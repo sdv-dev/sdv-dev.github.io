@@ -1,0 +1,407 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="title" content="{{ page.title }}">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+
+    <meta name="og:title" content="{{ page.title }}">
+    <meta name="og:url" content="{{ page.url }}">
+    <!-- <meta name="og:image" content="{{ page.logo }}"> -->
+    <meta name="og:description" content="{{ page.description }}">
+
+    <meta name="MIT:card" content="summary" />
+    <meta name="MIT:site" content="{{ page.url }}" />
+    <meta name="MIT:title" content="{{ page.title }}" />
+    <meta name="MIT:description" content="{{ page.description }}" />
+    <!-- <meta name="MIT:image" content="{{ page.logo }}" /> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" type="image/png" href="assets/dai-favicon.png" />
+
+    <!-- Feather CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-core.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.custom_css }}" />
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Github</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Docs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-img">
+        <img src="assets/header-img.png" alt="img" />
+    </div>
+    <!-- Site wrapper -->
+    <div class="site">
+        <div class="wrapper">
+            <div class="row">
+                <div class="header-information">
+                    <h1>What is Synthetic Data Vault?</h1>
+                    <p class="des">Synthetic data vault is an ecosystem that comprises several open source libraries,
+                        tutorials
+                        and
+                        resources for end users to use synthetic data generation techniques. Through this ecosystem
+                        we’re
+                        open
+                        sourcing several years of research. Within this ecosystem you would find latest
+                        algorithms/methods
+                        to learn
+                        models from and generate synthetic data for different data modalities - tabular, time series,
+                        relational,
+                        images (coming soon) and text (coming soon). We also provide methods to evaluate the quality and
+                        efficacy of
+                        the synthetic data and a benchmarking framework to assess the latest and greatest in the field -
+                        so
+                        our end
+                        users can have the best methods available.</p>
+                </div>
+            </div>
+            <div class="resources">
+                <h1 class="section-title purple">Resources</h1>
+                <p class="des-section purple">Explore docs, papers, videos, tutorials. Join our community slack.</p>
+                <div class="row">
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">Papers</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset1.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">Community</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset2.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">Videos</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset6.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">Tutorials</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset3.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">Developer<br>
+                                docs</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset4.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="box purple">
+                            <p class="title">User<br>
+                                guides</p>
+                            <div class="img-sec">
+                                <img src="../assets/asset5.png" alt="img" />
+                            </div>
+                            <div class="line">
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="synthesize">
+            <div class="wrapper">
+                <div class="wr-synthesize">
+                    <h1 class="section-title bule">Synthesize</h1>
+                    <p class="des-section bule">Learn a variety of statistical and neural models and use
+                        them to synthesize
+                        data,
+                        evaluate the quality of the synthetic data. </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Relational data</h3>
+                                <p>Learn a model and synthesize relational data.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Tabular </h3>
+                                <p>Learn a model and synthesize tabular data.
+                                    Copulas, GANs</p>
+                                <div class="image">
+                                    <img src="assets/tabular.svg" alt="img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Time series</h3>
+                                <p>Learn a model and synthesize time series. </p>
+                                <div class="image">
+                                    <img src="assets/time-series.svg" alt="img" class="time-img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Images</h3>
+                                <p>Learn a model and synthesize images.
+                                    Coming soon. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Text </h3>
+                                <p>Learn a model and synthesize text data
+                                    Coming soon.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Benchmarking</h3>
+                                <p>A comprehensive benchmarking framework to assess different modeling
+                                    techniques.
+                                    Tabular, Timeseries. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box white">
+                                <h3 class="title">Metrics</h3>
+                                <p>Evaluate and assess generated synthetic data. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="concepts">
+                <h1 class="section-title d-dark-blue">Concepts</h1>
+                <p class="des-section d-dark-blue">Learn about different concepts that underpin synthetic data
+                    generation,
+                    evaluation and usage through our tutorials.</p>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box dark-blue">
+                            <div class="text-sec">
+                                <p>How to
+                                    evaluate quality
+                                    of synthetic<br>
+                                    data?</p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box dark-blue">
+                            <div class="text-sec">
+                                <p>What are
+                                    multivariate<br>
+                                    copulas?
+                                </p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box dark-blue">
+                            <div class="text-sec">
+                                <p>How to handle
+                                    constraints?
+                                </p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box dark-blue">
+                            <div class="text-sec">
+                                <p>How to interact
+                                    with relational<br>
+                                    data?</p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="libraries">
+            <div class="wrapper">
+                <h1 class="section-title purple">Libraries</h1>
+                <p class="des-section purple">Explore our open source libraries, contribute and become part of the
+                    community.
+                </p>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/c-1.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/m-1.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/s-1.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/sdv.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/rdt.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
+                                <img src="assets/ct.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="#" target="_blank">Github</a></li>
+                                <li><a href="#" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="applications">
+            <div class="wrapper">
+                <h1 class="section-title purple">Applications</h1>
+                <p class="des-section purple">Learn about different uses of synthetic data and its applications. </p>
+                <div class="row">
+                    <div class="col-20">
+                        <div class="box purple">
+                            <p class="title">Data<br>
+                                Augmentation</p>
+                            <div class="img-sec">
+                                <img src="../assets/data.svg" alt="img" />
+                            </div>
+                            <hr />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+        <!-- Footer -->
+        <div class="footer">
+        </div> <!-- End of Footer -->
+
+        <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+        <script src="{{ site.baseurl }}/js/main.js"></script>
+        <script src="{{ site.baseurl }}/js/{{ page.custom_js }}"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+
+        {% include ga.html %}
+</body>
+
+</html>
