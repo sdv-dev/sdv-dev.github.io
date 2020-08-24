@@ -1,0 +1,27 @@
+branches:
+  only:
+    - master
+
+language: ruby
+
+rvm:
+  - 2.7.1
+
+before_script:
+  - chmod +x ./scripts/cibuild
+
+script: ./scripts/cibuild
+
+git:
+  depth: false
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $OAUTH_TOKEN
+  keep-history: true
+  verbose: true
+  target-branch: master
+  on:
+    branch: master
+    condition: $TRAVIS_EVENT_TYPE = "cron"
