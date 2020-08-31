@@ -581,11 +581,9 @@ hr {
 
 .synthesize {
   margin-top: 3.5rem;
-  background: linear-gradient(
-    90deg,
-    rgba(180, 172, 65, 0.1) 10%,
-    rgba(9, 90, 96, 0.1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(180, 172, 65, 0.1) 10%,
+      rgba(9, 90, 96, 0.1) 100%);
   padding: 2.8rem 0px 0px;
 }
 
@@ -761,82 +759,106 @@ img.time-img {
     width: 100%;
   }
 }
+
 @media (min-width: 2200px) {
   .concepts hr {
     width: 82%;
     bottom: 25px;
   }
+
   hr {
     margin-top: 205px;
   }
+
   .box {
     height: 250px;
   }
+
   .synthesize .col-md-4 {
     height: 480px;
   }
+
   .image {
     width: 450px;
   }
+
   .navbar-light .navbar-nav .nav-link {
-    font-size: 28px;
+    font-size: 32px;
   }
+
   .synthesize {
     padding: 4% 0px 3%;
   }
+
   .synthesize .col-md-4 {
     height: 460px;
   }
+
   .image {
     width: 440px;
   }
+
   .resources {
     margin-bottom: 10%;
   }
+
   .applications {
     margin-top: 4%;
     margin-bottom: 3%;
   }
+
   .libraries .box img {
     width: 120px;
   }
+
   .libraries a {
     font-size: 19px;
   }
+
   .libraries .box {
     height: 275px;
   }
+
   .libraries {
     padding: 4% 0px 5%;
   }
+
   .concepts {
     margin-top: 7%;
     margin-bottom: 10%;
   }
+
   .wr-synthesize {
     padding-top: 10%;
     padding-bottom: 10%;
   }
+
   .box .title {
     font-size: 36px;
   }
+
   .box p {
     font-size: 24px;
     line-height: 1.4;
   }
+
   .des-section {
     font-size: 28px;
     line-height: 1.4;
   }
+
   .section-title {
     font-size: 43px;
   }
+
   .site {
     margin-top: 8%;
   }
+
   .header-img img {
     width: 40%;
   }
+
   .header-information p {
     font-size: 28px;
   }
@@ -851,6 +873,7 @@ img.time-img {
     transform: scale(1.25);
   }
 }
+
 @media (max-width: 1300px) {
   .box .title {
     font-size: 20px;
@@ -1002,8 +1025,7 @@ img.time-img {
   }
 }
 
-@media (max-width: 1180px) {
-}
+@media (max-width: 1180px) {}
 
 @media (max-width: 991px) {
   .wrapper {
