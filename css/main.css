@@ -172,6 +172,13 @@ span.icon-menu {
   margin-bottom: 2.5rem;
 }
 
+.concepts a:hover {
+    text-decoration: none;
+}
+.synthesize a:hover {
+    text-decoration: none;
+}
+
 .concepts p {
   color: white;
   font-style: normal;
