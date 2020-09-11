@@ -22,7 +22,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_organization: "https://github.com/sdv-dev"
+basegithub: "https://github.com/sdv-dev"
+
+slack: https://join.slack.com/t/sdv-space/shared_invite/zt-gdsfcb5w-0QQpFMVoyB2Yd6SRiMplcw
 
 # Build settings
 markdown: kramdown
