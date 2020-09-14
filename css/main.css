@@ -961,6 +961,12 @@ img.time-img {
     margin-top: 4%;
     margin-bottom: 4%;
   }
+  img.Metrics-img {
+    width: 60%;
+    margin: 0;
+    margin-top: 0;
+    margin-left: 35px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -983,6 +989,12 @@ img.time-img {
 
   .image {
     width: 260px;
+  }
+  img.Metrics-img {
+    width: 60%;
+    margin: auto;
+    margin-top: 0;
+    margin-left: auto;
   }
 }
 
