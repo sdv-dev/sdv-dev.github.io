@@ -775,7 +775,7 @@ img.time-img {
   }
   .synthesize img.Metrics-img {
     width: 60%;
-    margin-top: 0px;
+    margin-top: -15px;
   }
   img.img-Relational {
     width: 85%;
@@ -786,7 +786,6 @@ img.time-img {
 @media (min-width: 2200px) {
   .synthesize img.Metrics-img {
     width: 60%;
-    margin-top: -15px;
   }
   .concepts hr {
     width: 82%;
