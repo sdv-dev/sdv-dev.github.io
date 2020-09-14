@@ -991,10 +991,14 @@ img.time-img {
     width: 260px;
   }
   img.Metrics-img {
-    width: 60%;
+    width: 55%;
     margin: auto;
     margin-top: 0;
     margin-left: auto;
+  }
+  .img-Relational {
+    width: 90%;
+    margin: auto;
   }
 }
 
