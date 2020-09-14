@@ -956,7 +956,10 @@ img.time-img {
     margin-top: 4%;
     margin-bottom: 4%;
   }
-
+  .synthesize img {
+    width: 85%;
+    margin: auto;
+  }
   .applications {
     margin-top: 4%;
     margin-bottom: 4%;
@@ -996,7 +999,7 @@ img.time-img {
     margin-top: 0;
     margin-left: auto;
   }
-  .img-Relational {
+  img.img-Relational {
     width: 90%;
     margin: auto;
   }
