@@ -173,10 +173,10 @@ span.icon-menu {
 }
 
 .concepts a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 .synthesize a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .concepts p {
@@ -620,7 +620,7 @@ hr {
 
 img.Metrics-img {
   width: 60%;
-  margin-top: 0px;
+  margin: auto;
 }
 
 img.time-img {
