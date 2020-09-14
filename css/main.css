@@ -777,6 +777,10 @@ img.time-img {
     width: 60%;
     margin-top: 0px;
   }
+  img.img-Relational {
+    width: 85%;
+    margin: auto;
+  }
 }
 
 @media (min-width: 2200px) {
@@ -894,6 +898,10 @@ img.time-img {
   .wrapper {
     max-width: 1820px;
     transform: scale(1.25);
+  }
+  img.img-Relational {
+    width: 85%;
+    margin: auto;
   }
 }
 
