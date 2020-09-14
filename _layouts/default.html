@@ -58,10 +58,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Github</span></a>
+                    <a class="nav-link" href="{{ site.github_organization }}">Github</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Docs</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/SDV">Docs</a>
                 </li>
             </ul>
         </div>
@@ -75,23 +75,17 @@
             <div class="row">
                 <div class="header-information">
                     <h1>What is Synthetic Data Vault?</h1>
-                    <p class="des">Synthetic data vault is an ecosystem that comprises several open source libraries,
-                        tutorials
-                        and
-                        resources for end users to use synthetic data generation techniques. Through this ecosystem
-                        we’re
-                        open
-                        sourcing several years of research. Within this ecosystem you would find latest
-                        algorithms/methods
-                        to learn
-                        models from and generate synthetic data for different data modalities - tabular, time series,
-                        relational,
-                        images (coming soon) and text (coming soon). We also provide methods to evaluate the quality and
-                        efficacy of
-                        the synthetic data and a benchmarking framework to assess the latest and greatest in the field -
-                        so
-                        our end
-                        users can have the best methods available.</p>
+                    <p class="des">
+                        Synthetic data vault is an ecosystem that comprises several open source
+                        libraries, tutorials and resources for end users to use synthetic data
+                        generation techniques. Through this ecosystem we’re open sourcing several
+                        years of research. Within this ecosystem you would find latest algorithms/methods
+                        to learn models from and generate synthetic data for different data modalities
+                        - single table, relational and time series data. We also provide methods to
+                        evaluate the quality and efficacy of the synthetic data and a benchmarking
+                        framework to assess the latest and greatest in the field - so our end users
+                        can have the best methods available.
+                    </p>
                 </div>
             </div>
             <div class="resources">
@@ -99,75 +93,84 @@
                 <p class="des-section purple">Explore docs, papers, videos, tutorials. Join our community slack.</p>
                 <div class="row">
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">Papers</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset1.png" alt="img" />
+                        <a href="#" target="_blank">
+                            <div class="box purple">
+                                <p class="title">Papers</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset1.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">Community</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset2.png" alt="img" />
+                        <a href="{{ site.slack }}" target="_blank">
+                            <div class="box purple">
+                                <p class="title">Community</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset2.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">Videos</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset6.png" alt="img" />
+                        <a href="#" target="_blank">
+                            <div class="box purple">
+                                <p class="title">Videos</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset6.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">Tutorials</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset3.png" alt="img" />
+                        <a href="{{ site.basegithub }}/SDV/tree/master/tutorials" target="_blank">
+                            <div class="box purple">
+                                <p class="title">Tutorials</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset3.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">Developer<br>
-                                docs</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset4.png" alt="img" />
+                        <a href="{{ site.baseurl }}/SDV/developer_guides/index.html" target="_blank">
+                            <div class="box purple">
+                                <p class="title">Developer<br>
+                                    docs</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset4.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-2 col-12">
-                        <div class="box purple">
-                            <p class="title">User<br>
-                                guides</p>
-                            <div class="img-sec">
-                                <img src="../assets/asset5.png" alt="img" />
+                        <a href="{{ site.baseurl }}/SDV/user_guides/index.html" target="_blank">
+                            <div class="box purple">
+                                <p class="title">User<br>
+                                    guides</p>
+                                <div class="img-sec">
+                                    <img src="../assets/asset5.png" alt="img" />
+                                </div>
+                                <div class="line">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="line">
-                                <hr />
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -182,33 +185,41 @@
                         evaluate the quality of the synthetic data. </p>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="box white">
-                                <h3 class="title">Relational data</h3>
-                                <p>Learn a model and synthesize relational data.</p>
-                                <div class="image">
-                                    <img src="assets/Rational.svg" alt="img" />
+                            <a href="{{ site.baseurl }}/SDV/user_guides/relational/rcpa.html" target="_blank">
+                                <div class="box white">
+                                    <h3 class="title">Relational data</h3>
+                                    <p>Learn a model and synthesize relational data.</p>
+                                    <div class="image">
+                                        <img src="assets/Rational.svg" alt="img" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-4">
-                            <div class="box white">
-                                <h3 class="title">Tabular </h3>
-                                <p>Learn a model and synthesize tabular data.
-                                    Copulas, GANs</p>
-                                <div class="image">
-                                    <img src="assets/tabular.svg" alt="img" />
+                            <a href="{{ site.baseurl }}/SDV/user_guides/single_table/gaussian_copula.html"
+                                target="_blank">
+                                <div class="box white">
+                                    <h3 class="title">Tabular </h3>
+                                    <p>Learn a model and synthesize tabular data.
+                                        Copulas, GANs</p>
+                                    <div class="image">
+                                        <img src="assets/tabular.svg" alt="img" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-4">
-                            <div class="box white">
-                                <h3 class="title">Time series</h3>
-                                <p>Learn a model and synthesize time series. </p>
-                                <div class="image">
-                                    <img src="assets/time-series.svg" alt="img" class="time-img" />
+                            <a href="{{ site.baseurl }}/SDV/user_guides/timeseries/index.html" target="_blank">
+                                <div class="box white">
+                                    <h3 class="title">Time series</h3>
+                                    <p>Learn a model and synthesize time series. </p>
+                                    <div class="image">
+                                        <img src="assets/time-series.svg" alt="img" class="time-img" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
+                        <!--
                         <div class="col-md-4">
                             <div class="box white">
                                 <h3 class="title">Images</h3>
@@ -216,6 +227,8 @@
                                     Coming soon. </p>
                             </div>
                         </div>
+                        -->
+                        <!--
                         <div class="col-md-4">
                             <div class="box white">
                                 <h3 class="title">Text </h3>
@@ -224,25 +237,30 @@
                                 </p>
                             </div>
                         </div>
+                        -->
                         <div class="col-md-4">
-                            <div class="box white">
-                                <h3 class="title">Benchmarking</h3>
-                                <p>A comprehensive benchmarking framework to assess different modeling
-                                    techniques.
-                                    Tabular, Timeseries. </p>
-                                <div class="image">
-                                    <img src="assets/Benchmarking.svg" alt="img" class="benchmarking-img" />
+                            <a href="#" target="_blank">
+                                <div class="box white">
+                                    <h3 class="title">Benchmarking</h3>
+                                    <p>A comprehensive benchmarking framework to assess different modeling
+                                        techniques.
+                                        Tabular, Timeseries. </p>
+                                    <div class="image">
+                                        <img src="assets/Benchmarking.svg" alt="img" class="benchmarking-img" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-4">
-                            <div class="box white">
-                                <h3 class="title">Metrics</h3>
-                                <p>Evaluate and assess generated synthetic data. </p>
-                                <div class="image">
-                                    <img src="assets/Metrics.svg" alt="img" class="Metrics-img" />
+                            <a href="#" target="_blank">
+                                <div class="box white">
+                                    <h3 class="title">Metrics</h3>
+                                    <p>Evaluate and assess generated synthetic data. </p>
+                                    <div class="image">
+                                        <img src="assets/Metrics.svg" alt="img" class="Metrics-img" />
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -256,46 +274,48 @@
                     evaluation and usage through our tutorials.</p>
                 <div class="row">
                     <div class="col-lg-2 col-md-3">
-                        <div class="box dark-blue">
-                            <div class="text-sec">
-                                <p>How to
-                                    evaluate quality
-                                    of synthetic<br>
-                                    data?</p>
-                                <hr />
+                        <a href="{{ site.basegithub }}/SDMetrics/blob/master/tutorials/1_getting_started.ipynb"
+                            target="_blank">
+                            <div class="box dark-blue">
+                                <div class="text-sec">
+                                    <p>How to evaluate quality of synthetic data?</p>
+                                    <hr />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-3">
-                        <div class="box dark-blue">
-                            <div class="text-sec">
-                                <p>What are
-                                    multivariate<br>
-                                    copulas?
-                                </p>
-                                <hr />
+                        <a href="{{ site.basegithub }}/Copulas/blob/master/tutorials/01_Introduction_to_Copulas.ipynb"
+                            target="_blank">
+                            <div class="box dark-blue">
+                                <div class="text-sec">
+                                    <p>What are multivariate copulas?</p>
+                                    <hr />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-3">
-                        <div class="box dark-blue">
-                            <div class="text-sec">
-                                <p>How to handle
-                                    constraints?
-                                </p>
-                                <hr />
+                        <a href="{{ site.basegithub }}/SDV/blob/master/tutorials/single_table_data/03_Handling_Constraints.ipynb"
+                            target="_blank">
+                            <div class="box dark-blue">
+                                <div class="text-sec">
+                                    <p>How to handle constraints?</p>
+                                    <hr />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-2 col-md-3">
-                        <div class="box dark-blue">
-                            <div class="text-sec">
-                                <p>How to interact
-                                    with relational<br>
-                                    data?</p>
-                                <hr />
+                        <a href="{{ site.basegithub }}/SDV/blob/master/tutorials/relational_data/01_Relational_Metadata.ipynb"
+                            target="_blank">
+                            <div class="box dark-blue">
+                                <div class="text-sec">
+                                    <p>How to interact with relational data?</p>
+                                    <hr />
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -310,11 +330,22 @@
                     <div class="col-lg-2 col-md-3">
                         <div class="box white">
                             <div class="sec-img-center">
+                                <img src="assets/sdv.png" alt="img" />
+                            </div>
+                            <ul class="link">
+                                <li><a href="{{ site.basegithub }}/SDV" target="_blank">Github</a></li>
+                                <li><a href="{{ site.baseurl }}/SDV" target="_blank">Docs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="box white">
+                            <div class="sec-img-center">
                                 <img src="assets/c-1.png" alt="img" />
                             </div>
                             <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
+                                <li><a href="{{ site.basegithub }}/Copulas" target="_blank">Github</a></li>
+                                <li><a href="{{ site.baseurl }}/Copulas" target="_blank">Docs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -324,8 +355,8 @@
                                 <img src="assets/m-1.png" alt="img" />
                             </div>
                             <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
+                                <li><a href="{{ site.basegithub }}/SDMetrics" target="_blank">Github</a></li>
+                                <li><a href="{{ site.baseurl }}/SDMetrics" target="_blank">Docs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -335,19 +366,7 @@
                                 <img src="assets/s-1.png" alt="img" />
                             </div>
                             <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <div class="box white">
-                            <div class="sec-img-center">
-                                <img src="assets/sdv.png" alt="img" />
-                            </div>
-                            <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
+                                <li><a href="{{ site.basegithub }}/SDGym" target="_blank">Github</a></li>
                             </ul>
                         </div>
                     </div>
@@ -357,8 +376,7 @@
                                 <img src="assets/rdt.png" alt="img" />
                             </div>
                             <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
+                                <li><a href="{{ site.basegithub }}/RDT" target="_blank">Github</a></li>
                             </ul>
                         </div>
                     </div>
@@ -368,8 +386,7 @@
                                 <img src="assets/ct.png" alt="img" />
                             </div>
                             <ul class="link">
-                                <li><a href="#" target="_blank">Github</a></li>
-                                <li><a href="#" target="_blank">Docs</a></li>
+                                <li><a href="{{ site.basegithub }}/CTGAN" target="_blank">Github</a></li>
                             </ul>
                         </div>
                     </div>
