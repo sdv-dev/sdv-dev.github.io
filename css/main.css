@@ -581,9 +581,11 @@ hr {
 
 .synthesize {
   margin-top: 3.5rem;
-  background: linear-gradient(90deg,
-      rgba(180, 172, 65, 0.1) 10%,
-      rgba(9, 90, 96, 0.1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(180, 172, 65, 0.1) 10%,
+    rgba(9, 90, 96, 0.1) 100%
+  );
   padding: 2.8rem 0px 0px;
 }
 
@@ -607,6 +609,11 @@ hr {
 
 .synthesize img {
   display: block;
+}
+
+img.Metrics-img {
+  width: 60%;
+  margin-top: 0px;
 }
 
 img.time-img {
@@ -758,9 +765,17 @@ img.time-img {
   .synthesize img {
     width: 100%;
   }
+  .synthesize img.Metrics-img {
+    width: 60%;
+    margin-top: 0px;
+  }
 }
 
 @media (min-width: 2200px) {
+  .synthesize img.Metrics-img {
+    width: 60%;
+    margin-top: 0px;
+  }
   .concepts hr {
     width: 82%;
     bottom: 25px;
@@ -1025,7 +1040,8 @@ img.time-img {
   }
 }
 
-@media (max-width: 1180px) {}
+@media (max-width: 1180px) {
+}
 
 @media (max-width: 991px) {
   .wrapper {
