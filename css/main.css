@@ -621,6 +621,7 @@ hr {
 img.Metrics-img {
   width: 60%;
   margin: auto;
+  margin-top: -25px;
 }
 
 img.time-img {
