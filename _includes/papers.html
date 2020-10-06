@@ -1,0 +1,15 @@
+<div class="section" id="papers">
+  <h1 class="section-title purple">Papers</h1>
+  {% for paper in site.data.papers %}
+  <div class="row">
+    <div class="col-12">
+      <div class="paper">
+        <a href="{{ paper.url }}" target="_blank"><p>{{ paper.title }}</p></a>
+        <p>{{ paper.type }}{% if paper.place %}, <i>{{ paper.place }}</i>{% endif %}{% if paper.date %}, {{ paper.date }}{% endif %}
+        </p>
+        <p>{{ paper.authors }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

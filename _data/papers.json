@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Synthesizing Tabular Data using Conditional GAN",
+        "url": "https://dai.lids.mit.edu/wp-content/uploads/2020/02/Lei_SMThesis_neo.pdf",
+        "type": "S.M Thesis",
+        "place": "Dept. of EECS, MIT",
+        "date": "February 2020",
+        "authors": "Lei Xu"
+    },
+    {
+        "title": "Modeling Tabular data using Conditional GAN (CTGAN)",
+        "url": "https://arxiv.org/pdf/1907.00503.pdf",
+        "type": "NeurIPS|2019",
+        "place": "Proc. of Advances in Neural Information Processing Systems",
+        "date": "2019",
+        "authors": "Lei Xu, Maria Skoularidou, Alfredo Cuesta-Infante, Kalyan Veeramachaneni"
+    },
+    {
+        "title": "Learning Vine Copula Models For Synthetic Data Generation",
+        "url": "https://dai.lids.mit.edu/wp-content/uploads/2019/01/1812.01226.pdf",
+        "type": "AAAI-19",
+        "place": "In Proc. 33rd AAAI Conference on Artificial Intelligence",
+        "date": "2019",
+        "authors": "Yi Sun, Alfredo Cuesta-Infante, Kalyan Veeramachaneni"
+    },
+    {
+        "title": "Synthesizing Tabular Data using Generative Adversarial Networks (TGAN)",
+        "url": "https://arxiv.org/pdf/1811.11264.pdf",
+        "type": "Preprint",
+        "date": "27 November 2018",
+        "authors": "Lei Xu, Kalyan Veeramachaneni"
+    },
+    {
+        "title": "SDV: An Open Source Library for Synthetic Data Generation",
+        "url": "https://dai.lids.mit.edu/wp-content/uploads/2018/12/Andrew_MEng.pdf",
+        "type": "M.Eng Thesis",
+        "place": "Dept. of EECS, MIT",
+        "date": "August 2018",
+        "authors": "Andrew Montanez"
+    },
+    {
+        "title": "The synthetic data vault",
+        "url": "https://dai.lids.mit.edu/wp-content/uploads/2018/03/SDV.pdf",
+        "type": "DSAA -16",
+        "place": "International Conference on Data Science and Advance Analytics",
+        "date": "October 2016",
+        "authors": "Neha Patki, Roy Wedge, Kalyan Veeramachaneni"
+    },
+    {
+        "title": "The Synthetic Data Vault: Generative Modeling for Relational Databases.",
+        "url": "https://dspace.mit.edu/handle/1721.1/109616",
+        "type": "M.Eng. Thesis",
+        "place": "Dept. of EECS, MIT",
+        "date": "June 2016",
+        "authors": "Neha Patki"
+    }
+]
