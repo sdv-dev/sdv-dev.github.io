@@ -770,7 +770,7 @@ img.time-img {
   }
   .synthesize img.Metrics-img {
     width: 60%;
-    margin-top: -15px;
+    margin-top: 0px;
   }
   img.img-Relational {
     width: 85%;
@@ -785,10 +785,6 @@ img.time-img {
   .concepts hr {
     width: 82%;
     bottom: 25px;
-  }
-
-  hr {
-    margin-top: 205px;
   }
 
   .box {
@@ -876,10 +872,6 @@ img.time-img {
     margin-top: 8%;
   }
 
-  .header-img img {
-    width: 40%;
-  }
-
   .header-information p {
     font-size: 28px;
   }
@@ -891,7 +883,6 @@ img.time-img {
 
   .wrapper {
     max-width: 1820px;
-    transform: scale(1.25);
   }
   img.img-Relational {
     width: 85%;
