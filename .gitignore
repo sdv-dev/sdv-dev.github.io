@@ -13,3 +13,5 @@ node_modules
 
 # Vim
 *.swp
+
+Gemfile.lock

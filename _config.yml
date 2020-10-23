@@ -13,18 +13,45 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 
+title: The Synthetic Data Vault
+tagline: The Synthetic Data Vault
+description: >-
+  The Synthetic Data Vault (SDV) enables end users to easily generate synthetic data
+  synthetic data for different data modalities, including single table, relational and
+  time series data. With this ecosystem, we are releasing several years of our work building,
+  testing and evaluating algorithms and models geared towards synthetic data generation.
+email: info@sdv.dev
+logo: /assets/logo.png
+keywords: mit, dai, open, source, open source, synthetic, data, generation, sdv, vault
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sdv.dev" # the base hostname & protocol for your site, e.g. http://example.com
 basegithub: "https://github.com/sdv-dev"
 
 slack: https://join.slack.com/t/sdv-space/shared_invite/zt-gdsfcb5w-0QQpFMVoyB2Yd6SRiMplcw
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      description: >-
+        The Synthetic Data Vault (SDV) enables end users to easily generate synthetic data
+        synthetic data for different data modalities, including single table, relational and
+        time series data. With this ecosystem, we are releasing several years of our work building,
+        testing and evaluating algorithms and models geared towards synthetic data generation.
+      keywords: mit, dai, open, source, open source, synthetic, data, generation, sdv, vault
+
+twitter:
+  username: sdv_dev
+  card: summary
+
+social:
+  links:
+    - https://twitter.com/sdv_dev
+    - https://slack.sdv.dev
+    - https://github.com/sdv-dev
 
 # Build settings
 markdown: kramdown

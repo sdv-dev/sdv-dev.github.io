@@ -3,21 +3,9 @@
 <html>
 
   <head>
+    <!-- Meta -->
     <meta charset="utf-8" />
-    <meta name="title" content="{{ page.title }}">
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
-
-    <meta name="og:title" content="{{ page.title }}">
-    <meta name="og:url" content="{{ page.url }}">
-    <!-- <meta name="og:image" content="{{ page.logo }}"> -->
-    <meta name="og:description" content="{{ page.description }}">
-
-    <meta name="MIT:card" content="summary" />
-    <meta name="MIT:site" content="{{ page.url }}" />
-    <meta name="MIT:title" content="{{ page.title }}" />
-    <meta name="MIT:description" content="{{ page.description }}" />
-    <!-- <meta name="MIT:image" content="{{ page.logo }}" /> -->
+    <meta name="og:locale" content="en_US">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,7 +14,42 @@
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
 
-    <title>{{ page.title }}</title>
+    <meta name="keywords" content="{{ page.keywords }}">
+
+    <meta name="og:url" content="{{ site.url }}">
+    <meta name="og:site_name" content="{{ site.title }}">
+
+    <meta name="title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="twitter:site" content="@{{ site.twitter.username }}">
+
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary }}">
+    <meta name="twitter:description" content="{{ page.summary }}">
+    <meta name="og:description" content="{{ page.summary }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="og:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+    <meta name="twitter:card"  content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+    {% else %}
+    <meta name="twitter:card"  content="summary">
+    <meta name="twitter:image" content="{{ site.logo }}">
+    {% endif %}
+
+    <script type="application/ld+json">
+      {"description":"{{ site.description }}","@type":"WebSite","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"{{ site.url }}{{ site.baseurl }}{{ site.logo }}"}},"name":"{{ site.title }}","headline":"{{ page.title }}","sameAs":[{% for link in site.social.links %}"{{ link }}"{% if forloop.last == false %},{% endif %}{% endfor %}],"url":"{{ site.url }}","@context":"https://schema.org"}</script>
+    <!-- end of Meta -->
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="canonical" href="{{ site.url }}">
+
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="shortcut icon" href="assets/favicon.ico">
@@ -45,6 +68,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.custom_css }}" />
+
   </head>
 
   <body>
