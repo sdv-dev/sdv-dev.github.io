@@ -19,10 +19,10 @@
     <meta name="og:url" content="{{ site.url }}">
     <meta name="og:site_name" content="{{ site.title }}">
 
-    <meta name="title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta name="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="title" content="{{ page.title }} | {{ page.tagline }}">
+    <meta name="og:title" content="{{ page.title }} | {{ page.tagline }}">
 
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="twitter:title" content="{{ page.title }} | {{ page.tagline }}">
     <meta name="twitter:site" content="@{{ site.twitter.username }}">
 
     {% if page.summary %}
@@ -44,10 +44,10 @@
     {% endif %}
 
     <script type="application/ld+json">
-      {"description":"{{ site.description }}","@type":"WebSite","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"{{ site.url }}{{ site.baseurl }}{{ site.logo }}"}},"name":"{{ site.title }}","headline":"{{ page.title }}","sameAs":[{% for link in site.social.links %}"{{ link }}"{% if forloop.last == false %},{% endif %}{% endfor %}],"url":"{{ site.url }}","@context":"https://schema.org"}</script>
+      {"description":"{{ site.description }}","@type":"WebSite","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"{{ site.url }}{{ site.baseurl }}{{ site.logo }}"}},"name":"{{ site.title }}","headline":"{{ page.tagline }}","sameAs":[{% for link in site.social.links %}"{{ link }}"{% if forloop.last == false %},{% endif %}{% endfor %}],"url":"{{ site.url }}","@context":"https://schema.org"}</script>
     <!-- end of Meta -->
 
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>{{ page.title }} | {{ page.tagline }}</title>
     <link rel="canonical" href="{{ site.url }}">
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
