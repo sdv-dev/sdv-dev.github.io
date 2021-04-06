@@ -10,6 +10,20 @@ export default function Nav () {
 
   const ref = useRef();
 
+
+  const [isLarge, setNavbarLarge] = useState(true)
+
+  const changeNavBackground = () => {
+    const scrolledThrough = window.scrollY >= 80;
+    if (scrolledThrough && isLarge) {
+      document.body.classList.add("nav-bg-white");
+      setNavbarLarge(false)
+    } else if(!scrolledThrough) {
+      document.body.classList.remove("nav-bg-white");
+      setNavbarLarge(true)
+    }
+  }
+
   const useOutsideClick = (ref, callback) => {
     const handleClick = e => {
       if (ref.current && !ref.current.contains(e.target)) {
@@ -36,9 +50,16 @@ export default function Nav () {
 
   const handleNavCollapse = () => setNavActive(!isActive);
 
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBackground)
+    return () => {
+      window.removeEventListener('scroll', changeNavBackground)
+    }
+  })
+
   return (
    
-    <nav className="h-20 flex flex-col justify-center items-center z-50 fixed w-full" ref={ref}>
+    <nav className="h-20 flex flex-col justify-center items-center z-50 fixed w-full" id="navbar" ref={ref}>
       
       <div className="container mx-auto">
         <div className="relative flex md:flex-row flex-col items-center justify-between -mx-5">
