@@ -1,5 +1,24 @@
 @font-face {
-  font-family: "Urbanist", sans-serif;
-  src: url("../fonts/webfont/Urbanist-Light.woff2");
+  font-family: 'Cern';
+  src: url('../fonts/webfont/CernBook-webfont.woff2') format('woff2'),
+       url('../fonts/webfont/CernBook-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cern';
+  src: url('../fonts/webfont/CernBold-webfont.woff2') format('woff2'),
+       url('../fonts/webfont/CernBold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'CernLight';
+  src: url('../fonts/webfont/CernLight-webfont.woff2') format('woff2'),
+       url('../fonts/webfont/CernLight-webfont.woff') format('woff');
   font-weight: 300;
+  font-style: normal;
 }

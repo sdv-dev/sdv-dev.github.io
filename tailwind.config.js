@@ -1,5 +1,6 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  // purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
@@ -7,6 +8,9 @@ module.exports = {
       padding: {
         DEFAULT: '1.875rem'
       }
+    },
+    fontFamily: {
+      cern: ['Cern', 'sans-serif'],
     },
     fontSize: {
       'xs': '.75rem',    //12
@@ -64,10 +68,6 @@ module.exports = {
           footer: '#183B56',
           fbg: '#B3BAC5',
         }
-      },
-      fontFamily: {
-        cern: ['Cern', 'sans-serif'],
-        proxima: ['Proxima Nova', 'sans-serif'],
       },
       letterSpacing: {
         body: '0.0125rem'
