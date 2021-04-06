@@ -14,7 +14,7 @@ export default function Nav () {
   const [isLarge, setNavbarLarge] = useState(true)
 
   const changeNavBackground = () => {
-    const scrolledThrough = window.scrollY >= 80;
+    const scrolledThrough = window.scrollY >= 30;
     if (scrolledThrough && isLarge) {
       document.body.classList.add("nav-bg-white");
       setNavbarLarge(false)
@@ -67,7 +67,7 @@ export default function Nav () {
             <Hamburger toggled={isActive} toggle={setNavActive} onClick={handleNavCollapse} />
           </div>
           <div className="flex md:flex-row flex-wrap flex-col items-center justify-between w-full px-5">
-            <div className="md:order-2 md:w-6/12 lg:w-2/12 flex md:justify-center lg:justify-start justify-start">
+            <div className="md:order-2 w-full lg:w-2/12 flex md:justify-center lg:justify-start justify-center">
               <Link to="/" className="">
                 <Logo widht="83" height="45" />
               </Link>

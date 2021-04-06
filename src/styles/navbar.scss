@@ -4,15 +4,24 @@
     background-color: white;
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
   }
+
+  @media (max-width: 1024px) {
+    background-color: white;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+  }
 }
 
 .navbar-item {
   color: white;
   .nav-bg-white & {
-    color: #0C0C0C
+    color: #0C0C0C;
   }
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (max-width: 1024px) {
+    color: #0C0C0C;
   }
 }
