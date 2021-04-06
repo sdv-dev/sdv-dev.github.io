@@ -28,14 +28,22 @@ export default function AllArticles(props) {
             }
             id
           }
+          afterImage: file(relativePath: { eq: "dotted graphics.png" }) {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_noBase64
+              }
+            }
+            id
+          }
         }
       `}
       render={(data) => {
         const list = [1, 2, 3, 4];
 
-        const bloglist = list.map((item) => {
+        const bloglist = list.map((item, idx) => {
           return (
-            <div className="w-full md:w-6/12 lg:w-4/12 px-6 mb-14">
+            <div key={`blog-article-${idx}`} className="w-full md:w-6/12 lg:w-4/12 px-6 mb-14">
               <div
                 style={{
                   boxShadow: "0px 15px 35px rgba(0, 0, 0, 0.05)",
@@ -82,7 +90,7 @@ export default function AllArticles(props) {
                 </p>
                 <p>
                   <Link to="#" className="text-sdv-link font-bold">
-                    Read more <FontAwesomeIcon icon={faArrowRight} />
+                    Read more <FontAwesomeIcon width="16" icon={faArrowRight} />
                   </Link>
                 </p>
               </div>
@@ -93,7 +101,15 @@ export default function AllArticles(props) {
         return (
           <div className="mt-32">
             <div className="flex flex-wrap justify-center -mx-6">
-              <div className="w-auto flex-shrink px-6">
+              <div className="w-auto flex-shrink px-6 relative">
+                <div className="absolute -left-4 bottom-7 z-0 w-20">
+                  <Img
+                    fadeIn={true}
+                    fluid={data.afterImage.childImageSharp.fluid}
+                    alt="graphic dots"
+                    className=""
+                  />
+                </div>
                 <h3>All Articles</h3>
               </div>
               <div className="w-auto flex-grow px-6 font-light">

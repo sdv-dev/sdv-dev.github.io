@@ -16,13 +16,13 @@ export default function Footer() {
             <Logo width="83" height="45" />
             <div className="flex flex-row -mx-1 mt-4">
               <div className="px-1">
-                <Link className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
-                  <FontAwesomeIcon icon={faSlack} />
+                <Link to="#" className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
+                  <FontAwesomeIcon width="16" icon={faSlack} />
                 </Link>
               </div>
               <div className="px-1">
-                <Link className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
-                  <FontAwesomeIcon icon={faTwitter} />
+                <Link to="#" className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
+                  <FontAwesomeIcon width="16" icon={faTwitter} />
                 </Link>
               </div>
             </div>

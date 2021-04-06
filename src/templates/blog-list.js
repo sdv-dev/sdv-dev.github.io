@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 
 import BlogMainHero from '../components/BlogMainHero'
 
+import BlogHeader from '../components/BlogHeader'
+
 export default function BlogList({ children }) {
   return (
     <div>
@@ -13,15 +15,7 @@ export default function BlogList({ children }) {
       <BlogMainHero />
       <Navbar />
       <div className="relative z-10">
-      <div className="lg:py-48">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap -mx-6">
-            <div className="w-full md:w-6/12 px-6">
-              <h1>The Synthetic Data Vault Blog</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BlogHeader />
         <div className="bg-sdv-placeholder mx-auto rounded-10 pt-20" style={{
           boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
           maxWidth: '1300px'
