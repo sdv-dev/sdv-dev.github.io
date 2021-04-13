@@ -19,4 +19,8 @@ jobs:
         run: npm install 
 
       - name: Deploy
-        run: npm run deploy
+        run: |
+          git config user.email "andriisharapatov@gmail.com"
+          git config user.name "Andrii S"
+          npm run deploy
+        
