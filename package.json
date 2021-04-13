@@ -1,5 +1,5 @@
 {
-  "name": "superdelux",
+  "name": "sdv-dev",
   "version": "1.0.0",
   "description": "Building Revolutionary Websites and Apps on the Jamstack",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Brightscout/superdelux.git"
+    "url": "git+https://github.com/sdv-dev/SDV.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Brightscout/superdelux/issues"
+    "url": "https://github.com/sdv-dev/SDV/issues"
   },
-  "homepage": "https://github.com/Brightscout/superdelux#readme",
+  "homepage": "https://github.com/sdv-dev/SDV#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
