@@ -5,22 +5,11 @@ on:
     branches:
       main
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-
-      - name: Set Node.js
-        uses: actions/setup-node@master
+      - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          node-version: 12.13.x
-
-      - name: Install dependencies
-        run: npm install 
-
-      - name: Deploy
-        run: |
-          git config user.email "andriisharapatov@gmail.com"
-          git config user.name "Andrii S"
-          npm run deploy
-        
+          access-token: ${{ secrets.GH_TOKEN }}
+          deploy-branch: gh-pages
