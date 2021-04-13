@@ -37,6 +37,12 @@
     margin-bottom: 22px;
   }
 
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+
 
   p {
     margin-bottom: 22px;
@@ -46,6 +52,14 @@
   figcaption {
     text-align: center;
     font-style: italic;
+  }
+
+  blockquote {
+    padding-left: 20px;
+    border-left: 3px solid #183B56;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 22px;
   }
 
   .kg-card-hascaption {
@@ -65,5 +79,6 @@
       height: 100%;
     }
   }
+
   
 }
