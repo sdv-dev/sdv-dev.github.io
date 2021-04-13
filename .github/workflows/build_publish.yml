@@ -1,16 +1,27 @@
-name: Gatsby Publish
+name: Update Website
 
 on:
   push:
     branches:
       main
-
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
         with:
-          access-token: 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
-          deploy-branch: gh-pages
+          node-version: 12.13.x
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Build
+        run:
+          git config --global user.email "andriisharapatov@gmail.com"
+          git config --global user.name "Andrii S"
+
+      - name: Deploy
+        run: npm run deploy
