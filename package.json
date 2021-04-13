@@ -4,7 +4,6 @@
   "description": "Building Revolutionary Websites and Apps on the Jamstack",
   "main": "index.js",
   "scripts": {
-    // "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://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@github.com/sdv-dev/web-dev.git",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
