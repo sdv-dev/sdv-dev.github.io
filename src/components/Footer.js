@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex-grow md:w-9/12 text-center md:text-left mx-6 px-3">
+          <div className="flex-grow md:w-9/12 mx-6 px-3">
             <div className="flex flex-wrap">
               <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer">
                 <p className="font-bold mb-6">Site</p>

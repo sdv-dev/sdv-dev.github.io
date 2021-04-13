@@ -10,7 +10,7 @@ import BlogHeader from '../components/BlogHeader'
 
 export default function BlogList({ children }) {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ProgressBar bgcolor="#000036" />
       <BlogMainHero />
       <Navbar />
