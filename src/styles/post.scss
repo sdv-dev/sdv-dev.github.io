@@ -47,6 +47,14 @@
   p {
     margin-bottom: 22px;
     line-height: 1.75;
+
+    a {
+      border-bottom: 1px dotted #03AFF1;
+      color: #03AFF1;
+      &:hover {
+        border-bottom: 1px solid #03AFF1;
+      }
+    }
   }
 
   figcaption {
@@ -63,12 +71,11 @@
   }
 
   .kg-card-hascaption {
-    margin-bottom: 22px;
+    margin-bottom: 40px;
   }
 
   .kg-embed-card {
     position: relative;
-    overflow: hidden;
     padding-top: 56.25%;
 
     iframe, object, embed {
@@ -77,6 +84,13 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    iframe + figcaption {
+      position: absolute;
+      bottom: -26px;
+      width: 100%;
+      z-index: 10;
     }
   }
 
