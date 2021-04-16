@@ -50,9 +50,9 @@ export default function AllArticlesWrap({children}) {
                     className=""
                   />
                 </div>
-                <h3>All Blog Articles</h3>
+                <h3>All Articles</h3>
               </div>
-              {/* <div className="w-auto flex-grow px-6 font-light">
+              <div className="w-auto flex-grow px-6 font-light">
                 <div className="mb-2 border border-sdv-stroke rounded-full inline-block px-6 py-3 shadow-lg mr-4">
                   Engineering
                 </div>
@@ -62,7 +62,7 @@ export default function AllArticlesWrap({children}) {
                 <div className="mb-2 border border-sdv-stroke rounded-full inline-block px-6 py-3 shadow-lg mr-4">
                   Leadership
                 </div>
-              </div> */}
+              </div>
             </div>
             <div className="w-20 h-0.5 bg-sdv-separator mt-8 mb-14"></div>
 
