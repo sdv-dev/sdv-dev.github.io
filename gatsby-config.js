@@ -1,75 +1,209 @@
-const path = require(`path`);
+const path = require(`path`)
 
-module.exports = {
-  /* Your site config here */
-  pathPrefix: "/web-dev",
-  plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-sass",
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `static`),
-      },
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /assets/, // See below to configure properly
+const config = require(`./src/utils/siteConfig`)
+const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
+
+let ghostConfig
+
+try {
+    ghostConfig = require(`./.ghost`)
+} catch (e) {
+    ghostConfig = {
+        production: {
+            apiUrl: process.env.GHOST_API_URL,
+            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
         },
-      },
+    }
+} finally {
+    const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
+
+    if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
+        throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
+    }
+}
+
+if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhost:8000` && !process.env.SITEURL) {
+    throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
+}
+
+/**
+* This is the place where you can tell Gatsby which plugins to use
+* and set them up the way you want.
+*
+* Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
+*
+*/
+module.exports = {
+    // pathPrefix: "/web-dev",
+    siteMetadata: {
+        siteUrl: process.env.SITEURL || config.siteUrl,
     },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
-      },
-    },
-    {
-      resolve: `gatsby-source-ghost`,
-      options: {
-        apiUrl: `https://sdv.ghost.io`,
-        contentApiKey: `68a3f60d2555e5dff8a5df9e11`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-ghost-images`,
-      options: {
-          // An array of node types and image fields per node
-          // Image fields must contain a valid absolute path to the image to be downloaded
-          lookup: [
-              {
-                  type: `GhostAuthor`,
-                  imgTags: [`profile_image`],
+    plugins: [
+        /**
+         *  Content Plugins
+         */
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: path.join(__dirname, `src`, `pages`),
+                name: `pages`,
+            },
+        },
+        // Setup for optimised images.
+        // See https://www.gatsbyjs.org/packages/gatsby-image/
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: path.join(__dirname, `src`, `images`),
+                name: `images`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `images`,
+              path: path.join(__dirname, `static`),
+            },
+        },
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+              rule: {
+                include: /assets/, // See below to configure properly
               },
-              {
-                  type: `GhostPost`,
-                  imgTags: [`feature_image`],
-              },
-              {
-                  type: `GhostPage`,
-                  imgTags: [`feature_image`],
-              },
-              {
-                  type: `GhostSettings`,
-                  imgTags: [`cover_image`],
-              },
-          ],
-          // Additional condition to exclude nodes 
-          // Takes precedence over lookup
-          exclude: node => (
-              node.ghostId === undefined
-          ),
-          // Additional information messages useful for debugging
-          verbose: true,
-          // Option to disable the module (default: false)
-          disable: false,
-      },
-    },
-  ],
-};
+            },
+        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: `gatsby-source-ghost`,
+            options:
+                process.env.NODE_ENV === `development`
+                    ? ghostConfig.development
+                    : ghostConfig.production,
+        },
+        /**
+         *  Utility Plugins
+         */
+        {
+            resolve: `gatsby-plugin-ghost-manifest`,
+            options: {
+                short_name: config.shortTitle,
+                start_url: `/`,
+                background_color: config.backgroundColor,
+                theme_color: config.themeColor,
+                display: `minimal-ui`,
+                icon: `static/${config.siteIcon}`,
+                legacy: true,
+                query: `
+                {
+                    allGhostSettings {
+                        edges {
+                            node {
+                                title
+                                description
+                            }
+                        }
+                    }
+                }
+              `,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                    allGhostSettings {
+                        edges {
+                            node {
+                                title
+                                description
+                            }
+                        }
+                    }
+                }
+              `,
+                feeds: [
+                    generateRSSFeed(config),
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-advanced-sitemap`,
+            options: {
+                query: `
+                {
+                    allGhostPost {
+                        edges {
+                            node {
+                                id
+                                slug
+                                updated_at
+                                created_at
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostPage {
+                        edges {
+                            node {
+                                id
+                                slug
+                                updated_at
+                                created_at
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostTag {
+                        edges {
+                            node {
+                                id
+                                slug
+                                feature_image
+                            }
+                        }
+                    }
+                    allGhostAuthor {
+                        edges {
+                            node {
+                                id
+                                slug
+                                profile_image
+                            }
+                        }
+                    }
+                }`,
+                mapping: {
+                    allGhostPost: {
+                        sitemap: `posts`,
+                    },
+                    allGhostTag: {
+                        sitemap: `tags`,
+                    },
+                    allGhostAuthor: {
+                        sitemap: `authors`,
+                    },
+                    allGhostPage: {
+                        sitemap: `pages`,
+                    },
+                },
+                exclude: [
+                    `/dev-404-page`,
+                    `/404`,
+                    `/404.html`,
+                    `/offline-plugin-app-shell-fallback`,
+                ],
+                createLinkInHead: true,
+                addUncaughtPages: true,
+            },
+        },
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-catch-links`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-force-trailing-slashes`,
+        `gatsby-plugin-offline`,
+    ],
+}

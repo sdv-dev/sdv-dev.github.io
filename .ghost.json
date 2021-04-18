@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://sdv.ghost.io",
+    "contentApiKey": "68a3f60d2555e5dff8a5df9e11"
+  },
+  "production": {
+    "apiUrl": "https://sdv.ghost.io",
+    "contentApiKey": "68a3f60d2555e5dff8a5df9e11"
+  }
+}

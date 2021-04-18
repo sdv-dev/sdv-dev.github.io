@@ -1,9 +1,6 @@
 import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function FeaturedArticle({children}) {
   
@@ -24,7 +21,7 @@ export default function FeaturedArticle({children}) {
       render={(data) => {
         return (
           <div
-            className="flex flex-wrap rounded-10 relative"
+            className="flex flex-wrap rounded-10 relative mb-28"
             style={{
               boxShadow: "0px 6px 40px rgba(153, 158, 178, 0.277153)",
             }}
