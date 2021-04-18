@@ -1,9 +1,9 @@
-name: Update Website
+name: Build and Deploy SDV Blog
 
 on:
   push:
     branches:
-      main
+      ghost-blog
 jobs:
   build:
     runs-on: ubuntu-latest
