@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhos
 *
 */
 module.exports = {
-    pathPrefix: "/web-dev",
+    // pathPrefix: "/web-dev",
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
