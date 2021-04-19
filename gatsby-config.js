@@ -77,11 +77,17 @@ module.exports = {
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-source-ghost`,
-            options:
-                process.env.NODE_ENV === `development`
-                    ? ghostConfig.development
-                    : ghostConfig.production,
+            options: {
+              apiUrl: `https://sdv.ghost.io`,
+              contentApiKey: `68a3f60d2555e5dff8a5df9e11`,
+            },
+            // options:
+            //     process.env.NODE_ENV === `development`
+            //         ? ghostConfig.development
+            //         : ghostConfig.production,
         },
+
+        
         /**
          *  Utility Plugins
          */
