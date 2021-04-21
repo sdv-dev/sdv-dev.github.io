@@ -57,7 +57,7 @@ const Index = ({ data, location, pageContext }) => {
                     </AllArticlesWrap>
 
                     <section className="flex flex-wrap -mx-6">
-                        {posts.filter(({node}) => node.id !== "Ghost__Post__607f0356ade17a003b4ca9f3").map(({ node }) => (
+                        {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <>
                             <PostCard key={node.id} post={node} />
