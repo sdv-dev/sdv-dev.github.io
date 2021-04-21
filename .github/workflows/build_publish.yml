@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - ghost-blog
+      - main
   repository_dispatch:
     branches:
       - ghost-blog
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
