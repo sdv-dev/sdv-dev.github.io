@@ -6,12 +6,13 @@ import Img from "gatsby-image";
 
 import { Navigation } from ".";
 import Footer from '../../components/Footer';
+import Cta from '../../components/Cta'
 // import config from "../../utils/siteConfig";
 
 import MoreArticles from '../MoreArticles'
 
 import favicon from '../../../static/favicon.ico';
-
+import Logo from "../../../assets/sdv-blog-logo.svg";
 
 /**
  * Main layout component
@@ -43,10 +44,13 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                 <div className="viewport-top">
                     <Navigation
                         data={site.navigation}
-                        navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item text-xl"
+                        navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
                         <Link to="/">
-                            {site.logo ? (
+                        <div className="w-20">
+                                <Logo />
+                            </div>
+                            {/* {site.logo ? (
                                 <img
                                     width="80"
                                     height="44"
@@ -59,7 +63,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                                     fixed={data.file.childImageSharp.fixed}
                                     alt={site.title}
                                 />
-                            )}
+                            )} */}
                         </Link>
                     </Navigation>
                  
@@ -71,7 +75,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                         </div>) : ''}
                     </main>
                 </div>
-
+                <Cta />
                 <Footer/>
                   </div>
         </>

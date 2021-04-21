@@ -28,9 +28,9 @@ const Index = ({ data, location, pageContext }) => {
             <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
-                    {location.pathname === "/" ? (
+                    {location.pathname === "/" || location.pathname === "/web-dev/" || location.pathname === "/blog/" ? (
                         <>
-                            <h2 className="mb-10 lg:mb-14 lg:text-left text-center">
+                            <h2 className="mb-10 lg:mb-14 lg:text-left text-center text-sdv-heading">
                                 Featured Article
                             </h2>
                             <FeaturedArticleWrap>
@@ -57,9 +57,11 @@ const Index = ({ data, location, pageContext }) => {
                     </AllArticlesWrap>
 
                     <section className="flex flex-wrap -mx-6">
-                        {all.map(({ node }) => (
+                        {posts.filter(({node}) => node.id !== "Ghost__Post__607f0356ade17a003b4ca9f3").map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
+                            <>
                             <PostCard key={node.id} post={node} />
+                            </>
                         ))}
                     </section>
                     <Pagination pageContext={pageContext} />

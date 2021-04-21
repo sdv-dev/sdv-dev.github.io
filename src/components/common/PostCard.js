@@ -9,7 +9,7 @@ const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
 
     return (
-        <Link to={url} className="w-full md:w-6/12 lg:w-4/12 px-6 mb-14" key={`blog-article-${post.id}`}>
+        <Link to={url} className="w-full md:w-6/12 lg:w-4/12 px-6 mb-14 link-wrap" key={`blog-article-${post.id}`}>
             <header
                 style={{
                 boxShadow: "0px 15px 35px rgba(0, 0, 0, 0.05)",
@@ -51,7 +51,7 @@ const PostCard = ({ post }) => {
                 {post.excerpt}
                 </p>
                 <p>
-                    <div className="text-sdv-link font-bold">Read more <FontAwesomeIcon width="16" icon={faArrowRight} /></div>
+                    <div className="read-more font-bold">Read more <FontAwesomeIcon width="16" icon={faArrowRight} /></div>
                 </p>
             </div>
         </Link>

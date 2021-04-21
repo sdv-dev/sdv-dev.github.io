@@ -16,6 +16,7 @@ export default function MoreArticles() {
               title
               slug
               published_at(formatString: "MMMM DD, YYYY")
+              published_at_pretty: published_at(formatString: "DD MMMM, YYYY")
               authors {
                 bio
                 cover_image

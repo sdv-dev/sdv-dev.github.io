@@ -11,6 +11,8 @@ import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import ProgressBar from "react-scroll-progress-bar";
 
+import config from "../utils/siteConfig"
+
 /**
  * Single post view (/:slug)
  *
@@ -121,7 +123,7 @@ const Post = ({ data, location }) => {
                                         <Link
                                             target="_blank"
                                             rel="noopener"
-                                            to={`https://twitter.com/intent/tweet/?text=${post.title}&url=https://sdv.dev/blog/${post.slug}&hashtags=syntheticdatavault`}
+                                            to={`https://twitter.com/intent/tweet/?text=${post.title}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
                                             className="w-10 h-10 flex justify-center items-center text-sdv-mute bg-sdv-font inline-block rounded-full"
                                         >
                                             <FontAwesomeIcon
@@ -134,7 +136,7 @@ const Post = ({ data, location }) => {
                                         <Link
                                             target="_blank"
                                             rel="noopener"
-                                            to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev/blog/${post.slug}`}
+                                            to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
                                             className="w-10 h-10 flex justify-center items-center text-sdv-mute bg-sdv-font inline-block rounded-full"
                                         >
                                             <FontAwesomeIcon

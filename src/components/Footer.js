@@ -9,10 +9,10 @@ import { Link } from "gatsby"
 
 export default function Footer() {
   return (
-    <section className="-mt-20 bg-white z-10 relative pt-36">
+    <section className="bg-white z-10 relative pt-36">
       <div className="container mx-auto mb-20 md:mb-11">
         <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-6">
-          <div className="flex-shrink w-full md:w-3/12 px-6">
+          <div className="flex-shrink w-full md:w-3/12 px-6 mb-10">
             <Logo width="83" height="45" />
             <div className="flex flex-row -mx-1 mt-4">
               <div className="px-1">
@@ -31,9 +31,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex-grow md:w-9/12 mx-6 px-3">
+          <div className="flex-grow md:w-9/12 px-6">
             <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer">
+              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer mb-4">
                 <p className="font-bold mb-6">Site</p>
                 <ul className="font-light">
                   <li className="mb-4">
@@ -43,7 +43,7 @@ export default function Footer() {
                   
                 </ul>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer">
+              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer mb-4">
                 <p className="font-bold mb-6">Documenation</p>
                 <ul className="font-light">
                   <li className="mb-4">
@@ -56,7 +56,7 @@ export default function Footer() {
                     <Link className="hover:underline" to="https://sdv.dev/SDV/developer_guides/index.html">Developers</Link></li>
                 </ul>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer">
+              <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer mb-4">
                 <p className="font-bold mb-6">Github</p>
                 <ul className="font-light">
                   <li className="mb-4">

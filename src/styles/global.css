@@ -12,31 +12,45 @@
     @apply text-6xl;
     @apply leading-snug;
     @apply font-bold;
+    @apply text-sdv-heading;
   }
   h2 {
     @apply text-4xl;
     @apply leading-none;
     @apply font-bold;
+    @apply text-sdv-heading;
   }
   h3 {
     @apply text-3xl;
     @apply leading-snug;
     @apply font-bold;
+    @apply text-sdv-heading;
   }
   h4 {
     @apply text-2xl;
     @apply leading-snug;
     @apply font-bold;
+    @apply text-sdv-heading;
   }
   h5 {
     @apply text-lg;
     @apply leading-snug;
     @apply font-bold;
+    @apply text-sdv-heading;
   }
   h6 {
     @apply text-sm;
     @apply leading-snug;
     @apply font-bold;
+    @apply text-sdv-heading;
+  }
+
+  .link-wrap .read-more {
+    @apply text-sdv-heading;
+  }
+
+  .link-wrap:hover .read-more {
+    @apply text-sdv-heading;
   }
 
   ul.dashed > li:before {

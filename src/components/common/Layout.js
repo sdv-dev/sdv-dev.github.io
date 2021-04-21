@@ -6,11 +6,13 @@ import Img from "gatsby-image";
 
 import { Navigation } from ".";
 import Footer from '../../components/Footer';
+import Cta from '../../components/Cta'
 import config from "../../utils/siteConfig";
-
 
 import HeroImage from "../../../assets/blog-hero.svg";
 import favicon from '../../../static/favicon.ico';
+
+import Logo from "../../../assets/sdv-blog-logo.svg";
 
 /**
  * Main layout component
@@ -49,10 +51,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </div>
                     <Navigation
                         data={site.navigation}
-                        navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item text-xl"
+                        navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
                         <Link to="/">
-                            {site.logo ? (
+                            <div className="w-20">
+                                <Logo />
+                            </div>
+                            {/* {site.logo ? (
                                 <img
                                     width="80"
                                     height="44"
@@ -65,7 +70,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     fixed={data.file.childImageSharp.fixed}
                                     alt={site.title}
                                 />
-                            )}
+                            )} */}
                         </Link>
                     </Navigation>
                     <header
@@ -80,13 +85,14 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             <div className="md:pt-20">
                                 <div className="container mx-auto">
                                     <div className="flex flex-wrap -mx-6 justify-center lg:justify-between items-center">
-                                        <div className="w-full lg:w-6/12 px-6 mt-28 md:mt-0 text-sdv-font text-center lg:text-left">
+                                        <div className="w-full lg:w-6/12 px-6 mt-28 lg:mt-0 text-sdv-font text-center lg:text-left">
                                             <h1 className="self-center leading-none ">
-                                                {site.title}
+                                                Blog
+                                                {/* {site.title} */}
                                             </h1>
-                                            <p className="text-2xl">
+                                            {/* <p className="text-2xl">
                                                 {site.description}
-                                            </p>
+                                            </p> */}
                                         </div>
                                         <div className="w-10/12 sm:w-8/12 lg:w-5/12 px-6">
                                             <Img
@@ -108,9 +114,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <main className="">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         <div
-                            className="bg-sdv-placeholder mx-auto rounded-10 pt-20 z-10 relative mb-40"
+                            className="bg-sdv-placeholder mx-auto rounded-t-10 pt-20 z-10 relative"
                             style={{
-                                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                                // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                                 maxWidth: "1300px",
                             }}
                         >
@@ -118,7 +124,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </div>
                     </main>
                 </div>
-
+                            <Cta />
                             <Footer />
            </div>
         </>
