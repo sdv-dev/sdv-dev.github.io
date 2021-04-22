@@ -79,6 +79,11 @@ module.exports = {
       },
       padding: {
         '4/3': '75%',
+        'pimg-lg': '32.15%',
+        'pimg-md': '56%',
+        'pimg-sm': '60%',
+        'pimg-xs': '90%',
+        'cimg-xs': '78%',
       },
       spacing: {
         'input': '1.125rem',

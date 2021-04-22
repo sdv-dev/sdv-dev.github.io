@@ -21,8 +21,8 @@ const navItems = [
 url: 'https://sdv.dev/SDV'},
 {label: 'GitHub',
 url: 'https://github.com/sdv-dev'},
-{label: 'Blog',
-url: 'https://sdv.dev/blog'}
+{label: 'SDV',
+url: 'https://sdv.dev/'}
 ]
 
 const Navigation = ({ data, navClass, children }) => {
@@ -73,6 +73,10 @@ const Navigation = ({ data, navClass, children }) => {
             window.removeEventListener("scroll", changeNavBackground);
         };
     });
+
+    useEffect(() => {
+        window.addEventListener('load', changeNavBackground);
+    })
 
     return (
         <nav

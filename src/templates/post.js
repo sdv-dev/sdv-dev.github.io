@@ -30,20 +30,20 @@ const Post = ({ data, location }) => {
             </Helmet>
             <ProgressBar bgcolor="#000036" />
             <Article isPost={true}>
-                <div className="pt-32 bg-sdv-green pb-28">
-                    <div className="container mx-auto" style={{ maxWidth: "560px"}}>
-                        <div className="flex flex-wrap -mx-6 justify-center items-center">
+                <div className="pt-20">
+                    <div className="w-full feature-image relative h-0 pb-pimg-xs sm:pb-pimg-sm lg:pb-pimg-lg">
+                        
                             {post.feature_image ? (
                                 <img
                                     src={post.feature_image}
                                     alt={post.title}
-                                    className="block object-contain h-64 w-full"
+                                    className="absolute inset-0 md:w-full h-full object-cover object-center"
                                 />
                             ) : ''}
-                        </div>
+                        
                     </div>
                 </div>
-                <div className=" flex justify-center items-center -mt-20">
+                <div className=" flex justify-center items-center -mt-10 md:-mt-20">
                     <article className="container max-w-5xl bg-white px-6 pt-10 lg:p-20 relative">
                         
                         <h1 className="leading-none text-5xl mb-6">
@@ -112,9 +112,7 @@ const Post = ({ data, location }) => {
                         ) : (
                             ""
                         )}
-                        <div className="leading-relaxed mb-4">
-                            <p>{post.excerpt}</p>
-                        </div>
+                       
                         <div className="post">
                         <section className="transform w-12 -translate-x-20 absolute inset-0 pt-36 z-0">
                             <div className="relative z-10">

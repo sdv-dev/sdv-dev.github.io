@@ -8,15 +8,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function FeaturedArticle({ post, featuredImg }) {
     return (
         <>
-            <Link to={post.slug} className="link-wrap flex flex-wrap rounded-10 relative">
+            <Link to={post.slug} className="link-wrap flex flex-wrap rounded-10 relative w-full">
                 <div
-                    className="w-full md:w-5/12
-                  px-10 py-10 md:py-16
+                    className="w-full md:w-5/12 overflow-hidden
                   rounded-tl-10 md:rounded-bl-10 rounded-tr-10 md:rounded-tr-none
                   border border-t-stroke border-b-none md:border-b-stroke border-l-stroke border-r-stroke md:border-r-0
-                  bg-white flex justify-center relative z-10"
+                  bg-white justify-center relative z-10"
                 >
-                    <img src={post.feature_image} className=" block object-contain h-48 w-full"></img>
+                    <div className="w-full feature-image relative h-full pb-pimg-sm md:pb-pimg-md"><img src={post.feature_image} className="absolute inset-0 md:w-full h-full object-cover object-center"></img></div>
                 </div>
                 <div
                     className="bg-white w-full md:w-7/12 xl:pl-28

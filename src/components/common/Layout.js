@@ -87,7 +87,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <div className="flex flex-wrap -mx-6 justify-center lg:justify-between items-center">
                                         <div className="w-full lg:w-6/12 px-6 mt-28 lg:mt-0 text-sdv-font text-center lg:text-left">
                                             <h1 className="self-center leading-none ">
-                                                Blog
+                                                Welcome to the SDV Blog
                                                 {/* {site.title} */}
                                             </h1>
                                             {/* <p className="text-2xl">
