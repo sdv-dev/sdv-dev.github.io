@@ -28,18 +28,29 @@ url: 'https://sdv.dev/'}
 const Navigation = ({ data, navClass, children }) => {
     const ref = useRef();
 
-    const [isLarge, setNavbarLarge] = useState(true);
+    const [isWhite, setNavbarColor] = useState(false);
 
     const changeNavBackground = () => {
         const scrolledThrough = window.scrollY >= 30;
-        if (scrolledThrough && isLarge) {
+        if (scrolledThrough && isWhite) {
             document.body.classList.add("nav-bg-white");
-            setNavbarLarge(false);
+            setNavbarColor(false);
         } else if (!scrolledThrough) {
             document.body.classList.remove("nav-bg-white");
-            setNavbarLarge(true);
+            setNavbarColor(true);
         }
-    };
+    };  
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeNavBackground);
+        return () => {
+            window.removeEventListener("scroll", changeNavBackground);
+        };
+    });
+    
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const useOutsideClick = (ref, callback) => {
         const handleClick = (e) => {
@@ -67,20 +78,9 @@ const Navigation = ({ data, navClass, children }) => {
 
     const handleNavCollapse = () => setNavActive(!isActive);
 
-    useEffect(() => {
-        window.addEventListener("scroll", changeNavBackground);
-        return () => {
-            window.removeEventListener("scroll", changeNavBackground);
-        };
-    });
-
-    useEffect(() => {
-        window.addEventListener('load', changeNavBackground);
-    })
-
     return (
         <nav
-            className="h-20 flex flex-col justify-center items-center z-50 fixed w-full"
+            className={`h-20 flex flex-col justify-center items-center z-50 fixed w-full`}
             id="navbar"
             ref={ref}
         >

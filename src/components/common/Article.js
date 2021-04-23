@@ -41,7 +41,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
             </Helmet>
 
             <div className="overflow-x-hidden">
-                <div className="viewport-top">
+                <div className="viewport-top nav-bg-white">
                     <Navigation
                         data={site.navigation}
                         navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
