@@ -66,7 +66,7 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
                 {settings.twitter && <meta name="twitter:creator" content={settings.twitter} />}
                 <script type="application/ld+json">{JSON.stringify(jsonLd, undefined, 4)}</script>
             </Helmet>
-            <ImageMeta image={shareImage} />
+            <ImageMeta image={sharableImage} />
         </>
     )
 }
