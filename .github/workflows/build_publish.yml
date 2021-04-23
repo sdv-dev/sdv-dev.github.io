@@ -19,3 +19,7 @@ jobs:
           access-token: ${{ secrets.BLOG_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
+
+        env: 
+          SITEURL: ${{ secrets.SITEURL }}
+          SITEPATH: ${{ secrets.SITEPATH }}

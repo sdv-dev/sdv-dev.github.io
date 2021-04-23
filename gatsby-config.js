@@ -26,6 +26,8 @@ if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhos
     throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
 }
 
+const password =  process.env.SITEPATH === 'web-dev' ? 'sdv5678' : undefined;
+
 /**
 * This is the place where you can tell Gatsby which plugins to use
 * and set them up the way you want.
@@ -34,11 +36,17 @@ if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhos
 *
 */
 module.exports = {
-    pathPrefix: "/blog",
+    pathPrefix: "/" + process.env.SITEPATH,
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
     plugins: [
+        {
+            resolve: '@mkitio/gatsby-theme-password-protect',
+            options: {
+              password: password // delete or `undefined` to disable password protection
+            }
+        },
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
