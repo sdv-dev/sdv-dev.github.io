@@ -121,7 +121,7 @@ const Post = ({ data, location }) => {
                                         <Link
                                             target="_blank"
                                             rel="noopener"
-                                            to={`https://twitter.com/intent/tweet/?text=${post.title}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
+                                            to={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(post.title)}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
                                             className="w-10 h-10 flex justify-center items-center text-sdv-mute bg-sdv-font inline-block rounded-full"
                                         >
                                             <FontAwesomeIcon
