@@ -20,8 +20,7 @@ import AllArticlesWrap from "../components/AllArticlesWrap";
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges;
     const tags = data.allGhostTag.edges;
-    const featured = posts[0];
-    const all = posts.slice(1);
+    const featured = data.featured.edges[0];
 
     return (
         <>
@@ -96,6 +95,34 @@ export const pageQuery = graphql`
                 node {
                     ...GhostPostFields
                 }
+            }
+        }
+        featured: allGhostPost(filter: {featured: {eq: true}}, limit: 1) {
+            edges {
+            node {
+                featured
+                id
+                excerpt
+                updated_at(formatString: "MMMM DD, YYYY")
+                title
+                slug
+                published_at(formatString: "MMMM DD, YYYY")
+                published_at_pretty: published_at(formatString: "DD MMMM, YYYY")
+                authors {
+                bio
+                cover_image
+                name
+                profile_image
+                url
+                }
+                primary_author {
+                name
+                profile_image
+                }
+                meta_description
+                meta_title
+                feature_image
+            }
             }
         }
         allGhostTag {
