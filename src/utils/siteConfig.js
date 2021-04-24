@@ -1,7 +1,8 @@
 module.exports = {
-    siteUrl: (process.env.NODE_ENV === `development`) ? `http://localhost:8000` : process.env.SITEURL, // Site domain. Do not include a trailing slash!
+    // siteUrl: `http://localhost:8000`, // Site domain. Do not include a trailing slash!
+    siteUrl: `https://sdv.dev`, // Site domain. Do not include a trailing slash!
 
-    sitePath: (process.env.NODE_ENV === `development`) ? `/` : `/${process.env.SITEPATH}/`,
+    sitePath: `/blog/`,
     
     postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
