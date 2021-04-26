@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 
 import { Article } from "../components/common";
 import { MetaData } from "../components/common/meta";
+import AuthorPost from "../components/AuthorPost"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -46,58 +47,14 @@ const Post = ({ data, location }) => {
                 <div className=" flex justify-center items-center -mt-10 md:-mt-20">
                     <article className="container max-w-5xl bg-white px-6 pt-10 lg:p-20 relative">
                         
-                        <h1 className="leading-none text-5xl mb-6">
+                        <h1 className="leading-none text-5xl mb-3">
                             {post.title}
                         </h1>
+                        <p className="font-light mb-6">
+                            {post.published_at_pretty}
+                        </p>
 
-                        <section className="flex flew-row mb-6">
-                            <div className="relative">
-                                <div
-                                    className="rounded-full bg-sdv-highlight top-0 left-0"
-                                    style={{
-                                        width: "48px",
-                                        height: "48px",
-                                    }}
-                                >
-                                    <div
-                                        className="overflow-hidden rounded-full absolute bottom-0 right-0"
-                                        style={{
-                                            width: "46px",
-                                            height: "46px",
-                                        }}
-                                    >
-                                        {post.primary_author.profile_image ? (
-                                            <img
-                                                width={46}
-                                                height={46}
-                                                className="block rounded-full relative z-10"
-                                                src={
-                                                    post.primary_author
-                                                        .profile_image
-                                                }
-                                                alt={post.primary_author.name}
-                                            />
-                                        ) : (
-                                            <img
-                                                width={46}
-                                                height={46}
-                                                className="block rounded-full relative z-10"
-                                                src="/images/icons/avatar.svg"
-                                                alt={post.primary_author.name}
-                                            />
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="text-xs px-4 flex flex-col justify-center">
-                                <p className="font-bold text-xs">
-                                    {post.primary_author.name}
-                                </p>
-                                <p className="font-light">
-                                    {post.published_at_pretty}
-                                </p>
-                            </div>
-                        </section>
+                        <AuthorPost post={post} />
                         {post.primary_tag ? (
                             <div className="flex flex-grow -mx-6 font-light mb-8 lg:mb-14">
                                 <div className="px-6">
