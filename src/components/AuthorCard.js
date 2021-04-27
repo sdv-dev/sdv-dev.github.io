@@ -6,13 +6,12 @@ export default function AuthorCard({ post }) {
   if (typeof authors[1] === "object") {
     return (
       <section className="flex flew-row mb-6">
-        <div className="relative mr-3">
-          <div
-            className="rounded-full bg-sdv-highlight top-0 left-0"
-            style={{
+        <div className="relative mr-3" style={{
               width: "49px",
               height: "49px",
-            }}
+            }}>
+          <div
+            className="rounded-full bg-sdv-highlight top-0 left-0  h-full w-full"
           >
             <div
               className="overflow-hidden rounded-full absolute bottom-0 right-0"
@@ -42,13 +41,13 @@ export default function AuthorCard({ post }) {
           </div>
         </div>
 
-        <div className="relative">
-          <div
-            className="rounded-full bg-sdv-highlight top-0 left-0"
-            style={{
+        <div className="relative" style={{
               width: "49px",
               height: "49px",
-            }}
+            }}>
+          <div
+            className="rounded-full bg-sdv-highlight top-0 left-0 h-full w-full"
+            
           >
             <div
               className="overflow-hidden rounded-full absolute bottom-0 right-0"
