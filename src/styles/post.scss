@@ -68,6 +68,14 @@
   figcaption {
     text-align: center;
     font-style: italic;
+
+    a {
+      border-bottom: 1px dotted #03AFF1;
+      color: #03AFF1;
+      &:hover {
+        border-bottom: 1px solid #03AFF1;
+      }
+    }
   }
 
   blockquote {

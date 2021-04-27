@@ -114,7 +114,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <main className="">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         <div
-                            className="bg-sdv-placeholder mx-auto rounded-t-10 pt-20 z-10 relative"
+                            className="bg-sdv-offwhite mx-auto rounded-t-10 pt-20 z-10 relative"
                             style={{
                                 // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                                 maxWidth: "1300px",

@@ -23,22 +23,26 @@ const Tag = ({ data, location, pageContext }) => {
                 type="series"
             />
             <Article hasMoreArticles={false}>
-            <div className="lg:pt-32 pt-20 bg-sdv-green p-16">
-                <div className="container mx-auto">
-                    <div className="flex flex-wrap -mx-6 justify-center items-center">
-                    <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white text-center">
-                        <h1 className="leading-none ">
-                            {tag.name}
-                        </h1>
-                        {tag.description ? <p className="text-2xl">
-                            {tag.description}
-                        </p> : null }
-                        
-                    </div>
+            <div className=" pt-20">
+                <div className="bg-sdv-highlight w-full feature-image relative h-0 pb-pimg-md lg:pb-pimg-lg" style={{background: 'linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)'}}>
+                    <div className="absolute inset-0 flex justify-center items-center">
+                        <div className="container mx-auto">
+                            <div className="flex flex-wrap -mx-6 justify-center items-center">
+                            <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white text-center">
+                                <h1 className="leading-none text-white text-6xl lg:text-8xl ">
+                                    {tag.name}
+                                </h1>
+                                {tag.description ? <p className="text-2xl">
+                                    {tag.description}
+                                </p> : null }
+                
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-                <div className="container">
+                <div className="container -mt-20  md:-mt-28">
                     
                     <section className="flex flex-wrap -mx-6 pt-12">
                         {posts.map(({ node }) => (

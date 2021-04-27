@@ -8,10 +8,10 @@ export default function AuthorCard({ post }) {
       <section className="flex flew-row mb-6">
         <div className="relative mr-3">
           <div
-            className="rounded-full bg-sdv-link top-0 left-0"
+            className="rounded-full bg-sdv-highlight top-0 left-0"
             style={{
-              width: "48px",
-              height: "48px",
+              width: "49px",
+              height: "49px",
             }}
           >
             <div
@@ -44,10 +44,10 @@ export default function AuthorCard({ post }) {
 
         <div className="relative">
           <div
-            className="rounded-full bg-sdv-link top-0 left-0"
+            className="rounded-full bg-sdv-highlight top-0 left-0"
             style={{
-              width: "48px",
-              height: "48px",
+              width: "49px",
+              height: "49px",
             }}
           >
             <div
@@ -78,11 +78,11 @@ export default function AuthorCard({ post }) {
           </div>
         </div>
 
-        <div className="text-xs px-4 flex flex-col justify-center">
-          <p className=" text-xs">
+        <div className="px-4 flex flex-col justify-center">
+          <p className="text-sm">
             by <strong className="font-bold">{authors[0].name}</strong> and <strong className="font-bold">{authors[1].name}</strong>
           </p>
-          <p className="font-light">{post.published_at_pretty}</p>
+          <p className="font-light text-xs">{post.published_at_pretty}</p>
         </div>
       </section>
     );
@@ -92,10 +92,10 @@ export default function AuthorCard({ post }) {
     <section className="flex flew-row mb-6">
       <div className="relative">
         <div
-          className="rounded-full bg-sdv-link top-0 left-0"
+          className="rounded-full bg-sdv-highlight top-0 left-0"
           style={{
-            width: "48px",
-            height: "48px",
+            width: "49px",
+            height: "49px",
           }}
         >
           <div
@@ -125,9 +125,9 @@ export default function AuthorCard({ post }) {
           </div>
         </div>
       </div>
-      <div className="text-xs px-4 flex flex-col justify-center">
-        <p className="font-bold text-xs">{post.primary_author.name}</p>
-        <p className="font-light">{post.published_at_pretty}</p>
+      <div className="px-4 flex flex-col justify-center">
+        <p className="font-bold text-sm">{post.primary_author.name}</p>
+        <p className="font-light text-xs">{post.published_at_pretty}</p>
       </div>
     </section>
   );

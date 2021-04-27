@@ -43,7 +43,7 @@ export default function MoreArticles() {
         <section className="my-10">
           <div>
             <h3>More Articles</h3>
-            <div className="w-16 h-0.5 bg-sdv-green mt-6 mb-12"></div>
+            <div className="w-16 h-0.5 bg-sdv-highlight mt-6 mb-12"></div>
           </div>
           <div className="flex flex-wrap -mx-6">
             

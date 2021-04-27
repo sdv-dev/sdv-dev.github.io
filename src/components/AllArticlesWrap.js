@@ -54,7 +54,7 @@ export default function AllArticlesWrap({ children }) {
                                     />
                                 </div>
                                 <h3>All Articles</h3>
-                                <div className="w-20 h-0.5 bg-sdv-separator mb-6 md:mb-0"></div>
+                                <div className="w-20 h-0.5 bg-sdv-highlight mb-6 md:mb-0"></div>
                             </div>
                             <div className="w-auto flex-grow px-6">
                                 {children}

@@ -17,11 +17,14 @@ module.exports = {
       'base': '1rem',    //16
       'lg': '1.125rem',  //18
       'xl': '1.25rem',  //20
-      '2xl': '1.5rem',  //24
-      '3xl': '2rem',     //32
-      '4xl': '2.625rem', //42
-      '5xl': '3rem',     //48 - h1 on mobile
-      '6xl': '3.25rem',  //52
+      '2xl': '1.375rem',  //22
+      '3xl': '1.5rem',     //24
+      '4xl': '1.75rem', //28
+      '5xl': '2rem',     //32 - h1 on mobile
+      '6xl': '2.25rem',  //36
+      '7xl': '2.5rem',  //40
+      '8xl': '3rem',  //48
+      '9xl': '3.5rem',  //56
     },
     screens: {
       'sm': '640px',
@@ -47,25 +50,28 @@ module.exports = {
       },
       colors: {
         sdv: {
-          white: '#FFFFFF',
-          placeholder: '#FAFAFA',
-          mute: '#F1F2F9',
-          disabled: '#C8CCD8',
-          secondary: '#8A90A2',
-          primary: '#2D3142',
-          purple: '#7550EE',
-          pink: '#FF3B9B',
-          green: '#01DFC8', // sdv
-          dark: '#24292E',
-          font: '#183B56',
-          stroke: '#E5EAF4',
-          link: '#03AFF1',
-          heading: '#000036',
-          subheading: '#24292E',
           highlight: '#03C8DE',
-          separator: '#02C7DD',
-          footer: '#183B56',
-          fbg: '#B3BAC5',
+          primary: '#01E0C9',
+          secondary: '#03AFF1',
+          success: '#36B37E',
+          warning: '#FAAD13',
+          error: '#F16141',
+          dark: '#000036',
+          gray: '#231F20',
+          graylight: '#F7F7F8',
+          offwhite: '#FAFAFA',
+        },
+
+        light: {
+          primary: 'rgba(1, 224, 201, .1)',
+          secondary: 'rgba(3, 175, 241, .1)',
+          success: 'rgba(54, 179, 126, .1)',
+          warning: 'rgba(250, 173, 19, .1)',
+          error: 'rgba(241, 97, 65, .1)',
+          dark: 'rgba(0, 0, 54, .1)',
+          gray: 'rgba(35, 31, 32, .1)',
+          graylight: 'rgba(247, 247, 248, .1)',
+          offwhite: 'rgba(250, 250, 250, .1)',
         }
       },
       letterSpacing: {
@@ -73,6 +79,7 @@ module.exports = {
       },
       lineHeight: {
         'extra-loose': '1.85',
+        'extra-relaxed': '1.75',
       },
       maxWidth: {
         form: "956px"
@@ -84,6 +91,7 @@ module.exports = {
         'pimg-sm': '60%',
         'pimg-xs': '90%',
         'cimg-xs': '78%',
+        '21/9': '35%'
       },
       spacing: {
         'input': '1.125rem',

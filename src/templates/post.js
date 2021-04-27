@@ -31,6 +31,7 @@ const Post = ({ data, location }) => {
             </Helmet>
             <ProgressBar bgcolor="#000036" />
             <Article isPost={true}>
+                
                 <div className="pt-20">
                     <div className="w-full feature-image relative h-0 pb-pimg-xs sm:pb-pimg-sm lg:pb-pimg-lg">
                         
@@ -44,13 +45,81 @@ const Post = ({ data, location }) => {
                         
                     </div>
                 </div>
-                <div className=" flex justify-center items-center -mt-10 md:-mt-20">
-                    <article className="container max-w-5xl bg-white px-6 pt-10 lg:p-20 relative">
+                <div className="-mt-10 md:-mt-20 relative">
+                
+                 <div className="container max-w-7xl h-full z-0 mx-auto relative">
+                 <section className="absolute left-0 pt-36 z-0 absolute hidden xl:block">
                         
-                        <h1 className="leading-none text-5xl mb-3">
+                            <div className="flex flex-col mt-16 w-10 z-10 relative ">
+                                <div className="px-1 pb-3">
+                                    <Link
+                                        target="_blank"
+                                        rel="noopener"
+                                        to={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(post.title)}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
+                                        className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                    >
+                                        <FontAwesomeIcon
+                                            width="16"
+                                            icon={faTwitter}
+                                        />
+                                    </Link>
+                                </div>
+                                <div className="px-1 pb-3">
+                                    <Link
+                                        target="_blank"
+                                        rel="noopener"
+                                        to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                        className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                    >
+                                        <FontAwesomeIcon
+                                            width="16"
+                                            icon={faLinkedin}
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
+                        
+                    </section>
+                 </div>       
+                    
+                    <article className="container max-w-5xl bg-white px-6 pt-10 md:pt-20 md:px-10 lg:p-20 relative">
+                        
+                        <h1 className="leading-none text-6xl lg:text-8xl mb-3">
                             {post.title}
                         </h1>
-                        <p className="font-light mb-6">
+
+                        <div className="block xl:hidden">
+                        <div className="flex flex-row">
+                                <div className="px-1 pb-3">
+                                    <Link
+                                        target="_blank"
+                                        rel="noopener"
+                                        to={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(post.title)}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
+                                        className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                    >
+                                        <FontAwesomeIcon
+                                            width="16"
+                                            icon={faTwitter}
+                                        />
+                                    </Link>
+                                </div>
+                                <div className="px-1 pb-3">
+                                    <Link
+                                        target="_blank"
+                                        rel="noopener"
+                                        to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                        className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                    >
+                                        <FontAwesomeIcon
+                                            width="16"
+                                            icon={faLinkedin}
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="font-light text-xs mb-6">
                             {post.published_at_pretty}
                         </p>
 
@@ -71,43 +140,43 @@ const Post = ({ data, location }) => {
                         )}
                        
                         <div className="post">
-                        <section className="transform w-12 -translate-x-20 absolute inset-0 pt-36 z-0">
-                            <div className="relative z-10">
-                                <div className="flex flex-col sticky top-56">
-                                    <div className="p-1">
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            to={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(post.title)}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
-                                            className="w-10 h-10 flex justify-center items-center text-sdv-mute bg-sdv-font inline-block rounded-full"
-                                        >
-                                            <FontAwesomeIcon
-                                                width="16"
-                                                icon={faTwitter}
-                                            />
-                                        </Link>
-                                    </div>
-                                    <div className="p-1">
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
-                                            className="w-10 h-10 flex justify-center items-center text-sdv-mute bg-sdv-font inline-block rounded-full"
-                                        >
-                                            <FontAwesomeIcon
-                                                width="16"
-                                                icon={faLinkedin}
-                                            />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
                             <section
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
+                            <div className="">
+                                <div className="flex flex-row items-center">
+                                <div className="px-1 pb-3 font-light text-lg">Share: </div>
+                                        <div className="px-1 pb-3">
+                                            <Link
+                                                target="_blank"
+                                                rel="noopener"
+                                                to={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(post.title)}&url=https://sdv.dev${config.sitePath}${post.slug}&hashtags=syntheticdatavault`}
+                                                className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                            >
+                                                <FontAwesomeIcon
+                                                    width="16"
+                                                    icon={faTwitter}
+                                                />
+                                            </Link>
+                                        </div>
+                                        <div className="px-1 pb-3">
+                                            <Link
+                                                target="_blank"
+                                                rel="noopener"
+                                                to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                                className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
+                                            >
+                                                <FontAwesomeIcon
+                                                    width="16"
+                                                    icon={faLinkedin}
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </article>
+                   
                 </div>
             </Article>
         </>

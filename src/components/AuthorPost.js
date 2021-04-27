@@ -12,10 +12,10 @@ export default function AuthorPost({post}) {
                         <section className="flex flew-row mb-6 mr-4">
                             <div className="relative">
                                 <div
-                                    className="rounded-full bg-sdv-link top-0 left-0"
+                                    className="rounded-full bg-sdv-highlight top-0 left-0"
                                     style={{
-                                        width: "48px",
-                                        height: "48px",
+                                        width: "49px",
+                                        height: "49px",
                                     }}
                                 >
                                     <div
@@ -63,7 +63,7 @@ export default function AuthorPost({post}) {
     <section className="flex flew-row mb-6">
       <div className="relative">
           <div
-              className="rounded-full bg-sdv-link top-0 left-0"
+              className="rounded-full bg-sdv-highlight top-0 left-0"
               style={{
                   width: "48px",
                   height: "48px",
@@ -101,7 +101,7 @@ export default function AuthorPost({post}) {
       </div>
       <div className="text-xs px-4 flex flex-col justify-center">
           <p className="text-sm">
-            by <strong className="font-bold ">{post.primary_author.name}</strong>
+            by <strong className="font-bold">{post.primary_author.name}</strong>
           </p>
       </div>
   </section>
