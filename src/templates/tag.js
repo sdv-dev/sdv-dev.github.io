@@ -24,7 +24,7 @@ const Tag = ({ data, location, pageContext }) => {
             />
             <Article hasMoreArticles={false}>
             <div className=" pt-20">
-                <div className="bg-sdv-highlight w-full feature-image relative h-0 pb-pimg-md lg:pb-pimg-lg" style={{background: 'linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)'}}>
+                <div className="bg-sdv-highlight w-full feature-image relative h-40" style={{background: 'linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)'}}>
                     <div className="absolute inset-0 flex justify-center items-center">
                         <div className="container mx-auto">
                             <div className="flex flex-wrap -mx-6 justify-center items-center">
@@ -42,7 +42,7 @@ const Tag = ({ data, location, pageContext }) => {
                     </div>
                 </div>
             </div>
-                <div className="container -mt-20  md:-mt-28">
+                <div className="container">
                     
                     <section className="flex flex-wrap -mx-6 pt-12">
                         {posts.map(({ node }) => (

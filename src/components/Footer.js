@@ -44,7 +44,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer mb-4">
-                <p className="font-bold mb-6">Documenation</p>
+                <p className="font-bold mb-6">Documentation</p>
                 <ul className="font-light">
                   <li className="mb-4">
                     <Link className="hover:underline" to="https://sdv.dev/SDV/getting_started/index.html">Getting Started</Link></li>
