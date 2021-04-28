@@ -68,7 +68,7 @@ const Post = ({ data, location }) => {
                                     <Link
                                         target="_blank"
                                         rel="noopener"
-                                        to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                        to={`https://www.linkedin.com/shareArticle?mini=true&url=https://sdv.dev${config.sitePath}${post.slug}`}
                                         className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
                                     >
                                         <FontAwesomeIcon
@@ -107,7 +107,7 @@ const Post = ({ data, location }) => {
                                     <Link
                                         target="_blank"
                                         rel="noopener"
-                                        to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                        to={`https://www.linkedin.com/shareArticle?mini=true&url=https://sdv.dev${config.sitePath}${post.slug}`}
                                         className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
                                     >
                                         <FontAwesomeIcon
@@ -163,7 +163,7 @@ const Post = ({ data, location }) => {
                                             <Link
                                                 target="_blank"
                                                 rel="noopener"
-                                                to={`https://www.linkedin.com/sharing/share-offsite/?url=https://sdv.dev${config.sitePath}${post.slug}`}
+                                                to={`https://www.linkedin.com/shareArticle?mini=true&url=https://sdv.dev${config.sitePath}${post.slug}`}
                                                 className="w-8 h-8 flex justify-center items-center text-white bg-sdv-dark inline-block rounded-full"
                                             >
                                                 <FontAwesomeIcon
