@@ -40,6 +40,9 @@ const Post = ({ data, location }) => {
                                     src={post.feature_image}
                                     alt={post.title}
                                     className="absolute inset-0 md:w-full h-full object-cover object-center"
+                                    style={{
+                                        "background": 'linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)'
+                                    }}
                                 />
                             ) : ''}
                         
