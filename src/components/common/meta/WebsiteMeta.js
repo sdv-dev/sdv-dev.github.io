@@ -51,6 +51,9 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
     return (
         <>
             <Helmet>
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+                <meta http-equiv="Pragma" content="no-cache"/>
+                <meta http-equiv="Expires" content="0"/>
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <link rel="canonical" href={canonical} />

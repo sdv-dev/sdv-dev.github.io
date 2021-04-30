@@ -20,7 +20,7 @@ import AllArticlesWrap from "../components/AllArticlesWrap";
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges;
     const tags = data.allGhostTag.edges;
-    const featured = data.featured.edges[0];
+    const featured = data.featured !== undefined ? data.featured.edges[0] : data.allGhostPost.edges[0];
 
     return (
         <>
