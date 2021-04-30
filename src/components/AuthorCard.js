@@ -24,7 +24,7 @@ export default function AuthorCard({ post }) {
                 <img
                   width={46}
                   height={46}
-                  className="block rounded-full relative z-10"
+                  className="block rounded-full relative z-10 object-cover h-full"
                   src={authors[0].profile_image}
                   alt={authors[0].name}
                 />
@@ -32,7 +32,7 @@ export default function AuthorCard({ post }) {
                 <img
                   width={46}
                   height={46}
-                  className="block rounded-full relative z-10"
+                  className="block rounded-full relative z-10 object-cover h-full"
                   src="/blog/images/icons/avatar.svg"
                   alt={authors[0].name}
                 />
@@ -60,7 +60,7 @@ export default function AuthorCard({ post }) {
                 <img
                   width={46}
                   height={46}
-                  className="block rounded-full relative z-10"
+                  className="block rounded-full relative z-10 object-cover h-full"
                   src={authors[1].profile_image}
                   alt={authors[1].name}
                 />
@@ -68,7 +68,7 @@ export default function AuthorCard({ post }) {
                 <img
                   width={46}
                   height={46}
-                  className="block rounded-full relative z-10"
+                  className="block rounded-full relative z-10 object-cover h-full"
                   src="/blog/images/icons/avatar.svg"
                   alt={authors[1].name}
                 />
@@ -108,7 +108,7 @@ export default function AuthorCard({ post }) {
               <img
                 width={46}
                 height={46}
-                className="block rounded-full relative z-10"
+                className="block rounded-full relative z-10 object-cover h-full"
                 src={post.primary_author.profile_image}
                 alt={post.primary_author.name}
               />
@@ -116,7 +116,7 @@ export default function AuthorCard({ post }) {
               <img
                 width={46}
                 height={46}
-                className="block rounded-full relative z-10"
+                className="block rounded-full relative z-10 object-cover h-full"
                 src="/blog/images/icons/avatar.svg"
                 alt={post.primary_author.name}
               />

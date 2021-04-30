@@ -29,7 +29,7 @@ export default function AuthorPost({post}) {
                                             <img
                                                 width={46}
                                                 height={46}
-                                                className="block rounded-full relative z-10"
+                                                className="block rounded-full relative z-10 object-cover h-full"
                                                 src={
                                                     item.profile_image
                                                 }
@@ -39,7 +39,7 @@ export default function AuthorPost({post}) {
                                             <img
                                                 width={46}
                                                 height={46}
-                                                className="block rounded-full relative z-10"
+                                                className="block rounded-full relative z-10 object-cover h-full"
                                                 src="/blog/images/icons/avatar.svg"
                                                 alt={item.name}
                                             />
@@ -80,7 +80,7 @@ export default function AuthorPost({post}) {
                       <img
                           width={46}
                           height={46}
-                          className="block rounded-full relative z-10"
+                          className="block rounded-full relative z-10 object-cover h-full"
                           src={
                               post.primary_author
                                   .profile_image
@@ -91,7 +91,7 @@ export default function AuthorPost({post}) {
                       <img
                           width={46}
                           height={46}
-                          className="block rounded-full relative z-10"
+                          className="block rounded-full relative z-10 object-cover h-full"
                           src="/blog/images/icons/avatar.svg"
                           alt={post.primary_author.name}
                       />
