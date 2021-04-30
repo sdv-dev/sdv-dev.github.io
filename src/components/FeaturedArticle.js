@@ -17,7 +17,7 @@ export default function FeaturedArticle({ post, featuredImg }) {
                   border border-t-stroke border-b-none md:border-b-stroke border-l-stroke border-r-stroke md:border-r-0
                   bg-white justify-center relative z-10"
                 >
-                    <div className="w-full feature-image relative h-full pb-pimg-sm md:pb-pimg-md"><img src={post.feature_image} className="absolute inset-0 md:w-full h-full object-cover object-center"></img></div>
+                    <div className="w-full feature-image relative h-full pb-pimg-sm md:pb-pimg-md"><img src={post.feature_image} className="absolute inset-0 md:w-full h-full object-cover object-center" alt={post.title}></img></div>
                 </div>
                 <div
                     className="bg-white w-full md:w-7/12 xl:pl-28
