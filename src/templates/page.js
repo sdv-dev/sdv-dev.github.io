@@ -23,6 +23,9 @@ const Page = ({ data, location }) => {
                 type="website"
             />
             <Helmet>
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+                <meta http-equiv="Pragma" content="no-cache"/>
+                <meta http-equiv="Expires" content="0"/>
                 <style type="text/css">{`${page.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
