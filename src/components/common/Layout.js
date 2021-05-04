@@ -47,7 +47,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         className="relative container mx-auto w-full z-0"
                         style={{ maxWidth: "1680px" }}
                     >
-                        <HeroImage className="absolute right-0 top-0 bottom-0 left-0 md:left-40 lg:left-80 xl:left-auto z-0" />
+                        <HeroImage className="absolute right-0 top-0 bottom-0 left-0 md:left-40 lg:left-80 xl:left-auto z-0 lg:block hidden" />
                     </div>
                     <Navigation
                         data={site.navigation}
@@ -93,8 +93,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             <div className="md:pt-20">
                                 <div className="container mx-auto">
                                     <div className="flex flex-wrap -mx-6 justify-center lg:justify-between items-center">
-                                        <div className="w-full lg:w-6/12 px-6 mt-28 lg:mt-0 text-sdv-font text-center lg:text-left max-w-md">
-                                            <h1 className="self-center leading-none ">
+                                        <div className="w-full lg:w-6/12 px-6 mt-20 sm:mt-24 md:mt-10 lg:mt-0 text-sdv-font text-center lg:text-left max-w-md">
+                                            <h1 className="self-center leading-none sm:block hidden">
                                                 Welcome to the SDV Blog
                                                 {/* {site.title} */}
                                             </h1>
@@ -102,7 +102,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                                 {site.description}
                                             </p> */}
                                         </div>
-                                        <div className="w-10/12 sm:w-8/12 lg:w-5/12 px-6">
+                                        <div className="w-10/12 sm:w-8/12 lg:w-5/12 px-6  sm:block hidden">
                                             <Img
                                                 fadeIn={true}
                                                 fluid={
@@ -122,7 +122,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <main className="">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         <div
-                            className="bg-sdv-offwhite mx-auto rounded-t-10 pt-20 z-10 relative"
+                            className="bg-sdv-offwhite mx-auto rounded-t-10 pt-10 md:pt-16 lg:pt-20 z-10 relative"
                             style={{
                                 // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                                 maxWidth: "1300px",

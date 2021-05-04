@@ -21,7 +21,7 @@ export default function FeaturedArticle({ post, featuredImg }) {
                 </div>
                 <div
                     className="bg-white w-full md:w-7/12 xl:pl-28
-                md:pl-20 md:pr-10 pr-5 pl-5 md:py-10 py-5
+                lg:pl-20 md:pl-5 md:pr-5 lg:pr-10 pr-5 pl-5 md:py-10 py-5
                 md:rounded-r-10
                 md:rounded-bl-none
                 rounded-bl-10 rounded-br-10
