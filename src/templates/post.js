@@ -27,6 +27,9 @@ const Post = ({ data, location }) => {
         <>
             <MetaData data={data} location={location} type="article" />
             <Helmet>
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+                <meta http-equiv="Pragma" content="no-cache"/>
+                <meta http-equiv="Expires" content="0"/>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
             </Helmet>
             <ProgressBar bgcolor="#000036" />
@@ -85,7 +88,7 @@ const Post = ({ data, location }) => {
                     </section>
                  </div>       
                     
-                    <article className="container max-w-5xl bg-white px-6 pt-10 md:pt-20 md:px-10 lg:p-20 relative">
+                    <article className="container max-w-5xl bg-white px-6 pt-10 md:pt-20 md:px-10 lg:px-20 pb-0 relative">
                         
                         <h1 className="leading-none text-6xl lg:text-8xl mb-3">
                             {post.title}
@@ -127,20 +130,7 @@ const Post = ({ data, location }) => {
                         </p>
 
                         <AuthorPost post={post} />
-                        {post.primary_tag ? (
-                            <div className="flex flex-grow -mx-6 font-light mb-8 lg:mb-14">
-                                <div className="px-6">
-                                    <Link
-                                        to={`/tag/${post.primary_tag.slug}`}
-                                        className="mb-2 border border-sdv-stroke rounded-full inline-block px-6 py-1 shadow-lg mr-4"
-                                    >
-                                        {post.primary_tag.name}
-                                    </Link>
-                                </div>
-                            </div>
-                        ) : (
-                            ""
-                        )}
+                        
                        
                         <div className="post">
                             <section
@@ -148,7 +138,7 @@ const Post = ({ data, location }) => {
                             />
                             <div className="">
                                 <div className="flex flex-row items-center">
-                                <div className="px-1 pb-3 font-light text-lg">Share: </div>
+                                <div className="pr-1 pb-3 font-light text-lg">Share: </div>
                                         <div className="px-1 pb-3">
                                             <Link
                                                 target="_blank"
@@ -177,6 +167,20 @@ const Post = ({ data, location }) => {
                                         </div>
                                     </div>
                                 </div>
+                                {post.primary_tag ? (
+                                    <div className="flex flex-grow -mx-6 font-light mb-8 mt-4 lg:mb-14">
+                                        <div className="px-6">
+                                            <Link
+                                                to={`/tag/${post.primary_tag.slug}`}
+                                                className="mb-2 border border-sdv-stroke rounded-full inline-block px-6 py-1 shadow-lg mr-4"
+                                            >
+                                                {post.primary_tag.name}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    ""
+                                )}
                         </div>
                     </article>
                    

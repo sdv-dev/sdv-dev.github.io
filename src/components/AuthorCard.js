@@ -11,7 +11,11 @@ export default function AuthorCard({ post }) {
               height: "49px",
             }}>
           <div
-            className="rounded-full bg-sdv-highlight top-0 left-0  h-full w-full"
+            className="rounded-full bg-sdv-highlight top-0 left-0 h-full w-full"
+            style={{
+              width: "49px",
+              height: "49px",
+            }}
           >
             <div
               className="overflow-hidden rounded-full absolute bottom-0 right-0"
@@ -47,7 +51,10 @@ export default function AuthorCard({ post }) {
             }}>
           <div
             className="rounded-full bg-sdv-highlight top-0 left-0 h-full w-full"
-            
+            style={{
+              width: "49px",
+              height: "49px",
+            }}
           >
             <div
               className="overflow-hidden rounded-full absolute bottom-0 right-0"
@@ -77,7 +84,7 @@ export default function AuthorCard({ post }) {
           </div>
         </div>
 
-        <div className="px-4 flex flex-col justify-center">
+        <div className="pl-4 flex flex-col justify-center">
           <p className="text-sm">
             <strong className="font-bold">{authors[0].name}</strong> and <strong className="font-bold">{authors[1].name}</strong>
           </p>
@@ -124,7 +131,7 @@ export default function AuthorCard({ post }) {
           </div>
         </div>
       </div>
-      <div className="px-4 flex flex-col justify-center">
+      <div className="pl-4 flex flex-col justify-center">
         <p className="font-bold text-sm">{post.primary_author.name}</p>
         <p className="font-light text-xs">{post.published_at_pretty}</p>
       </div>

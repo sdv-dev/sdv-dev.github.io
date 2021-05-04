@@ -23,19 +23,19 @@
   }
 
   h2 {
-    margin: 48px 0;
+    margin: 48px 0 40px;
   }
   h3{
-    margin: 40px 0;
+    margin: 40px 0 32px;
   }
   h4{
-    margin: 32px 0;
+    margin: 32px 0 24px;
   }
   h5 {
-    margin: 24px 0;
+    margin: 24px 0 16px;
   }
   h6 {
-    margin: 16px 0;
+    margin: 16px 0 8px;
   }
 
   ol,ul {
@@ -47,6 +47,13 @@
   ul {
     li {
       list-style: disc;
+      a {
+        border-bottom: 1px dotted #03AFF1;
+        color: #03AFF1;
+        &:hover {
+          border-bottom: 1px solid #03AFF1;
+        }
+      }
     }
   }
 
@@ -55,15 +62,17 @@
     margin-bottom: 22px;
     line-height: 1.75;
     letter-spacing: 0.5px;
-  }
 
-  a {
-    border-bottom: 1px dotted #03AFF1;
-    color: #03AFF1;
-    &:hover {
-      border-bottom: 1px solid #03AFF1;
+    a {
+      border-bottom: 1px dotted #03AFF1;
+      color: #03AFF1;
+      &:hover {
+        border-bottom: 1px solid #03AFF1;
+      }
     }
   }
+
+  
   
   figcaption {
     text-align: center;
