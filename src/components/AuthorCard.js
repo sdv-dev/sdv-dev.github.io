@@ -79,7 +79,7 @@ export default function AuthorCard({ post }) {
 
         <div className="px-4 flex flex-col justify-center">
           <p className="text-sm">
-            by <strong className="font-bold">{authors[0].name}</strong> and <strong className="font-bold">{authors[1].name}</strong>
+            <strong className="font-bold">{authors[0].name}</strong> and <strong className="font-bold">{authors[1].name}</strong>
           </p>
           <p className="font-light text-xs">{post.published_at_pretty}</p>
         </div>

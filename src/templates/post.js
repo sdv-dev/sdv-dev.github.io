@@ -122,7 +122,7 @@ const Post = ({ data, location }) => {
                             </div>
                         </div>
 
-                        <p className="font-light text-xs mb-6">
+                        <p className="font-light text-sm mb-6">
                             {post.published_at_pretty}
                         </p>
 

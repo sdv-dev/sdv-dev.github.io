@@ -48,7 +48,15 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                     >
                         <Link to="/">
                         <div className="w-20">
-                                <Logo />
+                            <Img
+                                fadeIn={true}
+                                fixed={
+                                    data.logo
+                                        .childImageSharp.fixed
+                                }
+                                alt="The Synthetic Data Vault Blog"
+                                className=""
+                            />
                             </div>
                             {/* {site.logo ? (
                                 <img
@@ -116,6 +124,15 @@ const PostDefaultLayoutSettingsQuery = (props) => (
                     childImageSharp {
                         fluid {
                             ...GatsbyImageSharpFluid_noBase64
+                        }
+                    }
+                }
+                logo: file(
+                    relativePath: { eq: "logo.png" }
+                ) {
+                    childImageSharp {
+                        fixed(width: 84, quality: 100) {
+                            ...GatsbyImageSharpFixed_noBase64
                         }
                     }
                 }

@@ -49,7 +49,7 @@ export default function AuthorPost({post}) {
                             </div>
                             <div className="text-xs px-4 flex flex-col justify-center">
                                 <p className="text-sm">
-                                    by <strong className="font-bold ">{item.name}</strong>
+                                    <strong className="font-bold ">{item.name}</strong>
                                 </p>
                             </div>
                         </section>
@@ -101,7 +101,7 @@ export default function AuthorPost({post}) {
       </div>
       <div className="text-xs px-4 flex flex-col justify-center">
           <p className="text-sm">
-            by <strong className="font-bold">{post.primary_author.name}</strong>
+            <strong className="font-bold">{post.primary_author.name}</strong>
           </p>
       </div>
   </section>

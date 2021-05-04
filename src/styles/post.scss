@@ -55,16 +55,16 @@
     margin-bottom: 22px;
     line-height: 1.75;
     letter-spacing: 0.5px;
-
-    a {
-      border-bottom: 1px dotted #03AFF1;
-      color: #03AFF1;
-      &:hover {
-        border-bottom: 1px solid #03AFF1;
-      }
-    }
   }
 
+  a {
+    border-bottom: 1px dotted #03AFF1;
+    color: #03AFF1;
+    &:hover {
+      border-bottom: 1px solid #03AFF1;
+    }
+  }
+  
   figcaption {
     text-align: center;
     font-style: italic;
