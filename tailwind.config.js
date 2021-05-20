@@ -5,7 +5,9 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.875rem'
+        DEFAULT: '1rem',
+        sm: '1rem',
+        md: '1.875rem',
       }
     },
     fontFamily: {
@@ -48,6 +50,9 @@ module.exports = {
         '30': "30px",
         '50': "50px"
       },
+      borderWidth: {
+        '3': '3px'
+      },
       colors: {
         sdv: {
           highlight: '#03C8DE',
@@ -60,6 +65,7 @@ module.exports = {
           gray: '#231F20',
           graylight: '#F7F7F8',
           offwhite: '#FAFAFA',
+          border: '#BBC0CB'
         },
 
         light: {
