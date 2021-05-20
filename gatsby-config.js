@@ -41,12 +41,12 @@ module.exports = {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
     plugins: [
-        {
-            resolve: '@mkitio/gatsby-theme-password-protect',
-            options: {
-              password: password // delete or `undefined` to disable password protection
-            }
-        },
+        // {
+        //     resolve: '@mkitio/gatsby-theme-password-protect',
+        //     options: {
+        //       password: password // delete or `undefined` to disable password protection
+        //     }
+        // },
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {

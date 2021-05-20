@@ -3,12 +3,10 @@ name: Build and Deploy SDV Blog
 on:
   push:
     branches:
-      - ghost-blog
-      - main
+      - gatsby-home
   repository_dispatch:
     branches:
-      - ghost-blog
-      - main
+      - gatsby-home
 jobs:
   build:
     runs-on: ubuntu-latest
