@@ -31,7 +31,7 @@ export default function Hero() {
               </Link>
             </div>
             <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white flex flex-col justify-end">
-              <div className="pb-40"><img width="445" src={'/homehero.png'} /></div>
+              <div className="pb-40"><img width="445" src={`${process.env.SITEPATH}/homehero.png`} /></div>
             </div>
           </div>
         </div>

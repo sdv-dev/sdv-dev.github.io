@@ -40,7 +40,7 @@ export default function Features() {
               return (
                 <div className="w-full sm:w-4/12 px-4">
                   <div className="rounded-2xl bg-white p-8 border border-offwhite shadow-sm">
-                    <img src={item.icon} className="my-3"/>
+                    <img src={`${process.env.SITEPATH}${item.icon}`} className="my-3"/>
                     <p className="font-bold text-2xl">{item.name}</p>
                     <p className="text-lg">
                       {item.text}

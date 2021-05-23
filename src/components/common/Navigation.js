@@ -16,14 +16,16 @@ import PropTypes from "prop-types";
  *
  */
 
-const navItems = [
-{label: 'Docs',
-url: 'https://sdv.dev/SDV'},
-{label: 'GitHub',
-url: 'https://github.com/sdv-dev'},
-{label: 'SDV',
-url: 'https://sdv.dev/'}
-]
+const navItemsBlog = [
+  { label: "Docs", url: "https://sdv.dev/SDV" },
+  { label: "GitHub", url: "https://github.com/sdv-dev" },
+  { label: "SDV", url: "https://sdv.dev/" },
+];
+const navItemsHome = [
+  { label: "Docs", url: "https://sdv.dev/SDV" },
+  { label: "GitHub", url: "https://github.com/sdv-dev" },
+  { label: "Blog", url: "https://sdv.dev/blog" },
+];
 
 const Navigation = ({ data, navClass, children }) => {
     const ref = useRef();
@@ -106,7 +108,7 @@ const Navigation = ({ data, navClass, children }) => {
                                 } lg:block absolute lg:relative top-14 lg:top-auto inset-x-0 bg-white lg:bg-transparent`}
                             >
                                 <div className=" flex lg:flex-row flex-col justify-center items-center w-full">
-                                    {navItems.map((navItem, i) => {
+                                    {navItemsHome.map((navItem, i) => {
                                         if (
                                             navItem.url.match(/^\s?http(s?)/gi)
                                         ) {

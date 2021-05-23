@@ -132,7 +132,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </div>
                     </main>
                 </div>
-                            <Cta />
+                            {/* <Cta /> */}
                             <Footer />
            </div>
         </>
@@ -177,7 +177,7 @@ const DefaultLayoutSettingsQuery = (props) => (
                     }
                 }
                 logo: file(
-                    relativePath: { eq: "logo.png" }
+                    relativePath: { eq: "logo-home.png" }
                 ) {
                     childImageSharp {
                         fixed(width: 84, quality: 100) {

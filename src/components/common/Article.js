@@ -83,7 +83,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                         </div>) : ''}
                     </main>
                 </div>
-                <Cta />
+                {/* <Cta /> */}
                 <Footer/>
                   </div>
         </>
@@ -128,7 +128,7 @@ const PostDefaultLayoutSettingsQuery = (props) => (
                     }
                 }
                 logo: file(
-                    relativePath: { eq: "logo.png" }
+                    relativePath: { eq: "logo-home.png" }
                 ) {
                     childImageSharp {
                         fixed(width: 84, quality: 100) {

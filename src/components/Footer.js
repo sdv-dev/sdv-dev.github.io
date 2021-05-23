@@ -15,7 +15,7 @@ export default function Footer() {
       query={graphql`
         query FooterImages {
           logo: file(
-              relativePath: { eq: "logo.png" }
+              relativePath: { eq: "logo-home.png" }
           ) {
               childImageSharp {
                   fixed(width: 84, quality: 100) {
