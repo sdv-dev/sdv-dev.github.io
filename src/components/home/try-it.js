@@ -6,6 +6,8 @@ import WhiteBottomWave from "./wave-bottom-white"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+import config from "../../utils/siteConfig"
+
 const code = `
 from sdv import load_demo, SDV
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import config from "../../utils/siteConfig"
 
 export default function Join() {
   return (
@@ -19,7 +20,7 @@ export default function Join() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center -mx-6">
           <div className="px-6 w-full my-20">
-            <img src={`${process.env.SITEPATH}/join our community map.png`} alt="join our community map"/>
+            <img src={`${config.sitePath}/join our community map.png`} alt="join our community map"/>
           </div>
         </div>
       </div>

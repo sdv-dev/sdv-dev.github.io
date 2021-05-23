@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import config from "../../utils/siteConfig"
 
 const modelingItems = [
   {
@@ -79,7 +80,7 @@ const Card = ({item}) => {
     <div className="w-full sm:w-4/12 px-4 mb-8">
       <div className="rounded-2xl bg-white p-8 border border-offwhite shadow-sm">
         <img width="30" height="30" className="h-8 w-8" 
-          src={`${process.env.SITEPATH}${item.icon}`} className="my-3"/>
+          src={`${config.sitePath}${item.icon}`} className="my-3"/>
         <p className="font-bold text-2xl">{item.name}</p>
         <p className="text-lg h-36">
           {item.text}
@@ -122,19 +123,19 @@ export default function OpenSource() {
           <button onClick={() => setFilter('modeling')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center">
             <img 
               className={`${filter === "modeling" ? '' : `filter-gs opacity-50`} mx-auto`} 
-              src={`${process.env.SITEPATH}/modeling.svg`} />
+              src={`${config.sitePath}/modeling.svg`} />
             <div className={`text-lg mx-auto ${filter === "modeling" ? `font-bold`:`text-sdv-border`} mt-1`}>Modeling</div>
           </button>
           <button onClick={() => setFilter('benchmarking')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center border-l border-r border-sdv-border">
             <img 
               className={`${filter === "benchmarking" ? '' : `filter-gs opacity-50`} mx-auto`} 
-              src={`${process.env.SITEPATH}/benchmarking.svg`} />
+              src={`${config.sitePath}/benchmarking.svg`} />
             <div className={`text-lg mx-auto ${filter === "benchmarking" ? `font-bold`:`text-sdv-border`} mt-1`}>Benchmarking</div>
           </button>
           <button onClick={() => setFilter('metrics')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center">
             <img 
               className={`${filter === "metrics" ? '' : `filter-gs opacity-50`} mx-auto`} 
-              src={`${process.env.SITEPATH}/metrics.svg`} />
+              src={`${config.sitePath}/metrics.svg`} />
             <div className={`text-lg mx-auto ${filter === "metrics" ? `font-bold`:`text-sdv-border`} mt-1`}>Metrics</div>
           </button>
         </div>

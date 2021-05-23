@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import config from "../../utils/siteConfig"
+
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
@@ -32,14 +34,14 @@ export default function ProtectEnhance() {
               <h3 className="text-white">PROTECT</h3>
               <p className="text-white">Create a clone to protect Real data</p>
             </div>
-            <div className="flex flex-col justify-center h-full my-16"><img className="mx-auto block" width="364" src={`${process.env.SITEPATH}/protect.png`} /></div>
+            <div className="flex flex-col justify-center h-full my-16"><img className="mx-auto block" width="364" src={`${config.sitePath}/protect.png`} /></div>
           </div>
           <div className="w-full sm:w-1/2 px-6 flex flex-col items-stretch">
             <div className="text-center">
               <h3 className="text-white">ENHANCE</h3>
               <p className="text-white">Add synthetic values to real data</p>
             </div>
-            <div className="flex flex-col justify-center h-full my-16"><img className="mx-auto block" width="424" src={`${process.env.SITEPATH}/enhance.png`} /></div>
+            <div className="flex flex-col justify-center h-full my-16"><img className="mx-auto block" width="424" src={`${config.sitePath}/enhance.png`} /></div>
           </div>
         </div>
       </div>
