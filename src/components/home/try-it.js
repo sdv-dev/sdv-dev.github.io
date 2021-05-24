@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { Link } from 'gatsby'
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faCopy } from "@fortawesome/free-solid-svg-icons";
+import Prism from "prismjs";
 
-import config from "../../utils/siteConfig"
+import "prismjs/components/prism-python";
+import "prismjs/themes/prism-twilight.css";
+import "prismjs/themes/prism-okaidia.css";
 
-const code = `
-from sdv import load_demo, SDV
+const code = `from sdv import load_demo, SDV
 
 # Use pre-loaded demo tables
 metadata, tables = load_demo(metadata=True)
@@ -21,8 +23,43 @@ synthetic_data = sdv.sample()
 print(synthetic_data)`;
 
 export default function TryIt() {
+  const [strCode, setStrCode] = useState('');
+  const [isCopied, setCopied] = useState(false);
+
+  // const printtheString = (str, code) => {
+  //   for (var i = 0; i < code.length; i++) {
+
+  //     setTimeout(function() {
+  //       setStrCode(str + code[i])
+  //     }, 500)
+  //   }
+
+  // }
+
+  // useEffect(() => {
+  //   // printtheString(strCode, code)
+  // }, [strCode])
+
+  const copyCodeToClipboard = () => {
+    const el = document.getElementById('text-area')
+    el.select()
+    document.execCommand("copy")
+    setCopied(true)
+  }
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
+  useEffect(() => {
+    if (isCopied) {
+      setTimeout(function(){
+        setCopied(false)
+      }, 1500)
+    }
+  }, [isCopied])
+
   return (
-    <section className="relative bg-white py-40">
+    <section className="relative bg-white py-20 lg:py-40">
       <div className="absolute -top-1 left-0 right-0">
         <WhiteTopWave color={`#FAFAFA`} />
       </div>
@@ -41,24 +78,26 @@ export default function TryIt() {
 
       <div className="container">
         <div className="flex flex-wrap justify-center -mx-4">
-          <div className="w-full md:w-auto px-4">
-          <button className="copy-to-clipboard-button" type="button" data-copy-state="copy">
-              <span>Copy</span>
-            </button>
-          <div className="code-container bg-sdv-dark p-4 rounded-2xl">
-       
-            <pre>
+          <div className="w-full md:w-auto px-4 relative ">
+          <button 
+            className="absolute right-4 top-1 text-white p-1 rounded z-10 focus:outline-none"
+          type="button" onClick={() => copyCodeToClipboard()}>
+            {isCopied && `Copied`}
+            {!isCopied && `Copy`}
+            {` `}
+             <FontAwesomeIcon width="16" icon={faCopy} />
+          </button>
+          <textarea id="text-area" rows="1" className="opacity-0 absolute bottom-10 left-10 right-10 top-10 z-0">
+            {code}
+          </textarea>
+          <div className="code-container relative z-1">
+          <pre>
+            <code className="language-py"
             
-              <code 
-                data-copy-state="Copy"
-                data-copy-state="copy-error"
-                data-copy-state="copy-success"
-               className="language-python">
-            
-               {code}
-            
-              </code>
-            </pre>
+            data-prismjs-copy="Copy the Pyhon snippet"
+            >{code}</code>
+          </pre>
+          
           </div>
           </div>
         </div>

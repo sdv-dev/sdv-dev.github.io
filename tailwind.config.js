@@ -42,7 +42,23 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     
-    extend: {
+    extend: { 
+      animation: {
+        'slide-up': 'slideup 300ms ease-in forwards',
+      },
+      keyframes: {
+        slideup: {
+          '0%': { 
+            transform: 'translateY(50px)',
+            opacity: 0
+            },
+          '100%': { 
+            transform: 'rotate(0)',
+            opacity: 1
+          },
+        }
+      },
+      
       borderRadius: {
         '3': "3px",
         '20': "20px",

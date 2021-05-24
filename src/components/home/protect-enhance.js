@@ -11,7 +11,7 @@ import WhiteBottomWave from "./wave-bottom-white"
 
 export default function ProtectEnhance() {
   return (
-    <section className="bg-sdv-dark relative py-40 -mt-20" id="sdv">
+    <section className="bg-sdv-dark relative py-20 lg:py-40 -mt-20" id="sdv">
       <div className="absolute left-0 right-0 -top-1">
         <WhiteTopWave color="#fff" />
       </div>

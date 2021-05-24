@@ -40,10 +40,10 @@ export default function Features() {
             features.map((item, idx) => {
               return (
                 <div className="w-full sm:w-4/12 px-4">
-                  <div className="rounded-2xl bg-white p-8 border border-offwhite shadow-sm">
+                  <div className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm mb-4">
                     <img src={`${config.sitePath}${item.icon}`} className="my-3"/>
-                    <p className="font-bold text-2xl">{item.name}</p>
-                    <p className="text-lg">
+                    <p className="font-bold text-xl lg:text-2xl">{item.name}</p>
+                    <p className="text-base lg:text-lg">
                       {item.text}
                     </p>
 
@@ -74,10 +74,10 @@ export default function Features() {
           
         </div>
 
-        <div className="flex flex-wrap justify-center -mx-6 my-10">
+        <div className="flex flex-wrap justify-center -mx-6 my-10 md:mb-16">
           <div className="px-6 w-auto">
             <AnchorLink to="#sdv" title="scroll">
-              <img src={'/chevron-bottom.svg'} />
+              <img src={`${config.sitePath}/chevron-bottom.svg`} />
             </AnchorLink>
           </div>
         </div>

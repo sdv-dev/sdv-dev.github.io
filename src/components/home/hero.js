@@ -18,7 +18,7 @@ export default function Hero() {
       >
         <div className="container mx-auto">
           <div className="flex flex-wrap -mx-6">
-            <div className="w-full lg:w-6/12 px-6 pt-40 pb-72">
+            <div className="w-full lg:w-6/12 px-6 pt-40 pb-10 lg:pb-72 text-center lg:text-left">
               <h1 className="leading-tight text-white text-6xl lg:text-8xl mb-4">
                 Let’s put synthetic data to work.
               </h1>
@@ -31,7 +31,7 @@ export default function Hero() {
               </Link>
             </div>
             <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white flex flex-col justify-end">
-              <div className="pb-40"><img width="445" src={`${config.sitePath}/homehero.png`} /></div>
+              <div className="pb-40"><img width="445" src={`${config.sitePath}/homehero.png`} className="mx-auto" /></div>
             </div>
           </div>
         </div>

@@ -75,14 +75,16 @@ const metricsItems = [
   }
 ];
 
-const Card = ({item}) => {
+const Card = ({item, idx}) => {
   return (
-    <div className="w-full sm:w-4/12 px-4 mb-8">
-      <div className="rounded-2xl bg-white p-8 border border-offwhite shadow-sm">
-        <img width="30" height="30" className="h-8 w-8" 
-          src={`${config.sitePath}${item.icon}`} className="my-3"/>
-        <p className="font-bold text-2xl">{item.name}</p>
-        <p className="text-lg h-36">
+    <div className="w-full sm:w-4/12 px-4 mb-8 animate-slide-up opacity-0">
+      <div className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm">
+        <div className="h-8 w-8" >
+          <img width="30" height="30"
+            src={`${config.sitePath}${item.icon}`} className="my-3"/>
+        </div>
+        <p className="font-bold text-xl lg:text-2xl">{item.name}</p>
+        <p className="text-base lg:text-lg h-auto lg:h-36 leading-normal lg:leading-relaxed">
           {item.text}
         </p>
         <div className="flex flex-row text-center justify-center my-6">
@@ -120,19 +122,19 @@ export default function OpenSource() {
 
       <div className="container mx-auto my-10">
         <div className="flex flex-wrap justify-center -mx-6">
-          <button onClick={() => setFilter('modeling')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center">
+          <button onClick={() => setFilter('modeling')} className="focus:outline-none h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center">
             <img 
               className={`${filter === "modeling" ? '' : `filter-gs opacity-50`} mx-auto`} 
               src={`${config.sitePath}/modeling.svg`} />
             <div className={`text-lg mx-auto ${filter === "modeling" ? `font-bold`:`text-sdv-border`} mt-1`}>Modeling</div>
           </button>
-          <button onClick={() => setFilter('benchmarking')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center border-l border-r border-sdv-border">
+          <button onClick={() => setFilter('benchmarking')} className="focus:outline-none h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center border-l border-r border-sdv-border">
             <img 
               className={`${filter === "benchmarking" ? '' : `filter-gs opacity-50`} mx-auto`} 
               src={`${config.sitePath}/benchmarking.svg`} />
             <div className={`text-lg mx-auto ${filter === "benchmarking" ? `font-bold`:`text-sdv-border`} mt-1`}>Benchmarking</div>
           </button>
-          <button onClick={() => setFilter('metrics')} className="focus:outline-none h-32 w-40 px-6 flex flex-col justify-center">
+          <button onClick={() => setFilter('metrics')} className="focus:outline-none h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center">
             <img 
               className={`${filter === "metrics" ? '' : `filter-gs opacity-50`} mx-auto`} 
               src={`${config.sitePath}/metrics.svg`} />
@@ -146,7 +148,7 @@ export default function OpenSource() {
           {
             modelingItems.map((item, idx) => {
               return (
-                <Card item={item} />
+                <Card item={item} idx={idx} />
               )
             })
           }
@@ -155,7 +157,7 @@ export default function OpenSource() {
           {
             benchmarkingItems.map((item, idx) => {
               return (
-                <Card item={item} />
+                <Card item={item} idx={idx} />
               )
             })
           }
@@ -164,7 +166,7 @@ export default function OpenSource() {
           {
             metricsItems.map((item, idx) => {
               return (
-                <Card item={item} />
+                <Card item={item} idx={idx} />
               )
             })
           }
