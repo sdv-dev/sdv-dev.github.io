@@ -44,6 +44,7 @@ export default function TryIt() {
     const el = document.getElementById('text-area')
     el.select()
     document.execCommand("copy")
+    document.getElementById('text-area').blur()
     setCopied(true)
   }
   useEffect(() => {

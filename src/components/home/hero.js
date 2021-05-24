@@ -18,7 +18,7 @@ export default function Hero() {
       >
         <div className="container mx-auto">
           <div className="flex flex-wrap -mx-6">
-            <div className="w-full lg:w-6/12 px-6 pt-40 pb-10 lg:pb-72 text-center lg:text-left">
+            <div className="w-full lg:w-6/12 px-6 lg:pt-40 pt-10 pb-10 lg:pb-72 text-center lg:text-left">
               <h1 className="leading-tight text-white text-6xl lg:text-8xl mb-4">
                 Let’s put synthetic data to work.
               </h1>
