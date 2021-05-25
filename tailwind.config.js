@@ -44,7 +44,7 @@ module.exports = {
     
     extend: { 
       animation: {
-        'slide-up': 'slideup 300ms ease-in forwards',
+        'slide-up': 'slideup 300ms 200ms ease-in forwards',
       },
       keyframes: {
         slideup: {

@@ -77,7 +77,7 @@ export default function TryIt() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container mt-8">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full md:w-auto px-4 relative ">
           <button 
