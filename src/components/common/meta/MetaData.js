@@ -97,7 +97,8 @@ MetaData.propTypes = {
     image: PropTypes.string,
 }
 
-const MetaDataQuery = props => (
+export default function MetaDataQuery (props) {
+    return (
     <StaticQuery
         query={graphql`
             query GhostSettingsMetaData {
@@ -113,6 +114,4 @@ const MetaDataQuery = props => (
         `}
         render={data => <MetaData settings={data} {...props} />}
     />
-)
-
-export default MetaDataQuery
+)}

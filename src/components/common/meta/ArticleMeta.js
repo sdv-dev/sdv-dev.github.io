@@ -150,7 +150,8 @@ ArticleMetaGhost.propTypes = {
     canonical: PropTypes.string.isRequired,
 }
 
-const ArticleMetaQuery = props => (
+export default function ArticleMetaQuery (props) {
+    return (
     <StaticQuery
         query={graphql`
             query GhostSettingsArticleMeta {
@@ -165,6 +166,6 @@ const ArticleMetaQuery = props => (
         `}
         render={data => <ArticleMetaGhost settings={data} {...props} />}
     />
-)
+)}
 
-export default ArticleMetaQuery
+

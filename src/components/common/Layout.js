@@ -149,7 +149,8 @@ DefaultLayout.propTypes = {
     }).isRequired,
 };
 
-const DefaultLayoutSettingsQuery = (props) => (
+export default function DefaultLayoutSettingsQuery (props) {
+    return (
     <StaticQuery
         query={graphql`
             query GhostSettings {
@@ -189,6 +190,4 @@ const DefaultLayoutSettingsQuery = (props) => (
         `}
         render={(data) => <DefaultLayout data={data} {...props} />}
     />
-);
-
-export default DefaultLayoutSettingsQuery;
+)};

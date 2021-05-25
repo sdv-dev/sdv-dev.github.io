@@ -76,7 +76,8 @@ AuthorMeta.propTypes = {
     canonical: PropTypes.string.isRequired,
 }
 
-const AuthorMetaQuery = props => (
+export default function AuthorMetaQuery (props){ 
+    return (
     <StaticQuery
         query={graphql`
             query GhostSettingsAuthorMeta {
@@ -91,6 +92,4 @@ const AuthorMetaQuery = props => (
         `}
         render={data => <AuthorMeta settings={data} {...props} />}
     />
-)
-
-export default AuthorMetaQuery
+)}

@@ -100,7 +100,8 @@ PostDefaultLayout.propTypes = {
     }).isRequired,
 };
 
-const PostDefaultLayoutSettingsQuery = (props) => (
+export default function PostDefaultLayoutSettingsQuery (props) {
+    return (
     <StaticQuery
         query={graphql`
             query GhostSettingsArticle {
@@ -140,6 +141,4 @@ const PostDefaultLayoutSettingsQuery = (props) => (
         `}
         render={(data) => <PostDefaultLayout data={data} {...props} />}
     />
-);
-
-export default PostDefaultLayoutSettingsQuery;
+)};
