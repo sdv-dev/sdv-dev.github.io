@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSlack, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import { Link, StaticQuery, graphql } from "gatsby"
+import config from "../utils/siteConfig"
 
 export default function Footer() {
   return (
@@ -66,6 +67,8 @@ export default function Footer() {
                         <Link className="hover:underline" to="https://sdv.dev/blog">Blog</Link></li>
                       <li className="mb-4">
                         <Link className="hover:underline" to="https://sdv.dev/SDV">Docs</Link></li>
+                      <li className="mb-4">
+                        <Link className="hover:underline" to={`${config.sitePath}/resources`}>Resources</Link></li>
                       
                     </ul>
                   </div>

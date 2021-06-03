@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 import config from "../../utils/siteConfig"
 
 
@@ -40,33 +39,13 @@ export default function Features() {
             features.map((item, idx) => {
               return (
                 <div className="w-full sm:w-4/12 px-4">
-                  <div className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm mb-4">
+                  <Link to={item.userguide} className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm mb-4 block hover:shadow-xl transition-shadow">
                     <img src={`${config.sitePath}${item.icon}`} className="my-3"/>
                     <p className="font-bold text-xl lg:text-2xl">{item.name}</p>
                     <p className="text-base lg:text-lg">
                       {item.text}
                     </p>
-
-                    <p className="mt-4 mb-3">
-                      <Link to={item.userguide}
-                        className="hover:text-sdv-secondary font-bold "
-                      >User Guide</Link>
-                    </p>
-
-                      { item.docs !== '' && (
-                        <>
-                        <div className="flex flex-row text-center my-6">
-                        <div className="w-1/2">
-                        <Link className="text-sdv-highlight" to={item.github}>Github</Link>
-                        </div>
-                        <div className="w-1/2 border-l-2 border-sdv-offwhite">
-                          <Link className="text-sdv-highlight" to={item.docs}>Docs</Link>
-                        </div>
-                        </div>
-                        </>
-                      )}
-                      
-                  </div>
+                  </Link>
                 </div>
               )
             })
@@ -74,11 +53,8 @@ export default function Features() {
           
         </div>
 
-        <div className="flex flex-wrap justify-center -mx-6 my-10 md:mb-16">
-          <div className="px-6 w-auto">
-            <AnchorLink to="#sdv" title="scroll">
-              <img src={`${config.sitePath}/chevron-bottom.svg`} />
-            </AnchorLink>
+        <div className="flex flex-wrap justify-center -mx-6 my-1 md:mb-16">
+          <div className=" w-auto">
           </div>
         </div>
       </div>
