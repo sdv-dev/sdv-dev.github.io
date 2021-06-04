@@ -66,8 +66,8 @@ export default function TryIt() {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center -mx-6">
-          <div className="px-6 w-full sm:w-8/12 md:w-7/12 text-center ">
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
             <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">QUICKSTART</p>
             <h2 className="text-sdv-dark my-8">Try it out Now!</h2>
             <p className="text-sdv-dark mx-auto max-w-4xl text-lg">

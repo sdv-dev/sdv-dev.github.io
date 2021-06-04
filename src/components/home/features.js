@@ -54,11 +54,6 @@ export default function Features() {
           }
           
         </div>
-
-        <div className="flex flex-wrap justify-center -mx-6 my-1 md:mb-16">
-          <div className=" w-auto">
-          </div>
-        </div>
       </div>
     </section>
   )

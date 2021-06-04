@@ -30,8 +30,8 @@ export default function Footer() {
         return (
           <section className="bg-white z-10 relative pt-36">
           <div className="container mx-auto mb-20 md:mb-11">
-            <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-6">
-              <div className="flex-shrink w-full md:w-3/12 px-6 mb-10">
+            <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-4">
+              <div className="flex-shrink w-full md:w-3/12 px-4 mb-10">
               <Img
                   fadeIn={true}
                   fixed={
@@ -58,7 +58,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex-grow md:w-9/12 px-6">
+              <div className="flex-grow md:w-9/12 px-4">
                 <div className="flex flex-wrap">
                   <div className="w-full md:w-6/12 lg:w-3/12 text-sdv-footer mb-4">
                     <p className="font-bold mb-6">Site</p>

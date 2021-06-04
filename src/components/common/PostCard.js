@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
 
     return (
-        <Link to={url} className="w-full md:w-6/12 lg:w-4/12 px-6 mb-14 link-wrap" key={`blog-article-${post.id}`}>
+        <Link to={url} className="link-wrap" key={`blog-article-${post.id}`}>
             <header
                 style={{
                 boxShadow: "0px 15px 35px rgba(0, 0, 0, 0.05)",

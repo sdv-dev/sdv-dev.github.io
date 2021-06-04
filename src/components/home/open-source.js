@@ -78,7 +78,7 @@ const metricsItems = [
 const Card = ({ item, idx }) => {
   return (
     <div className="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8 animate-slide-up opacity-0">
-      <div className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm">
+      <div className="rounded-2xl bg-white p-5 lg:p-8 border border-offwhite shadow-sm">
         <div className="h-8 w-8 my-2 flex justify-center items-center">
           <img
             width="30"
@@ -91,7 +91,7 @@ const Card = ({ item, idx }) => {
         <p className="text-base lg:text-lg h-auto lg:h-36 leading-normal lg:leading-relaxed">
           {item.text}
         </p>
-        <div className="flex flex-row text-left -mx-4">
+        <div className="flex flex-row text-left -mx-4 mt-4">
           <div className="w-auto px-4">
             <Link
               className="hover:text-sdv-secondary font-bold"
@@ -122,8 +122,8 @@ export default function OpenSource() {
   return (
     <section className="bg-sdv-offwhite">
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center -mx-6">
-          <div className="px-6 w-full sm:w-8/12 md:w-7/12 text-center ">
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
             <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">
               The SDV Ecosystem
             </p>
@@ -140,12 +140,12 @@ export default function OpenSource() {
 
       
         
-      <div className="sticky top-96">
+      <div className="sticky top-20 z-10 bg-sdv-offwhite">
         <div className="container mx-auto my-10 ">
-          <div className="flex flex-wrap justify-center -mx-6">
+          <div className="flex flex-wrap justify-center -mx-4">
             <button
               onClick={() => setFilter("modeling")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
             >
               <img
                 className={`${
@@ -163,7 +163,7 @@ export default function OpenSource() {
             </button>
             <button
               onClick={() => setFilter("benchmarking")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center border-l border-r border-sdv-border"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center border-l border-r border-sdv-border"
             >
               <img
                 className={`${
@@ -181,7 +181,7 @@ export default function OpenSource() {
             </button>
             <button
               onClick={() => setFilter("metrics")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
             >
               <img
                 className={`${

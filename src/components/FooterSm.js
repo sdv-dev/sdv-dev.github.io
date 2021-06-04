@@ -6,8 +6,8 @@ export default function FooterSm() {
     {/* The footer at the very bottom of the screen */}
     <footer className="site-foot">
         <div className="container mx-auto mb-20 md:mb-11">
-            <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-6">
-                <div className="flex-shrink w-full md:w-3/12 px-6">
+            <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-4">
+                <div className="flex-shrink w-full md:w-3/12 px-4">
                     <Link to="/">
                         {site.logo ? (
                             <img
@@ -53,7 +53,7 @@ export default function FooterSm() {
                     </div>
                 </div>
                 <div className="flex-grow md:w-9/12 mx-6 px-3">
-                    <div className="flex flex-wrap -mx-6">
+                    <div className="flex flex-wrap -mx-4">
                         
                             {site.navigation.map(
                                 (navItem, i) => {
@@ -64,7 +64,7 @@ export default function FooterSm() {
                                     ) {
                                         return (
                                             <a
-                                                className="px-6 py-3"
+                                                className="px-4 py-3"
                                                 href={
                                                     navItem.url
                                                 }
@@ -78,7 +78,7 @@ export default function FooterSm() {
                                     } else {
                                         return (
                                             <Link
-                                                className="px-6 py-3"
+                                                className="px-4 py-3"
                                                 to={navItem.url}
                                                 key={i}
                                             >
@@ -93,8 +93,8 @@ export default function FooterSm() {
                 </div>
             </div>
 
-            <div className="flex -mx-6 mt-4">
-                <div className="w-full px-6">
+            <div className="flex -mx-4 mt-4">
+                <div className="w-full px-4">
                     <Link to="/">{site.title}</Link> © 2021
                     {/* &mdash;  */}
                     {/* Published with{" "} */}

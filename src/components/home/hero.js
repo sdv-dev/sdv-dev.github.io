@@ -49,15 +49,15 @@ export default function Hero() {
         }}
       >
         <div className="container mx-auto">
-          <div className="flex flex-wrap -mx-6">
-            <div className="w-full lg:w-6/12 px-6 lg:pt-40 pt-10 pb-10 lg:pb-72 text-center lg:text-left">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full lg:w-6/12 px-4 lg:pt-40 pt-10 pb-10 lg:pb-72 text-center lg:text-left">
               <h1 className="leading-tight text-white text-6xl lg:text-8xl mb-6 lg:mb-10">
                 Let’s put synthetic data to work.
               </h1>
               <div className="flex lg:flex-row flex-col items-center">
                 <Link
                   to="https://github.com/sdv-dev"
-                  className="px-10 py-3 inline-block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
+                  className="px-10 py-3 block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
                   target="_blank"
                 >
                   <FontAwesomeIcon width="16" icon={faGithub} className="mr-3" /> View on Github
@@ -69,7 +69,7 @@ export default function Hero() {
               </div>    
               </div>
             </div>
-            <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white flex flex-col justify-end">
+            <div className="w-full lg:w-6/12 px-4 md:mt-0 text-white flex flex-col justify-end">
               <div className="pb-40"><img width="445" src={`${config.sitePath}/homehero.png`} className="mx-auto" /></div>
             </div>
           </div>

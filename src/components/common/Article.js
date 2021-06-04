@@ -40,7 +40,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                 <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
             </Helmet>
 
-            <div className="overflow-x-hidden">
+            <div className="">
                 <div className="viewport-top nav-bg-white">
                     <Navigation
                         data={site.navigation}

@@ -22,8 +22,8 @@ export default function Join() {
   return (
     <section className="bg-sdv-dark pb-10">
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center -mx-6">
-          <div className="px-6 w-full sm:w-8/12 md:w-7/12 text-center ">
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
             <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">Join Us</p>
             <h2 className="text-white my-8">Join Our Community</h2>
             <p className="text-white mx-auto max-w-lg text-lg">
@@ -59,20 +59,17 @@ export default function Join() {
       </div>
 
       <div className="container mx-auto relative">
-        <div className="flex flex-wrap justify-center -mx-6">
-          <div className="px-6 w-full md:w-10/12 lg:w-9/12 mb-20">
-          <div data-sal="fade"
-              data-sal-delay="200"
-              data-sal-duration="1000"
-              data-sal-easing="ease">
-              <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="join our community map" loading={`lazy`} durationFadeIn={2000} fadeIn={true}/></div>
+        <div className="flex flex-wrap justify-center -mx-4">
+          <div className="px-4 w-full md:w-10/12 lg:w-9/12 mb-20">
+            <div data-sal="fade"
+                data-sal-delay="200"
+                data-sal-duration="1000"
+                data-sal-easing="ease">
+                <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="join our community map" loading={`lazy`} durationFadeIn={2000} fadeIn={true}/>
+            </div>
           </div>
         </div>
-        <div className="absolute inset-0">
-          <div className="flex flex-wrap">
-            {[]}
-          </div>
-        </div>
+        
       </div>
 
       

@@ -40,7 +40,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
             </Helmet>
 
-            <div className="overflow-x-hidden">
+            <div className="">
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     <div
