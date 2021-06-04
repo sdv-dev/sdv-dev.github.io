@@ -91,7 +91,7 @@ const Card = ({ item, idx }) => {
         <p className="text-base lg:text-lg h-auto lg:h-36 leading-normal lg:leading-relaxed">
           {item.text}
         </p>
-        <div className="flex flex-row text-left my-6 -mx-4">
+        <div className="flex flex-row text-left -mx-4">
           <div className="w-auto px-4">
             <Link
               className="hover:text-sdv-secondary font-bold"
@@ -145,12 +145,12 @@ export default function OpenSource() {
           <div className="flex flex-wrap justify-center -mx-6">
             <button
               onClick={() => setFilter("modeling")}
-              className="focus:outline-none hover:opacity-70 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
             >
               <img
                 className={`${
-                  filter === "modeling" ? "" : `filter-gs opacity-50`
-                } mx-auto`}
+                  filter === "modeling" ? "" : `filter-gs`
+                } mx-auto mb-2`}
                 src={`${config.sitePath}/modeling.svg`}
               />
               <div
@@ -163,12 +163,12 @@ export default function OpenSource() {
             </button>
             <button
               onClick={() => setFilter("benchmarking")}
-              className="focus:outline-none hover:opacity-70 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center border-l border-r border-sdv-border"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center border-l border-r border-sdv-border"
             >
               <img
                 className={`${
-                  filter === "benchmarking" ? "" : `filter-gs opacity-50`
-                } mx-auto`}
+                  filter === "benchmarking" ? "" : `filter-gs`
+                } mx-auto mb-2`}
                 src={`${config.sitePath}/benchmarking.svg`}
               />
               <div
@@ -181,12 +181,12 @@ export default function OpenSource() {
             </button>
             <button
               onClick={() => setFilter("metrics")}
-              className="focus:outline-none hover:opacity-70 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
+              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 lg:px-6 flex flex-col justify-center"
             >
               <img
                 className={`${
-                  filter === "metrics" ? "" : `filter-gs opacity-50`
-                } mx-auto`}
+                  filter === "metrics" ? "" : `filter-gs`
+                } mx-auto mb-2`}
                 src={`${config.sitePath}/metrics.svg`}
               />
               <div

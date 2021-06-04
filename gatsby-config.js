@@ -92,6 +92,7 @@ module.exports = {
               },
             },
         },
+        `gatsby-plugin-scroll-reveal`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {

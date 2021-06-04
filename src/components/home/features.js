@@ -38,14 +38,16 @@ export default function Features() {
           {
             features.map((item, idx) => {
               return (
-                <div className="w-full sm:w-4/12 px-4">
-                  <Link to={item.userguide} className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm mb-4 block hover:shadow-xl transition-shadow">
-                    <img src={`${config.sitePath}${item.icon}`} className="my-3"/>
-                    <p className="font-bold text-xl lg:text-2xl">{item.name}</p>
-                    <p className="text-base lg:text-lg">
-                      {item.text}
-                    </p>
-                  </Link>
+                <div className="w-full sm:w-4/12 px-4 mb-4">
+                  <div className="bg-white rounded-2xl">
+                    <Link to={item.userguide} className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite shadow-sm h-full block hover:shadow-xl transition-shadow hover:opacity-80">
+                      <img src={`${config.sitePath}${item.icon}`} className="my-3"/>
+                      <p className="font-bold text-xl lg:text-2xl">{item.name}</p>
+                      <p className="text-base lg:text-lg">
+                        {item.text}
+                      </p>
+                    </Link>
+                  </div>
                 </div>
               )
             })

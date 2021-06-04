@@ -81,11 +81,9 @@ export default function TryIt() {
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full md:w-auto px-4 relative ">
           <button 
-            className="absolute right-6 bottom-3 text-white p-1 rounded z-10 focus:outline-none opacity-80 hover:opacity-100 font-light"
+            className="absolute right-6 bottom-3 text-white p-1 rounded z-10 focus:outline-none opacity-100 hover:opacity-80 font-light"
           type="button" onClick={() => copyCodeToClipboard()}>
             {isCopied && `Copied`}
-            {/* 
-            {!isCopied && `Copy`} */}
             {` `}
              <FontAwesomeIcon width="16" icon={faCopy} />
           </button>

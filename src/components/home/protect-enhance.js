@@ -69,7 +69,7 @@ export default function ProtectEnhance() {
           <div className="px-6 w-auto mb-10">
           <Link
                 to="https://github.com/sdv-dev"
-                className="px-10 py-3 inline-block border-3 border-white rounded-full font-semibold leading-none text-lg text-white"
+                className="px-10 py-3 inline-block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
                 target="_blank"
               >
                 <FontAwesomeIcon width="16" icon={faGithub} className="mr-3" /> {' '} View on Github

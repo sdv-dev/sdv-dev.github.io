@@ -86,3 +86,29 @@
 
   
 }
+
+pre[class*="language-"], :not(pre) > code[class*="language-"] {
+  background: #000036 !important;
+}
+
+pre[class*="language-"] {
+  border: .3em solid #000036 !important;
+  font-family: 'Cern', sans-serif;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  border-radius: 1rem !important;
+}
+
+.token.keyword  {
+  font-weight: 700 !important;
+  color:#03C8DE !important
+}
+
+.token.boolean {
+  font-weight: 700 !important;
+  color: #01E0C9 !important;
+}
+
+.token.comment {
+  color: #ADADAD !important;
+}
