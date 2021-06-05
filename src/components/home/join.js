@@ -3,10 +3,11 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import config from "../../utils/siteConfig"
 
+export default function Join({downloads}) {
 
+  function imageLoaded() {
 
-
-export default function Join() {
+  }
 
   const data = useStaticQuery(graphql`
     query {
@@ -29,11 +30,14 @@ export default function Join() {
             <p className="text-white mx-auto max-w-lg text-lg">
               Chat with developers across the world. Stay up-to-date with the latest features, blogs, and news.
             </p>
+            { downloads != '' ? (
+              <p className="px-4 text-white"><span className="font-bold">{downloads}K</span> Downloads</p>
+            ) : ''}
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto mt-10 mb-8">
+      <div className="container mx-auto mt-8 mb-8">
         <div className="flex flex-wrap justify-center -mx-2">
           <div className="w-auto px-2 mb-4">
             <Link 
@@ -58,17 +62,38 @@ export default function Join() {
         </div>
       </div>
 
-      <div className="container mx-auto relative">
+      <div className="container mx-auto overflow-hidden">
         <div className="flex flex-wrap justify-center -mx-4">
-          <div className="px-4 w-full md:w-10/12 lg:w-9/12 mb-20">
+          <div className="px-4 w-full md:w-10/12 lg:w-9/12 mb-20 relative">
             <div data-sal="fade"
                 data-sal-delay="200"
                 data-sal-duration="1000"
                 data-sal-easing="ease">
-                <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="join our community map" loading={`lazy`} durationFadeIn={2000} fadeIn={true}/>
+                <Img 
+                  fluid={data.placeholderImage.childImageSharp.fluid} 
+                  alt="join our community map" 
+                  loading={`lazy`} 
+                  />
+                <div className="absolute inset-0">
+                  <div className="flex flex-wrap h-full" id="loaded">
+                    { [1,2,3,4,5,6,7,8,9,10,11,12].map((i, idx) => {
+
+                      if (idx % 2 === 0) {
+                        return (
+                          <div className="transform duration-1000 delay-500 w-1/12 bg-sdv-dark img-cover"></div>
+                        )
+                      }
+                      
+                      return (
+                        <div className="transform duration-1000 delay-500 w-1/12 bg-sdv-dark img-cover"></div>
+                      )
+                    })}
+                  </div>
+                </div>
             </div>
           </div>
         </div>
+        
         
       </div>
 

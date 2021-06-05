@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Article } from '../components/common'
 
@@ -9,17 +9,52 @@ import OpenSource from '../components/home/open-source'
 import ProtectEnhance from '../components/home/protect-enhance'
 import TryIt from '../components/home/try-it'
 
-const HomePage = () => (
+
+
+export default function HomePage() {
+    const [downloads, setDownloads] = useState('')
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    //Get the total number of downloads for a single release, using its tag name.
+
+    function getDownloadsCount() {
+        var project = 'ctgan';
+        
+        var xhr = new XMLHttpRequest();
+        
+        xhr.addEventListener('load', function(){
+        var data = JSON.parse(this.responseText);
+        var number = numberWithCommas(data.total_downloads)
+        var numberK = number.split(',')[0]
+            console.log(" - COUNT - ", number);
+            setDownloads(numberK)
+            return numberK
+            
+        });
+        xhr.open('GET', 'https://api.pepy.tech/api/projects/' + project );
+        xhr.send();
+    }
+
+
+    useEffect(() => {
+        getDownloadsCount()
+        return () => {
+        
+        }
+    }, [])
+
+    return (
     <Article>
 
-        <Hero />
+        <Hero downloads={downloads} />
         <Features />
         <ProtectEnhance />
         <OpenSource />
         <TryIt />
-        <Join />
+        <Join downloads={downloads} />
 
     </Article>
-)
+)}
 
-export default HomePage

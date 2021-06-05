@@ -32,7 +32,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative z-10">
+    <section className="relative z-10 pb-10">
       <div className="container max-w-7xl mx-auto">
         <div className="flex flex-wrap -mx-4 -mt-40">
           {

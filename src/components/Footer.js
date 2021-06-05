@@ -4,7 +4,7 @@ import React from "react";
 import Img from "gatsby-image";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSlack, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faSlack, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import { Link, StaticQuery, graphql } from "gatsby"
 import config from "../utils/siteConfig"
@@ -45,15 +45,22 @@ export default function Footer() {
                   <div className="px-1">
                     <Link target="_blank" rel="noopener" 
                       to="https://sdv-space.slack.com/join/shared_invite/zt-gdsfcb5w-0QQpFMVoyB2Yd6SRiMplcw#/" 
-                      className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
+                      className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite">
                       <FontAwesomeIcon width="16" icon={faSlack} />
                     </Link>
                   </div>
                   <div className="px-1">
                     <Link target="_blank" rel="noopener" 
                       to="https://twitter.com/sdv_dev" 
-                      className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full">
+                      className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite">
                       <FontAwesomeIcon width="16" icon={faTwitter} />
+                    </Link>
+                  </div>
+                  <div className="px-1">
+                    <Link target="_blank" rel="noopener" 
+                      to="https://www.linkedin.com/company/sdv-dev/" 
+                      className="w-10 h-10 flex justify-center items-center bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite">
+                      <FontAwesomeIcon width="16" icon={faLinkedin} />
                     </Link>
                   </div>
                 </div>
@@ -68,7 +75,7 @@ export default function Footer() {
                       <li className="mb-4">
                         <Link className="hover:underline" to="https://sdv.dev/SDV">Docs</Link></li>
                       <li className="mb-4">
-                        <Link className="hover:underline" to={`${config.sitePath}/resources`}>Resources</Link></li>
+                        <Link className="hover:underline" to={`${config.sitePath === "" ? `` : `/${config.sitePath}` }/resources`}>Resources</Link></li>
                       
                     </ul>
                   </div>

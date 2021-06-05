@@ -7,39 +7,39 @@ import config from "../../utils/siteConfig"
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
-export default function Hero() {
-  const [downloads, setDownloads] = useState('')
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+export default function Hero({downloads}) {
+  // const [downloads, setDownloads] = useState('')
+  // function numberWithCommas(x) {
+  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // }
 
-  //Get the total number of downloads for a single release, using its tag name.
+  // //Get the total number of downloads for a single release, using its tag name.
 
-  function getDownloadsCount() {
-    var project = 'ctgan';
+  // function getDownloadsCount() {
+  //   var project = 'ctgan';
     
-    var xhr = new XMLHttpRequest();
+  //   var xhr = new XMLHttpRequest();
     
-    xhr.addEventListener('load', function(){
-      var data = JSON.parse(this.responseText);
-      var number = numberWithCommas(data.total_downloads)
-      var numberK = number.split(',')[0]
-        console.log(" - COUNT - ", number);
-        setDownloads(numberK)
-        return numberK
+  //   xhr.addEventListener('load', function(){
+  //     var data = JSON.parse(this.responseText);
+  //     var number = numberWithCommas(data.total_downloads)
+  //     var numberK = number.split(',')[0]
+  //       console.log(" - COUNT - ", number);
+  //       setDownloads(numberK)
+  //       return numberK
         
-    });
-    xhr.open('GET', 'https://api.pepy.tech/api/projects/' + project );
-    xhr.send();
-  }
+  //   });
+  //   xhr.open('GET', 'https://api.pepy.tech/api/projects/' + project );
+  //   xhr.send();
+  // }
 
 
-  useEffect(() => {
-    getDownloadsCount()
-    return () => {
+  // useEffect(() => {
+  //   getDownloadsCount()
+  //   return () => {
       
-    }
-  }, [])
+  //   }
+  // }, [])
   return (
     <div className="pt-20 relative">
       <div

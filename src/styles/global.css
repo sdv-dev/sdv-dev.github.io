@@ -112,3 +112,10 @@ pre[class*="language-"] {
 .token.comment {
   color: #ADADAD !important;
 }
+
+.sal-animate .img-cover:nth-of-type(even) {
+  @apply translate-y-full
+}
+.sal-animate .img-cover:nth-of-type(odd) {
+  @apply -translate-y-full
+}
