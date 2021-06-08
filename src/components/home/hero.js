@@ -8,38 +8,7 @@ import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
 export default function Hero({downloads}) {
-  // const [downloads, setDownloads] = useState('')
-  // function numberWithCommas(x) {
-  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  // }
 
-  // //Get the total number of downloads for a single release, using its tag name.
-
-  // function getDownloadsCount() {
-  //   var project = 'ctgan';
-    
-  //   var xhr = new XMLHttpRequest();
-    
-  //   xhr.addEventListener('load', function(){
-  //     var data = JSON.parse(this.responseText);
-  //     var number = numberWithCommas(data.total_downloads)
-  //     var numberK = number.split(',')[0]
-  //       console.log(" - COUNT - ", number);
-  //       setDownloads(numberK)
-  //       return numberK
-        
-  //   });
-  //   xhr.open('GET', 'https://api.pepy.tech/api/projects/' + project );
-  //   xhr.send();
-  // }
-
-
-  // useEffect(() => {
-  //   getDownloadsCount()
-  //   return () => {
-      
-  //   }
-  // }, [])
   return (
     <div className="pt-20 relative">
       <div
@@ -62,7 +31,7 @@ export default function Hero({downloads}) {
                 >
                   <FontAwesomeIcon width="16" icon={faGithub} className="mr-3" /> View on Github
                 </Link>
-                <div className="text-white flex-row flex text-sm mt-6 lg:mt-0">
+                <div className="text-white flex-row flex text-lg mt-6 lg:mt-0 h-6 md:h-auto">
                   { downloads != '' ? (
                     <p className="px-4"><span className="font-bold">{downloads}K</span> Downloads</p>
                   ) : ''}

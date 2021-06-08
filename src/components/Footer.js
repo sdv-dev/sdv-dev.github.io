@@ -28,10 +28,11 @@ export default function Footer() {
       `}
       render={data => {
         return (
-          <section className="bg-white z-10 relative pt-36">
+          <section className="bg-white z-10 relative pt-24">
           <div className="container mx-auto mb-20 md:mb-11">
             <div className="flex flex-col md:flex-row justify-center md:justify-start -mx-4">
               <div className="flex-shrink w-full md:w-3/12 px-4 mb-10">
+              <Link to={`/`}>
               <Img
                   fadeIn={true}
                   fixed={
@@ -41,6 +42,7 @@ export default function Footer() {
                   alt="The Synthetic Data Vault Blog"
                   className=""
               />
+              </Link>
                 <div className="flex flex-row -mx-1 mt-4">
                   <div className="px-1">
                     <Link target="_blank" rel="noopener" 

@@ -30,9 +30,7 @@ export default function Join({downloads}) {
             <p className="text-white mx-auto max-w-lg text-lg">
               Chat with developers across the world. Stay up-to-date with the latest features, blogs, and news.
             </p>
-            { downloads != '' ? (
-              <p className="px-4 text-white"><span className="font-bold">{downloads}K</span> Downloads</p>
-            ) : ''}
+            
           </div>
         </div>
       </div>
@@ -58,6 +56,13 @@ export default function Join({downloads}) {
               className="hover:border-sdv-offwhite border border-sdv-dark p-0.5 inline-block rounded-full font-semibold leading-none text-lg grad-bg">
               <span className="px-10 py-3 block rounded-full bg-sdv-dark"><span className="grad-txt">LinkedIn</span></span>
             </Link>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center -mx-2 mt-4">
+          <div className="w-auto px-4">
+          { downloads != '' ? (
+              <p className="px-4 text-white"><span className="font-bold">{downloads}K</span> Downloads</p>
+            ) : ''}
           </div>
         </div>
       </div>

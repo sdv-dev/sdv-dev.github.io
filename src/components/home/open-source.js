@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 import config from "../../utils/siteConfig";
 
 const modelingItems = [
-  {
-    name: "Synthetic Data Vault",
-    icon: "/sdv.svg",
-    text:
-      "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
-    github: "https://github.com/sdv-dev/SDV",
-  },
   {
     name: "Copulas",
     icon: "/copulas.svg",
@@ -39,16 +32,16 @@ const modelingItems = [
       "Discovers properties & transforms data for data science use. Reverses the transforms to reproduce realistic data.",
     github: "https://github.com/sdv-dev/RDT",
   },
-];
-
-const benchmarkingItems = [
   {
     name: "Synthetic Data Vault",
     icon: "/sdv.svg",
     text:
       "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
     github: "https://github.com/sdv-dev/SDV",
-  },
+  }
+];
+
+const benchmarkingItems = [
   {
     name: "SDGym",
     icon: "/sdgym.svg",
@@ -56,16 +49,16 @@ const benchmarkingItems = [
       "Benchmarks synthetic data generators, including SDV models. Evaluates the synthetic output of a given model on a dataset.",
     github: "https://github.com/sdv-dev/SDGym",
   },
-];
-
-const metricsItems = [
   {
     name: "Synthetic Data Vault",
     icon: "/sdv.svg",
     text:
       "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
     github: "https://github.com/sdv-dev/SDV",
-  },
+  }
+];
+
+const metricsItems = [
   {
     name: "SDMetrics",
     icon: "/sdmetrics.svg",
@@ -73,6 +66,13 @@ const metricsItems = [
       "Provides a set of model-agnostic tools for evaluating synthetic data. Defines metrics for statistics, efficiency, and privacy.",
     github: "https://github.com/sdv-dev/SDMetrics",
   },
+  {
+    name: "Synthetic Data Vault",
+    icon: "/sdv.svg",
+    text:
+      "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
+    github: "https://github.com/sdv-dev/SDV",
+  }
 ];
 
 const Card = ({ item, idx }) => {
@@ -93,21 +93,21 @@ const Card = ({ item, idx }) => {
         </p>
         <div className="flex flex-row text-left -mx-4 mt-4">
           <div className="w-auto px-4">
-            <Link
+            <a
               className="hover:text-sdv-secondary font-bold"
-              to={item.github}
+              href={item.github}
             >
               Github
-            </Link>
+            </a>
           </div>
           {item.url && (
             <div className="w-auto border-l-2 border-sdv-offwhite px-4">
-              <Link
+              <a
                 className="hover:text-sdv-secondary font-bold"
-                to={item.url}
+                href={item.url}
               >
                 Docs
-              </Link>
+              </a>
             </div>
           )}
         </div>
@@ -118,6 +118,14 @@ const Card = ({ item, idx }) => {
 
 export default function OpenSource() {
   const [filter, setFilter] = useState("modeling");
+  const ref = useRef(null);
+  
+  const scrollToLibWrap = () => {
+    const yVal = ref.current.getBoundingClientRect().y;
+    if (yVal <= 80) {
+      document.getElementById('lib-wrap').scrollIntoView();
+    }
+  }
 
   return (
     <section className="bg-sdv-offwhite">
@@ -138,14 +146,17 @@ export default function OpenSource() {
         </div>
       </div>
 
-      
+      <div id="lib-wrap" ></div>      
         
-      <div className="sticky top-20 z-10 bg-sdv-offwhite">
+      <div className="sticky top-20 z-10 bg-sdv-offwhite" ref={ref}>
         <div className="container mx-auto my-10 ">
           <div className="flex flex-wrap justify-center -mx-4">
             <button
-              onClick={() => setFilter("modeling")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
+              onClick={() => {
+                scrollToLibWrap()
+                setFilter("modeling")
+              }}
+              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
             >
               <img
                 className={`${
@@ -155,15 +166,18 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "modeling" ? `font-bold` : `text-sdv-border`
+                  filter === "modeling" ? `font-bold` : `text-sdv-border font-bold filter-gs`
                 } mt-1`}
               >
                 Modeling
               </div>
             </button>
             <button
-              onClick={() => setFilter("benchmarking")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center border-l border-r border-sdv-border"
+              onClick={() => {
+                scrollToLibWrap()
+                setFilter("benchmarking")
+              }}
+              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center border-l border-r border-sdv-border"
             >
               <img
                 className={`${
@@ -173,15 +187,18 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "benchmarking" ? `font-bold` : `text-sdv-border`
+                  filter === "benchmarking" ? `font-bold` : `text-sdv-border font-bold filter-gs`
                 } mt-1`}
               >
                 Benchmarking
               </div>
             </button>
             <button
-              onClick={() => setFilter("metrics")}
-              className="focus:outline-none opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
+              onClick={() => {
+                scrollToLibWrap()
+                setFilter("metrics")
+              }}
+              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
             >
               <img
                 className={`${
@@ -191,7 +208,7 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "metrics" ? `font-bold` : `text-sdv-border`
+                  filter === "metrics" ? `font-bold` : `text-sdv-border font-bold filter-gs`
                 } mt-1`}
               >
                 Metrics

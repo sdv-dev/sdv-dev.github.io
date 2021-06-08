@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Article } from "../components/common";
+import { Helmet } from 'react-helmet'
 
 import Cta from "../components/Cta";
 
-const HomePage = () => (
+import config from "../utils/siteConfig"
+
+const ResourcesPage = () => (
   <Article hasMoreArticles={false}>
+    <Helmet
+        title={config.siteTitleMeta}
+        description={config.siteDescriptionMeta}
+        type="website"
+    />
+
     <div className=" pt-20">
       <div
         className="bg-sdv-highlight w-full feature-image relative h-48"
@@ -128,4 +137,4 @@ const HomePage = () => (
   </Article>
 );
 
-export default HomePage;
+export default ResourcesPage;

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Article } from '../components/common'
-
 import Features from '../components/home/features'
 import Hero from '../components/home/hero'
 import Join from '../components/home/join'
 import OpenSource from '../components/home/open-source'
 import ProtectEnhance from '../components/home/protect-enhance'
 import TryIt from '../components/home/try-it'
-
+import config from "../utils/siteConfig"
+import { Helmet } from 'react-helmet'
 
 
 export default function HomePage() {
@@ -48,6 +48,12 @@ export default function HomePage() {
     return (
     <Article>
 
+        <Helmet
+            title={config.siteTitleMeta}
+            description={config.siteDescriptionMeta}
+            type="website"
+        />
+    
         <Hero downloads={downloads} />
         <Features />
         <ProtectEnhance />
