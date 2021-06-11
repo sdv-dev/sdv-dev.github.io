@@ -78,6 +78,7 @@
     "gatsby-transformer-sharp": "2.12.1",
     "hamburger-react": "^2.4.0",
     "lodash": "4.17.21",
+    "md5": "^2.3.0",
     "postcss": "^8.2.10",
     "prismjs": "^1.23.0",
     "react": "17.0.1",
