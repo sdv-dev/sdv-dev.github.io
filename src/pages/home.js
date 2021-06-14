@@ -52,7 +52,7 @@ export default function HomePage() {
             title={config.siteTitleMeta}
             description={config.siteDescriptionMeta}
             type="website"
-            image={config.siteimage}
+            image={`https://sdv.dev/web-dev/sdv-home.jpg`}
             canonical={`https://sdv.dev/`}
         />
         
