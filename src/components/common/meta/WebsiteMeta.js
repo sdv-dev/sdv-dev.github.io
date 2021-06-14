@@ -7,7 +7,6 @@ import url from 'url'
 
 import ImageMeta from './ImageMeta'
 import config from '../../../utils/siteConfig'
-import sharableImage from '../../../../static/sdv.jpg';
 
 const WebsiteMeta = ({ data, settings, canonical, title, description, image, type }) => {
     settings = settings.allGhostSettings.edges[0].node

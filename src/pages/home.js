@@ -8,8 +8,7 @@ import OpenSource from '../components/home/open-source'
 import ProtectEnhance from '../components/home/protect-enhance'
 import TryIt from '../components/home/try-it'
 import config from "../utils/siteConfig"
-import { Helmet } from 'react-helmet'
-import ImageMeta from '../components/common/meta/ImageMeta'
+import WebsiteMeta from '../components/common/meta/WebsiteMeta'
 
 
 export default function HomePage() {
@@ -49,12 +48,14 @@ export default function HomePage() {
     return (
     <Article>
 
-        <Helmet
+        <WebsiteMeta
             title={config.siteTitleMeta}
             description={config.siteDescriptionMeta}
             type="website"
+            image={config.siteimage}
+            canonical={`https://sdv.dev/`}
         />
-        <ImageMeta image={config.siteimage} />
+        
     
         <Hero downloads={downloads} />
         <Features />
