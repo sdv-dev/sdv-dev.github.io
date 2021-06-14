@@ -9,6 +9,7 @@ import ProtectEnhance from '../components/home/protect-enhance'
 import TryIt from '../components/home/try-it'
 import config from "../utils/siteConfig"
 import { Helmet } from 'react-helmet'
+import ImageMeta from '../components/common/meta/ImageMeta'
 
 
 export default function HomePage() {
@@ -53,6 +54,7 @@ export default function HomePage() {
             description={config.siteDescriptionMeta}
             type="website"
         />
+        <ImageMeta image={config.siteimage} />
     
         <Hero downloads={downloads} />
         <Features />
