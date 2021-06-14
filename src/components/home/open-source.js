@@ -156,7 +156,9 @@ export default function OpenSource() {
                 scrollToLibWrap()
                 setFilter("modeling")
               }}
-              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
+              className={`${
+                filter === "modeling" ? "text-sdv-dark" : `text-sdv-border`
+              } focus:outline-none hover:text-sdv-dark opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center`}
             >
               <img
                 className={`${
@@ -166,8 +168,8 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "modeling" ? `font-bold` : `text-sdv-border font-bold filter-gs`
-                } mt-1`}
+                  filter === "modeling" ? `` : ` filter-gs`
+                } mt-1 font-bold`}
               >
                 Modeling
               </div>
@@ -177,7 +179,9 @@ export default function OpenSource() {
                 scrollToLibWrap()
                 setFilter("benchmarking")
               }}
-              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center border-l border-r border-sdv-border"
+              className={`${
+                filter === "benchmarking" ? "text-sdv-dark" : `text-sdv-border`
+              } focus:outline-none hover:text-sdv-dark opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center border-l border-r border-sdv-border`}
             >
               <img
                 className={`${
@@ -187,8 +191,8 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "benchmarking" ? `font-bold` : `text-sdv-border font-bold filter-gs`
-                } mt-1`}
+                  filter === "benchmarking" ? `` : ` filter-gs`
+                } mt-1 font-bold`}
               >
                 Benchmarking
               </div>
@@ -198,7 +202,9 @@ export default function OpenSource() {
                 scrollToLibWrap()
                 setFilter("metrics")
               }}
-              className="focus:outline-none opacity-70 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center"
+              className={`${
+                filter === "metrics" ? "text-sdv-dark" : `text-sdv-border`
+              } focus:outline-none hover:text-sdv-dark opacity-80 hover:opacity-100 h-20 w-30 md:h-32 md:w-40 px-4 flex flex-col justify-center`}
             >
               <img
                 className={`${
@@ -208,8 +214,8 @@ export default function OpenSource() {
               />
               <div
                 className={`text-lg mx-auto ${
-                  filter === "metrics" ? `font-bold` : `text-sdv-border font-bold filter-gs`
-                } mt-1`}
+                  filter === "metrics" ? `` : ` filter-gs`
+                } mt-1 font-bold`}
               >
                 Metrics
               </div>
