@@ -9,6 +9,7 @@ import ProtectEnhance from '../components/home/protect-enhance'
 import TryIt from '../components/home/try-it'
 import config from "../utils/siteConfig"
 import WebsiteMeta from '../components/common/meta/WebsiteMeta'
+import ImageMeta from '../components/common/meta/ImageMeta'
 
 
 export default function HomePage() {
@@ -54,6 +55,9 @@ export default function HomePage() {
             type="website"
             image={`https://sdv.dev/web-dev/sdv-home.jpg`}
             canonical={`https://sdv.dev/`}
+        />
+        <ImageMeta 
+            image={`https://sdv.dev/web-dev/sdv-home.jpg`}
         />
         
     
