@@ -47,7 +47,6 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@mkitio/gatsby-theme-password-protect": "^2.1.2",
     "@tryghost/helpers": "1.1.41",
     "@tryghost/helpers-gatsby": "1.0.47",
     "autoprefixer": "^10.2.5",
