@@ -96,6 +96,7 @@ const Card = ({ item, idx }) => {
             <a
               className="hover:text-sdv-secondary font-bold"
               href={item.github}
+              target="_blank"
             >
               Github
             </a>
@@ -105,6 +106,7 @@ const Card = ({ item, idx }) => {
               <a
                 className="hover:text-sdv-secondary font-bold"
                 href={item.url}
+                target="_blank"
               >
                 Docs
               </a>

@@ -39,6 +39,7 @@ export default function Join({downloads}) {
         <div className="flex flex-wrap justify-center -mx-2">
           <div className="w-auto px-2 mb-4">
             <Link 
+              target="_blank"
               to="https://twitter.com/sdv_dev"
              className="hover:border-sdv-offwhite border border-sdv-dark p-0.5 inline-block rounded-full font-semibold leading-none text-lg grad-bg">
             <span className="px-10 py-3 block rounded-full bg-sdv-dark"><span className="grad-txt">Twitter</span></span>
@@ -46,12 +47,14 @@ export default function Join({downloads}) {
           </div>
           <div className="w-auto px-2 mb-4">
             <Link
+              target="_blank"
               className="hover:border-sdv-offwhite border border-sdv-dark p-0.5 inline-block rounded-full font-semibold leading-none text-lg grad-bg"
               to={`https://sdv-space.slack.com/join/shared_invite/zt-gdsfcb5w-0QQpFMVoyB2Yd6SRiMplcw#/`}
             ><span className="px-10 py-3 block rounded-full bg-sdv-dark"><span className=" grad-txt">Slack</span></span></Link>
           </div>
           <div className="w-auto px-2 mb-4">
             <Link 
+              target="_blank"
               to="https://www.linkedin.com/company/sdv-dev/"
               className="hover:border-sdv-offwhite border border-sdv-dark p-0.5 inline-block rounded-full font-semibold leading-none text-lg grad-bg">
               <span className="px-10 py-3 block rounded-full bg-sdv-dark"><span className="grad-txt">LinkedIn</span></span>

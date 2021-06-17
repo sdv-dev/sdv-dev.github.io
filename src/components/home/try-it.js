@@ -106,6 +106,7 @@ export default function TryIt() {
       <div className="container mx-auto mt-10 mb-20">
         <div className="flex flex-wrap justify-center">
           <Link 
+            target="_blank"
             className="font-bold text-sdv-secondary hover:underline"
             to={`https://sdv.dev/SDV/getting_started/install.html`}
           >Install SDV <FontAwesomeIcon width="16" icon={faArrowRight} /></Link>
