@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
 import { Article } from '../components/common'
 import Features from '../components/home/features'
 import Hero from '../components/home/hero'
