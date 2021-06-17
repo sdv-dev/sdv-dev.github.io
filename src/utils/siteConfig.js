@@ -6,7 +6,7 @@ module.exports = {
     
     postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
-    siteTitleMeta: `The Synthetic Data Vault Blog. Put synthetic data to work!`, // This allows an alternative site title for meta data for pages.
+    siteTitleMeta: `The Synthetic Data Vault. Put synthetic data to work!`, // This allows an alternative site title for meta data for pages.
     siteDescriptionMeta: `The Synthetic Data Vault (SDV) enables end users to easily generate synthetic data for different data modalities, including single table, relational and time series data.`, // This allows an alternative site description for meta data for pages.
 
     shareImageWidth: 1000, // Change to the width of your default share image
