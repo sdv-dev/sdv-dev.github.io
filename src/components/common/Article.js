@@ -12,7 +12,6 @@ import Cta from '../../components/Cta'
 import MoreArticles from '../MoreArticles'
 
 import favicon from '../../../static/favicon.ico';
-import Logo from "../../../assets/sdv-blog-logo.svg";
 
 /**
  * Main layout component
@@ -23,27 +22,18 @@ import Logo from "../../../assets/sdv-blog-logo.svg";
  *
  */
 const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
-    const site = data.allGhostSettings.edges[0].node;
-    const twitterUrl = site.twitter
-        ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
-        : null;
-    const facebookUrl = site.facebook
-        ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
-        : null;
 
     return (
         <>
             <Helmet>
-                <html lang={site.lang} />
-                <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <body className={bodyClass} />
+                <html lang={`en`} />
                 <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
             </Helmet>
 
             <div className="">
                 <div className="viewport-top nav-bg-white">
                     <Navigation
-                        data={site.navigation}
+                        
                         navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
                         <Link to="/">
@@ -90,28 +80,14 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
     );
 };
 
-PostDefaultLayout.propTypes = {
-    children: PropTypes.node.isRequired,
-    bodyClass: PropTypes.string,
-    isHome: PropTypes.bool,
-    data: PropTypes.shape({
-        file: PropTypes.object,
-        allGhostSettings: PropTypes.object.isRequired,
-    }).isRequired,
-};
+
 
 export default function PostDefaultLayoutSettingsQuery (props) {
     return (
     <StaticQuery
         query={graphql`
             query GhostSettingsArticle {
-                allGhostSettings {
-                    edges {
-                        node {
-                            ...GhostSettingsFields
-                        }
-                    }
-                }
+        
                 file(relativePath: { eq: "ghost-icon.png" }) {
                     childImageSharp {
                         fixed(width: 30, height: 30) {

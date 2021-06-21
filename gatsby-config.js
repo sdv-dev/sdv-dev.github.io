@@ -39,6 +39,9 @@ module.exports = {
     pathPrefix: "/" + process.env.SITEPATH,
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
+        url: process.env.SITEURL || config.siteUrl,
+        twitterUsername: "@sdv_dev",
+        image: config.image,
     },
     flags: {
         PRESERVE_WEBPACK_CACHE: true,
@@ -93,136 +96,6 @@ module.exports = {
         `gatsby-plugin-scroll-reveal`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
-        {
-            resolve: `gatsby-source-ghost`,
-            options: {
-              apiUrl: `https://sdv.ghost.io`,
-              contentApiKey: `68a3f60d2555e5dff8a5df9e11`,
-            },
-            // options:
-            //     process.env.NODE_ENV === `development`
-            //         ? ghostConfig.development
-            //         : ghostConfig.production,
-        },
-
-        
-        /**
-         *  Utility Plugins
-         */
-        {
-            resolve: `gatsby-plugin-ghost-manifest`,
-            options: {
-                short_name: config.shortTitle,
-                start_url: `/`,
-                background_color: config.backgroundColor,
-                theme_color: config.themeColor,
-                display: `minimal-ui`,
-                icon: `static/${config.siteIcon}`,
-                legacy: true,
-                query: `
-                {
-                    allGhostSettings {
-                        edges {
-                            node {
-                                title
-                                description
-                            }
-                        }
-                    }
-                }
-              `,
-            },
-        },
-        {
-            resolve: `gatsby-plugin-feed`,
-            options: {
-                query: `
-                {
-                    allGhostSettings {
-                        edges {
-                            node {
-                                title
-                                description
-                            }
-                        }
-                    }
-                }
-              `,
-                feeds: [
-                    generateRSSFeed(config),
-                ],
-            },
-        },
-        {
-            resolve: `gatsby-plugin-advanced-sitemap`,
-            options: {
-                query: `
-                {
-                    allGhostPost {
-                        edges {
-                            node {
-                                id
-                                slug
-                                updated_at
-                                created_at
-                                feature_image
-                            }
-                        }
-                    }
-                    allGhostPage {
-                        edges {
-                            node {
-                                id
-                                slug
-                                updated_at
-                                created_at
-                                feature_image
-                            }
-                        }
-                    }
-                    allGhostTag {
-                        edges {
-                            node {
-                                id
-                                slug
-                                feature_image
-                            }
-                        }
-                    }
-                    allGhostAuthor {
-                        edges {
-                            node {
-                                id
-                                slug
-                                profile_image
-                            }
-                        }
-                    }
-                }`,
-                mapping: {
-                    allGhostPost: {
-                        sitemap: `posts`,
-                    },
-                    allGhostTag: {
-                        sitemap: `tags`,
-                    },
-                    allGhostAuthor: {
-                        sitemap: `authors`,
-                    },
-                    allGhostPage: {
-                        sitemap: `pages`,
-                    },
-                },
-                exclude: [
-                    `/dev-404-page`,
-                    `/404`,
-                    `/404.html`,
-                    `/offline-plugin-app-shell-fallback`,
-                ],
-                createLinkInHead: true,
-                addUncaughtPages: true,
-            },
-        },
         {
     resolve: `gatsby-transformer-remark`,
     options: {

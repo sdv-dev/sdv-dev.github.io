@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Layout } from '../components/common'
+import { Article } from "../components/common";
 
 const NotFoundPage = () => (
-    <Layout>
-        <div className="container">
+    <Article>
+        <div className="container pt-48">
             <article className="content" style={{ textAlign: `center` }}>
                 <h1 className="content-title">Error 404</h1>
                 <section className="content-body">
@@ -12,7 +12,7 @@ const NotFoundPage = () => (
                 </section>
             </article>
         </div>
-    </Layout>
+    </Article>
 )
 
 export default NotFoundPage

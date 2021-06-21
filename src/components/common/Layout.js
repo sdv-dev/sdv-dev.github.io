@@ -23,20 +23,11 @@ import Logo from "../../../assets/sdv-blog-logo.svg";
  *
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
-    const site = data.allGhostSettings.edges[0].node;
-    const twitterUrl = site.twitter
-        ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
-        : null;
-    const facebookUrl = site.facebook
-        ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
-        : null;
 
     return (
         <>
             <Helmet>
-                <html lang={site.lang} />
-                <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <body className={bodyClass} />
+                <html lang={`en`} />
                 <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
             </Helmet>
 
@@ -50,7 +41,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <HeroImage className="absolute right-0 top-0 bottom-0 left-0 md:left-40 lg:left-80 xl:left-auto z-0 lg:block hidden" />
                     </div>
                     <Navigation
-                        data={site.navigation}
+                        
                         navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
                         <Link to="/">
@@ -139,28 +130,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     );
 };
 
-DefaultLayout.propTypes = {
-    children: PropTypes.node.isRequired,
-    bodyClass: PropTypes.string,
-    isHome: PropTypes.bool,
-    data: PropTypes.shape({
-        file: PropTypes.object,
-        allGhostSettings: PropTypes.object.isRequired,
-    }).isRequired,
-};
-
 export default function DefaultLayoutSettingsQuery (props) {
     return (
     <StaticQuery
         query={graphql`
             query GhostSettings {
-                allGhostSettings {
-                    edges {
-                        node {
-                            ...GhostSettingsFields
-                        }
-                    }
-                }
                 file(relativePath: { eq: "ghost-icon.png" }) {
                     childImageSharp {
                         fixed(width: 30, height: 30) {
