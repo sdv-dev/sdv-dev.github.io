@@ -81,7 +81,7 @@ export default function Footer() {
                       <li className="mb-4">
                         <Link className="hover:underline" to="https://sdv.dev/SDV">Docs</Link></li>
                       <li className="mb-4">
-                        <Link className="hover:underline" to={`https://sdv.dev/web-dev/resources`}>Resources</Link></li>
+                        <Link className="hover:underline" to={`https://sdv.dev/resources`}>Resources</Link></li>
                       
                     </ul>
                   </div>
