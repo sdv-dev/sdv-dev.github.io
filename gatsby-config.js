@@ -40,6 +40,10 @@ module.exports = {
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
+    flags: {
+        PRESERVE_WEBPACK_CACHE: true,
+        PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    },
     plugins: [
         {
             resolve: `gatsby-plugin-google-gtag`,
