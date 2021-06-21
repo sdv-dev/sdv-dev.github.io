@@ -19,4 +19,4 @@ jobs:
 
         env: 
           SITEURL: "https://sdv.dev"
-          SITEPATH: "/"
+          SITEPATH: ""
