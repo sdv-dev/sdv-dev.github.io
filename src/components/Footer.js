@@ -77,11 +77,11 @@ export default function Footer() {
                     <p className="font-bold mb-6">Site</p>
                     <ul className="font-light">
                       <li className="mb-4">
-                        <Link className="hover:underline" to="https://sdv.dev/blog">Blog</Link></li>
+                        <Link className="hover:underline" to="https://sdv.dev/blog/">Blog</Link></li>
                       <li className="mb-4">
-                        <Link className="hover:underline" to="https://sdv.dev/SDV">Docs</Link></li>
+                        <Link className="hover:underline" to="https://sdv.dev/SDV/">Docs</Link></li>
                       <li className="mb-4">
-                        <Link className="hover:underline" to={`https://sdv.dev/resources`}>Resources</Link></li>
+                        <Link className="hover:underline" to={`https://sdv.dev/resources/`}>Resources</Link></li>
                       
                     </ul>
                   </div>
