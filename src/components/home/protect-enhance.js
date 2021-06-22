@@ -21,7 +21,7 @@ export default function ProtectEnhance() {
             <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">Synthetic Data Vault</p>
             <h2 className="text-white my-8">Protect and Enhance Your Data</h2>
             <p className="text-white mx-auto max-w-4xl text-lg">
-            Use a synthetic data in place of real data for added protection, or use it in addition to your real data as an enhancement.
+            Use synthetic data in place of real data for added protection, or use it in addition to your real data as an enhancement.
             </p>
           </div>
         </div>
