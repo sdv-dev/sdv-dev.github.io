@@ -61,7 +61,7 @@ export default function Join({downloads}) {
             </Link>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center -mx-2 mt-4">
+        <div className="flex flex-wrap justify-center -mx-2 mt-4 text-center">
           <div className="w-auto px-4">
           { downloads != '' ? (
               <p className="px-4 text-white"><span className="font-bold">{downloads}K</span> Downloads</p>
