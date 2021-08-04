@@ -45,7 +45,7 @@ export default function HomePage() {
         title={config.siteTitleMeta}
         description={config.siteDescriptionMeta}
         type="website"
-        image={`https://sdv.dev/web-dev/sdv-home.jpg`}
+        image={`/sdv-home.jpg`}
         canonical={`https://sdv.dev/`}
       />
 
