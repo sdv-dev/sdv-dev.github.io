@@ -49,12 +49,14 @@ export default function HomePage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <Hero downloads={downloads} />
-      <Features />
-      <ProtectEnhance />
-      <OpenSource />
-      <TryIt />
-      <Join downloads={downloads} />
+      <div className="mx-auto" style={{ maxWidth: "1680px"}}>
+        <Hero downloads={downloads} />
+        <Features />
+        <ProtectEnhance />
+        <OpenSource />
+        <TryIt />
+        <Join downloads={downloads} />
+      </div>
     </Article>
   );
 }

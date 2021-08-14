@@ -74,7 +74,7 @@ export default function Join({downloads}) {
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-full md:w-10/12 lg:w-9/12 mb-20 relative">
             <div data-sal="fade"
-                data-sal-delay="200"
+                data-sal-delay="0"
                 data-sal-duration="1000"
                 data-sal-easing="ease">
                 <Img 
@@ -82,7 +82,7 @@ export default function Join({downloads}) {
                   alt="join our community map" 
                   loading={`lazy`} 
                   />
-                <div className="absolute inset-0">
+                <div className="absolute hidden inset-0">
                   <div className="flex flex-wrap h-full" id="loaded">
                     { [1,2,3,4,5,6,7,8,9,10,11,12].map((i, idx) => {
 
