@@ -56,6 +56,7 @@ const benchmarkingItems = [
     text:
       "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
     github: "https://github.com/sdv-dev/SDV",
+    url: "https://sdv.dev/SDV/"
   }
 ];
 
@@ -73,6 +74,7 @@ const metricsItems = [
     text:
       "Generates synthetic data across single table, relational, and time series data. Supports multiple models & evaluations.",
     github: "https://github.com/sdv-dev/SDV",
+    url: "https://sdv.dev/SDV/"
   }
 ];
 
