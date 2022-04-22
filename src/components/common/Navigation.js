@@ -23,7 +23,7 @@ const navItemsBlog = [
 ];
 const navItemsHome = [
   { label: "Docs", url: "https://sdv.dev/SDV" },
-  { label: "GitHub", url: "https://github.com/sdv-dev" },
+  { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
   { label: "Blog", url: "https://sdv.dev/blog/" },
 ];
 

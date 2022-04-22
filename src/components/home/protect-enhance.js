@@ -68,7 +68,7 @@ export default function ProtectEnhance() {
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-auto mb-10">
           <Link
-                to="https://github.com/sdv-dev"
+                to="https://github.com/sdv-dev/SDV"
                 className="px-10 py-3 block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
                 target="_blank"
               >

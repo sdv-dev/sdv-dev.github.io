@@ -15,7 +15,7 @@ export default function Cta() {
             <p className="text-white text-6xl font-bold leading-tight mb-6 lg:mb-0">Let's put synthetic data to work.</p>
           </div>
           <div className="flex justify-center items-center">
-            <Link to="https://github.com/sdv-dev" 
+            <Link to="https://github.com/sdv-dev/SDV" 
               className="px-6 py-4 inline-block bg-white text-sdv-dark rounded-full font-semibold leading-none text-lg"
             target="_blank">
               <FontAwesomeIcon width="16" icon={faGithub} />

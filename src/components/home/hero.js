@@ -25,7 +25,7 @@ export default function Hero({downloads}) {
               </h1>
               <div className="flex lg:flex-row flex-col items-center">
                 <Link
-                  to="https://github.com/sdv-dev"
+                  to="https://github.com/sdv-dev/SDV"
                   className="px-10 py-3 block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
                   target="_blank"
                 >
