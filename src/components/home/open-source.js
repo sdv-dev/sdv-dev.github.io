@@ -31,6 +31,7 @@ const modelingItems = [
     text:
       "Discovers properties & transforms data for data science use. Reverses the transforms to reproduce realistic data.",
     github: "https://github.com/sdv-dev/RDT",
+    url: "https://docs.sdv.dev/rdt"
   },
   {
     name: "Synthetic Data Vault",
