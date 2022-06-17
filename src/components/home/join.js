@@ -49,7 +49,7 @@ export default function Join({downloads}) {
             <Link
               target="_blank"
               className="hover:border-sdv-offwhite border border-sdv-dark p-0.5 inline-block rounded-full font-semibold leading-none text-lg grad-bg"
-              to={`https://sdv-space.slack.com/join/shared_invite/zt-gdsfcb5w-0QQpFMVoyB2Yd6SRiMplcw#/`}
+              to={`https://bit.ly/sdv-slack-invite`}
             ><span className="px-10 py-3 block rounded-full bg-sdv-dark"><span className=" grad-txt">Slack</span></span></Link>
           </div>
           <div className="w-auto px-2 mb-4">
