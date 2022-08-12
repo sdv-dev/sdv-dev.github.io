@@ -40,24 +40,42 @@ const ResourcesPage = () => (
     </div>
     <div className="container">
       <section className=" py-12">
+
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
+            className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
+            to="https://arxiv.org/pdf/2207.14406.pdf"
+          >
+            Sequential Models in the Synthetic Data Vault
+          </a>
+          <p>Preprint, June 2022</p>
+          <p>Kevin Zhang, Kalyan Veeramachaneni, Neha Patki</p>
+        </div>
+
+        <div className="text-lg my-10">
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://dai.lids.mit.edu/wp-content/uploads/2020/02/Lei_SMThesis_neo.pdf"
           >
             Synthesizing Tabular Data using Conditional GAN
-          </Link>
+          </a>
           <p>S.M Thesis, Dept. of EECS, MIT, February 2020</p>
           <p>Lei Xu</p>
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://arxiv.org/pdf/1907.00503.pdf"
           >
             Modeling Tabular data using Conditional GAN (CTGAN)
-          </Link>
+          </a>
           <p>
             NeurIPS|2019, Proc. of Advances in Neural Information Processing
             Systems, 2019
@@ -69,12 +87,14 @@ const ResourcesPage = () => (
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://dai.lids.mit.edu/wp-content/uploads/2019/01/1812.01226.pdf"
           >
             Learning Vine Copula Models For Synthetic Data Generation
-          </Link>
+          </a>
           <p>
             AAAI-19, In Proc. 33rd AAAI Conference on Artificial Intelligence,
             2019
@@ -83,35 +103,41 @@ const ResourcesPage = () => (
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://arxiv.org/pdf/1811.11264.pdf"
           >
             Synthesizing Tabular Data using Generative Adversarial Networks
             (TGAN)
-          </Link>
+          </a>
           <p>Preprint, 27 November 2018</p>
           <p>Lei Xu, Kalyan Veeramachaneni</p>
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://dai.lids.mit.edu/wp-content/uploads/2018/12/Andrew_MEng.pdf"
           >
             SDV: An Open Source Library for Synthetic Data Generation
-          </Link>
+          </a>
           <p>M.Eng Thesis, Dept. of EECS, MIT, August 2018</p>
           <p>Andrew Montanez</p>
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://dai.lids.mit.edu/wp-content/uploads/2018/03/SDV.pdf"
           >
             The synthetic data vault
-          </Link>
+          </a>
           <p>
             DSAA -16, International Conference on Data Science and Advance
             Analytics, October 2016
@@ -120,13 +146,15 @@ const ResourcesPage = () => (
         </div>
 
         <div className="text-lg my-10">
-          <Link
+          <a
+            rel="noopener"
+            target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
             to="https://dspace.mit.edu/handle/1721.1/109616"
           >
             The Synthetic Data Vault: Generative Modeling for Relational
             Databases.
-          </Link>
+          </a>
           <p>M.Eng. Thesis, Dept. of EECS, MIT, June 2016</p>
           <p>Neha Patki</p>
         </div>
