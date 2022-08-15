@@ -226,7 +226,7 @@ const ResourcesPage = () => {
             </div>
             <div className="text-lg my-10 post">
               <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
-                5. Keep conversation focused
+                5. Keep conversations focused
               </p>
               <p>
                 The primary focus of the SDV Slack is discussing the open source
