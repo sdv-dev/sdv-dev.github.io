@@ -53,7 +53,7 @@ const ResourcesPage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container max-w-5xl bg-white px-6 md:px-10 lg:px-20">
         <section className=" py-12">
           <div className="text-lg my-10 post">
             <p className="font-semibold">Dear SDV Community,</p>
@@ -85,7 +85,7 @@ const ResourcesPage = () => {
             </p>
           </div>
 
-          <div className="sm:pl-8 md:pl-16 xl:pl-24">
+          <div className="sm:pl-8 md:pl-16 xl:pl-20">
             <div className="text-lg my-10 post">
               <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
                 1. Keep the workspace organized
