@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Article } from "../components/common";
 import { Helmet } from 'react-helmet'
 
@@ -46,7 +45,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://arxiv.org/pdf/2207.14406.pdf"
+            href="https://arxiv.org/pdf/2207.14406.pdf"
           >
             Sequential Models in the Synthetic Data Vault
           </a>
@@ -59,7 +58,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://dai.lids.mit.edu/wp-content/uploads/2020/02/Lei_SMThesis_neo.pdf"
+            href="https://dai.lids.mit.edu/wp-content/uploads/2020/02/Lei_SMThesis_neo.pdf"
           >
             Synthesizing Tabular Data using Conditional GAN
           </a>
@@ -72,7 +71,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://arxiv.org/pdf/1907.00503.pdf"
+            href="https://arxiv.org/pdf/1907.00503.pdf"
           >
             Modeling Tabular data using Conditional GAN (CTGAN)
           </a>
@@ -91,7 +90,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://dai.lids.mit.edu/wp-content/uploads/2019/01/1812.01226.pdf"
+            href="https://dai.lids.mit.edu/wp-content/uploads/2019/01/1812.01226.pdf"
           >
             Learning Vine Copula Models For Synthetic Data Generation
           </a>
@@ -107,7 +106,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://arxiv.org/pdf/1811.11264.pdf"
+            href="https://arxiv.org/pdf/1811.11264.pdf"
           >
             Synthesizing Tabular Data using Generative Adversarial Networks
             (TGAN)
@@ -121,7 +120,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://dai.lids.mit.edu/wp-content/uploads/2018/12/Andrew_MEng.pdf"
+            href="https://dai.lids.mit.edu/wp-content/uploads/2018/12/Andrew_MEng.pdf"
           >
             SDV: An Open Source Library for Synthetic Data Generation
           </a>
@@ -134,7 +133,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://dai.lids.mit.edu/wp-content/uploads/2018/03/SDV.pdf"
+            href="https://dai.lids.mit.edu/wp-content/uploads/2018/03/SDV.pdf"
           >
             The synthetic data vault
           </a>
@@ -150,7 +149,7 @@ const ResourcesPage = () => (
             rel="noopener"
             target={`_blank`}
             className="text-sdv-secondary underline hover:no-underline hover:opacity-80"
-            to="https://dspace.mit.edu/handle/1721.1/109616"
+            href="https://dspace.mit.edu/handle/1721.1/109616"
           >
             The Synthetic Data Vault: Generative Modeling for Relational
             Databases.
