@@ -23,7 +23,7 @@ const ResourcesPage = () => (
       >
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="container mx-auto">
-            <div className="flex flex-wrap -mx-6 justify-center items-center">
+            <div className="flex flex-wrap -mx-4 lg:-mx-6 justify-center items-center">
               <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white text-center">
                 <h1 className="leading-none text-white text-4xl lg:text-5xl mb-3">
                   Research papers
