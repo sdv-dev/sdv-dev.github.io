@@ -68,6 +68,7 @@ const metricsItems = [
     text:
       "Provides a set of model-agnostic tools for evaluating synthetic data. Defines metrics for statistics, efficiency, and privacy.",
     github: "https://github.com/sdv-dev/SDMetrics",
+    url: "https://docs.sdv.dev/sdmetrics/"
   },
   {
     name: "Synthetic Data Vault",
