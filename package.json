@@ -10,7 +10,8 @@
     "url": "git+https://github.com/sdv-dev/SDV.git"
   },
   "resolutions": {
-    "sharp": "0.27.1"
+    "sharp": "0.27.1",
+    "gatsby-plugin-sharp/probe-image-size": "^7.0.0"
   },
   "engines": {
     "node": ">= 10.13.0"
@@ -54,7 +55,6 @@
     "gatsby-plugin-advanced-sitemap": "1.6.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-catch-links": "2.10.0",
-    "gatsby-plugin-feed": "2.13.1",
     "gatsby-plugin-force-trailing-slashes": "1.0.5",
     "gatsby-plugin-google-gtag": "^3.3.0",
     "gatsby-plugin-manifest": "2.12.1",
@@ -78,7 +78,6 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
-    "react-scroll-progress-bar": "^1.1.13",
     "sass": "^1.32.10",
     "styled-components": "^5.2.3",
     "tailwindcss": "^2.1.1"

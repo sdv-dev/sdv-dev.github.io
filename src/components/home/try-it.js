@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'gatsby'
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
@@ -72,8 +71,8 @@ export default function TryIt() {
             {` `}
              <FontAwesomeIcon width="16" icon={faCopy} />
           </button>
-          <textarea id="text-area" rows="1" className="opacity-0 absolute bottom-10 left-10 right-10 top-10 z-0">
-            {code}
+          <textarea value={code} readOnly={true} id="text-area" rows="1" className="opacity-0 absolute bottom-10 left-10 right-10 top-10 z-0">
+            
           </textarea>
           <div className="code-container relative z-1" style={{
             filter: 'drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.1))'
@@ -92,11 +91,12 @@ export default function TryIt() {
 
       <div className="container mx-auto mt-10 mb-20">
         <div className="flex flex-wrap justify-center">
-          <Link 
+          <a 
             target="_blank"
             className="font-bold text-sdv-secondary hover:underline"
-            to={`https://docs.sdv.dev/sdv/installation`}
-          >Install SDV <FontAwesomeIcon width="16" icon={faArrowRight} /></Link>
+            rel="noreferrer"
+            href={`https://docs.sdv.dev/sdv/installation`}
+          >Install SDV <FontAwesomeIcon width="16" icon={faArrowRight} /></a>
         </div>
       </div>
 
