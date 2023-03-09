@@ -16,147 +16,159 @@ import PropTypes from "prop-types";
  *
  */
 
-const navItemsBlog = [
-  { label: "Docs", url: "https://sdv.dev/SDV" },
-  { label: "GitHub", url: "https://github.com/sdv-dev" },
-  { label: "SDV", url: "https://sdv.dev/" },
-];
-const navItemsHome = [
-  { label: "Docs", url: "https://sdv.dev/SDV" },
+const navItems = [
+  { label: "Blog", url: "https://datacebo.com/blog" },
+  { label: "Company", url: "https://datacebo.com" },
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
-  { label: "Blog", url: "https://sdv.dev/blog/" },
 ];
 
-const Navigation = ({ data, navClass, children }) => {
-    const ref = useRef();
+const Navigation = ({ data, navClass, children, isDark }) => {
+  const ref = useRef();
 
-    const [isWhite, setNavbarColor] = useState(false);
+  const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
 
-    const changeNavBackground = () => {
-        const scrolledThrough = window.scrollY >= 30;
-        if (scrolledThrough && isWhite) {
-            document.body.classList.add("nav-bg-white");
-            setNavbarColor(false);
-        } else if (!scrolledThrough) {
-            document.body.classList.remove("nav-bg-white");
-            setNavbarColor(true);
-        }
-    };  
+  // const [isWhite, setNavbarColor] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener("scroll", changeNavBackground);
-        return () => {
-            window.removeEventListener("scroll", changeNavBackground);
-        };
-    });
-    
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+  const changeNavBackground = () => {
+    const scrolledThrough = window.scrollY >= 30;
+    if (scrolledThrough) {
+      document.body.classList.add(navbarClassName);
+      // setNavbarColor(false);
+    } else {
+      document.body.classList.remove(navbarClassName);
+      // setNavbarColor(true);
+    }
+  };
 
-    const useOutsideClick = (ref, callback) => {
-        const handleClick = (e) => {
-            if (ref.current && !ref.current.contains(e.target)) {
-                callback();
-            }
-        };
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavBackground);
+    return () => {
+      window.removeEventListener("scroll", changeNavBackground);
+    };
+  });
 
-        useEffect(() => {
-            document.addEventListener("click", handleClick);
+  useEffect(() => {
+    if (
+      window.location.hash === "#core-contributors" &&
+      window.location.hash !== "#guest-authors"
+    ) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
-            return () => {
-                document.removeEventListener("click", handleClick);
-            };
-        });
+  const useOutsideClick = (ref, callback) => {
+    const handleClick = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        callback();
+      }
     };
 
-    useOutsideClick(ref, () => {
-        if (isActive) {
-            setNavActive(!isActive);
-        }
+    useEffect(() => {
+      document.addEventListener("click", handleClick);
+
+      return () => {
+        document.removeEventListener("click", handleClick);
+      };
     });
+  };
 
-    const [isActive, setNavActive] = useState(false);
+  useOutsideClick(ref, () => {
+    if (isActive) {
+      setNavActive(!isActive);
+    }
+  });
 
-    const handleNavCollapse = () => setNavActive(!isActive);
+  const [isActive, setNavActive] = useState(false);
 
-    return (
-        <nav
-            className={`h-20 flex flex-col justify-center items-center z-50 fixed w-full`}
-            id="navbar"
-            ref={ref}
-        >
-            <div className="container mx-auto">
-                <div className="relative flex md:flex-row flex-col items-center justify-between -mx-5">
-                    <div className="absolute inset-y-0 px-2 left-0 flex items-center lg:hidden ">
-                        <Hamburger
-                            rounded
-                            size={20}
-                            toggled={isActive}
-                            toggle={setNavActive}
-                            onClick={handleNavCollapse}
-                        />
-                    </div>
-                    <div className="flex md:flex-row flex-wrap flex-col items-center justify-between w-full px-5">
-                        <div className="md:order-2 w-full lg:w-2/12 flex md:justify-center lg:justify-start justify-center">
-                            {children}
-                        </div>
-                        <div className="md:order-1 w-auto lg:order-2">
-                            <div
-                                className={`${
-                                    isActive ? "flex" : "hidden"
-                                } lg:block absolute lg:relative top-14 lg:top-auto inset-x-0 bg-white lg:bg-transparent`}
-                            >
-                                <div className=" flex lg:flex-row flex-col justify-center items-center w-full">
-                                    {navItemsHome.map((navItem, i) => {
-                                        if (
-                                            navItem.url.match(/^\s?http(s?)/gi)
-                                        ) {
-                                            return (
-                                                <a
-                                                    className={navClass}
-                                                    href={navItem.url}
-                                                    key={i}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    {navItem.label}
-                                                </a>
-                                            );
-                                        } else {
-                                            return (
-                                                <Link
-                                                    className={navClass}
-                                                    to={navItem.url}
-                                                    key={i}
-                                                >
-                                                    {navItem.label}
-                                                </Link>
-                                            );
-                                        }
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  const handleNavCollapse = () => setNavActive(!isActive);
+
+  useEffect(() => {
+    setTimeout(changeNavBackground, 50);
+  });
+
+  return (
+    <nav
+      className={`${
+        isDark ? "tp-start" : "white-start"
+      } h-20 flex flex-col justify-center items-center z-50 fixed w-full`}
+      id="navbar"
+      ref={ref}
+    >
+      <div className="container mx-auto">
+        <div className="relative flex md:flex-row flex-col items-center justify-between -mx-5">
+          <div className="absolute nav-toggler inset-y-0 px-4 left-0 flex items-center lg:hidden ">
+            <Hamburger
+              rounded
+              size={20}
+              toggled={isActive}
+              toggle={setNavActive}
+              onClick={handleNavCollapse}
+            />
+          </div>
+          <div className="flex md:flex-row flex-wrap flex-col items-center justify-between w-full px-5">
+            <div className="md:order-2 w-full lg:w-auto flex md:justify-center lg:justify-start justify-center">
+              {children}
             </div>
-        </nav>
-    );
+            <div className="md:order-1 w-auto lg:order-2">
+              <div
+                className={`${
+                  isActive ? "flex" : "hidden"
+                } lg:block absolute lg:relative top-14 lg:top-auto inset-x-0 bg-white lg:bg-transparent`}
+              >
+                <div className=" flex lg:flex-row flex-col justify-center items-center w-full">
+                  {navItems.map((navItem, i) => {
+                    if (navItem.url.match(/^\s?http(s?)/gi)) {
+                      return (
+                        <a
+                          className={navClass}
+                          href={navItem.url}
+                          key={i}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {navItem.label}
+                        </a>
+                      );
+                    } else {
+                      return (
+                        <Link className={navClass} to={navItem.url} key={i}>
+                          {navItem.label}
+                        </Link>
+                      );
+                    }
+                  })}
+
+                  <a
+                    className={`${navClass} bordered`}
+                    href="https://datacebo.com/contact"
+                    
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 Navigation.defaultProps = {
-    navClass: `site-nav-item`,
+  navClass: `site-nav-item`,
 };
 
 Navigation.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            label: PropTypes.string.isRequired,
-            url: PropTypes.string.isRequired,
-        }).isRequired
-    ).isRequired,
-    navClass: PropTypes.string,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  navClass: PropTypes.string,
 };
 
 export default Navigation;

@@ -12,8 +12,6 @@ import config from "../../utils/siteConfig";
 import HeroImage from "../../../assets/blog-hero.svg";
 import favicon from '../../../static/favicon.ico';
 
-import Logo from "../../../assets/sdv-blog-logo.svg";
-
 /**
  * Main layout component
  *
@@ -152,7 +150,7 @@ export default function DefaultLayoutSettingsQuery (props) {
                     }
                 }
                 logo: file(
-                    relativePath: { eq: "logo-home.png" }
+                    relativePath: { eq: "data-cebo-logo@2x.png" }
                 ) {
                     childImageSharp {
                         fixed(width: 84, quality: 100) {

@@ -1,28 +1,103 @@
 #navbar {
-  transition: all 100ms ease-in-out;
-  .nav-bg-white & {
-    background-color: white;
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+  transition: all 400ms ease-in-out;
+  
+
+  @media (min-width: 1025px) {
+    &.tp-start {
+      .nav-bg-dark & {
+        transition: all 400ms ease-in-out;
+        background-color: #fff;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+  
+        .dark-logo {
+          display: block !important;
+        }
+        .white-logo {
+          display: none !important;
+        }
+      }
+      .dark-logo {
+        display: none !important;
+      }
+    }
+  
+    &.white-start {
+      background-color: white;
+      .nav-bg-white & {
+        transition: all 400ms ease-in-out;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+        background-color: white;
+      }
+      .white-logo {
+        display: none !important;
+      }
+    }
   }
 
   @media (max-width: 1024px) {
-    background-color: white;
+    background-color: #fff;
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+    .nav-toggler {
+      color: #03C8DE;
+      .tp-start & {
+        color: #ffffff;
+      }
+      .white-start & {
+        color: #fff;
+      }
+    }
+    
+    &.white-start, &.tp-start {
+      .dark-logo {
+        display: block !important;
+      }
+      
+      .white-logo {
+        display: none !important;
+      }
+    }
   }
 }
 
 .navbar-item {
-  color: white;
-  .nav-bg-white & {
-    color: #0C0C0C;
-  }
+
+
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
+  @media (min-width: 1025px) { 
+    .white-start & {
+      color: #0C0C0C;
+      .nav-bg-white & {
+        color: #0C0C0C;
+      }
+    }
+  
+    .tp-start & {
+      &.bordered {
+        @apply border border-white ml-4;
+      }
+    
+      color: white;
+      .nav-bg-dark & { 
+        color: #0C0C0C;
+        &.bordered {
+          border-color: #0C0C0C;
+        }
+      
+      }
+    }
+  }
+
+ 
+
   @media (max-width: 1024px) {
-    color: #0C0C0C;
+    color: #ffffff;
+    .tp-start &, .white-start & {
+      color: #0C0C0C;
+    }
   }
 }
 

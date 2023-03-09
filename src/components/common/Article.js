@@ -31,37 +31,26 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
             </Helmet>
 
             <div className="">
-                <div className="viewport-top nav-bg-white">
+                <div className="viewport-top">
                     <Navigation
-                        
-                        navClass="block px-3 py-4 mb:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
+                        isDark={true}
+                        navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
-                        <Link to="/">
-                        <div className="w-20">
-                            <Img
-                                fadeIn={true}
-                                fixed={
-                                    data.logo
-                                        .childImageSharp.fixed
-                                }
-                                alt="The Synthetic Data Vault Blog"
-                                className=""
-                            />
-                            </div>
-                            {/* {site.logo ? (
-                                <img
-                                    width="80"
-                                    height="44"
-                                    className="site-logo"
-                                    src={site.logo}
-                                    alt={site.title}
-                                />
-                            ) : (
+                        <Link to="https://datacebo.com">
+                            <div className="w-auto">
                                 <Img
-                                    fixed={data.file.childImageSharp.fixed}
-                                    alt={site.title}
+                                fadeIn={true}
+                                fixed={data.logo.childImageSharp.fixed}
+                                alt="DataCebo Blog"
+                                className="white-logo"
                                 />
-                            )} */}
+                                <Img
+                                fadeIn={true}
+                                fixed={data.darklogo.childImageSharp.fixed}
+                                alt="DataCebo Blog"
+                                className="dark-logo"
+                                />
+                            </div>
                         </Link>
                     </Navigation>
                  
@@ -104,14 +93,19 @@ export default function PostDefaultLayoutSettingsQuery (props) {
                         }
                     }
                 }
-                logo: file(
-                    relativePath: { eq: "logo-home.png" }
-                ) {
-                    childImageSharp {
-                        fixed(width: 84, quality: 100) {
-                            ...GatsbyImageSharpFixed_noBase64
-                        }
+                logo: file(relativePath: { eq: "logo-white.png" }) {
+                childImageSharp {
+                    fixed(width: 199, quality: 100) {
+                    ...GatsbyImageSharpFixed_noBase64
                     }
+                }
+                }
+                darklogo: file(relativePath: { eq: "logo-dark.png" }) {
+                childImageSharp {
+                    fixed(width: 199, quality: 100) {
+                    ...GatsbyImageSharpFixed_noBase64
+                    }
+                }
                 }
             }
         `}

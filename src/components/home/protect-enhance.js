@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -8,8 +8,46 @@ import config from "../../utils/siteConfig"
 
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
+import Img from "gatsby-image";
+
+import TestSoftware from "../../../assets/test-software.svg"
+import ExpandAccess from "../../../assets/expand-access.svg"
+import PilotProducts from "../../../assets/pilot-new-products.svg"
+import AugmentData from "../../../assets/augment-data.svg"
+import PlanScenarios from "../../../assets/plan-scenarios.svg"
+
+
 
 export default function ProtectEnhance() {
+
+  const useCases = [
+    {
+      svg: <TestSoftware />,
+      name: "Test Software",
+      url: "https://datacebo.com/blog/fake-to-synthetic-ml/"
+    },
+    {
+      svg: <ExpandAccess />,
+      name: "Expand Access",
+      url: ""
+    },
+    {
+      svg: <PilotProducts />,
+      name: "Pilot New Products",
+      url: ""
+    },
+    {
+      svg: <AugmentData />,
+      name: "Augment Data",
+      url: "https://datacebo.com/blog/synthetic-label-balancing/"
+    },
+    {
+      svg: <PlanScenarios />,
+      name: "Plan Scenarios",
+      url: "https://datacebo.com/blog/sdv-flights-synthesizer/"
+    },
+  ]
+
   return (
     <section className="bg-sdv-dark relative py-20 lg:py-40 -mt-20" id="sdv">
       <div className="absolute left-0 right-0 -top-1">
@@ -18,49 +56,40 @@ export default function ProtectEnhance() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
-            <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">Synthetic Data Vault</p>
-            <h2 className="text-white my-8">Protect and Enhance Your Data</h2>
-            <p className="text-white mx-auto max-w-4xl text-lg">
-            Use synthetic data in place of real data for added protection, or use it in addition to your real data as an enhancement.
+            <p className="grad-txt uppercase text-sm tracking-widest font-bold mt-8">The Synthetic Data Vault</p>
+            <h3 className="text-white my-8">What can you use synthetic data for?</h3>
+            <p className="text-white mx-auto max-w-lg tracking-tight text-base font-light">
+              Use a synthetic data in place of real data for added protection, or
+            use it in addition to your real data as an enhancement.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto mt-16">
-        <div className="flex flex-wrap -mx-4">
-          <div className="w-full sm:w-1/2 px-4 flex flex-col items-stretch">
-            <div className="text-center">
-              <h3 className="text-white">PROTECT</h3>
-              <p className="text-white">Create a clone to protect real data</p>
-            </div>
-            <div className="flex flex-col justify-center h-full my-16"><img alt="protect" className="mx-auto block" width="364" src={`${config.sitePath}/protect.png`} /></div>
-          </div>
-          <div className="w-full sm:w-1/2 px-4 flex flex-col items-stretch">
-            <div className="text-center">
-              <h3 className="text-white">ENHANCE</h3>
-              <p className="text-white">Add synthetic values to real data</p>
-            </div>
-            <div className="flex flex-col justify-center h-full my-16"><img alt="enhance" className="mx-auto block" width="424" src={`${config.sitePath}/enhance.png`} /></div>
-          </div>
-        </div>
-      </div>
+      <div className="container mx-auto my-16">
+        <div className="flex justify-center items-center flex-wrap -mx-4">
+          {
+            useCases.map((item, idx) => {
 
-      <div className="container mx-auto mb-16">
-        <div className="flex flex-wrap justify-center -mx-4">
-          <div className="px-4 w-auto text-white text-center">
-            <p>
-              <span className="mx-1">Test Software</span> {' '}· 
-                {' '}
-              <span className="mx-1">Scale Data Science</span> {' '}· 
-                {' '}
-              <span className="mx-1">Create Demos</span> {' '}· 
-                {' '}
-              <span className="mx-1">Augmented ML</span> {' '}· 
-                {' '}
-              <span className="mx-1">Plan Scenarios</span>
-            </p>
-          </div>
+              if (item.url) {
+                return (<div className="w-auto px-4 my-4" key={`usecase-${idx}`}>
+                  <a href={item.url} className=" text-white hover:text-sdv-secondary hover:border-sdv-secondary duration-200 w-44 h-44 border-white border text-center rounded-2xl flex flex-col items-center justify-center">
+                    <div className="mt-2 mb-3 mx-auto w-28 h-28">{ item.svg }</div>
+                    <p className="text-base text-center">{item.name}</p>
+                  </a>
+                </div>)
+              }
+              
+              return (
+                <div className="w-auto px-4 my-4" key={`usecase-${idx}`}>
+                  <div className="w-44 h-44 border-white border text-center rounded-2xl flex flex-col items-center justify-center">
+                    <div className="mt-2 mb-3 mx-auto w-28 h-28">{ item.svg }</div>
+                    <p className="text-base text-center text-white">{item.name}</p>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
 

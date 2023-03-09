@@ -11,16 +11,16 @@ import "prismjs/components/prism-python";
 import "prismjs/themes/prism-twilight.css";
 import "prismjs/themes/prism-okaidia.css";
 
-const code = `from sdv import load_demo, SDV
+const code = `from sdv.datasets.demo import download_demo
+from sdv.lite import SingleTablePreset
 
-# Use pre-loaded demo tables
-metadata, tables = load_demo(metadata=True)
+real_data, metadata = download_demo(
+    'single_table', 'fake_hotel_guests')
 
-sdv = SDV()
-sdv.fit(metadata, tables)
+synthesizer = SingleTablePreset(metadata, name='FAST_ML')
+synthesizer.fit(real_data)
 
-synthetic_data = sdv.sample()
-print(synthetic_data)`;
+synthetic_data = synthesizer.sample(num_rows=10)`;
 
 export default function TryIt() {
   const [strCode, setStrCode] = useState('');
@@ -68,8 +68,8 @@ export default function TryIt() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
-            <p className="grad-txt uppercase text-sm tracking-widest font-bold my-8">QUICKSTART</p>
-            <h2 className="text-sdv-dark my-8">Try it out Now!</h2>
+            <p className="grad-txt uppercase text-sm tracking-widest font-bold mt-8">QUICKSTART</p>
+            <h2 className="text-sdv-dark my-8">Try it out now!</h2>
             <p className="text-sdv-dark mx-auto max-w-4xl text-lg">
               Quickly discover SDV with just a few lines of code!
             </p>
@@ -90,7 +90,9 @@ export default function TryIt() {
           <textarea id="text-area" rows="1" className="opacity-0 absolute bottom-10 left-10 right-10 top-10 z-0">
             {code}
           </textarea>
-          <div className="code-container relative z-1">
+          <div className="code-container relative z-1" style={{
+            filter: 'drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.1))'
+          }}>
           <pre>
             <code className="language-py"
             
@@ -108,7 +110,7 @@ export default function TryIt() {
           <Link 
             target="_blank"
             className="font-bold text-sdv-secondary hover:underline"
-            to={`https://sdv.dev/SDV/getting_started/install.html`}
+            to={`https://docs.sdv.dev/sdv/installation`}
           >Install SDV <FontAwesomeIcon width="16" icon={faArrowRight} /></Link>
         </div>
       </div>
