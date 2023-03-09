@@ -5,8 +5,6 @@ import { Article } from "../components/common";
 import { Helmet } from "react-helmet";
 import Cta from "../components/Cta";
 
-import config from "../utils/siteConfig";
-
 const ResourcesPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -30,12 +28,14 @@ const ResourcesPage = () => {
         type="website"
       />
 
-      <div className=" pt-20">
+      <div className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto" 
+        style={{
+          maxWidth: "1680px"
+        }}
+      >
         <div
-          className="bg-sdv-highlight w-full feature-image relative h-48"
-          style={{
-            background: "linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)",
-          }}
+          className=" w-full feature-image relative h-48"
+         
         >
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="container mx-auto">

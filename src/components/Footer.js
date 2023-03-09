@@ -1,6 +1,5 @@
 import React from "react";
 
-// import Logo from "../../static/logo.png";
 import Img from "gatsby-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +10,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { Link, StaticQuery, graphql } from "gatsby";
-import config from "../utils/siteConfig";
 
 export default function Footer() {
   return (
@@ -43,7 +41,7 @@ export default function Footer() {
             <div
               className="h-1"
               style={{
-                backgroundImage: "linear-gradient(to right, #F9AD14, #E45432);",
+                backgroundImage: "linear-gradient(to right, #F9AD14, #E45432)",
               }}
             ></div>
             <section
@@ -89,6 +87,7 @@ export default function Footer() {
                                 <a
                                   className="opacity-80 hover:opacity-100 text-white hover:underline"
                                   href={i.url}
+                                  rel="noreferrer"
                                 >
                                   {i.name}
                                 </a>
@@ -117,6 +116,7 @@ export default function Footer() {
                                 <a
                                   className="opacity-80 hover:opacity-100 text-white hover:underline"
                                   href={i.url}
+                                  rel="noreferrer"
                                 >
                                   {i.name}
                                 </a>
@@ -131,34 +131,34 @@ export default function Footer() {
                         </p>
                         <div className="flex flex-row -mx-1 mt-4">
                           <div className="px-1">
-                            <Link
+                            <a
                               target="_blank"
-                              rel="noopener"
-                              to="https://www.linkedin.com/company/datacebo"
+                              rel="noreferrer"
+                              href="https://www.linkedin.com/company/datacebo"
                               className="w-10 h-10 flex justify-center items-center bg-opacity-50 bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite"
                             >
                               <FontAwesomeIcon width="16" icon={faLinkedin} />
-                            </Link>
+                            </a>
                           </div>
                           <div className="px-1">
-                            <Link
+                            <a
                               target="_blank"
-                              rel="noopener"
-                              to="https://twitter.com/sdv_dev"
+                              rel="noreferrer"
+                              href="https://twitter.com/sdv_dev"
                               className="w-10 h-10 flex justify-center items-center bg-opacity-50 bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite"
                             >
                               <FontAwesomeIcon width="16" icon={faTwitter} />
-                            </Link>
+                            </a>
                           </div>
                           <div className="px-1">
-                            <Link
+                            <a
                               target="_blank"
-                              rel="noopener"
-                              to="https://bit.ly/sdv-slack-invite"
+                              rel="noreferrer"
+                              href="https://bit.ly/sdv-slack-invite"
                               className="w-10 h-10 flex justify-center items-center bg-opacity-50 bg-sdv-mute inline-block rounded-full hover:bg-sdv-graylight bg-sdv-offwhite"
                             >
                               <FontAwesomeIcon width="16" icon={faSlack} />
-                            </Link>
+                            </a>
                           </div>
                         </div>
                       </div>

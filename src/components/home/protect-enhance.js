@@ -1,14 +1,10 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import config from "../../utils/siteConfig"
-
 import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
-import Img from "gatsby-image";
 
 import TestSoftware from "../../../assets/test-software.svg"
 import ExpandAccess from "../../../assets/expand-access.svg"
@@ -73,7 +69,8 @@ export default function ProtectEnhance() {
 
               if (item.url) {
                 return (<div className="w-auto px-4 my-4" key={`usecase-${idx}`}>
-                  <a href={item.url} className=" text-white hover:text-sdv-secondary hover:border-sdv-secondary duration-200 w-44 h-44 border-white border text-center rounded-2xl flex flex-col items-center justify-center">
+                  <a href={item.url}
+                rel="noreferrer" className=" text-white hover:text-sdv-secondary hover:border-sdv-secondary duration-200 w-44 h-44 border-white border text-center rounded-2xl flex flex-col items-center justify-center">
                     <div className="mt-2 mb-3 mx-auto w-28 h-28">{ item.svg }</div>
                     <p className="text-base text-center">{item.name}</p>
                   </a>
@@ -96,13 +93,14 @@ export default function ProtectEnhance() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-auto mb-10">
-          <Link
-                to="https://github.com/sdv-dev/SDV"
+          <a
+                href="https://github.com/sdv-dev/SDV"
                 className="px-10 py-3 block border-3 border-white rounded-full font-semibold leading-none text-lg text-white hover:opacity-70"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon width="16" icon={faGithub} className="mr-3" /> {' '} View on Github
-              </Link>
+              </a>
           </div>
         </div>
       </div>

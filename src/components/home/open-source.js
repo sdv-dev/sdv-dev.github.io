@@ -1,14 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import config from "../../utils/siteConfig";
-import Img from "gatsby-image";
 
 import Copulas from "../../../assets/copulas.svg"
-import CTGAN from "../../../assets/ctgan.svg"
+import Ctgan from "../../../assets/ctgan.svg"
 import DeepEcho from "../../../assets/deepecho.svg"
 import SDGym from "../../../assets/sdgym.svg"
 import SDMetrics from "../../../assets/sdmetrics.svg"
-import RDT from "../../../assets/rdt.svg"
+import Rdt from "../../../assets/rdt.svg"
 import Vault from "../../../assets/sdv.svg"
 
 
@@ -29,6 +27,7 @@ const Card = ({ item, idx }) => {
               className="hover:text-sdv-secondary font-bold"
               href={item.github}
               target="_blank"
+              rel="noreferrer"
             >
               Github
             </a>
@@ -39,6 +38,7 @@ const Card = ({ item, idx }) => {
                 className="hover:text-sdv-secondary font-bold"
                 href={item.url}
                 target="_blank"
+                rel="noreferrer"
               >
                 Docs
               </a>
@@ -75,7 +75,7 @@ export default function OpenSource() {
     },
     {
       name: "CTGAN",
-      svg: <CTGAN />,
+      svg: <Ctgan />,
       // image: data.library_ctgan.childImageSharp.fixed,
       icon: "/ctgan.svg",
       text: "Models & generates tabular data with Deep Learning. Offers  CTGAN and TVAE models.",
@@ -91,7 +91,7 @@ export default function OpenSource() {
     },
     {
       name: "RDT",
-      svg: <RDT />,
+      svg: <Rdt />,
       // image: data.library_rdt.childImageSharp.fixed,
       icon: "/rdt.svg",
       text: "Discovers properties & transforms data for data science use. Reverses the transforms to reproduce realistic data.",
@@ -185,6 +185,7 @@ export default function OpenSource() {
                 className={`${
                   filter === "modeling" ? "" : `filter-gs`
                 } mx-auto mb-2`}
+                alt="modeling"
                 src={`${config.sitePath}/modeling.svg`}
               />
               <div
@@ -208,6 +209,7 @@ export default function OpenSource() {
                 className={`${
                   filter === "benchmarking" ? "" : `filter-gs`
                 } mx-auto mb-2`}
+                alt="benchmarking"
                 src={`${config.sitePath}/benchmarking.svg`}
               />
               <div
@@ -231,6 +233,7 @@ export default function OpenSource() {
                 className={`${
                   filter === "metrics" ? "" : `filter-gs`
                 } mx-auto mb-2`}
+                alt="metrics"
                 src={`${config.sitePath}/metrics.svg`}
               />
               <div

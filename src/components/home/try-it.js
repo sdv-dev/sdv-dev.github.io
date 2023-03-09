@@ -23,22 +23,7 @@ synthesizer.fit(real_data)
 synthetic_data = synthesizer.sample(num_rows=10)`;
 
 export default function TryIt() {
-  const [strCode, setStrCode] = useState('');
   const [isCopied, setCopied] = useState(false);
-
-  // const printtheString = (str, code) => {
-  //   for (var i = 0; i < code.length; i++) {
-
-  //     setTimeout(function() {
-  //       setStrCode(str + code[i])
-  //     }, 500)
-  //   }
-
-  // }
-
-  // useEffect(() => {
-  //   // printtheString(strCode, code)
-  // }, [strCode])
 
   const copyCodeToClipboard = () => {
     const el = document.getElementById('text-area')

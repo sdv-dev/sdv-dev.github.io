@@ -1,7 +1,4 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import config from "../../utils/siteConfig";
-import Img from "gatsby-image";
 
 
 import Multitable from "../../../assets/multitable.svg";
@@ -57,6 +54,7 @@ const features = [
                   <a
                     href={item.userguide}
                     target="_blank"
+                    rel="noreferrer"
                     className="rounded-2xl bg-white p-4 lg:p-8 border border-offwhite h-full block transition-shadow hover:text-sdv-secondary"
                   >
                     <div className="my-3">{ item.svg }</div>

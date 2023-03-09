@@ -1,13 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import { Navigation } from ".";
 import Footer from '../../components/Footer';
-import Cta from '../../components/Cta'
-// import config from "../../utils/siteConfig";
 
 import MoreArticles from '../MoreArticles'
 
@@ -36,7 +33,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                         isDark={true}
                         navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
                     >
-                        <Link to="https://datacebo.com">
+                        <a href="https://datacebo.com">
                             <div className="w-auto">
                                 <Img
                                 fadeIn={true}
@@ -51,7 +48,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                                 className="dark-logo"
                                 />
                             </div>
-                        </Link>
+                        </a>
                     </Navigation>
                  
 

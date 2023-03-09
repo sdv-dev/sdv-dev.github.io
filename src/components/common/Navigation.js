@@ -22,7 +22,7 @@ const navItems = [
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
 ];
 
-const Navigation = ({ data, navClass, children, isDark }) => {
+const Navigation = ({ navClass, children, isDark }) => {
   const ref = useRef();
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";

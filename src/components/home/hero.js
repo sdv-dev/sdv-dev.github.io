@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from "react";
-import { Link } from "gatsby";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faSlack, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faSlack, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import config from "../../utils/siteConfig"
-import WhiteTopWave from "./wave-top-white"
 import WhiteBottomWave from "./wave-bottom-white"
 
 
@@ -27,31 +25,31 @@ export default function Hero({downloads}) {
               </h1>
               <div className="flex flex-row justify-center md:justify-start -mx-1 mt-4">
                     <div className="px-1">
-                      <Link target="_blank" rel="noopener" 
-                        to="https://github.com/sdv-dev/SDV" 
+                      <a target="_blank" rel="noreferrer"
+                        href="https://github.com/sdv-dev/SDV" 
                         className="w-8 h-8 flex justify-center text-3xl items-center text-white bg-transparent rounded-full hover:opacity-80">
                         <FontAwesomeIcon icon={faGithub} />
-                      </Link>
+                      </a>
                     </div>
                     <div className="px-1">
-                      <Link target="_blank" rel="noopener" 
-                        to="https://bit.ly/sdv-slack-invite" 
+                      <a target="_blank" rel="noreferrer"
+                        href="https://bit.ly/sdv-slack-invite" 
                         className="w-8 h-8 flex justify-center text-3xl items-center text-white bg-transparent rounded-full hover:opacity-80">
                         <FontAwesomeIcon icon={faSlack} />
-                      </Link>
+                      </a>
                     </div>
 
                     <div className="px-1">
-                      <Link target="_blank" rel="noopener" 
-                        to="https://www.linkedin.com/company/datacebo" 
+                      <a target="_blank" rel="noreferrer"
+                        href="https://www.linkedin.com/company/datacebo" 
                         className="w-8 h-8 text-3xl flex justify-center items-center text-white bg-transparent rounded-full hover:opacity-80">
                         <FontAwesomeIcon icon={faLinkedin} />
-                      </Link>
+                      </a>
                     </div>
                   </div>
             </div>
             <div className="w-full md:w-7/12 lg:w-6/12 px-4 md:mt-0 text-white flex flex-col justify-end">
-              <div className="pb-40"><img width="445" src={`${config.sitePath}/homehero.png`} className="mx-auto" /></div>
+              <div className="pb-40"><img width="445" alt="sdv hero" src={`${config.sitePath}/homehero.png`} className="mx-auto" /></div>
             </div>
           </div>
         </div>
