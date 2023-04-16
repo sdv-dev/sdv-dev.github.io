@@ -44,7 +44,7 @@ const features = [
 ];
   
   return (
-    <section className="relative z-10 pb-10">
+    <section className="relative z-10">
       <div className="container max-w-7xl mx-auto">
         <div className="flex flex-wrap -mx-4 -mt-40">
           {features.map((item, idx) => {
@@ -65,6 +65,11 @@ const features = [
               </div>
             );
           })}
+        </div>
+      </div>
+      <div class="container py-16">
+        <div class="logo-stripe w-embed">
+          
         </div>
       </div>
     </section>

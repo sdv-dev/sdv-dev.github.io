@@ -45,7 +45,7 @@ const ResourcesPage = () => {
                     SDV Slack Community Guidelines
                   </h1>
                   <p className="text-xl">
-                    Last Update: <i>July 2022</i>
+                    Last Update: <i>April 2023</i>
                   </p>
                 </div>
               </div>
@@ -63,8 +63,8 @@ const ResourcesPage = () => {
               to use.
             </p>
             <p>
-              Our goal at the SDV is to be the most comprehensive and trusted
-              open source platform for synthetic data. Since we started the{" "}
+              Our goal at the SDV is to be the most comprehensive and trusted 
+              platform for synthetic data. Since we started the{" "}
               <a
                 target={`_blank`}
                 rel="noopener"
@@ -112,7 +112,7 @@ const ResourcesPage = () => {
                 <a
                   target={`_blank`}
                   rel="noopener"
-                  href="https://sdv.dev/SDV/user_guides/index.html"
+                  href="https://docs.sdv.dev/sdv"
                 >
                   SDV User Guides
                 </a>{" "}
@@ -130,13 +130,16 @@ const ResourcesPage = () => {
                 initial question. The text will become the start of a new thread,
                 and new replies will appear nested underneath it:
               </p>
-              <div className="max-w-2xl">
+              <div className="max-w-2xl mb-6">
                 <Img
                   fluid={data.placeholderImage.childImageSharp.fluid}
                   alt="join our community map"
                   loading={`lazy`}
                 />
               </div>
+              <p>
+                (We recognize that there may be bots or Apps that you use in other Slack spaces. Currently, we are not accepting any requests to add external Slack Apps to the SDV space.)
+              </p>
             </div>
             <div className="text-lg my-10 post">
               <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
@@ -229,8 +232,7 @@ const ResourcesPage = () => {
                 5. Keep conversations focused
               </p>
               <p>
-                The primary focus of the SDV Slack is discussing the open source
-                SDV software for creating and evaluating synthetic data. However,
+                The primary focus of the SDV Slack is discussing the <a href="https://sdv.dev/">SDV software</a> for creating and evaluating synthetic data. However,
                 we recognize that synthetic data can be useful in a variety of
                 applications. Feel free to use the #random channel for general
                 industry news about synthetic data. (The SDV team will not be

@@ -45,10 +45,10 @@ export default function ProtectEnhance() {
   ]
 
   return (
-    <section className="bg-sdv-dark relative py-20 lg:py-40 -mt-20" id="sdv">
-      <div className="absolute left-0 right-0 -top-1">
+    <section className="bg-sdv-dark relative pt-16 lg:pt-20 pb-20 lg:pb-40" id="sdv">
+      {/* <div className="absolute left-0 right-0 -top-1">
         <WhiteTopWave color="#fff" />
-      </div>
+      </div> */}
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="px-4 w-full sm:w-8/12 md:w-7/12 text-center ">
