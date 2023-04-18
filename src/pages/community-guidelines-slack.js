@@ -117,8 +117,8 @@ const ResourcesPage = () => {
                   SDV User Guides
                 </a>{" "}
                 and the{" "}
-                <a target={`_blank`} rel="noopener" href="https://sdv.dev/blog/">
-                  SDV Blog
+                <a target={`_blank`} rel="noopener" href="https://datacebo.com/blog/">
+                  DataCebo Blog
                 </a>
                 .
               </p>
