@@ -67,8 +67,8 @@ const features = [
           })}
         </div>
       </div>
-      <div class="container py-16">
-        <div class="logo-stripe w-embed">
+      <div className="container-2xl py-16">
+        <div className="logo-stripe w-embed">
           
         </div>
       </div>
