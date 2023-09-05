@@ -289,28 +289,6 @@ const ResourcesPage = () => {
                 responses from us.
               </p>
             </div>
-            <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
-                6. Keep conversations focused
-              </p>
-              <p>
-                The primary focus of the SDV Slack is discussing the{" "}
-                <a href="https://sdv.dev/">SDV software</a> for creating and
-                evaluating synthetic data. However, we recognize that synthetic
-                data can be useful in a variety of applications. Feel free to
-                use the #random channel for general industry news about
-                synthetic data. (The SDV team will not be actively participating
-                in this channel.)
-              </p>
-              <p>
-                Please refrain from advertising or soliciting anywhere in the
-                SDV Slack, as this creates a bad experience for the community.
-                Promotion of a specific business or research may result in your
-                expulsion from the Slack space. If you are receiving
-                solicitation or spam from someone else, please get in touch with
-                the SDV team at info@sdv.dev for a resolution.
-              </p>
-            </div>
           </div>
 
           <div className="text-lg my-10 post">
