@@ -17,27 +17,27 @@ export default function HomePage() {
 
   //Get the total number of downloads for a single release, using its tag name.
 
-  function getDownloadsCount() {
-    var project = "ctgan";
+  // function getDownloadsCount() {
+  //   var project = "ctgan";
 
-    var xhr = new XMLHttpRequest();
+  //   var xhr = new XMLHttpRequest();
 
-    xhr.addEventListener("load", function () {
-      var data = JSON.parse(this.responseText);
-      var number = numberWithCommas(data.total_downloads);
-      var numberK = number.split(",")[0];
-      console.log(" - COUNT - ", number);
-      setDownloads(numberK);
-      return numberK;
-    });
-    xhr.open("GET", "https://api.pepy.tech/api/projects/" + project);
-    xhr.send();
-  }
+  //   xhr.addEventListener("load", function () {
+  //     var data = JSON.parse(this.responseText);
+  //     var number = numberWithCommas(data.total_downloads);
+  //     var numberK = number.split(",")[0];
+  //     console.log(" - COUNT - ", number);
+  //     setDownloads(numberK);
+  //     return numberK;
+  //   });
+  //   xhr.open("GET", "https://api.pepy.tech/api/projects/" + project);
+  //   xhr.send();
+  // }
 
-  useEffect(() => {
-    getDownloadsCount();
-    return () => {};
-  }, []);
+  // useEffect(() => {
+  //   getDownloadsCount();
+  //   return () => {};
+  // }, []);
 
   return (
     <Article>

@@ -24,7 +24,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
         <>
             <Helmet>
                 <html lang={`en`} />
-                <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
+                {/* <link rel="icon" type="image/png" href={favicon} sizes="16x16" /> */}
             </Helmet>
 
             <div className="">
