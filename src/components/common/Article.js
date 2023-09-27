@@ -92,14 +92,14 @@ export default function PostDefaultLayoutSettingsQuery (props) {
                 }
                 logo: file(relativePath: { eq: "logo-white.png" }) {
                 childImageSharp {
-                    fixed(width: 199, quality: 100) {
+                    fixed(width: 182, quality: 100) {
                     ...GatsbyImageSharpFixed_noBase64
                     }
                 }
                 }
                 darklogo: file(relativePath: { eq: "logo-dark.png" }) {
                 childImageSharp {
-                    fixed(width: 199, quality: 100) {
+                    fixed(width: 182, quality: 100) {
                     ...GatsbyImageSharpFixed_noBase64
                     }
                 }

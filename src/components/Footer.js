@@ -18,7 +18,7 @@ export default function Footer() {
         query FooterImages {
           logo: file(relativePath: { eq: "logo-white.png" }) {
             childImageSharp {
-              fixed(width: 199, quality: 100) {
+              fixed(width: 182, quality: 100) {
                 ...GatsbyImageSharpFixed_noBase64
               }
             }
