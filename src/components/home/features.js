@@ -19,7 +19,7 @@ const features = [
     github: "",
     docs: "",
     userguide:
-      "https://colab.research.google.com/drive/1UltaGqbvbp4a_s85FZb3Pyjc_Igad3Ea?usp=sharing",
+      "https://colab.research.google.com/drive/1F3WWduNjcX4oKck6XkjlwZ9zIsWlTGEM?usp=sharing",
   },
   {
     svg: <Multitable />,
@@ -29,7 +29,7 @@ const features = [
     text: "Learn a relational data model to synthesize multiple, related tables",
     github: "",
     docs: "",
-    userguide: "https://colab.research.google.com/drive/1h_xwzHXrif-xEOC39amYC6xfNPu5hDA1?usp=sharing",
+    userguide: "https://colab.research.google.com/drive/1L6i-JhJK9ROG-KFcyzT9G-8FC3L8y8Lc?usp=sharing",
   },
   {
     svg: <Sequential />,
@@ -39,7 +39,7 @@ const features = [
     text: "Learn a sequential or time series model to synthesize new events",
     github: "",
     docs: "",
-    userguide: "https://colab.research.google.com/drive/1cT4-jFK2Bxe93QudC_CwHq_yVCcNcxal?usp=sharing",
+    userguide: "https://colab.research.google.com/drive/1YLk2uwn8yrSRPy0soEeJwu8Hdk_tGTlE?usp=sharing",
   },
 ];
   
