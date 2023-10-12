@@ -43,7 +43,7 @@ const ResourcesPage = () => {
                     SDV Slack Community Guidelines
                   </h1>
                   <p className="text-xl">
-                    Last Update: <i>September 2023</i>
+                    Last Update: <i>October 12, 2023</i>
                   </p>
                 </div>
               </div>
@@ -86,7 +86,22 @@ const ResourcesPage = () => {
           <div className="sm:pl-8 md:pl-16 xl:pl-20">
             <div className="text-lg my-10 post">
               <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
-                1. Keep the workspace organized
+                1. Discuss and participate openly
+              </p>
+              <p>
+              We created our Slack Community as an open place to discuss the SDV. Anyone can join our community by creating a profile. Whether it's through asking questions, having detailed discussions or reacting to existing conversations, you are welcome to engage with the community in any way you feel comfortable. Feel free to answer questions by replying in a thread, especially if you've run into the same problems in the past or have workarounds.
+              </p>
+              <p>
+                The guidance below allows us to keep the community safe:
+              </p>
+              <ul>
+                <li>We encourage  SDV Slack members to create profiles that accurately represent who they are, including their name, profile image and email. Please do not deliberately change your identity in order to mislead the community, for example by providing a temporary email or a fake name or profile photo. Impersonating others could also result in your expulsion.</li>
+                <li>We encourage everyone to communicate in public channels instead of through private Direct Messages (DMs). When you keep discussions in the public space, everyone in the community can benefit from the solutions that you find, and others can also join in. This also applies to communicating with SDV team members — we try to respond to questions on a first-come, first-serve basis, and generally get to everything within a few business days. <strong>You will <i>not</i> receive a faster response by directly messaging individual members of the SDV team.</strong></li>
+              </ul>
+            </div>
+            <div className="text-lg my-10 post">
+              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+                2. Keep the workspace organized
               </p>
               <p>
                 Before starting a discussion, check to see if there is already
@@ -145,32 +160,6 @@ const ResourcesPage = () => {
                 (We recognize that there may be bots or Apps that you use in
                 other Slack spaces. Currently, we are not accepting any requests
                 to add external Slack Apps to the SDV space.)
-              </p>
-            </div>
-            <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
-                2. Discuss and participate openly
-              </p>
-              <p>
-                Whether it's through asking questions, having detailed
-                discussions or reacting to existing conversations, you are
-                welcome to engage with the community in any way you feel
-                comfortable. Feel free to answer questions by replying in a
-                thread, especially if you've run into the same problems in the
-                past or have workarounds.
-              </p>
-              <p>
-                We encourage everyone to communicate in public channels instead
-                of through private Direct Messages (DMs). When you keep
-                discussions in the public space, everyone in the community can
-                benefit from the solutions that you find, and others can also
-                join in. This also applies to communicating with SDV team
-                members — we try to respond to questions on a first-come,
-                first-serve basis, and generally get to everything within a few
-                business days. <strong className="font-bold">
-                  You will <i className="italic">not</i> receive a faster response by
-                  directly messaging individual members of the SDV team.
-                </strong>
               </p>
             </div>
             <div className="text-lg my-10 post">
