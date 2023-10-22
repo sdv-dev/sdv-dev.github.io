@@ -138,7 +138,7 @@ pre[class*="language-"] {
   background-image: url(/slider-3x.png);
   background-repeat: repeat-x;
   background-position: 0 50%;
-  background-size: 4198px 48px;
+  background-size: 3505px 48px;
 }
 .logo-stripe:hover {
   animation-play-state: paused;
@@ -146,6 +146,6 @@ pre[class*="language-"] {
 
 @keyframes marquee {
   to {
-    background-position: -4198px 0%;
+    background-position: -3505px 0%;
   }
 }
