@@ -67,11 +67,13 @@ const features = [
           })}
         </div>
       </div>
-      <div className="container-2xl py-16">
+      <div className="h-16"></div>
+      
+      {/* <div className="container-2xl py-16">
         <div className="logo-stripe w-embed">
           
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
