@@ -43,7 +43,7 @@ const ResourcesPage = () => {
                     SDV Slack Community Guidelines
                   </h1>
                   <p className="text-xl">
-                    Last Update: <i>October 12, 2023</i>
+                    Last Update: <i>May 8, 2024</i>
                   </p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const ResourcesPage = () => {
               to use.
             </p>
             <p>
-              Our goal at the SDV is to be the most comprehensive and trusted
+              Our goal with the SDV is to be the most comprehensive and trusted
               platform for synthetic data. Since we started the{" "}
               <a
                 target={`_blank`}
@@ -118,14 +118,6 @@ const ResourcesPage = () => {
                 <a
                   target={`_blank`}
                   rel="noopener"
-                  href="https://github.com/sdv-dev/SDV/discussions"
-                >
-                  GitHub Discussions
-                </a>
-                ,{" "}
-                <a
-                  target={`_blank`}
-                  rel="noopener"
                   href="https://docs.sdv.dev/sdv"
                 >
                   SDV User Guides
@@ -143,7 +135,7 @@ const ResourcesPage = () => {
               <p>
                 If you cannot find any related material, post your question in
                 the appropriate channel depending on the use – for eg.
-                #single-table, #multi-table, #timeseries, etc. For general
+                #single-table, #multi-table, #timeseries, #sdmetrics, etc. For general
                 questions, use #sdv-dev. We recommend you use only 1 block of
                 text to write your initial question. The text will become the
                 start of a new thread, and new replies will appear nested
@@ -208,7 +200,7 @@ const ResourcesPage = () => {
                 4. Keep the focus on SDV usage
               </p>
               <p>
-                The primary focus of the SDV Slack is to discus the{" "}
+                The primary focus of the SDV Slack is to discuss the{" "}
                 <a href="https://sdv.dev/">SDV software</a>. Due to recent
                 growth in users and usage questions, and our goal of supporting
                 users in every way possible, we are adopting a new policy: Slack
