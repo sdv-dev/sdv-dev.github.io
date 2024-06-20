@@ -11,12 +11,12 @@ import "prismjs/themes/prism-twilight.css";
 import "prismjs/themes/prism-okaidia.css";
 
 const code = `from sdv.datasets.demo import download_demo
-from sdv.lite import SingleTablePreset
+from sdv.single_table import GaussianCopulaSynthesizer
 
 real_data, metadata = download_demo(
-    'single_table', 'fake_hotel_guests')
+  'single_table', 'fake_hotel_guests')
 
-synthesizer = SingleTablePreset(metadata, name='FAST_ML')
+synthesizer = GaussianCopulaSynthesizer(metadata)
 synthesizer.fit(real_data)
 
 synthetic_data = synthesizer.sample(num_rows=10)`;
