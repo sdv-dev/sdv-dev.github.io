@@ -39,7 +39,7 @@ const ResourcesPage = () => {
             <div className="container mx-auto">
               <div className="flex flex-wrap -mx-4 lg:-mx-6 justify-center items-center">
                 <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white text-center">
-                  <h1 className="leading-none text-white text-4xl lg:text-5xl mb-3">
+                  <h1 className="leading-none text-white text-[28px] lg:text-2xl mb-3">
                     SDV Slack Community Guidelines
                   </h1>
                   <p className="text-xl">
@@ -85,22 +85,48 @@ const ResourcesPage = () => {
 
           <div className="sm:pl-8 md:pl-16 xl:pl-20">
             <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+              <p className="text-2xl lg:text-[28px] font-bold text-sdv-dark">
                 1. Discuss and participate openly
               </p>
               <p>
-              We created our Slack Community as an open place to discuss the SDV. Anyone can join our community by creating a profile. Whether it's through asking questions, having detailed discussions or reacting to existing conversations, you are welcome to engage with the community in any way you feel comfortable. Feel free to answer questions by replying in a thread, especially if you've run into the same problems in the past or have workarounds.
+                We created our Slack Community as an open place to discuss the
+                SDV. Anyone can join our community by creating a profile.
+                Whether it's through asking questions, having detailed
+                discussions or reacting to existing conversations, you are
+                welcome to engage with the community in any way you feel
+                comfortable. Feel free to answer questions by replying in a
+                thread, especially if you've run into the same problems in the
+                past or have workarounds.
               </p>
-              <p>
-                The guidance below allows us to keep the community safe:
-              </p>
+              <p>The guidance below allows us to keep the community safe:</p>
               <ul>
-                <li>We encourage  SDV Slack members to create profiles that accurately represent who they are, including their name, profile image and email. Please do not deliberately change your identity in order to mislead the community, for example by providing a temporary email or a fake name or profile photo. Impersonating others could also result in your expulsion.</li>
-                <li>We encourage everyone to communicate in public channels instead of through private Direct Messages (DMs). When you keep discussions in the public space, everyone in the community can benefit from the solutions that you find, and others can also join in. This also applies to communicating with SDV team members — we try to respond to questions on a first-come, first-serve basis, and generally get to everything within a few business days. <strong>You will <i>not</i> receive a faster response by directly messaging individual members of the SDV team.</strong></li>
+                <li>
+                  We encourage SDV Slack members to create profiles that
+                  accurately represent who they are, including their name,
+                  profile image and email. Please do not deliberately change
+                  your identity in order to mislead the community, for example
+                  by providing a temporary email or a fake name or profile
+                  photo. Impersonating others could also result in your
+                  expulsion.
+                </li>
+                <li>
+                  We encourage everyone to communicate in public channels
+                  instead of through private Direct Messages (DMs). When you
+                  keep discussions in the public space, everyone in the
+                  community can benefit from the solutions that you find, and
+                  others can also join in. This also applies to communicating
+                  with SDV team members — we try to respond to questions on a
+                  first-come, first-serve basis, and generally get to everything
+                  within a few business days.{" "}
+                  <strong>
+                    You will <i>not</i> receive a faster response by directly
+                    messaging individual members of the SDV team.
+                  </strong>
+                </li>
               </ul>
             </div>
             <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+              <p className="text-2xl lg:text-[28px] font-bold text-sdv-dark">
                 2. Keep the workspace organized
               </p>
               <p>
@@ -135,11 +161,11 @@ const ResourcesPage = () => {
               <p>
                 If you cannot find any related material, post your question in
                 the appropriate channel depending on the use – for eg.
-                #single-table, #multi-table, #timeseries, #sdmetrics, etc. For general
-                questions, use #sdv-dev. We recommend you use only 1 block of
-                text to write your initial question. The text will become the
-                start of a new thread, and new replies will appear nested
-                underneath it:
+                #single-table, #multi-table, #timeseries, #sdmetrics, etc. For
+                general questions, use #sdv-dev. We recommend you use only 1
+                block of text to write your initial question. The text will
+                become the start of a new thread, and new replies will appear
+                nested underneath it:
               </p>
               <div className="max-w-2xl mb-6">
                 <Img
@@ -155,7 +181,7 @@ const ResourcesPage = () => {
               </p>
             </div>
             <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+              <p className="text-2xl lg:text-[28px] font-bold text-sdv-dark">
                 3. Continue with involved discussions on GitHub
               </p>
               <p>
@@ -196,7 +222,7 @@ const ResourcesPage = () => {
               </ul>
             </div>
             <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+              <p className="text-2xl lg:text-[28px] font-bold text-sdv-dark">
                 4. Keep the focus on SDV usage
               </p>
               <p>
@@ -249,7 +275,7 @@ const ResourcesPage = () => {
               </ul>
             </div>
             <div className="text-lg my-10 post">
-              <p className="text-3xl lg:text-4xl font-bold text-sdv-dark">
+              <p className="text-2xl lg:text-[28px] font-bold text-sdv-dark">
                 5. Be respectful
               </p>
               <p>

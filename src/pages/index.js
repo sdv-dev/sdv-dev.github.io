@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Article } from "../components/common";
 import Features from "../components/home/features";
 import Hero from "../components/home/hero";
@@ -49,7 +49,7 @@ export default function HomePage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <div className="mx-auto" style={{ maxWidth: "1680px"}}>
+      <div className="mx-auto" style={{ maxWidth: "1680px" }}>
         <Hero downloads={downloads} />
         <Features />
         <ProtectEnhance />

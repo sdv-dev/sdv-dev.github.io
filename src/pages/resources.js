@@ -1,33 +1,31 @@
 import React from "react";
 import { Article } from "../components/common";
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 import Cta from "../components/Cta";
 
-import config from "../utils/siteConfig"
+import config from "../utils/siteConfig";
 
 const ResourcesPage = () => (
   <Article hasMoreArticles={false}>
     <Helmet
-        title={config.siteTitleMeta}
-        description={config.siteDescriptionMeta}
-        type="website"
+      title={config.siteTitleMeta}
+      description={config.siteDescriptionMeta}
+      type="website"
     />
 
-    <div className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto" 
-        style={{
-          maxWidth: "1680px"
-        }}
-      >
-        <div
-          className=" w-full feature-image relative h-48"
-         
-        >
+    <div
+      className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto"
+      style={{
+        maxWidth: "1680px",
+      }}
+    >
+      <div className=" w-full feature-image relative h-48">
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="container mx-auto">
             <div className="flex flex-wrap -mx-4 lg:-mx-6 justify-center items-center">
               <div className="w-full lg:w-6/12 px-6 md:mt-0 text-white text-center">
-                <h1 className="leading-none text-white text-4xl lg:text-5xl mb-3">
+                <h1 className="leading-none text-white text-[28px] lg:text-2xl mb-3">
                   Research papers
                 </h1>
                 <p className="text-xl">
@@ -41,7 +39,6 @@ const ResourcesPage = () => (
     </div>
     <div className="container">
       <section className=" py-12">
-
         <div className="text-lg my-10">
           <a
             rel="noopener"

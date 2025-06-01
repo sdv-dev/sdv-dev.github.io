@@ -3,31 +3,30 @@
 @tailwind utilities;
 
 @layer base {
-
   body {
     @apply font-cern;
   }
 
   h1 {
-    @apply text-8xl;
+    @apply text-5xl;
     @apply leading-snug;
     @apply font-bold;
     @apply text-sdv-dark;
   }
   h2 {
-    @apply text-7xl;
+    @apply text-[40px];
     @apply leading-none;
     @apply font-bold;
     @apply text-sdv-dark;
   }
   h3 {
-    @apply text-6xl;
+    @apply text-4xl;
     @apply leading-snug;
     @apply font-bold;
     @apply text-sdv-dark;
   }
   h4 {
-    @apply text-5xl;
+    @apply text-3xl;
     @apply leading-snug;
     @apply font-bold;
     @apply text-sdv-dark;
@@ -39,14 +38,14 @@
     @apply text-sdv-dark;
   }
   h6 {
-    @apply text-3xl;
+    @apply text-2xl;
     @apply leading-snug;
     @apply font-bold;
     @apply text-sdv-dark;
   }
 
   p {
-    @apply leading-extra-relaxed
+    @apply leading-extra-relaxed;
   }
 
   .link-wrap .read-more {
@@ -71,67 +70,79 @@
   }
 
   .grad-txt {
-    background: -webkit-linear-gradient(0deg, #03B0F2 1.57%, #01E0C9 100%);
+    background: -webkit-linear-gradient(0deg, #03b0f2 1.57%, #01e0c9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .grad-border {
-    border-image: linear-gradient(0deg, #03B0F2 1.57%, #01E0C9 100%);
+    border-image: linear-gradient(0deg, #03b0f2 1.57%, #01e0c9 100%);
   }
 
   .grad-bg {
-    background-image: linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%);
+    background-image: linear-gradient(90deg, #03b0f2 1.57%, #01e0c9 100%);
   }
 
   .hero-heading {
     font-size: 98px;
     line-height: 1;
-    
+
     @media screen(sm) {
       font-size: 72px;
     }
   }
-  
 }
 
-pre[class*="language-"], :not(pre) > code[class*="language-"] {
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
   background: #000036 !important;
 }
 
 pre[class*="language-"] {
-  border: .3em solid #000036 !important;
-  font-family: 'Cern', sans-serif;
+  border: 0.3em solid #000036 !important;
+  font-family: "Cern", sans-serif;
   padding-left: 32px !important;
   padding-right: 32px !important;
   border-radius: 1rem !important;
 }
 
-.token.keyword  {
+.token.keyword {
   font-weight: 700 !important;
-  color:#03C8DE !important
+  color: #03c8de !important;
 }
 
 .token.boolean {
   font-weight: 700 !important;
-  color: #01E0C9 !important;
+  color: #01e0c9 !important;
 }
 
 .token.comment {
-  color: #ADADAD !important;
+  color: #adadad !important;
 }
 
 .sal-animate .img-cover:nth-of-type(even) {
-  @apply translate-y-full
+  @apply translate-y-full;
 }
 .sal-animate .img-cover:nth-of-type(odd) {
-  @apply -translate-y-full
+  @apply -translate-y-full;
 }
 
 .logo-stripe {
   animation: marquee 50s linear infinite;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.776042) 20%, #000000 80%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.776042) 20%, #000000 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.776042) 20%,
+    #000000 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.776042) 20%,
+    #000000 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   width: 100%;
   height: 48px;
@@ -148,4 +159,38 @@ pre[class*="language-"] {
   to {
     background-position: -3505px 0%;
   }
+}
+
+.all-button {
+  @apply font-semibold rounded-lg text-base xs:text-lg lg:text-xl duration-200 leading-none text-center;
+  @apply px-6 pt-[18px] pb-[21px];
+}
+
+.blue-btn {
+  @apply rounded-lg bg-midnight-950 py-[15px] px-[18px] md:py-[17px] md:px-[20px] text-white;
+}
+
+.blue-btn:hover {
+  @apply bg-[rgba(0,11,61,0.77)];
+}
+
+.blue-btn:focus-visible {
+  @apply bg-midnight-950 ring-2 ring-blue-600 ring-offset-2 ring-offset-white outline-none;
+}
+
+.gray-btn {
+  @apply rounded-lg border bg-[rgba(30,30,105,0.04)] border-[rgba(0,32,99,0.03)] backdrop-blur-[50px];
+  @apply text-midnight-950 py-[15px] px-[18px] md:py-[17px] md:px-[20px];
+}
+
+.gray-btn:hover {
+  @apply border bg-[rgba(5,5,88,0.06)] border-[rgba(4,32,98,0.03)];
+}
+
+.gray-btn:focus-visible {
+  @apply bg-[rgba(30,30,105,0.04)] ring-2 ring-blue-600 ring-offset-2 ring-offset-[rgba(0,32,99,0.03)] outline-none;
+}
+
+.dotted-bg {
+  background: radial-gradient(#fff 1.5px, transparent 0) 1.5px 1.5px / 7px 7px;
 }
