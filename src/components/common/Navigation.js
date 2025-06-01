@@ -105,7 +105,7 @@ const Navigation = ({ navClass, children, isDark }) => {
               onClick={handleNavCollapse}
             />
           </div>
-          <div className="flex md:flex-row flex-wrap flex-col items-center justify-between w-full px-5">
+          <div className="flex md:flex-row flex-wrap flex-col items-center justify-between w-full">
             <div className="md:order-2 w-full lg:w-auto flex md:justify-center lg:justify-start justify-center">
               {children}
             </div>
@@ -141,7 +141,6 @@ const Navigation = ({ navClass, children, isDark }) => {
                   <a
                     className={`${navClass} bordered`}
                     href="https://datacebo.com/contact"
-                    
                     target="_blank"
                     rel="noopener noreferrer"
                   >

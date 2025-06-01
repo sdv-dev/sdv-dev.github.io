@@ -78,11 +78,7 @@ export default function SdvOpenCoreSection() {
         >
           Learn more
         </a>
-        <div
-          className=""
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
+        <div onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
           <img
             src={activeSlide.imgSrc}
             alt="Illustration"
