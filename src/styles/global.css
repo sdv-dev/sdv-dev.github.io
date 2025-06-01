@@ -44,6 +44,30 @@
     @apply text-sdv-dark;
   }
 
+  .heading-700-xl {
+    @apply text-4xl md:text-6xl;
+    @apply leading-md md:leading-xl;
+    @apply font-semibold;
+    @apply tracking-2xs;
+    @apply text-midnight-950;
+  }
+
+  .heading-600-lg {
+    @apply text-3xl md:text-5xl;
+    @apply leading-md md:leading-lg;
+    @apply font-semibold;
+    @apply tracking-2xs;
+    @apply text-midnight-950;
+  }
+
+  .heading-500-md {
+    @apply text-2xl md:text-4xl;
+    @apply leading-base md:leading-md;
+    @apply font-semibold;
+    @apply tracking-2xs;
+    @apply text-midnight-950;
+  }
+
   p {
     @apply leading-extra-relaxed;
   }

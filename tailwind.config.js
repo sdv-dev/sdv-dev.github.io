@@ -7,7 +7,6 @@ module.exports = {
       padding: {
         DEFAULT: "1rem",
         sm: "1rem",
-        md: "1.875rem",
       },
     },
     fontFamily: {
@@ -27,6 +26,17 @@ module.exports = {
       "5xl": "3rem", //48
       "6xl": "3.75rem", //60
       "7xl": "4.5rem", //72
+    },
+    fontWeight: {
+      thin: 100,
+      ultrathin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+      black: 900,
     },
     screens: {
       xs: "412px",
@@ -143,8 +153,25 @@ module.exports = {
       },
       letterSpacing: {
         body: "0.0125rem",
+        "2xs": "-0.1rem", // -1.6px
+        xs: "-0.025rem", // -0.4px
+        sm: "-0.015625rem", // -0.25px
+        none: "0",
+        md: "-0.0125rem", // -0.2px
+        lg: "-0.00625rem", // -0.1px
+        xl: "0.1rem", // 1.6px
+        label: "0.05rem", // 0.8px
       },
       lineHeight: {
+        none: 1, // 1
+        "2xs": "1.5rem", // 24px
+        xs: "1.75rem", // 28px
+        sm: "1.875rem", // 30px
+        base: "2rem", //32
+        md: "2.5rem", // 40px
+        lg: "3.5rem", // 56px
+        xl: "3.75rem", // 60px
+        "2xl": "4.5rem", // 72px
         "extra-loose": "1.85",
         "extra-relaxed": "1.75",
       },
@@ -162,7 +189,7 @@ module.exports = {
       },
       spacing: {
         input: "1.125rem",
-        5: "1.875rem",
+        // 5: "1.875rem",
       },
     },
   },
