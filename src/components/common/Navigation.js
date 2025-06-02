@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
 import { Squash as Hamburger } from "hamburger-react";
 import PropTypes from "prop-types";
 
@@ -21,13 +22,13 @@ const navItems = [
 ];
 
 const Navigation = ({ navClass, children, isDark }) => {
-  const path = window.location.pathname;
+  const location = useLocation();
   const ref = useRef();
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
 
   const changeNavBackground = () => {
-    const pxs = path === "/community-stats" ? 0 : 30;
+    const pxs = location.pathname.includes("/community-stats") ? 0 : 30;
     const scrolledThrough = window.scrollY >= pxs;
     if (scrolledThrough) {
       document.body.classList.add(navbarClassName);
