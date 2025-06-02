@@ -8,7 +8,7 @@ import {
 import config from "../../utils/siteConfig";
 import WhiteBottomWave from "./wave-bottom-white";
 
-export default function Hero({ downloads }) {
+export default function Hero() {
   return (
     <div className="pt-20 md:pt-0 relative">
       <div

@@ -50,7 +50,7 @@ export default function HomePage() {
       />
 
       <div className="mx-auto" style={{ maxWidth: "1680px" }}>
-        <Hero downloads={downloads} />
+        <Hero />
         <Features />
         <ProtectEnhance />
         <OpenSource />
