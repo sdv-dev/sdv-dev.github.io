@@ -32,7 +32,7 @@ export default function SdvCommunityHero() {
 
             <div className="flex flex-col items-center md:flex-row gap-8 pb-10 lg:pb-0">
               <button
-                className="all-button blue-btn flex items-center gap-2"
+                className="all-button blue-btn flex gap-2"
                 onClick={() => {
                   window.location.href = "/";
                 }}

@@ -10,10 +10,10 @@ import config from "../utils/siteConfig";
 import Seo from "../components/Seo";
 
 export default function HomePage() {
-  const [downloads, setDownloads] = useState("");
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  const [downloads] = useState("");
+  // function numberWithCommas(x) {
+  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // }
 
   //Get the total number of downloads for a single release, using its tag name.
 

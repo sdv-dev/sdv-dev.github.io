@@ -2,13 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-
 import { Navigation } from ".";
-import Footer from '../../components/Footer';
-
-import MoreArticles from '../MoreArticles'
-
-import favicon from '../../../static/favicon.ico';
+import Footer from "../../components/Footer";
+import MoreArticles from "../MoreArticles";
+// import favicon from '../../../static/favicon.ico';
 
 /**
  * Main layout component
@@ -19,93 +16,90 @@ import favicon from '../../../static/favicon.ico';
  *
  */
 const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
+  return (
+    <>
+      <Helmet>
+        <html lang={`en`} />
+        {/* <link rel="icon" type="image/png" href={favicon} sizes="16x16" /> */}
+      </Helmet>
+      <div>
+        <div className="viewport-top">
+          <Navigation
+            isDark={true}
+            navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
+          >
+            <a href="https://datacebo.com">
+              <div className="w-auto">
+                <Img
+                  fadeIn={true}
+                  fixed={data.logo.childImageSharp.fixed}
+                  alt="DataCebo Blog"
+                  className="white-logo"
+                />
+                <Img
+                  fadeIn={true}
+                  fixed={data.darklogo.childImageSharp.fixed}
+                  alt="DataCebo Blog"
+                  className="dark-logo"
+                />
+              </div>
+            </a>
+          </Navigation>
 
-    return (
-        <>
-            <Helmet>
-                <html lang={`en`} />
-                {/* <link rel="icon" type="image/png" href={favicon} sizes="16x16" /> */}
-            </Helmet>
-
-            <div className="">
-                <div className="viewport-top">
-                    <Navigation
-                        isDark={true}
-                        navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
-                    >
-                        <a href="https://datacebo.com">
-                            <div className="w-auto">
-                                <Img
-                                fadeIn={true}
-                                fixed={data.logo.childImageSharp.fixed}
-                                alt="DataCebo Blog"
-                                className="white-logo"
-                                />
-                                <Img
-                                fadeIn={true}
-                                fixed={data.darklogo.childImageSharp.fixed}
-                                alt="DataCebo Blog"
-                                className="dark-logo"
-                                />
-                            </div>
-                        </a>
-                    </Navigation>
-                 
-
-                    <main className="">
-                        {children}
-                        { isPost ? (<div className="container mx-auto">
-                            <MoreArticles />
-                        </div>) : ''}
-                    </main>
-                </div>
-                {/* <Cta /> */}
-                <Footer/>
-                  </div>
-        </>
-    );
+          <main className="">
+            {children}
+            {isPost ? (
+              <div className="container mx-auto">
+                <MoreArticles />
+              </div>
+            ) : (
+              ""
+            )}
+          </main>
+        </div>
+        {/* <Cta /> */}
+        <Footer />
+      </div>
+    </>
+  );
 };
 
-
-
-export default function PostDefaultLayoutSettingsQuery (props) {
-    return (
+export default function PostDefaultLayoutSettingsQuery(props) {
+  return (
     <StaticQuery
-        query={graphql`
-            query GhostSettingsArticle {
-        
-                file(relativePath: { eq: "ghost-icon.png" }) {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
-                blogHero: file(
-                    relativePath: { eq: "Blog graphic people.png" }
-                ) {
-                    childImageSharp {
-                        fluid {
-                            ...GatsbyImageSharpFluid_noBase64
-                        }
-                    }
-                }
-                logo: file(relativePath: { eq: "logo-white.png" }) {
-                childImageSharp {
-                    fixed(width: 182, quality: 100) {
-                    ...GatsbyImageSharpFixed_noBase64
-                    }
-                }
-                }
-                darklogo: file(relativePath: { eq: "logo-dark.png" }) {
-                childImageSharp {
-                    fixed(width: 182, quality: 100) {
-                    ...GatsbyImageSharpFixed_noBase64
-                    }
-                }
-                }
+      query={graphql`
+        query GhostSettingsArticle {
+          file(relativePath: { eq: "ghost-icon.png" }) {
+            childImageSharp {
+              fixed(width: 30, height: 30) {
+                ...GatsbyImageSharpFixed
+              }
             }
-        `}
-        render={(data) => <PostDefaultLayout data={data} {...props} />}
+          }
+          blogHero: file(relativePath: { eq: "Blog graphic people.png" }) {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_noBase64
+              }
+            }
+          }
+          logo: file(relativePath: { eq: "logo-white.png" }) {
+            childImageSharp {
+              fixed(width: 182, quality: 100) {
+                ...GatsbyImageSharpFixed_noBase64
+              }
+            }
+          }
+          darklogo: file(relativePath: { eq: "logo-dark.png" }) {
+            childImageSharp {
+              fixed(width: 182, quality: 100) {
+                ...GatsbyImageSharpFixed_noBase64
+              }
+            }
+          }
+        }
+      `}
+      render={(data) => <PostDefaultLayout data={data} {...props} />}
     />
-)};
+  );
+}
