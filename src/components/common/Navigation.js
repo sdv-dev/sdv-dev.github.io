@@ -3,8 +3,6 @@ import { Link } from "gatsby";
 import { Squash as Hamburger } from "hamburger-react";
 import PropTypes from "prop-types";
 
-// import Logo from "../../../assets/logo.svg";
-
 /**
  * Navigation component
  *
@@ -23,6 +21,7 @@ const navItems = [
 ];
 
 const Navigation = ({ navClass, children, isDark }) => {
+  const path = window.location.pathname;
   const ref = useRef();
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
@@ -30,7 +29,8 @@ const Navigation = ({ navClass, children, isDark }) => {
   // const [isWhite, setNavbarColor] = useState(false);
 
   const changeNavBackground = () => {
-    const scrolledThrough = window.scrollY >= 30;
+    const pxs = path === "/community-stats" ? 0 : 30;
+    const scrolledThrough = window.scrollY >= pxs;
     if (scrolledThrough) {
       document.body.classList.add(navbarClassName);
       // setNavbarColor(false);
