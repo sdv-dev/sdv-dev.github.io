@@ -26,17 +26,13 @@ const Navigation = ({ navClass, children, isDark }) => {
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
 
-  // const [isWhite, setNavbarColor] = useState(false);
-
   const changeNavBackground = () => {
     const pxs = path === "/community-stats" ? 0 : 30;
     const scrolledThrough = window.scrollY >= pxs;
     if (scrolledThrough) {
       document.body.classList.add(navbarClassName);
-      // setNavbarColor(false);
     } else {
       document.body.classList.remove(navbarClassName);
-      // setNavbarColor(true);
     }
   };
 
