@@ -1,7 +1,84 @@
 import React from "react";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+  Label,
+  Legend,
+} from "recharts";
+import sdvPieChartLogo from "../../../static/sdv-pie-chart-logo.svg";
 
-const CustomPieChart = () => {
-  return <div>CustomPieChart</div>;
-};
+const data = [
+  { name: "SDV", value: 80.7 },
+  { name: "gretel", value: 10.2 },
+  { name: "Synthesized", value: 2.8 },
+  { name: "YData", value: 2.3 },
+  { name: "SynthCity", value: 0.9 },
+  { name: "realtabformer", value: 0.8 },
+  { name: "smartnoise-synth", value: 0.7 },
+  { name: "datomize", value: 0.7 },
+  { name: "be-great", value: 0.7 },
+  { name: "MOSTLY AI", value: 0.2 },
+];
 
-export default CustomPieChart;
+const COLORS = [
+  "#01E0C9",
+  "#03AFF1",
+  "#77DAFF",
+  "#959FBD",
+  "#000036",
+  "#353E67",
+  "#B7E9FF",
+  "#727C9E",
+  "#1376B1",
+  "#525C80",
+];
+
+export default function CustomPieChart() {
+  return (
+    <div className="w-full flex flex-col items-center relative">
+      <img
+        src={sdvPieChartLogo}
+        alt="SDV logo"
+        className="absolute top-[50%] z-10"
+        draggable={false}
+      />
+      <ResponsiveContainer width={600} height={600}>
+        <PieChart>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            outerRadius={200}
+            dataKey="value"
+            startAngle={90}
+            endAngle={-270}
+            isAnimationActive={false}
+            stroke="none"
+          >
+            {data.map((_, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index]} />
+            ))}
+            <Label
+              value="80.7%"
+              position="center"
+              fontSize={24}
+              fontWeight="medium"
+              fill="#0f172a"
+              dy={115}
+            />
+          </Pie>
+          <Tooltip />
+          <Legend
+            layout="horizontal"
+            verticalAlign="bottom"
+            align="center"
+            formatter={(value, _, index) => `${value} (${data[index].value}%)`}
+          />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
