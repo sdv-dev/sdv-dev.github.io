@@ -5,17 +5,22 @@ export default function CommunityUsersSection() {
   const slides = [
     {
       imgSrc: "",
-      title: "",
+      title: "JP Morgan Chase lorem ipsum dolorem",
       link: "",
     },
     {
       imgSrc: "",
-      title: "",
+      title: "MAPFRE insurance improves fraud detection by xx% using SDV",
       link: "",
     },
     {
       imgSrc: "",
-      title: "",
+      title: "Kaggle releases data for 11 competitions using SDV",
+      link: "",
+    },
+    {
+      imgSrc: "",
+      title: "Spar Nord Bank is  using SDV",
       link: "",
     },
   ];

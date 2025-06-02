@@ -9,6 +9,7 @@ import {
   Legend,
 } from "recharts";
 import sdvPieChartLogo from "../../../static/sdv-pie-chart-logo.svg";
+import useWindowWidth from "../../hooks/useviewport";
 
 const data = [
   { name: "SDV", value: 80.7 },
@@ -37,24 +38,27 @@ const COLORS = [
 ];
 
 export default function CustomPieChart() {
+  const width = useWindowWidth();
+  const isMobile = width < 768;
+
   return (
     <div className="w-full flex flex-col items-center relative">
       <img
         src={sdvPieChartLogo}
         alt="SDV logo"
-        className="absolute top-[50%] z-10"
+        className="absolute top-[48%] md:top-[50%] z-10"
         draggable={false}
       />
-      <ResponsiveContainer width={600} height={600}>
+      <ResponsiveContainer width={isMobile ? 400 : 600} height={550}>
         <PieChart>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
-            outerRadius={200}
+            outerRadius={isMobile ? 180 : 200}
             dataKey="value"
-            startAngle={90}
-            endAngle={-270}
+            startAngle={60}
+            endAngle={-300}
             isAnimationActive={false}
             stroke="none"
           >
@@ -66,8 +70,8 @@ export default function CustomPieChart() {
               position="center"
               fontSize={24}
               fontWeight="medium"
-              fill="#0f172a"
-              dy={115}
+              fill="#000036"
+              dy={isMobile ? 130 : 115}
             />
           </Pie>
           <Tooltip />
