@@ -70,14 +70,16 @@ export default function SdvOpenCoreSection() {
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg">
           SDV: An open core software for tabular Generative AI
         </h1>
-        <a
-          href={activeSlide.link}
-          target="_blank"
-          rel="noreferrer"
-          className="text-lg text-blue-600 hover:text-midnight-950 font-semibold duration-200 leading-none text-center cursor-pointer pt-1.5"
-        >
-          Learn more
-        </a>
+        <div className="text-center pt-1.5">
+          <a
+            href={activeSlide.link}
+            target="_blank"
+            rel="noreferrer"
+            className="text-lg text-blue-600 hover:text-midnight-950 font-semibold duration-200 leading-none cursor-pointer"
+          >
+            Learn more
+          </a>
+        </div>
         <div onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
           <img
             src={activeSlide.imgSrc}
