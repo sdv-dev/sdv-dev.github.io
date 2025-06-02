@@ -1,14 +1,11 @@
 import React from "react";
-
 import Img from "gatsby-image";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSlack,
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-
 import { Link, StaticQuery, graphql } from "gatsby";
 
 export default function Footer() {
@@ -83,7 +80,7 @@ export default function Footer() {
                             { name: "Blog", url: "https://datacebo.com/blog" },
                           ].map((i, idx) => {
                             return (
-                              <li className="mb-4">
+                              <li className="mb-4" key={idx}>
                                 <a
                                   className="opacity-80 hover:opacity-100 text-white hover:underline"
                                   href={i.url}
@@ -112,7 +109,7 @@ export default function Footer() {
                             },
                           ].map((i, idx) => {
                             return (
-                              <li className="mb-4">
+                              <li className="mb-4" key={idx}>
                                 <a
                                   className="opacity-80 hover:opacity-100 text-white hover:underline"
                                   href={i.url}
