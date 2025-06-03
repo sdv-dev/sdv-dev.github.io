@@ -16,15 +16,7 @@ export default function SdvCommunityHero() {
         <div className="container w-full flex flex-col lg:flex-row lg:justify-between lg:gap-8 py-12 md:py-16 lg:py-[46px] px-4 md:px-5 lg:px-0">
           <div className="flex flex-col flex-1 lg:justify-center">
             <h1 className="text-center md:text-left heading-700-xl md:leading-xl pb-10 lg:pb-16 md:max-w-[624px]">
-              <span
-                className="pt-[0.1rem] pr-[0.1rem]"
-                style={{
-                  background:
-                    "linear-gradient(90deg, var(--primary-blue-800, #025596) 0%, var(--primary-blue-700, #1376B1) 39.94%, var(--primary-teal-600, #00A29B) 80.51%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
+              <span className="pt-[0.1rem] pr-[0.1rem text-blue-600">
                 SDV <br className="md:hidden" />
               </span>
               Community

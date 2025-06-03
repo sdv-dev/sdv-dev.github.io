@@ -90,7 +90,9 @@ export default function SdvInNumbersSection() {
     <div className="flex justify-center bg-white">
       <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg">
-          The Synthetic Data Vault in numbers
+          The Synthetic Data Vault{" "}
+          <br className="hidden md:inline-block lg:hidden" />
+          <span className="text-blue-600">in numbers</span>
         </h1>
         <div className="text-center pt-1.5 pb-12">
           <a
