@@ -35,9 +35,9 @@ export default function CommunityUsersSection() {
         Users of community
       </h2>
       <div className="flex flex-col md:flex-row">
-        <div className="h-[200px] bg-blue-700 rounded-t-20"></div>
-        <div className="flex flex-col gap-6 pb-8 px-6 pt-6 border-b border-r border-l border-midnight-50 rounded-b-20 bg-midnight-25">
-          <p className="text-midnight-950 text-2xl font-medium leading-[30px] tracking-xs line-clamp-3 min-h-[90px]">
+        <div className="h-[200px] bg-blue-700 rounded-t-20 md:h-auto md:w-1/2 md:rounded-l-20 md:rounded-tr-none"></div>
+        <div className="flex flex-col md:w-1/2 gap-6 md:gap-12 pb-8 px-6 pt-6 md:pt-[42px] md:px-12 md:pb-12 border-b border-r border-l md:border-l-none md:border-t border-midnight-50 rounded-b-20 md:rounded-bl-none md:rounded-tr-20 bg-midnight-25">
+          <p className="text-midnight-950 text-2xl font-medium leading-[30px] tracking-xs line-clamp-3 min-h-[90px] md:min-h-[120px] md:text-4xl md:-tracking-xl md:leading-10">
             {activeSlide.title}
           </p>
           <div>
