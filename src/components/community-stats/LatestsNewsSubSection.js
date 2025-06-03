@@ -140,11 +140,17 @@ export default function LatestsNewsSubSection() {
               onTouchMove={!isLg ? handleTouchMove : undefined}
               onTouchEnd={!isLg ? handleTouchEnd : undefined}
             >
-              {newsAndUpdates.map((n) => (
+              {newsAndUpdates.map((n, idx) => (
                 <div
                   key={n.id}
                   className={`shrink-0 md:px-4 ${
                     isLg ? "w-1/2" : isMd ? "w-[85%]" : "w-full"
+                  } ${
+                    (isMd || isLg) && idx === currentSlide
+                      ? "!pl-0"
+                      : (isMd || isLg) && idx === currentSlide + 1
+                      ? "!pr-0"
+                      : ""
                   }`}
                 >
                   <NewsUpdate
