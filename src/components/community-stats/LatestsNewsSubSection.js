@@ -1,10 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import dataceboIng from "../../../static/images/news/datacebo-ing.svg";
 import newStack from "../../../static/images/news/new-stack.svg";
 import hoodline from "../../../static/images/news/hoodline.svg";
-import cag from "../../../static/images/news/cag.svg";
-import forbes from "../../../static/images/news/forbes.svg";
-import syntDataNews from "../../../static/images/news/synt-data-news.svg";
 import ArrowSlider from "../common/ArrowSlider";
 import DotSlider from "../common/DotSlider";
 import NewsUpdate from "../common/NewsUpdate";
@@ -27,28 +23,28 @@ export default function LatestsNewsSubSection() {
     },
     {
       id: 3,
-      imgSrc: cag,
+      imgSrc: newStack,
       label: "Announcements",
       text: "Introducing Constraint-Augmented Generation (CAG)",
       link: "https://datacebo.com/announcements/introducing-cag",
     },
     {
       id: 4,
-      imgSrc: dataceboIng,
+      imgSrc: hoodline,
       label: "Blog",
       text: "How ING Belgium Uses DataCebo’s SDV Enterprise to Create Synthetic Data for 100x the Test Coverage",
       link: "https://datacebo.com/blog/ing-belgium-sepa",
     },
     {
       id: 5,
-      imgSrc: forbes,
+      imgSrc: newStack,
       label: "News",
       text: "DataCebo Creates Synthetic Enterprise Data With Actually Useful Generative AI",
       link: "https://www.forbes.com/sites/justinwarren/2024/04/29/datacebo-creates-synthetic-enterprise-data-with-actually-useful-generative-ai",
     },
     {
       id: 6,
-      imgSrc: syntDataNews,
+      imgSrc: hoodline,
       label: "News",
       text: "What is synthetic data — and how can it help you competitively?",
       link: "https://mitsloan.mit.edu/ideas-made-to-matter/what-synthetic-data-and-how-can-it-help-you-competitively",
