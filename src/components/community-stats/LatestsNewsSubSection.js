@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import dataceboIng from "../../../static/images/news/datacebo-ing.svg";
 import newStack from "../../../static/images/news/new-stack.svg";
-import aiConnectors from "../../../static/images/news/ai-connectors.svg";
+import hoodline from "../../../static/images/news/hoodline.svg";
 import cag from "../../../static/images/news/cag.svg";
 import forbes from "../../../static/images/news/forbes.svg";
 import syntDataNews from "../../../static/images/news/synt-data-news.svg";
@@ -14,16 +14,16 @@ export default function LatestsNewsSubSection() {
     {
       id: 1,
       imgSrc: newStack,
-      label: "Blog",
+      label: "News",
       text: "What’s Next for Companies Built on Open Source?",
-      link: "https://medium.com/ing-blog/how-ai-powered-synthetic-data-boosts-software-engineering-d89ad77ca2e7",
+      link: "https://thenewstack.io/whats-next-for-companies-built-on-open-source/",
     },
     {
       id: 2,
-      imgSrc: aiConnectors,
-      label: "Announcements",
-      text: "Introducing AI Connectors",
-      link: "https://datacebo.com/announcements/introducing-ai-connectors",
+      imgSrc: hoodline,
+      label: "News",
+      text: "MIT's DataCebo Reinvents Software Testing with Over 1 Million Downloads of Synthetic Data Vault",
+      link: "https://hoodline.com/2024/03/mit-s-datacebo-reinvents-software-testing-with-over-1-million-downloads-of-synthetic-data-vault/",
     },
     {
       id: 3,
@@ -149,6 +149,7 @@ export default function LatestsNewsSubSection() {
                 >
                   <NewsUpdate
                     imgSrc={n.imgSrc}
+                    imgDimensions={"md:h-[149px] min-w-[288px]"}
                     label={n.label}
                     text={n.text}
                     link={n.link}
