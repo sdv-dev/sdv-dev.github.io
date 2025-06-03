@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DotSlider from "../common/DotSlider";
 import DataceboLogo from "../common/DataceboLogo";
 
 export default function CommunityUsersSection() {
@@ -26,7 +25,7 @@ export default function CommunityUsersSection() {
       link: "/",
     },
   ];
-  const [activeSliderIndex, setActiveSliderIndex] = useState(0);
+  const [activeSliderIndex] = useState(0);
   const activeSlide = slides[activeSliderIndex];
 
   return (
@@ -52,13 +51,6 @@ export default function CommunityUsersSection() {
           </div>
           <DataceboLogo />
         </div>
-      </div>
-      <div className="mx-auto mt-12">
-        <DotSlider
-          sliderItems={slides}
-          activeIndex={activeSliderIndex}
-          onClick={(ind) => setActiveSliderIndex(ind)}
-        />
       </div>
     </div>
   );
