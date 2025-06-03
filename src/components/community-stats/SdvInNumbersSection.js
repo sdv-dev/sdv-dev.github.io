@@ -8,6 +8,7 @@ import TableRowCell from "../common/table/TableRowCell";
 import Tab from "../common/Tab";
 import useWindowWidth from "../../hooks/useviewport";
 import CustomPieChart from "./CustomPieChart";
+import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function SdvInNumbersSection() {
   const metricKeys = ["toDate", "monthly", "yearToDate"];
@@ -239,6 +240,7 @@ export default function SdvInNumbersSection() {
           </Table>
         )}
         {activeTab.label === "Visualize" && <CustomPieChart />}
+        <LatestsNewsSubSection />
       </div>
     </div>
   );
