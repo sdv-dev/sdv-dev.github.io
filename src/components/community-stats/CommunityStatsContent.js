@@ -4,7 +4,7 @@ import NewsSliderSection from "./NewsSliderSection";
 import SynthesizeCardsSection from "./SynthesizeCardsSection";
 import CommunityUsersSection from "./CommunityUsersSection";
 import SdvInNumbersSection from "./SdvInNumbersSection";
-import SdvEcosystemSection from "./SdvEcosystemSection";
+import SdvCoreSection from "./SdvCoreSection";
 import SdvOpenCoreSection from "./SdvOpenCoreSection";
 import BannerSection from "./BannerSection";
 
@@ -15,7 +15,7 @@ export default function CommunityStatsContent() {
       <SynthesizeCardsSection />
       <CommunityUsersSection />
       <SdvInNumbersSection />
-      <SdvEcosystemSection />
+      <SdvCoreSection />
       <SdvOpenCoreSection />
       <NewsSliderSection />
       <BannerSection />

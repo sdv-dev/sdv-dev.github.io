@@ -8,20 +8,20 @@ import TableRowCell from "../common/table/TableRowCell";
 import Tab from "../common/Tab";
 import useWindowWidth from "../../hooks/useviewport";
 
-export default function SdvEcosystemSection() {
-  const metricKeys = ["toDate", "monthly", "yearToDate"];
-  const metricLabels = ["To date", "Monthly", "Year to date"];
+export default function SdvCoreSection() {
+  const metricKeys = ["toDate", "yearToDate"];
+  const metricLabels = ["To date", "Year to date"];
   const [tableColDimensions, setTableColDimensions] = useState(
-    "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px) minmax(181px, 348px)"
+    "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
   );
   const data = [
-    { name: "SDV", toDate: 492, monthly: 540, yearToDate: 994 },
-    { name: "RDT", toDate: 877, monthly: 154, yearToDate: 816 },
-    { name: "Copulas", toDate: 994, monthly: 447, yearToDate: 798 },
-    { name: "CTGAN", toDate: 357, monthly: 154, yearToDate: 928 },
-    { name: "SDGym", toDate: 274, monthly: 994, yearToDate: 659 },
-    { name: "SDMetrics", toDate: 177, monthly: 492, yearToDate: 756 },
-    { name: "Total", toDate: 3723, monthly: 3273, yearToDate: 5663 },
+    { name: "SDV", toDate: 492, yearToDate: 994 },
+    { name: "RDT", toDate: 877, yearToDate: 816 },
+    { name: "Copulas", toDate: 994, yearToDate: 798 },
+    { name: "CTGAN", toDate: 357, yearToDate: 928 },
+    { name: "SDGym", toDate: 274, yearToDate: 659 },
+    { name: "SDMetrics", toDate: 177, yearToDate: 756 },
+    { name: "Total", toDate: 3723, yearToDate: 5663 },
   ];
   const width = useWindowWidth();
   const isMobile = width < 768;
@@ -33,7 +33,7 @@ export default function SdvEcosystemSection() {
     setTableColDimensions(
       isMobile
         ? "minmax(162px, 204px) minmax(181px, 348px)"
-        : "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px) minmax(181px, 348px)"
+        : "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
     );
   }, [isMobile]);
 
@@ -117,7 +117,6 @@ export default function SdvEcosystemSection() {
             ) : (
               <>
                 <TableHeaderCell>To date</TableHeaderCell>
-                <TableHeaderCell>Monthly</TableHeaderCell>
                 <TableHeaderCell>Year to date</TableHeaderCell>
               </>
             )}
@@ -179,17 +178,6 @@ export default function SdvEcosystemSection() {
                           }`}
                         >
                           {row.toDate}
-                        </div>
-                      </TableRowCell>
-                      <TableRowCell>
-                        <div
-                          className={`flex justify-end ${
-                            isLast
-                              ? "font-bold text-midnight-950"
-                              : "font-normal"
-                          }`}
-                        >
-                          {row.monthly}
                         </div>
                       </TableRowCell>
                       <TableRowCell>

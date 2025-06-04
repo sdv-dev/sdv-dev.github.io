@@ -11,32 +11,30 @@ import CustomPieChart from "./CustomPieChart";
 import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function SdvInNumbersSection() {
-  const metricKeys = ["toDate", "monthly", "yearToDate"];
-  const metricLabels = ["To date", "Monthly", "Year to date"];
+  const metricKeys = ["toDate", "yearToDate"];
+  const metricLabels = ["To date", "Year to date"];
   const [tableColDimensions, setTableColDimensions] = useState(
-    "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px) minmax(181px, 348px)"
+    "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
   );
   const data = [
-    { name: "SDV", toDate: "8M", monthly: "131K", yearToDate: "10M" },
-    { name: "Gretle", toDate: "998K", monthly: "16K", yearToDate: "1M" },
-    { name: "Synthesized", toDate: "269K", monthly: "4K", yearToDate: "323K" },
-    { name: "YData", toDate: "221K", monthly: "3K", yearToDate: "405K" },
-    { name: "SynthCity", toDate: "84K", monthly: "1,413", yearToDate: "106K" },
+    { name: "SDV", toDate: "8M", yearToDate: "10M" },
+    { name: "Gretle", toDate: "998K", yearToDate: "1M" },
+    { name: "Synthesized", toDate: "269K", yearToDate: "323K" },
+    { name: "YData", toDate: "221K", yearToDate: "405K" },
+    { name: "SynthCity", toDate: "84K", yearToDate: "106K" },
     {
       name: "Realtabformer",
       toDate: "78K",
-      monthly: "1,304",
       yearToDate: "97K",
     },
-    { name: "Datomize", toDate: "73K", monthly: "1,216", yearToDate: "81K" },
+    { name: "Datomize", toDate: "73K", yearToDate: "81K" },
     {
       name: "Smartnoise",
       toDate: "68K",
-      monthly: "1,134",
       yearToDate: "92K",
     },
-    { name: "Be-great", toDate: "66K", monthly: "1,101", yearToDate: "90K" },
-    { name: "Mostly-AI", toDate: "22K", monthly: "373", yearToDate: "62K" },
+    { name: "Be-great", toDate: "66K", yearToDate: "90K" },
+    { name: "Mostly-AI", toDate: "22K", yearToDate: "62K" },
   ];
   const width = useWindowWidth();
   const isMobile = width < 768;
@@ -48,7 +46,7 @@ export default function SdvInNumbersSection() {
     setTableColDimensions(
       isMobile
         ? "minmax(204px, 204px) minmax(181px, 348px)"
-        : "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px) minmax(181px, 348px)"
+        : "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
     );
   }, [isMobile]);
 
@@ -147,7 +145,6 @@ export default function SdvInNumbersSection() {
               ) : (
                 <>
                   <TableHeaderCell>To date</TableHeaderCell>
-                  <TableHeaderCell>Monthly</TableHeaderCell>
                   <TableHeaderCell>Year to date</TableHeaderCell>
                 </>
               )}
@@ -209,17 +206,6 @@ export default function SdvInNumbersSection() {
                             }`}
                           >
                             {row.toDate}
-                          </div>
-                        </TableRowCell>
-                        <TableRowCell>
-                          <div
-                            className={`flex justify-end ${
-                              isLast
-                                ? "font-bold text-midnight-950"
-                                : "font-normal"
-                            }`}
-                          >
-                            {row.monthly}
                           </div>
                         </TableRowCell>
                         <TableRowCell>
