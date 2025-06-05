@@ -115,7 +115,7 @@ export default function LatestsNewsSubSection() {
     <div className="flex justify-center bg-white mt-[72px]">
       <div className="container w-full flex flex-col px-4 md:px-5 lg:px-0">
         <div className="flex justify-between items-center pb-8 md:pb-12">
-          <h2 className="text-midnight-950 font-medium leading-[30px] text-lg md:text-xl lg:text-2xl md:leading-9 tracking-lg md:tracking-md lg:tracking-xs">
+          <h2 className="heading-600-lg text-[36px] md:text-5xl">
             Latest news and updates
           </h2>
           <div className="hidden md:block">
