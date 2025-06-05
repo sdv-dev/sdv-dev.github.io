@@ -14,27 +14,19 @@ export default function SdvInNumbersSection() {
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", "Year to date"];
   const [tableColDimensions, setTableColDimensions] = useState(
-    "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
+    "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
   const data = [
     { name: "SDV", toDate: "8M", yearToDate: "10M" },
-    { name: "Gretle", toDate: "998K", yearToDate: "1M" },
-    { name: "Synthesized", toDate: "269K", yearToDate: "323K" },
-    { name: "YData", toDate: "221K", yearToDate: "405K" },
-    { name: "SynthCity", toDate: "84K", yearToDate: "106K" },
-    {
-      name: "Realtabformer",
-      toDate: "78K",
-      yearToDate: "97K",
-    },
-    { name: "Datomize", toDate: "73K", yearToDate: "81K" },
-    {
-      name: "Smartnoise",
-      toDate: "68K",
-      yearToDate: "92K",
-    },
+    { name: "gretel", toDate: "998K", yearToDate: "1M" },
+    { name: "Synthcity", toDate: "84K", yearToDate: "106K" },
+    { name: "Realtabformer", toDate: "78K", yearToDate: "97K" },
+    { name: "Smartnoise-synth", toDate: "68K", yearToDate: "92K" },
     { name: "Be-great", toDate: "66K", yearToDate: "90K" },
-    { name: "Mostly-AI", toDate: "22K", yearToDate: "62K" },
+    { name: "Vendor 1", toDate: "269K", yearToDate: "323K" },
+    { name: "Vendor 2", toDate: "221K", yearToDate: "405K" },
+    { name: "Vendor 3", toDate: "73K", yearToDate: "81K" },
+    { name: "Vendor 4", toDate: "22K", yearToDate: "62K" },
   ];
   const width = useWindowWidth();
   const isMobile = width < 768;
@@ -45,8 +37,8 @@ export default function SdvInNumbersSection() {
   useEffect(() => {
     setTableColDimensions(
       isMobile
-        ? "minmax(204px, 204px) minmax(181px, 348px)"
-        : "minmax(204px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
+        ? "minmax(208px, 208px) minmax(136px, 488px)"
+        : "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
     );
   }, [isMobile]);
 
@@ -158,7 +150,7 @@ export default function SdvInNumbersSection() {
                   <TableRow key={row.name} index={idx} isLast={isLast}>
                     <div className="relative">
                       <TableRowCell>
-                        <div className="flex font-semibold text-midnight-950">
+                        <div className="flex font-semibold text-midnight-950 tracking-lg">
                           {row.name}
                         </div>
                       </TableRowCell>
