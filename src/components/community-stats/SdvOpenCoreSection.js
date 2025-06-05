@@ -84,7 +84,7 @@ export default function SdvOpenCoreSection() {
           <img
             src={activeSlide.imgSrc}
             alt="Illustration"
-            className="pt-12 pb-5"
+            className="mt-12 mb-5 border border-midnight-50 rounded-20"
           />
         </div>
         <div className="flex items-end justify-between">
