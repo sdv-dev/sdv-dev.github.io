@@ -12,7 +12,7 @@ export default function SdvCoreSection() {
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", "Year to date"];
   const [tableColDimensions, setTableColDimensions] = useState(
-    "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
+    "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
   const data = [
     { name: "SDV", toDate: 492, yearToDate: 994 },
@@ -32,8 +32,8 @@ export default function SdvCoreSection() {
   useEffect(() => {
     setTableColDimensions(
       isMobile
-        ? "minmax(162px, 204px) minmax(181px, 348px)"
-        : "minmax(162px, 204px) minmax(181px, 348px) minmax(181px, 348px)"
+        ? "minmax(208px, 208px) minmax(136px, 488px)"
+        : "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
     );
   }, [isMobile]);
 
