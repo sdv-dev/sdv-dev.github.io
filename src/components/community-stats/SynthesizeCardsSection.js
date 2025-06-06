@@ -34,12 +34,12 @@ export default function SynthesizeCardsSection() {
       <h2 className="text-midnight-950 text-2xl font-medium leading-[36px] tracking-xs pb-8">
         Learn how to synthesize a:
       </h2>
-      <div className="flex flex-col gap-8 lg:flex-row">
-        {cards.map((c) => {
-          return (
+      <div className="block md:hidden lg:block">
+        <div className="flex flex-col gap-8 lg:flex-row">
+          {cards.map((c) => (
             <div
-              onClick={() => onCardClick(c.link)}
               key={c.title}
+              onClick={() => onCardClick(c.link)}
               className="flex flex-col flex-1 cursor-pointer pt-[30px] px-6 pb-6 md:pt-6 md:px-9 md:pb-9 bg-midnight-25 border border-midnight-50 rounded-20 transition-all duration-500 hover:shadow-[0px_20px_30px_-15px_rgba(0,0,54,0.08),_0px_1px_2px_0px_rgba(0,0,54,0.04)]"
             >
               <div className="mb-5">{c.icon}</div>
@@ -50,8 +50,28 @@ export default function SynthesizeCardsSection() {
                 {c.desc}
               </p>
             </div>
-          );
-        })}
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden md:block lg:hidden overflow-x-auto md:-mx-4">
+        <div className="flex flex-row gap-8 md:pl-4 md:pr-4 md:snap-x md:snap-mandatory">
+          {cards.map((c) => (
+            <div
+              key={c.title}
+              onClick={() => onCardClick(c.link)}
+              className="min-w-[395px] snap-start flex flex-col cursor-pointer pt-[30px] px-6 pb-6 md:pt-6 md:px-9 md:pb-9 bg-midnight-25 border border-midnight-50 rounded-20 transition-all duration-500 hover:shadow-[0px_20px_30px_-15px_rgba(0,0,54,0.08),_0px_1px_2px_0px_rgba(0,0,54,0.04)]"
+            >
+              <div className="mb-5">{c.icon}</div>
+              <h2 className="text-midnight-950 text-2xl font-medium leading-[36px] tracking-xs pb-2 md:pb-1.5">
+                {c.title}
+              </h2>
+              <p className="text-midnight-800 text-base md:text-lg font-normal tracking-lg">
+                {c.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
