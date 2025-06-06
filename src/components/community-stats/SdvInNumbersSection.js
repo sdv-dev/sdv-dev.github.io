@@ -105,121 +105,123 @@ export default function SdvInNumbersSection() {
             </Tab>
           ))}
         </div>
-        {(activeTab.label === "Downloads" || activeTab.label === "Users") && (
-          <Table tableColDimensions={tableColDimensions}>
-            <TableHeader>
-              <div className="relative">
-                <TableHeaderCell />
+        <div className="mb-12 lg:mb-24">
+          {(activeTab.label === "Downloads" || activeTab.label === "Users") && (
+            <Table tableColDimensions={tableColDimensions}>
+              <TableHeader>
+                <div className="relative">
+                  <TableHeaderCell />
 
-                {isMobile && (
-                  <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
-                    <div
-                      className="h-full w-full"
-                      style={{
-                        background:
-                          "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
-                        boxShadow: "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
-                      }}
-                    />
-                  </div>
-                )}
-              </div>
-              {isMobile ? (
-                <div
-                  onTouchStart={handleSwipeStart}
-                  onTouchMove={handleSwipeMove}
-                  className="touch-pan-x w-full"
-                >
-                  <TableHeaderCell>
-                    {metricLabels[activeMetricIndex]}
-                  </TableHeaderCell>
-                </div>
-              ) : (
-                <>
-                  <TableHeaderCell>To date</TableHeaderCell>
-                  <TableHeaderCell>Year to date</TableHeaderCell>
-                </>
-              )}
-            </TableHeader>
-
-            <TableBody>
-              {data.map((row, idx) => {
-                const isLast = idx === data.length - 1;
-
-                return (
-                  <TableRow key={row.name} index={idx} isLast={isLast}>
-                    <div className="relative">
-                      <TableRowCell>
-                        <div className="flex font-semibold text-midnight-950 tracking-lg">
-                          {row.name}
-                        </div>
-                      </TableRowCell>
-
-                      {isMobile && (
-                        <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
-                          <div
-                            className="h-full w-full"
-                            style={{
-                              background:
-                                "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
-                              boxShadow:
-                                "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
-                            }}
-                          />
-                        </div>
-                      )}
-                    </div>
-                    {isMobile ? (
+                  {isMobile && (
+                    <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
                       <div
-                        onTouchStart={handleSwipeStart}
-                        onTouchMove={handleSwipeMove}
-                        className="w-full touch-pan-x"
-                      >
+                        className="h-full w-full"
+                        style={{
+                          background:
+                            "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
+                          boxShadow: "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+                {isMobile ? (
+                  <div
+                    onTouchStart={handleSwipeStart}
+                    onTouchMove={handleSwipeMove}
+                    className="touch-pan-x w-full"
+                  >
+                    <TableHeaderCell>
+                      {metricLabels[activeMetricIndex]}
+                    </TableHeaderCell>
+                  </div>
+                ) : (
+                  <>
+                    <TableHeaderCell>To date</TableHeaderCell>
+                    <TableHeaderCell>Year to date</TableHeaderCell>
+                  </>
+                )}
+              </TableHeader>
+
+              <TableBody>
+                {data.map((row, idx) => {
+                  const isLast = idx === data.length - 1;
+
+                  return (
+                    <TableRow key={row.name} index={idx} isLast={isLast}>
+                      <div className="relative">
                         <TableRowCell>
-                          <div
-                            className={`flex justify-end ${
-                              isLast
-                                ? "font-bold text-midnight-950"
-                                : "font-normal"
-                            }`}
-                          >
-                            {row[metricKeys[activeMetricIndex]]}
+                          <div className="flex font-semibold text-midnight-950 tracking-lg">
+                            {row.name}
                           </div>
                         </TableRowCell>
+
+                        {isMobile && (
+                          <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
+                            <div
+                              className="h-full w-full"
+                              style={{
+                                background:
+                                  "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
+                                boxShadow:
+                                  "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
+                              }}
+                            />
+                          </div>
+                        )}
                       </div>
-                    ) : (
-                      <>
-                        <TableRowCell>
-                          <div
-                            className={`flex justify-end ${
-                              isLast
-                                ? "font-bold text-midnight-950"
-                                : "font-normal"
-                            }`}
-                          >
-                            {row.toDate}
-                          </div>
-                        </TableRowCell>
-                        <TableRowCell>
-                          <div
-                            className={`flex justify-end ${
-                              isLast
-                                ? "font-bold text-midnight-950"
-                                : "font-normal"
-                            }`}
-                          >
-                            {row.yearToDate}
-                          </div>
-                        </TableRowCell>
-                      </>
-                    )}
-                  </TableRow>
-                );
-              })}
-            </TableBody>
-          </Table>
-        )}
-        {activeTab.label === "Visualize" && <CustomPieChart />}
+                      {isMobile ? (
+                        <div
+                          onTouchStart={handleSwipeStart}
+                          onTouchMove={handleSwipeMove}
+                          className="w-full touch-pan-x"
+                        >
+                          <TableRowCell>
+                            <div
+                              className={`flex justify-end ${
+                                isLast
+                                  ? "font-bold text-midnight-950"
+                                  : "font-normal"
+                              }`}
+                            >
+                              {row[metricKeys[activeMetricIndex]]}
+                            </div>
+                          </TableRowCell>
+                        </div>
+                      ) : (
+                        <>
+                          <TableRowCell>
+                            <div
+                              className={`flex justify-end ${
+                                isLast
+                                  ? "font-bold text-midnight-950"
+                                  : "font-normal"
+                              }`}
+                            >
+                              {row.toDate}
+                            </div>
+                          </TableRowCell>
+                          <TableRowCell>
+                            <div
+                              className={`flex justify-end ${
+                                isLast
+                                  ? "font-bold text-midnight-950"
+                                  : "font-normal"
+                              }`}
+                            >
+                              {row.yearToDate}
+                            </div>
+                          </TableRowCell>
+                        </>
+                      )}
+                    </TableRow>
+                  );
+                })}
+              </TableBody>
+            </Table>
+          )}
+          {activeTab.label === "Visualize" && <CustomPieChart />}
+        </div>
         <LatestsNewsSubSection />
       </div>
     </div>

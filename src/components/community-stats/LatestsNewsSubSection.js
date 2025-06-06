@@ -112,7 +112,7 @@ export default function LatestsNewsSubSection() {
   };
 
   return (
-    <div className="flex justify-center bg-white mt-[72px]">
+    <div className="flex justify-center bg-white mt-12 lg:mt-24">
       <div className="container w-full flex flex-col px-4 md:px-5 lg:px-0">
         <div className="flex justify-between items-center pb-8 md:pb-12">
           <h2 className="heading-600-lg text-[36px] md:text-5xl">
