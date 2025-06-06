@@ -32,15 +32,16 @@ export default function CommunityUsersSection() {
       <h2 className="heading-600-lg text-center pb-8 md:pb-12">
         Users of the Community
       </h2>
-      <hr className="bg-midnight-500 h-0.5 mb-3 md:mb-[18px]" />
       <div className="flex flex-col">
         {cards.map((c, idx) => {
           const isLast = idx === cards.length - 1;
+          const isFirst = idx === 0;
+
           return (
             <div key={c.title}>
               <div
                 className={`flex flex-col md:flex-row py-8 md:py-12 ${
-                  isLast && "!pb-0"
+                  (isLast && "!pb-0", isFirst && "!pt-0")
                 }`}
               >
                 <div className="flex items-center justify-center h-[200px] bg-blue-700 rounded-t-20 md:h-auto md:w-1/2 md:rounded-l-20 md:rounded-tr-none">
