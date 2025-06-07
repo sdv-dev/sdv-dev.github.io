@@ -5,7 +5,6 @@ import TableHeaderCell from "../common/table/TableHeaderCell";
 import TableBody from "../common/table/TableBody";
 import TableRow from "../common/table/TableRow";
 import TableRowCell from "../common/table/TableRowCell";
-import Tab from "../common/Tab";
 import useWindowWidth from "../../hooks/useviewport";
 
 export default function SdvCoreSection() {
@@ -55,37 +54,12 @@ export default function SdvCoreSection() {
     }
   };
 
-  const [tabs, setTabs] = useState([
-    { label: "Downloads", isActive: true },
-    { label: "Users", isActive: false },
-  ]);
-
-  const clickTab = (label) => {
-    setTabs((prevTabs) =>
-      prevTabs.map((tab) => ({
-        ...tab,
-        isActive: tab.label === label,
-      }))
-    );
-  };
-
   return (
     <div className="flex justify-center bg-white">
       <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg md:pb-12">
           SDV Core
         </h1>
-        <div className="flex gap-2.5 lg:gap-9 border-b border-b-midnight-200 mb-6">
-          {tabs.map((t) => (
-            <Tab
-              key={t.label}
-              isActive={t.isActive}
-              onClick={() => clickTab(t.label)}
-            >
-              {t.label}
-            </Tab>
-          ))}
-        </div>
         <Table tableColDimensions={tableColDimensions}>
           <TableHeader>
             <div className="relative">

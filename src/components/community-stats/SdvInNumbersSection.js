@@ -61,9 +61,9 @@ export default function SdvInNumbersSection() {
   };
 
   const [tabs, setTabs] = useState([
-    { label: "Downloads", isActive: true },
-    { label: "Users", isActive: false },
-    { label: "Visualize", isActive: false },
+    { label: "Visualize", isActive: true },
+    { label: "Downloads", isActive: false },
+    // { label: "Users", isActive: false },
   ]);
   const activeTab = tabs.find((t) => t.isActive);
 
@@ -106,7 +106,7 @@ export default function SdvInNumbersSection() {
           ))}
         </div>
         <div className="mb-12 lg:mb-24">
-          {(activeTab.label === "Downloads" || activeTab.label === "Users") && (
+          {activeTab.label === "Downloads" && (
             <Table tableColDimensions={tableColDimensions}>
               <TableHeader>
                 <div className="relative">
