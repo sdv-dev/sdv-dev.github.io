@@ -11,8 +11,9 @@ import CustomPieChart from "./CustomPieChart";
 import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function SdvInNumbersSection() {
+  const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
-  const metricLabels = ["To date", "Year to date"];
+  const metricLabels = ["To date", currentYear];
   const [tableColDimensions, setTableColDimensions] = useState(
     "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
@@ -137,8 +138,9 @@ export default function SdvInNumbersSection() {
                   </div>
                 ) : (
                   <>
-                    <TableHeaderCell>To date</TableHeaderCell>
-                    <TableHeaderCell>Year to date</TableHeaderCell>
+                    {metricLabels.map((ml) => (
+                      <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
+                    ))}
                   </>
                 )}
               </TableHeader>

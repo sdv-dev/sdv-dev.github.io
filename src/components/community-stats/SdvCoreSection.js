@@ -8,8 +8,9 @@ import TableRowCell from "../common/table/TableRowCell";
 import useWindowWidth from "../../hooks/useviewport";
 
 export default function SdvCoreSection() {
+  const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
-  const metricLabels = ["To date", "Year to date"];
+  const metricLabels = ["To date", currentYear];
   const [tableColDimensions, setTableColDimensions] = useState(
     "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
@@ -90,8 +91,9 @@ export default function SdvCoreSection() {
               </div>
             ) : (
               <>
-                <TableHeaderCell>To date</TableHeaderCell>
-                <TableHeaderCell>Year to date</TableHeaderCell>
+                {metricLabels.map((ml) => (
+                  <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
+                ))}
               </>
             )}
           </TableHeader>
