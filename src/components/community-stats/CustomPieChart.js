@@ -17,38 +17,38 @@ const COLORS = [
   "#000036",
 ];
 
-const renderCustomizedLabel = ({ name, value, index }) => {
+const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
   const labelPositions = [
     { x: -290, y: -450 },
     { x: 140, y: 100 },
     { x: 105, y: 130 },
     { x: 106, y: 160 },
-    { x: 820, y: 100 },
-    { x: 870, y: 130 },
-    { x: 850, y: 160 },
-    { x: 853, y: 190 },
+    { x: isTablet ? 620 : 820, y: 100 },
+    { x: isTablet ? 680 : 870, y: 130 },
+    { x: isTablet ? 680 : 850, y: 160 },
+    { x: isTablet ? 690 : 853, y: 190 },
   ];
 
   const lineCoordinates = [
     { from: [-270, -450], to: [-290, -500] },
-    { from: [370, 100], to: [250, 100] },
-    { from: [465, 130], to: [180, 130] },
-    { from: [500, 160], to: [190, 160] },
-    { from: [530, 100], to: [770, 100] },
-    { from: [545, 130], to: [770, 130] },
-    { from: [550, 160], to: [770, 160] },
-    { from: [545, 190], to: [770, 190] },
+    { from: [isTablet ? 300 : 370, 100], to: [250, 100] },
+    { from: [isTablet ? 360 : 465, 130], to: [180, 130] },
+    { from: [isTablet ? 400 : 500, 160], to: [190, 160] },
+    { from: [isTablet ? 430 : 530, 100], to: [isTablet ? 570 : 770, 100] },
+    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 580 : 770, 130] },
+    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 600 : 770, 160] },
+    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 610 : 770, 190] },
   ];
 
   const strokeColors = [
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
-    "rgba(227, 234, 255, 0.93)",
+    "#000036",
+    "#000036",
+    "#000036",
+    "#000036",
+    "#000036",
+    "#000036",
+    "#000036",
+    "#000036",
   ];
 
   const label = labelPositions[index];
@@ -136,7 +136,11 @@ export default function CustomPieChart({ data }) {
           isAnimationActive={false}
           stroke="none"
           labelLine={false}
-          label={!isMobile ? renderCustomizedLabel : false}
+          label={
+            !isMobile
+              ? (props) => renderCustomizedLabel({ ...props, isTablet })
+              : false
+          }
         >
           {sortedData.map((_, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index]} />
