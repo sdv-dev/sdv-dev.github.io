@@ -15,27 +15,27 @@ const COLORS = [
   "#E5E8F2",
 ];
 
-const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
+const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const labelPositions = [
     { x: -290, y: -450 },
-    { x: 140, y: 100 },
-    { x: 104, y: 130 },
-    { x: 104, y: 160 },
-    { x: isTablet ? 678 : 870, y: 100 },
-    { x: isTablet ? 680 : 872, y: 130 },
-    { x: isTablet ? 703 : 895, y: 160 },
-    { x: isTablet ? 702 : 894, y: 190 },
+    { x: isTablet ? 140 : 130, y: 100 },
+    { x: isTablet ? 104 : 90, y: 130 },
+    { x: isTablet ? 104 : 90, y: 160 },
+    { x: isTablet ? 678 : 875, y: 100 },
+    { x: isTablet ? 680 : 873, y: 130 },
+    { x: isTablet ? 703 : 898, y: 160 },
+    { x: isTablet ? 702 : 897, y: 190 },
   ];
 
   const lineCoordinates = [
     { from: [-270, -450], to: [-290, -500] },
-    { from: [isTablet ? 300 : 370, 100], to: [260, 100] },
+    { from: [isTablet ? 300 : 370, 100], to: [isTablet ? 260 : 265, 100] },
     { from: [isTablet ? 360 : 465, 130], to: [190, 130] },
     { from: [isTablet ? 400 : 500, 160], to: [190, 160] },
     { from: [isTablet ? 430 : 530, 100], to: [isTablet ? 625 : 820, 100] },
-    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 575 : 765, 130] },
-    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 620 : 810, 160] },
-    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 620 : 810, 190] },
+    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 575 : 755, 130] },
+    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 620 : 805, 160] },
+    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 620 : 805, 190] },
   ];
 
   const strokeColors = [
@@ -85,7 +85,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
             x={label.x + 30}
             y={label.y}
             color="#000036"
-            fontSize={18}
+            fontSize={isMobile || isTablet ? 18 : 20}
             fontWeight={600}
             textAnchor="start"
             dominantBaseline="central"
@@ -97,7 +97,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
         <text
           x={label.x}
           y={label.y}
-          fontSize={18}
+          fontSize={isMobile || isTablet ? 18 : 20}
           color="#000036"
           fontWeight={600}
           textAnchor="middle"
@@ -138,7 +138,8 @@ export default function CustomPieChart({ data }) {
           labelLine={false}
           label={
             !isMobile
-              ? (props) => renderCustomizedLabel({ ...props, isTablet })
+              ? (props) =>
+                  renderCustomizedLabel({ ...props, isTablet, isMobile })
               : false
           }
         >
