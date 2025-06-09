@@ -1,6 +1,7 @@
 import React from "react";
 import { PieChart, Pie, Cell, Label, Legend } from "recharts";
 import sdvPieChartLogo from "../../../static/sdv-pie-chart-logo.svg";
+import gretelSvg from "../../../static/gretel.svg";
 import useWindowWidth from "../../hooks/useviewport";
 
 const COLORS = [
@@ -19,24 +20,24 @@ const COLORS = [
 const renderCustomizedLabel = ({ name, value, index }) => {
   const labelPositions = [
     { x: -290, y: -450 },
-    { x: 80, y: 100 },
-    { x: 80, y: 130 },
-    { x: 80, y: 160 },
-    { x: 670, y: 100 },
-    { x: 710, y: 130 },
-    { x: 720, y: 160 },
-    { x: 730, y: 190 },
+    { x: 140, y: 100 },
+    { x: 105, y: 130 },
+    { x: 106, y: 160 },
+    { x: 820, y: 100 },
+    { x: 870, y: 130 },
+    { x: 850, y: 160 },
+    { x: 853, y: 190 },
   ];
 
   const lineCoordinates = [
     { from: [-270, -450], to: [-290, -500] },
-    { from: [310, 100], to: [170, 100] },
-    { from: [365, 130], to: [150, 130] },
-    { from: [400, 160], to: [140, 160] },
-    { from: [430, 100], to: [620, 100] },
-    { from: [450, 130], to: [640, 130] },
-    { from: [450, 160], to: [660, 160] },
-    { from: [445, 190], to: [670, 190] },
+    { from: [370, 100], to: [250, 100] },
+    { from: [465, 130], to: [180, 130] },
+    { from: [500, 160], to: [190, 160] },
+    { from: [530, 100], to: [770, 100] },
+    { from: [545, 130], to: [770, 130] },
+    { from: [550, 160], to: [770, 160] },
+    { from: [545, 190], to: [770, 190] },
   ];
 
   const strokeColors = [
@@ -73,16 +74,38 @@ const renderCustomizedLabel = ({ name, value, index }) => {
           />
         </>
       )}
-      <text
-        x={label.x}
-        y={label.y}
-        fill="#000036"
-        fontSize={13}
-        textAnchor="middle"
-        dominantBaseline="central"
-      >
-        {`${name} (${value}%)`}
-      </text>
+      {name.toLowerCase() === "gretel" ? (
+        <>
+          <image
+            href={gretelSvg}
+            x={label.x - 40}
+            y={label.y - 10}
+            width={65}
+            height={23}
+          />
+          <text
+            x={label.x + 30}
+            y={label.y}
+            fill="#000036"
+            fontSize={18}
+            textAnchor="start"
+            dominantBaseline="central"
+          >
+            ({value}%)
+          </text>
+        </>
+      ) : (
+        <text
+          x={label.x}
+          y={label.y}
+          fill="#000036"
+          fontSize={18}
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          {`${name} (${value}%)`}
+        </text>
+      )}
     </g>
   );
 };
@@ -90,6 +113,7 @@ const renderCustomizedLabel = ({ name, value, index }) => {
 export default function CustomPieChart({ data }) {
   const width = useWindowWidth();
   const isMobile = width < 768;
+  const isTablet = width > 768 && width < 1024;
   const sortedData = [...data].sort((a, b) => b.percentage - a.percentage);
 
   return (
@@ -100,12 +124,12 @@ export default function CustomPieChart({ data }) {
         className="absolute top-[42%] md:top-[55%] z-10"
         draggable={false}
       />
-      <PieChart width={isMobile ? 400 : 800} height={550}>
+      <PieChart width={isMobile ? 400 : isTablet ? 800 : 1000} height={550}>
         <Pie
           data={sortedData}
           cx="50%"
           cy="50%"
-          outerRadius={isMobile ? 180 : 275}
+          outerRadius={isMobile ? 180 : isTablet ? 220 : 275}
           dataKey="percentage"
           startAngle={60}
           endAngle={-300}
