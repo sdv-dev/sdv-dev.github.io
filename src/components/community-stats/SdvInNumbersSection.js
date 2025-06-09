@@ -10,25 +10,13 @@ import useWindowWidth from "../../hooks/useviewport";
 import CustomPieChart from "./CustomPieChart";
 import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
-export default function SdvInNumbersSection() {
+export default function SdvInNumbersSection({ data }) {
   const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", currentYear];
   const [tableColDimensions, setTableColDimensions] = useState(
     "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
-  const data = [
-    { name: "SDV", toDate: "8M", yearToDate: "10M" },
-    { name: "gretel", toDate: "998K", yearToDate: "1M" },
-    { name: "Synthcity", toDate: "84K", yearToDate: "106K" },
-    { name: "Realtabformer", toDate: "78K", yearToDate: "97K" },
-    { name: "Smartnoise-synth", toDate: "68K", yearToDate: "92K" },
-    { name: "Be-great", toDate: "66K", yearToDate: "90K" },
-    { name: "Vendor 1", toDate: "269K", yearToDate: "323K" },
-    { name: "Vendor 2", toDate: "221K", yearToDate: "405K" },
-    { name: "Vendor 3", toDate: "73K", yearToDate: "81K" },
-    { name: "Vendor 4", toDate: "22K", yearToDate: "62K" },
-  ];
   const width = useWindowWidth();
   const isMobile = width < 768;
 
@@ -87,7 +75,7 @@ export default function SdvInNumbersSection() {
         </h1>
         <div className="text-center pt-1.5 pb-12">
           <a
-            href="https://docs.sdv.dev/sdv"
+            href="https://datacebo.com/announcements/sdv-reaches-10-million-downloads/"
             target="_blank"
             rel="noreferrer"
             className="text-lg text-blue-600 hover:text-midnight-950 font-semibold duration-200 leading-none cursor-pointer"
@@ -179,13 +167,7 @@ export default function SdvInNumbersSection() {
                           className="w-full touch-pan-x"
                         >
                           <TableRowCell>
-                            <div
-                              className={`flex justify-end ${
-                                isLast
-                                  ? "font-bold text-midnight-950"
-                                  : "font-normal"
-                              }`}
-                            >
+                            <div className="flex justify-end font-normal">
                               {row[metricKeys[activeMetricIndex]]}
                             </div>
                           </TableRowCell>
@@ -193,24 +175,12 @@ export default function SdvInNumbersSection() {
                       ) : (
                         <>
                           <TableRowCell>
-                            <div
-                              className={`flex justify-end ${
-                                isLast
-                                  ? "font-bold text-midnight-950"
-                                  : "font-normal"
-                              }`}
-                            >
+                            <div className="flex justify-end font-normal">
                               {row.toDate}
                             </div>
                           </TableRowCell>
                           <TableRowCell>
-                            <div
-                              className={`flex justify-end ${
-                                isLast
-                                  ? "font-bold text-midnight-950"
-                                  : "font-normal"
-                              }`}
-                            >
+                            <div className="flex justify-end font-normal">
                               {row.yearToDate}
                             </div>
                           </TableRowCell>
@@ -222,7 +192,7 @@ export default function SdvInNumbersSection() {
               </TableBody>
             </Table>
           )}
-          {activeTab.label === "Visualize" && <CustomPieChart />}
+          {activeTab.label === "Visualize" && <CustomPieChart data={data} />}
         </div>
         <LatestsNewsSubSection />
       </div>

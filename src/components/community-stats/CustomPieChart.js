@@ -3,19 +3,6 @@ import { PieChart, Pie, Cell, Label, Legend } from "recharts";
 import sdvPieChartLogo from "../../../static/sdv-pie-chart-logo.svg";
 import useWindowWidth from "../../hooks/useviewport";
 
-const data = [
-  { name: "SDV", value: 80.7 },
-  { name: "Gretel", value: 10.2 },
-  { name: "Synthesized", value: 2.8 },
-  { name: "YData", value: 2.3 },
-  { name: "SynthCity", value: 0.9 },
-  { name: "Realtabformer", value: 0.8 },
-  { name: "Smartnoise-synth", value: 0.7 },
-  { name: "Datomize", value: 0.7 },
-  { name: "Be-great", value: 0.7 },
-  { name: "MOSTLY AI", value: 0.2 },
-];
-
 const COLORS = [
   "#01E0C9",
   "#03AFF1",
@@ -29,38 +16,31 @@ const COLORS = [
   "#000036",
 ];
 
-const renderCustomizedLabel = ({ index }) => {
-  const name = data[index].name;
-  const value = data[index].value;
+const renderCustomizedLabel = ({ name, value, index }) => {
+  const labelPositions = [
+    { x: -290, y: -450 },
+    { x: 90, y: 130 },
+    { x: 90, y: 160 },
+    { x: 90, y: 190 },
+    { x: 630, y: 100 },
+    { x: 650, y: 130 },
+    { x: 650, y: 160 },
+    { x: 650, y: 190 },
+  ];
 
-  const manualLabelPositions = {
-    SDV: { x: 290, y: 520 },
-    Gretel: { x: 45, y: 190 },
-    Synthesized: { x: 120, y: 90 },
-    YData: { x: 160, y: 50 },
-    SynthCity: { x: 290, y: 40 },
-    Realtabformer: { x: 430, y: 40 },
-    "Smartnoise-synth": { x: 520, y: 70 },
-    Datomize: { x: 530, y: 110 },
-    "Be-great": { x: 530, y: 140 },
-    "MOSTLY AI": { x: 540, y: 180 },
-  };
+  const lineCoordinates = [
+    { from: [-270, -450], to: [-290, -500] },
+    { from: [310, 130], to: [170, 130] },
+    { from: [365, 160], to: [150, 160] },
+    { from: [400, 190], to: [155, 190] },
+    { from: [430, 100], to: [570, 100] },
+    { from: [450, 130], to: [570, 130] },
+    { from: [450, 160], to: [580, 160] },
+    { from: [445, 190], to: [590, 190] },
+  ];
 
-  const manualLineCoordinates = {
-    SDV: { from: [300, 450], to: [290, 500] },
-    Gretel: { from: [260, 190], to: [100, 190] },
-    Synthesized: { from: [300, 140], to: [190, 95] },
-    YData: { from: [330, 100], to: [200, 60] },
-    SynthCity: { from: [355, 100], to: [310, 55] },
-    Realtabformer: { from: [365, 100], to: [380, 55] },
-    "Smartnoise-synth": { from: [375, 100], to: [440, 75] },
-    Datomize: { from: [380, 105], to: [475, 110] },
-    "Be-great": { from: [387, 110], to: [475, 140] },
-    "MOSTLY AI": { from: [387, 120], to: [480, 175] },
-  };
-
-  const label = manualLabelPositions[name];
-  const line = manualLineCoordinates[name];
+  const label = labelPositions[index];
+  const line = lineCoordinates[index];
 
   if (!label) return null;
 
@@ -70,11 +50,16 @@ const renderCustomizedLabel = ({ index }) => {
         <>
           <polyline
             points={`${line.from[0]},${line.from[1]} ${line.to[0]},${line.to[1]}`}
-            stroke="#353E67"
-            strokeWidth={1}
+            stroke="rgba(227, 234, 255, 0.93)"
+            strokeWidth={2}
             fill="none"
           />
-          <circle cx={line.to[0]} cy={line.to[1]} r={3} fill="#353E67" />
+          <circle
+            cx={line.from[0]}
+            cy={line.from[1]}
+            r={3}
+            fill="rgba(227, 234, 255, 0.93)"
+          />
         </>
       )}
       <text
@@ -91,9 +76,11 @@ const renderCustomizedLabel = ({ index }) => {
   );
 };
 
-export default function CustomPieChart() {
+export default function CustomPieChart({ data }) {
   const width = useWindowWidth();
   const isMobile = width < 768;
+  const sortedData = [...data].sort((a, b) => b.percentage - a.percentage);
+  console.log(sortedData);
 
   return (
     <div className="w-full flex flex-col items-center relative">
@@ -103,13 +90,13 @@ export default function CustomPieChart() {
         className="absolute top-[42%] md:top-[54%] z-10"
         draggable={false}
       />
-      <PieChart width={isMobile ? 400 : 600} height={550}>
+      <PieChart width={isMobile ? 400 : 800} height={550}>
         <Pie
-          data={data}
+          data={sortedData}
           cx="50%"
           cy="50%"
           outerRadius={isMobile ? 180 : 200}
-          dataKey="value"
+          dataKey="percentage"
           startAngle={60}
           endAngle={-300}
           isAnimationActive={false}
@@ -117,11 +104,11 @@ export default function CustomPieChart() {
           labelLine={false}
           label={!isMobile ? renderCustomizedLabel : false}
         >
-          {data.map((_, index) => (
+          {sortedData.map((_, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index]} />
           ))}
           <Label
-            value="80.7%"
+            value={`${sortedData[0]?.percentage}%`}
             position="center"
             fontSize={24}
             fontWeight="medium"
@@ -147,7 +134,7 @@ export default function CustomPieChart() {
                         style={{ backgroundColor: entry.color }}
                       />
                       <span className="text-midnight-950">
-                        {`${entry.value} (${data[index].value}%)`}
+                        {`${entry.percentage} (${sortedData[index].percentage}%)`}
                       </span>
                     </div>
                   </li>
