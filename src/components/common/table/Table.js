@@ -9,7 +9,7 @@ export default function Table({ children, tableColDimensions }) {
   return (
     <div
       style={customStyles}
-      className="grid border border-midnight-200 rounded-20"
+      className="max-w-[776px] grid border border-midnight-200 rounded-20"
     >
       {children}
     </div>
