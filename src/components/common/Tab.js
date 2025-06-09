@@ -4,8 +4,8 @@ export default function Tab({ children, isActive, onClick }) {
   return (
     <div
       onClick={onClick}
-      className={`w-[93px] lg:w-auto text-center text-midnight-600 text-base md:text-lg lg:text-xl font-semibold leading-none md:tracking-lg cursor-pointer pb-3.5 ${
-        isActive ? "border-b-4 border-b-teal-400 text-midnight-950" : ""
+      className={`text-midnight-800 text-base md:text-lg lg:text-xl font-semibold leading-none md:tracking-lg cursor-pointer py-4 px-5 ${
+        isActive ? "bg-[#070C2F] rounded-[40px] text-midnight-0" : ""
       }`}
     >
       {children}

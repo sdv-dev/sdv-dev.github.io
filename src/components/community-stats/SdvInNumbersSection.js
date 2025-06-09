@@ -83,7 +83,7 @@ export default function SdvInNumbersSection({ data }) {
             Learn more
           </a>
         </div>
-        <div className="flex gap-2.5 lg:gap-9 border-b border-b-midnight-200 mb-6">
+        <div className="flex justify-center items-center gap-2.5 mb-6">
           {tabs.map((t) => (
             <Tab
               key={t.label}
