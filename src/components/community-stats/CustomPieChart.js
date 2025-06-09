@@ -8,47 +8,45 @@ const COLORS = [
   "#01E0C9",
   "#03AFF1",
   "#77DAFF",
-  "#1376B1",
+  "#0690D1",
   "#C1C8DB",
   "#959FBD",
-  "#525C80",
-  "#B7E9FF",
-  "#0690D1",
-  "#000036",
+  "#2EC8FF",
+  "#E5E8F2",
 ];
 
 const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
   const labelPositions = [
     { x: -290, y: -450 },
     { x: 140, y: 100 },
-    { x: 105, y: 130 },
-    { x: 106, y: 160 },
-    { x: isTablet ? 620 : 820, y: 100 },
-    { x: isTablet ? 680 : 870, y: 130 },
-    { x: isTablet ? 680 : 850, y: 160 },
-    { x: isTablet ? 690 : 853, y: 190 },
+    { x: 104, y: 130 },
+    { x: 104, y: 160 },
+    { x: isTablet ? 678 : 870, y: 100 },
+    { x: isTablet ? 680 : 872, y: 130 },
+    { x: isTablet ? 703 : 895, y: 160 },
+    { x: isTablet ? 702 : 894, y: 190 },
   ];
 
   const lineCoordinates = [
     { from: [-270, -450], to: [-290, -500] },
-    { from: [isTablet ? 300 : 370, 100], to: [250, 100] },
-    { from: [isTablet ? 360 : 465, 130], to: [180, 130] },
+    { from: [isTablet ? 300 : 370, 100], to: [260, 100] },
+    { from: [isTablet ? 360 : 465, 130], to: [190, 130] },
     { from: [isTablet ? 400 : 500, 160], to: [190, 160] },
-    { from: [isTablet ? 430 : 530, 100], to: [isTablet ? 570 : 770, 100] },
-    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 580 : 770, 130] },
-    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 600 : 770, 160] },
-    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 610 : 770, 190] },
+    { from: [isTablet ? 430 : 530, 100], to: [isTablet ? 625 : 820, 100] },
+    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 575 : 765, 130] },
+    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 620 : 810, 160] },
+    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 620 : 810, 190] },
   ];
 
   const strokeColors = [
-    "#000036",
-    "#000036",
-    "#000036",
-    "#000036",
-    "#000036",
-    "#000036",
-    "#000036",
-    "#000036",
+    "#353E67",
+    "#353E67",
+    "#353E67",
+    "#353E67",
+    "#353E67",
+    "#353E67",
+    "#353E67",
+    "#353E67",
   ];
 
   const label = labelPositions[index];
@@ -63,13 +61,13 @@ const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
           <polyline
             points={`${line.from[0]},${line.from[1]} ${line.to[0]},${line.to[1]}`}
             stroke={strokeColors[index]}
-            strokeWidth={2}
+            strokeWidth={1}
             fill="none"
           />
           <circle
             cx={line.from[0]}
             cy={line.from[1]}
-            r={3}
+            r={2}
             fill={strokeColors[index]}
           />
         </>
@@ -86,8 +84,9 @@ const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
           <text
             x={label.x + 30}
             y={label.y}
-            fill="#000036"
+            color="#000036"
             fontSize={18}
+            fontWeight={600}
             textAnchor="start"
             dominantBaseline="central"
           >
@@ -98,8 +97,9 @@ const renderCustomizedLabel = ({ name, value, index, isTablet }) => {
         <text
           x={label.x}
           y={label.y}
-          fill="#000036"
           fontSize={18}
+          color="#000036"
+          fontWeight={600}
           textAnchor="middle"
           dominantBaseline="central"
         >
