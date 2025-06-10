@@ -12,13 +12,13 @@ import NewsUpdate from "../common/NewsUpdate";
 
 export default function NewsSliderSection() {
   const newsAndUpdates = [
-    {
-      id: 1,
-      imgSrc: sdvTenMillions,
-      label: "Announcements",
-      text: "SDV reaches 10 Million Downloads",
-      link: "https://datacebo.com/announcements/sdv-reaches-10-million-downloads/",
-    },
+    // {
+    //   id: 1,
+    //   imgSrc: sdvTenMillions,
+    //   label: "Announcements",
+    //   text: "SDV reaches 10 Million Downloads",
+    //   link: "https://datacebo.com/announcements/sdv-reaches-10-million-downloads/",
+    // },
     {
       id: 2,
       imgSrc: aiPowered,
