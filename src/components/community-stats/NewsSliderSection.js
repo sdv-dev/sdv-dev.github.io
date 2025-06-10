@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import dataceboIng from "../../../static/images/news/datacebo-ing.svg";
+import sdvTenMillions from "../../../static/images/news/sdv-ten-millions.svg";
 import aiPowered from "../../../static/images/news/ai-powered.svg";
 import aiConnectors from "../../../static/images/news/ai-connectors.svg";
 import cag from "../../../static/images/news/cag.svg";
@@ -13,41 +14,48 @@ export default function NewsSliderSection() {
   const newsAndUpdates = [
     {
       id: 1,
+      imgSrc: sdvTenMillions,
+      label: "Announcements",
+      text: "SDV reaches 10 Million Downloads",
+      link: "https://datacebo.com/announcements/sdv-reaches-10-million-downloads/",
+    },
+    {
+      id: 2,
       imgSrc: aiPowered,
       label: "News",
       text: "How “AI powered” synthetic data boosts software engineering",
       link: "https://medium.com/ing-blog/how-ai-powered-synthetic-data-boosts-software-engineering-d89ad77ca2e7",
     },
     {
-      id: 2,
+      id: 3,
       imgSrc: aiConnectors,
       label: "Announcements",
       text: "Introducing AI Connectors",
       link: "https://datacebo.com/announcements/introducing-ai-connectors",
     },
     {
-      id: 3,
+      id: 4,
       imgSrc: cag,
       label: "Announcements",
       text: "Introducing Constraint-Augmented Generation (CAG)",
       link: "https://datacebo.com/announcements/introducing-cag",
     },
     {
-      id: 4,
+      id: 5,
       imgSrc: dataceboIng,
       label: "Blog",
       text: "How ING Belgium Uses DataCebo’s SDV Enterprise to Create Synthetic Data for 100x the Test Coverage",
       link: "https://datacebo.com/blog/ing-belgium-sepa",
     },
     {
-      id: 5,
+      id: 6,
       imgSrc: forbes,
       label: "News",
       text: "DataCebo Creates Synthetic Enterprise Data With Actually Useful Generative AI",
       link: "https://www.forbes.com/sites/justinwarren/2024/04/29/datacebo-creates-synthetic-enterprise-data-with-actually-useful-generative-ai",
     },
     {
-      id: 6,
+      id: 7,
       imgSrc: syntDataNews,
       label: "News",
       text: "What is synthetic data — and how can it help you competitively?",
