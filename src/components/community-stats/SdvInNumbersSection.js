@@ -93,7 +93,7 @@ export default function SdvInNumbersSection({ data }) {
             </Tab>
           ))}
         </div>
-        <div className="flex justify-center mb-12 lg:mb-24">
+        <div className="flex justify-center">
           {activeTab.label === "Downloads" && (
             <Table tableColDimensions={tableColDimensions}>
               <TableHeader>
