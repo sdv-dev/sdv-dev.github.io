@@ -1,5 +1,5 @@
 import React from "react";
-import worldMap from "../../../static/world-map.svg";
+import worldMap from "../../../static/world-map.png";
 import eastIcon from "../../../static/east.svg";
 
 export default function SdvCommunityHero() {
