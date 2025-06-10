@@ -8,6 +8,7 @@ import SdvInNumbersSection from "./SdvInNumbersSection";
 import SdvCoreSection from "./SdvCoreSection";
 import SdvOpenCoreSection from "./SdvOpenCoreSection";
 import BannerSection from "./BannerSection";
+import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function CommunityStatsContent() {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ export default function CommunityStatsContent() {
         const arrayBuffer = await blob.arrayBuffer();
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
-        const firstSheet = workbook.SheetNames[0];
+        // const firstSheet = workbook.SheetNames[0];
         const secondSheet = workbook.SheetNames[1];
         // const thirdSheet = workbook.SheetNames[2];
         const worksheet = workbook.Sheets[secondSheet];
@@ -74,6 +75,7 @@ export default function CommunityStatsContent() {
       <SynthesizeCardsSection />
       <CommunityUsersSection />
       <SdvInNumbersSection data={data} />
+      <LatestsNewsSubSection />
       <SdvCoreSection />
       <SdvOpenCoreSection />
       <NewsSliderSection />

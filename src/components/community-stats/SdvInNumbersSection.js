@@ -8,7 +8,6 @@ import TableRowCell from "../common/table/TableRowCell";
 import Tab from "../common/Tab";
 import useWindowWidth from "../../hooks/useviewport";
 import CustomPieChart from "./CustomPieChart";
-import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function SdvInNumbersSection({ data }) {
   const currentYear = new Date().getFullYear().toString();
@@ -194,7 +193,6 @@ export default function SdvInNumbersSection({ data }) {
           )}
           {activeTab.label === "Visualize" && <CustomPieChart data={data} />}
         </div>
-        <LatestsNewsSubSection />
       </div>
     </div>
   );

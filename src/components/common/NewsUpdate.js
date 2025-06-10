@@ -9,7 +9,7 @@ export default function NewsUpdate({
 }) {
   return (
     <div className="h-full">
-      <div className="flex flex-col md:flex-row gap-6 h-full md:h-[220px]">
+      <div className="flex flex-col md:flex-row gap-6 h-full">
         <img
           src={imgSrc}
           alt="Illustration"
