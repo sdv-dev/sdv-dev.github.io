@@ -13,7 +13,7 @@ import LatestsNewsSubSection from "./LatestsNewsSubSection";
 export default function CommunityStatsContent() {
   const [data, setData] = useState([]);
   const fileUrl =
-    "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/GitHub_Summary.xlsx";
+    "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/Downloads_Summary.xlsx";
 
   useEffect(() => {
     async function fetchExcel() {
@@ -23,15 +23,10 @@ export default function CommunityStatsContent() {
         const arrayBuffer = await blob.arrayBuffer();
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
-        // const firstSheet = workbook.SheetNames[0];
-        const secondSheet = workbook.SheetNames[1];
-        // const thirdSheet = workbook.SheetNames[2];
-        const worksheet = workbook.Sheets[secondSheet];
-        // const secondWorksheet = workbook.Sheets[secondSheet];
-        // const thirdWorksheet = workbook.Sheets[thirdSheet];
+        const firstSheet = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheet];
         const rawData = XLSX.utils.sheet_to_json(worksheet);
-        // const secondRawData = XLSX.utils.sheet_to_json(secondWorksheet);
-        // const thirdRawData = XLSX.utils.sheet_to_json(thirdWorksheet);
+        console.log(rawData);
 
         function formatThousands(value) {
           if (value >= 1_000_000)
@@ -56,8 +51,8 @@ export default function CommunityStatsContent() {
           percentage: parseFloat(
             ((item["Total Since Beginning"] / total) * 100).toFixed(2)
           ),
-          toDate: formatThousands(item["Total Since Beginning"] * 1000),
-          yearToDate: formatThousands(item["2025"] * 1000),
+          toDate: formatThousands(item["Total Since Beginning"]),
+          yearToDate: formatThousands(item["2025"]),
         }));
 
         setData(enrichedData);

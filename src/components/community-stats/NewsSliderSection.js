@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import dataceboIng from "../../../static/images/news/datacebo-ing.svg";
-import sdvTenMillions from "../../../static/images/news/sdv-ten-millions.svg";
+// import sdvTenMillions from "../../../static/images/news/sdv-ten-millions.svg";
 import aiPowered from "../../../static/images/news/ai-powered.svg";
 import aiConnectors from "../../../static/images/news/ai-connectors.svg";
 import cag from "../../../static/images/news/cag.svg";

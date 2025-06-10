@@ -13,6 +13,8 @@ const COLORS = [
   "#959FBD",
   "#2EC8FF",
   "#E5E8F2",
+  "#03AFF1",
+  "#77DAFF",
 ];
 
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
@@ -21,24 +23,30 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
     { x: isTablet ? 140 : 130, y: 100 },
     { x: isTablet ? 104 : 90, y: 130 },
     { x: isTablet ? 104 : 90, y: 160 },
-    { x: isTablet ? 678 : 875, y: 100 },
-    { x: isTablet ? 680 : 873, y: 130 },
-    { x: isTablet ? 703 : 898, y: 160 },
-    { x: isTablet ? 702 : 897, y: 190 },
+    { x: isTablet ? 110 : 100, y: 182 },
+    { x: isTablet ? 680 : 873, y: 100 },
+    { x: isTablet ? 685 : 880, y: 130 },
+    { x: isTablet ? 702 : 897, y: 160 },
+    { x: isTablet ? 702 : 897, y: 182 },
+    { x: isTablet ? 702 : 897, y: 202 },
   ];
 
   const lineCoordinates = [
     { from: [-270, -450], to: [-290, -500] },
-    { from: [isTablet ? 300 : 370, 100], to: [isTablet ? 260 : 265, 100] },
-    { from: [isTablet ? 360 : 465, 130], to: [190, 130] },
-    { from: [isTablet ? 400 : 500, 160], to: [190, 160] },
-    { from: [isTablet ? 430 : 530, 100], to: [isTablet ? 625 : 820, 100] },
-    { from: [isTablet ? 445 : 545, 130], to: [isTablet ? 575 : 755, 130] },
-    { from: [isTablet ? 450 : 550, 160], to: [isTablet ? 620 : 805, 160] },
-    { from: [isTablet ? 446 : 545, 190], to: [isTablet ? 620 : 805, 190] },
+    { from: [isTablet ? 380 : 475, 100], to: [isTablet ? 250 : 265, 100] },
+    { from: [isTablet ? 425 : 523, 130], to: [190, 130] },
+    { from: [isTablet ? 430 : 530, 160], to: [190, 160] },
+    { from: [isTablet ? 430 : 530, 182], to: [isTablet ? 190 : 190, 182] },
+    { from: [isTablet ? 465 : 565, 100], to: [isTablet ? 575 : 755, 100] },
+    { from: [isTablet ? 461 : 561, 130], to: [isTablet ? 570 : 760, 130] },
+    { from: [isTablet ? 454 : 554, 160], to: [isTablet ? 620 : 805, 160] },
+    { from: [isTablet ? 448 : 548, 182], to: [isTablet ? 620 : 805, 182] },
+    { from: [isTablet ? 441 : 541, 202], to: [isTablet ? 620 : 805, 202] },
   ];
 
   const strokeColors = [
+    "#353E67",
+    "#353E67",
     "#353E67",
     "#353E67",
     "#353E67",
@@ -67,7 +75,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           <circle
             cx={line.from[0]}
             cy={line.from[1]}
-            r={2}
+            r={1.5}
             fill={strokeColors[index]}
           />
         </>
@@ -86,7 +94,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
             y={label.y}
             color="#000036"
             fontSize={isMobile || isTablet ? 18 : 20}
-            fontWeight={600}
+            fontWeight={500}
             textAnchor="start"
             dominantBaseline="central"
           >
@@ -99,7 +107,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           y={label.y}
           fontSize={isMobile || isTablet ? 18 : 20}
           color="#000036"
-          fontWeight={600}
+          fontWeight={500}
           textAnchor="middle"
           dominantBaseline="central"
         >
