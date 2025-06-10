@@ -23,8 +23,14 @@ export default function CommunityStatsContent() {
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
         const firstSheet = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[firstSheet];
+        const secondSheet = workbook.SheetNames[1];
+        // const thirdSheet = workbook.SheetNames[2];
+        const worksheet = workbook.Sheets[secondSheet];
+        // const secondWorksheet = workbook.Sheets[secondSheet];
+        // const thirdWorksheet = workbook.Sheets[thirdSheet];
         const rawData = XLSX.utils.sheet_to_json(worksheet);
+        // const secondRawData = XLSX.utils.sheet_to_json(secondWorksheet);
+        // const thirdRawData = XLSX.utils.sheet_to_json(thirdWorksheet);
 
         function formatThousands(value) {
           if (value >= 1_000_000)
