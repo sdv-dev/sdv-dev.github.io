@@ -7,22 +7,13 @@ import TableRow from "../common/table/TableRow";
 import TableRowCell from "../common/table/TableRowCell";
 import useWindowWidth from "../../hooks/useviewport";
 
-export default function SdvCoreSection() {
+export default function SdvCoreSection({ dependenciesData }) {
   const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", currentYear];
   const [tableColDimensions, setTableColDimensions] = useState(
     "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
   );
-  const data = [
-    { name: "SDV", toDate: 492, yearToDate: 994 },
-    { name: "RDT", toDate: 877, yearToDate: 816 },
-    { name: "Copulas", toDate: 994, yearToDate: 798 },
-    { name: "CTGAN", toDate: 357, yearToDate: 928 },
-    { name: "SDGym", toDate: 274, yearToDate: 659 },
-    { name: "SDMetrics", toDate: 177, yearToDate: 756 },
-    { name: "Total", toDate: 3723, yearToDate: 5663 },
-  ];
   const width = useWindowWidth();
   const isMobile = width < 768;
 
@@ -99,8 +90,8 @@ export default function SdvCoreSection() {
           </TableHeader>
 
           <TableBody>
-            {data.map((row, idx) => {
-              const isLast = idx === data.length - 1;
+            {dependenciesData.map((row, idx) => {
+              const isLast = idx === dependenciesData.length - 1;
 
               return (
                 <TableRow key={row.name} index={idx} isLast={isLast}>
@@ -132,13 +123,7 @@ export default function SdvCoreSection() {
                       className="w-full touch-pan-x"
                     >
                       <TableRowCell>
-                        <div
-                          className={`flex justify-end ${
-                            isLast
-                              ? "font-bold text-midnight-950"
-                              : "font-normal"
-                          }`}
-                        >
+                        <div className="flex justify-end font-normal">
                           {row[metricKeys[activeMetricIndex]]}
                         </div>
                       </TableRowCell>
@@ -146,24 +131,12 @@ export default function SdvCoreSection() {
                   ) : (
                     <>
                       <TableRowCell>
-                        <div
-                          className={`flex justify-end ${
-                            isLast
-                              ? "font-bold text-midnight-950"
-                              : "font-normal"
-                          }`}
-                        >
+                        <div className="flex justify-end font-normal">
                           {row.toDate}
                         </div>
                       </TableRowCell>
                       <TableRowCell>
-                        <div
-                          className={`flex justify-end ${
-                            isLast
-                              ? "font-bold text-midnight-950"
-                              : "font-normal"
-                          }`}
-                        >
+                        <div className="flex justify-end font-normal">
                           {row.yearToDate}
                         </div>
                       </TableRowCell>

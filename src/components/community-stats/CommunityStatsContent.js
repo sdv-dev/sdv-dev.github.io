@@ -12,6 +12,7 @@ import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function CommunityStatsContent() {
   const [data, setData] = useState([]);
+  const [dependenciesData, setDependenciesData] = useState([]);
   const fileUrl =
     "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/Downloads_Summary.xlsx";
 
@@ -24,9 +25,12 @@ export default function CommunityStatsContent() {
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
         const firstSheet = workbook.SheetNames[0];
+        const thirdSheet = workbook.SheetNames[2];
         const worksheet = workbook.Sheets[firstSheet];
+        const dependenciesWorksheet = workbook.Sheets[thirdSheet];
+
         const rawData = XLSX.utils.sheet_to_json(worksheet);
-        console.log(rawData);
+        const rawDependencies = XLSX.utils.sheet_to_json(dependenciesWorksheet);
 
         function formatThousands(value) {
           if (value >= 1_000_000)
@@ -56,6 +60,21 @@ export default function CommunityStatsContent() {
         }));
 
         setData(enrichedData);
+
+        const dependencies = rawDependencies
+          .filter(
+            (item) =>
+              item["Library"] !== undefined &&
+              item["Total Since Beginning"] !== undefined &&
+              item["2025"] !== undefined
+          )
+          .map((item) => ({
+            name: item["Library"],
+            toDate: formatThousands(item["Total Since Beginning"]),
+            yearToDate: formatThousands(item["2025"]),
+          }));
+
+        setDependenciesData(dependencies);
       } catch (error) {
         console.error("Error loading Excel file:", error);
       }
@@ -71,7 +90,7 @@ export default function CommunityStatsContent() {
       <CommunityUsersSection />
       <SdvInNumbersSection data={data} />
       <LatestsNewsSubSection />
-      <SdvCoreSection />
+      <SdvCoreSection dependenciesData={dependenciesData} />
       <SdvOpenCoreSection />
       <NewsSliderSection />
       <BannerSection />
