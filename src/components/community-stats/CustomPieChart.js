@@ -19,63 +19,94 @@ const COLORS = [
 
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const labelPositions = [
-    { x: -290, y: -450 },
-    { x: isTablet ? 140 : 130, y: 100 },
-    { x: isTablet ? 104 : 90, y: 130 },
-    { x: isTablet ? 104 : 90, y: 160 },
-    { x: isTablet ? 110 : 100, y: 182 },
-    { x: isTablet ? 680 : 873, y: 100 },
-    { x: isTablet ? 685 : 880, y: 130 },
-    { x: isTablet ? 702 : 897, y: 160 },
-    { x: isTablet ? 702 : 897, y: 182 },
-    { x: isTablet ? 702 : 897, y: 202 },
+    { x: -290, y: -450 }, // hidden
+    { x: isTablet ? 140 : 50, y: 50 },
+    { x: isTablet ? 104 : 90, y: 120 },
+    { x: isTablet ? 104 : 90, y: 190 },
+    { x: isTablet ? 110 : 90, y: 260 },
+    // right side
+    { x: isTablet ? 680 : 900, y: 50 },
+    { x: isTablet ? 685 : 884, y: 120 },
+    { x: isTablet ? 702 : 924, y: 190 },
+    { x: isTablet ? 702 : 923, y: 260 },
+    { x: isTablet ? 702 : 922, y: 330 },
   ];
 
-  const lineCoordinates = [
-    { from: [-270, -450], to: [-290, -500] },
-    { from: [isTablet ? 380 : 475, 100], to: [isTablet ? 250 : 265, 100] },
-    { from: [isTablet ? 425 : 523, 130], to: [190, 130] },
-    { from: [isTablet ? 430 : 530, 160], to: [190, 160] },
-    { from: [isTablet ? 430 : 530, 182], to: [isTablet ? 190 : 190, 182] },
-    { from: [isTablet ? 465 : 565, 100], to: [isTablet ? 575 : 755, 100] },
-    { from: [isTablet ? 461 : 561, 130], to: [isTablet ? 570 : 760, 130] },
-    { from: [isTablet ? 454 : 554, 160], to: [isTablet ? 620 : 805, 160] },
-    { from: [isTablet ? 448 : 548, 182], to: [isTablet ? 620 : 805, 182] },
-    { from: [isTablet ? 441 : 541, 202], to: [isTablet ? 620 : 805, 202] },
+  const polylinePaths = [
+    { from: [-270, -450], bend: [-290, -475], to: [-290, -500] }, // hidden
+    {
+      from: [isTablet ? 380 : 475, 50],
+      bend: [isTablet ? 300 : 370, 50],
+      to: [isTablet ? 250 : 170, 50],
+    },
+    {
+      from: [isTablet ? 425 : 533, 60],
+      bend: [isTablet ? 320 : 250, 122],
+      to: [187, 122],
+    },
+    {
+      from: [isTablet ? 430 : 550, 80],
+      bend: [isTablet ? 320 : 220, 190],
+      to: [187, 190],
+    },
+    {
+      from: [isTablet ? 430 : 556, 100],
+      bend: [isTablet ? 320 : 220, 260],
+      to: [187, 260],
+    },
+    // right side
+    {
+      from: [isTablet ? 465 : 583, 50],
+      bend: [isTablet ? 640 : 740, 50],
+      to: [isTablet ? 755 : 780, 50],
+    },
+    {
+      from: [isTablet ? 461 : 588, 65],
+      bend: [isTablet ? 640 : 735, 122],
+      to: [isTablet ? 760 : 751, 122],
+    },
+    {
+      from: [isTablet ? 454 : 591, 80],
+      bend: [isTablet ? 670 : 780, 190],
+      to: [isTablet ? 805 : 825, 190],
+    },
+    {
+      from: [isTablet ? 448 : 590, 100],
+      bend: [isTablet ? 670 : 790, 260],
+      to: [isTablet ? 805 : 830, 260],
+    },
+    {
+      from: [isTablet ? 441 : 586, 120],
+      bend: [isTablet ? 670 : 785, 330],
+      to: [isTablet ? 805 : 830, 330],
+    },
   ];
 
-  const strokeColors = [
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-    "#353E67",
-  ];
+  const strokeColors = Array(10).fill("#353E67");
 
   const label = labelPositions[index];
-  const line = lineCoordinates[index];
+  const path = polylinePaths[index];
 
   if (!label) return null;
 
   return (
     <g>
-      {line && (
+      {path && (
         <>
           <polyline
-            points={`${line.from[0]},${line.from[1]} ${line.to[0]},${line.to[1]}`}
+            points={`
+              ${path.from[0]},${path.from[1]}
+              ${path.bend[0]},${path.bend[1]}
+              ${path.to[0]},${path.to[1]}
+            `}
             stroke={strokeColors[index]}
             strokeWidth={1}
             fill="none"
           />
           <circle
-            cx={line.from[0]}
-            cy={line.from[1]}
-            r={1.5}
+            cx={path.from[0]}
+            cy={path.from[1]}
+            r={1.4}
             fill={strokeColors[index]}
           />
         </>
