@@ -13,8 +13,8 @@ const COLORS = [
   "#959FBD",
   "#2EC8FF",
   "#E5E8F2",
-  "#03AFF1",
-  "#77DAFF",
+  "#0690D1",
+  "#525C80",
 ];
 
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
