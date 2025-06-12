@@ -20,65 +20,65 @@ const COLORS = [
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const labelPositions = [
     { x: -290, y: -450 }, // hidden
-    { x: isTablet ? 140 : 50, y: 50 },
-    { x: isTablet ? 104 : 90, y: 120 },
-    { x: isTablet ? 104 : 90, y: 190 },
-    { x: isTablet ? 110 : 90, y: 260 },
+    { x: isTablet ? 65 : 50, y: isTablet ? 100 : 50 },
+    { x: isTablet ? 96 : 90, y: isTablet ? 170 : 120 },
+    { x: isTablet ? 97 : 90, y: isTablet ? 240 : 190 },
+    { x: isTablet ? 101 : 90, y: isTablet ? 310 : 260 },
     // right side
-    { x: isTablet ? 680 : 900, y: 50 },
-    { x: isTablet ? 685 : 884, y: 120 },
-    { x: isTablet ? 702 : 924, y: 190 },
-    { x: isTablet ? 702 : 923, y: 260 },
-    { x: isTablet ? 702 : 922, y: 330 },
+    { x: isTablet ? 703 : 900, y: isTablet ? 100 : 50 },
+    { x: isTablet ? 705 : 884, y: isTablet ? 170 : 120 },
+    { x: isTablet ? 725 : 924, y: isTablet ? 240 : 190 },
+    { x: isTablet ? 725 : 923, y: isTablet ? 310 : 260 },
+    { x: isTablet ? 725 : 922, y: isTablet ? 380 : 330 },
   ];
 
   const polylinePaths = [
     { from: [-270, -450], bend: [-290, -475], to: [-290, -500] }, // hidden
     {
-      from: [isTablet ? 380 : 475, 50],
-      bend: [isTablet ? 300 : 370, 50],
-      to: [isTablet ? 250 : 170, 50],
+      from: [isTablet ? 380 : 475, isTablet ? 100 : 50],
+      bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
+      to: [isTablet ? 175 : 170, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 425 : 533, 60],
-      bend: [isTablet ? 320 : 250, 122],
-      to: [187, 122],
+      from: [isTablet ? 425 : 533, isTablet ? 115 : 60],
+      bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
+      to: [isTablet ? 188 : 187, isTablet ? 170 : 122],
     },
     {
-      from: [isTablet ? 430 : 550, 80],
-      bend: [isTablet ? 320 : 220, 190],
-      to: [187, 190],
+      from: [isTablet ? 443 : 550, isTablet ? 110 : 80],
+      bend: [isTablet ? 320 : 220, isTablet ? 240 : 190],
+      to: [isTablet ? 178 : 187, isTablet ? 240 : 190],
     },
     {
-      from: [isTablet ? 430 : 556, 100],
-      bend: [isTablet ? 320 : 220, 260],
-      to: [187, 260],
+      from: [isTablet ? 456 : 556, isTablet ? 100 : 100],
+      bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
+      to: [isTablet ? 180 : 187, isTablet ? 310 : 260],
     },
     // right side
     {
-      from: [isTablet ? 465 : 583, 50],
-      bend: [isTablet ? 640 : 740, 50],
-      to: [isTablet ? 755 : 780, 50],
+      from: [isTablet ? 464 : 583, isTablet ? 100 : 50],
+      bend: [isTablet ? 600 : 740, isTablet ? 100 : 50],
+      to: [isTablet ? 600 : 780, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 461 : 588, 65],
-      bend: [isTablet ? 640 : 735, 122],
-      to: [isTablet ? 760 : 751, 122],
+      from: [isTablet ? 471 : 588, isTablet ? 105 : 65],
+      bend: [isTablet ? 570 : 735, isTablet ? 171 : 122],
+      to: [isTablet ? 596 : 751, isTablet ? 171 : 122],
     },
     {
-      from: [isTablet ? 454 : 591, 80],
-      bend: [isTablet ? 670 : 780, 190],
-      to: [isTablet ? 805 : 825, 190],
+      from: [isTablet ? 472 : 591, isTablet ? 120 : 80],
+      bend: [isTablet ? 630 : 780, isTablet ? 241 : 190],
+      to: [isTablet ? 645 : 825, isTablet ? 241 : 190],
     },
     {
-      from: [isTablet ? 448 : 590, 100],
-      bend: [isTablet ? 670 : 790, 260],
-      to: [isTablet ? 805 : 830, 260],
+      from: [isTablet ? 474 : 590, isTablet ? 130 : 100],
+      bend: [isTablet ? 630 : 790, isTablet ? 311 : 260],
+      to: [isTablet ? 650 : 830, isTablet ? 311 : 260],
     },
     {
-      from: [isTablet ? 441 : 586, 120],
-      bend: [isTablet ? 670 : 785, 330],
-      to: [isTablet ? 805 : 830, 330],
+      from: [isTablet ? 475 : 586, isTablet ? 140 : 120],
+      bend: [isTablet ? 610 : 785, isTablet ? 381 : 330],
+      to: [isTablet ? 650 : 830, isTablet ? 381 : 330],
     },
   ];
 
