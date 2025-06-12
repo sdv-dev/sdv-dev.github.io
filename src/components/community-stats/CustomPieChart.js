@@ -17,14 +17,28 @@ const COLORS = [
   "#525C80",
 ];
 
+const gradientStops = [
+  ["#BCC4DE", "#FCFCFD"], // hidden
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+  ["#FCFCFD", "#BCC4DE"],
+];
+
+const gradientOffsets = [100, 44, 75, 86, 91, 37, 85, 74, 81, 83];
+
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const labelPositions = [
-    { x: -290, y: -450 }, // hidden
+    { x: -290, y: -450 },
     { x: isTablet ? 65 : 50, y: isTablet ? 100 : 50 },
     { x: isTablet ? 96 : 90, y: isTablet ? 170 : 120 },
     { x: isTablet ? 97 : 90, y: isTablet ? 240 : 190 },
     { x: isTablet ? 101 : 90, y: isTablet ? 310 : 260 },
-    // right side
     { x: isTablet ? 703 : 900, y: isTablet ? 100 : 50 },
     { x: isTablet ? 705 : 884, y: isTablet ? 170 : 120 },
     { x: isTablet ? 725 : 924, y: isTablet ? 240 : 190 },
@@ -33,7 +47,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   ];
 
   const polylinePaths = [
-    { from: [-270, -450], bend: [-290, -475], to: [-290, -500] }, // hidden
+    { from: [-270, -450], bend: [-290, -475], to: [-290, -500] },
     {
       from: [isTablet ? 380 : 475, isTablet ? 100 : 50],
       bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
@@ -54,7 +68,6 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
       bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
       to: [isTablet ? 180 : 187, isTablet ? 310 : 260],
     },
-    // right side
     {
       from: [isTablet ? 464 : 583, isTablet ? 100 : 50],
       bend: [isTablet ? 600 : 740, isTablet ? 100 : 50],
@@ -82,8 +95,6 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
     },
   ];
 
-  const strokeColors = Array(10).fill("#727C9E");
-
   const label = labelPositions[index];
   const path = polylinePaths[index];
 
@@ -91,6 +102,28 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
 
   return (
     <g>
+      <defs>
+        <linearGradient
+          id={`line-gradient-${index}`}
+          gradientUnits="userSpaceOnUse"
+          x1={path.from[0]}
+          y1={path.from[1]}
+          x2={path.to[0]}
+          y2={path.to[1]}
+        >
+          <stop offset="0%" stopColor={gradientStops[index][0]} />
+          <stop
+            offset={`${gradientOffsets[index]}%`}
+            stopColor={gradientStops[index][0]}
+          />
+          <stop
+            offset={`${gradientOffsets[index]}%`}
+            stopColor={gradientStops[index][1]}
+          />
+          <stop offset="100%" stopColor={gradientStops[index][1]} />
+        </linearGradient>
+      </defs>
+
       {path && (
         <>
           <polyline
@@ -99,16 +132,11 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
               ${path.bend[0]},${path.bend[1]}
               ${path.to[0]},${path.to[1]}
             `}
-            stroke={strokeColors[index]}
+            stroke={`url(#line-gradient-${index})`}
             strokeWidth={1}
             fill="none"
           />
-          <circle
-            cx={path.from[0]}
-            cy={path.from[1]}
-            r={1.4}
-            fill={strokeColors[index]}
-          />
+          <circle cx={path.from[0]} cy={path.from[1]} r={1.4} fill="#FCFCFD" />
         </>
       )}
       {name.toLowerCase() === "gretel" ? (
