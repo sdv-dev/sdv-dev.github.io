@@ -6,7 +6,7 @@ export default function TableRow({ index, isLast, children }) {
 
   return (
     <div
-      className={`grid grid-cols-[--table-col-dimensions] ${bgClass} hover:bg-midnight-50 ${cornerClass}`}
+      className={`grid grid-cols-[--table-col-dimensions] ${bgClass} hover:bg-[rgba(3,175,241,0.18)] ${cornerClass}`}
     >
       {children}
     </div>
