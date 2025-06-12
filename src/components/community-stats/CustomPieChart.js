@@ -82,7 +82,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
     },
   ];
 
-  const strokeColors = Array(10).fill("#353E67");
+  const strokeColors = Array(10).fill("#727C9E");
 
   const label = labelPositions[index];
   const path = polylinePaths[index];
@@ -123,13 +123,13 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           <text
             x={label.x + 30}
             y={label.y}
-            color="#000036"
             fontSize={isMobile || isTablet ? 18 : 20}
-            fontWeight={500}
             textAnchor="start"
             dominantBaseline="central"
           >
-            ({value}%)
+            <tspan fill="#727C9E" fontWeight={400}>
+              ({value}%)
+            </tspan>
           </text>
         </>
       ) : (
@@ -137,12 +137,15 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           x={label.x}
           y={label.y}
           fontSize={isMobile || isTablet ? 18 : 20}
-          color="#000036"
-          fontWeight={500}
           textAnchor="middle"
           dominantBaseline="central"
         >
-          {`${name} (${value}%)`}
+          <tspan fill="#000036" fontWeight={500}>
+            {name}{" "}
+          </tspan>
+          <tspan fill="#727C9E" fontWeight={400}>
+            ({value}%)
+          </tspan>
         </text>
       )}
     </g>
