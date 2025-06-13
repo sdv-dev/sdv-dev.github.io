@@ -30,13 +30,13 @@ const gradientStops = [
   ["#FCFCFD", "#BCC4DE"],
 ];
 
-const gradientOffsets = [100, 44, 75, 86, 91, 37, 85, 74, 81, 83];
+const gradientOffsets = [100, 39, 73, 86, 91, 37, 85, 74, 81, 83];
 
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const labelPositions = [
     { x: -290, y: -450 },
     { x: isTablet ? 65 : 50, y: isTablet ? 100 : 50 },
-    { x: isTablet ? 96 : 90, y: isTablet ? 170 : 120 },
+    { x: isTablet ? 96 : 83, y: isTablet ? 170 : 120 },
     { x: isTablet ? 97 : 90, y: isTablet ? 240 : 190 },
     { x: isTablet ? 101 : 90, y: isTablet ? 310 : 260 },
     { x: isTablet ? 703 : 900, y: isTablet ? 100 : 50 },
@@ -49,17 +49,17 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const polylinePaths = [
     { from: [-270, -450], bend: [-290, -475], to: [-290, -500] },
     {
-      from: [isTablet ? 380 : 475, isTablet ? 100 : 50],
+      from: [isTablet ? 380 : 450, isTablet ? 100 : 50],
       bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
       to: [isTablet ? 175 : 170, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 425 : 533, isTablet ? 115 : 60],
+      from: [isTablet ? 425 : 520, isTablet ? 115 : 60],
       bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
-      to: [isTablet ? 188 : 187, isTablet ? 170 : 122],
+      to: [isTablet ? 188 : 180, isTablet ? 170 : 122],
     },
     {
-      from: [isTablet ? 443 : 550, isTablet ? 110 : 80],
+      from: [isTablet ? 443 : 545, isTablet ? 110 : 80],
       bend: [isTablet ? 320 : 220, isTablet ? 240 : 190],
       to: [isTablet ? 178 : 187, isTablet ? 240 : 190],
     },
@@ -155,7 +155,10 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
             textAnchor="start"
             dominantBaseline="central"
           >
-            <tspan fill="#727C9E" fontWeight={400}>
+            <tspan
+              fill="#727C9E"
+              style={{ fontFamily: "CernLight, sans-serif", fontWeight: 300 }}
+            >
               ({value}%)
             </tspan>
           </text>
@@ -171,7 +174,10 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           <tspan fill="#000036" fontWeight={500}>
             {name}{" "}
           </tspan>
-          <tspan fill="#727C9E" fontWeight={400}>
+          <tspan
+            fill="#727C9E"
+            style={{ fontFamily: "CernLight, sans-serif", fontWeight: 300 }}
+          >
             ({value}%)
           </tspan>
         </text>
