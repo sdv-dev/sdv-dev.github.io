@@ -32,28 +32,28 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   ];
   const gradientOffsets = [
     100,
-    isTablet ? 50 : 39,
-    isTablet ? 91 : 73,
-    isTablet ? 98 : 86,
-    isTablet ? 99 : 91,
-    isTablet ? 50 : 37,
-    isTablet ? 98 : 85,
-    isTablet ? 85 : 74,
-    isTablet ? 87 : 81,
-    isTablet ? 85 : 83,
+    isTablet ? 31 : 27,
+    isTablet ? 60.5 : 53,
+    isTablet ? 72.5 : 63.5,
+    isTablet ? 77.5 : 69,
+    isTablet ? 24.5 : 20.5,
+    isTablet ? 48 : 39,
+    isTablet ? 58.5 : 50,
+    isTablet ? 65.5 : 58.5,
+    isTablet ? 67.5 : 62.5,
   ];
 
   const labelPositions = [
     { x: -290, y: -450 },
     { x: isTablet ? 65 : 50, y: isTablet ? 100 : 50 },
-    { x: isTablet ? 96 : 89, y: isTablet ? 170 : 120 },
-    { x: isTablet ? 97 : 90, y: isTablet ? 240 : 190 },
-    { x: isTablet ? 101 : 90, y: isTablet ? 310 : 260 },
-    { x: isTablet ? 703 : 900, y: isTablet ? 100 : 50 },
-    { x: isTablet ? 705 : 884, y: isTablet ? 170 : 120 },
-    { x: isTablet ? 725 : 924, y: isTablet ? 240 : 190 },
-    { x: isTablet ? 725 : 923, y: isTablet ? 310 : 260 },
-    { x: isTablet ? 725 : 922, y: isTablet ? 380 : 330 },
+    { x: isTablet ? 67 : 50, y: isTablet ? 170 : 120 },
+    { x: isTablet ? 68 : 51, y: isTablet ? 240 : 190 },
+    { x: isTablet ? 71 : 51, y: isTablet ? 310 : 260 },
+    { x: isTablet ? 743 : 945, y: isTablet ? 100 : 50 },
+    { x: isTablet ? 745 : 945, y: isTablet ? 170 : 120 },
+    { x: isTablet ? 744 : 945, y: isTablet ? 240 : 190 },
+    { x: isTablet ? 744 : 945, y: isTablet ? 310 : 260 },
+    { x: isTablet ? 744 : 945, y: isTablet ? 380 : 330 },
   ];
 
   const polylinePaths = [
@@ -61,47 +61,47 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
     {
       from: [isTablet ? 360 : 450, isTablet ? 100 : 50],
       bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
-      to: [isTablet ? 175 : 170, isTablet ? 100 : 50],
+      to: [isTablet ? 66 : 50, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 410 : 520, isTablet ? 115 : 60],
+      from: [isTablet ? 410 : 515, isTablet ? 115 : 60],
       bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
-      to: [isTablet ? 188 : 180, isTablet ? 170 : 122],
+      to: [isTablet ? 69 : 53, isTablet ? 170 : 122],
     },
     {
       from: [isTablet ? 440 : 545, isTablet ? 110 : 80],
       bend: [isTablet ? 320 : 220, isTablet ? 240 : 190],
-      to: [isTablet ? 178 : 187, isTablet ? 240 : 190],
+      to: [isTablet ? 69 : 56, isTablet ? 240 : 190],
     },
     {
       from: [isTablet ? 457 : 556, isTablet ? 100 : 100],
       bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
-      to: [isTablet ? 180 : 187, isTablet ? 310 : 260],
+      to: [isTablet ? 71 : 57, isTablet ? 310 : 260],
     },
     {
       from: [isTablet ? 465 : 583, isTablet ? 100 : 50],
       bend: [isTablet ? 600 : 740, isTablet ? 100 : 50],
-      to: [isTablet ? 600 : 780, isTablet ? 100 : 50],
+      to: [isTablet ? 742 : 944, isTablet ? 100 : 50],
     },
     {
       from: [isTablet ? 471 : 588, isTablet ? 105 : 65],
-      bend: [isTablet ? 570 : 735, isTablet ? 171 : 122],
-      to: [isTablet ? 596 : 751, isTablet ? 171 : 122],
+      bend: [isTablet ? 570 : 745, isTablet ? 171 : 122],
+      to: [isTablet ? 744 : 944, isTablet ? 171 : 122],
     },
     {
       from: [isTablet ? 472 : 591, isTablet ? 120 : 80],
       bend: [isTablet ? 630 : 780, isTablet ? 241 : 190],
-      to: [isTablet ? 645 : 825, isTablet ? 241 : 190],
+      to: [isTablet ? 744 : 944, isTablet ? 241 : 190],
     },
     {
       from: [isTablet ? 474 : 590, isTablet ? 130 : 100],
       bend: [isTablet ? 630 : 790, isTablet ? 311 : 260],
-      to: [isTablet ? 650 : 830, isTablet ? 311 : 260],
+      to: [isTablet ? 744 : 944, isTablet ? 311 : 260],
     },
     {
       from: [isTablet ? 475 : 586, isTablet ? 140 : 120],
       bend: [isTablet ? 610 : 785, isTablet ? 381 : 330],
-      to: [isTablet ? 650 : 830, isTablet ? 381 : 330],
+      to: [isTablet ? 743 : 944, isTablet ? 381 : 330],
     },
   ];
 
@@ -154,49 +154,66 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           />
         </>
       )}
-      {name.toLowerCase() === "gretel" ? (
-        <>
-          <image
-            href={gretelSvg}
-            x={label.x - 40}
-            y={label.y - 10}
-            width={65}
-            height={23}
-          />
+      {(() => {
+        const isLeftSide = index >= 1 && index <= 4;
+        const textAnchor = isLeftSide ? "start" : "end";
+
+        if (name.toLowerCase() === "gretel") {
+          return (
+            <>
+              <image
+                href={gretelSvg}
+                x={label.x}
+                y={label.y - 26}
+                width={65}
+                height={23}
+              />
+              <text
+                x={label.x}
+                y={label.y + 21}
+                fontSize={isMobile || isTablet ? 18 : 20}
+                textAnchor="start"
+              >
+                <tspan
+                  fill="#727C9E"
+                  fontWeight={300}
+                  style={{ fontFamily: "CernLight, sans-serif" }}
+                >
+                  ({value.toFixed(2)}%)
+                </tspan>
+              </text>
+            </>
+          );
+        }
+
+        return (
           <text
-            x={label.x + 30}
+            x={label.x}
             y={label.y}
             fontSize={isMobile || isTablet ? 18 : 20}
-            textAnchor="start"
-            dominantBaseline="central"
+            textAnchor={textAnchor}
           >
             <tspan
+              x={label.x}
+              dy="-0.4em"
+              fill="#000036"
+              fontWeight={500}
+              style={{ fontFamily: "Cern, sans-serif" }}
+            >
+              {name}
+            </tspan>
+            <tspan
+              x={label.x}
+              dy="1.5em"
               fill="#727C9E"
-              style={{ fontFamily: "CernLight, sans-serif", fontWeight: 300 }}
+              fontWeight={300}
+              style={{ fontFamily: "CernLight, sans-serif" }}
             >
               ({value.toFixed(2)}%)
             </tspan>
           </text>
-        </>
-      ) : (
-        <text
-          x={label.x}
-          y={label.y}
-          fontSize={isMobile || isTablet ? 18 : 20}
-          textAnchor="middle"
-          dominantBaseline="central"
-        >
-          <tspan fill="#000036" fontWeight={500}>
-            {name}{" "}
-          </tspan>
-          <tspan
-            fill="#727C9E"
-            style={{ fontFamily: "CernLight, sans-serif", fontWeight: 300 }}
-          >
-            ({value.toFixed(2)}%)
-          </tspan>
-        </text>
-      )}
+        );
+      })()}
     </g>
   );
 };
