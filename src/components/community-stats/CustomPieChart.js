@@ -17,22 +17,32 @@ const COLORS = [
   "#525C80",
 ];
 
-const gradientStops = [
-  ["#BCC4DE", "#FCFCFD"], // hidden
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-  ["#FCFCFD", "#BCC4DE"],
-];
-
-const gradientOffsets = [100, 39, 73, 86, 91, 37, 85, 74, 81, 83];
-
 const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
+  const gradientStops = [
+    ["#BCC4DE", "#FCFCFD"], // hidden
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+    ["#FCFCFD", "#BCC4DE"],
+  ];
+  const gradientOffsets = [
+    100,
+    isTablet ? 50 : 39,
+    isTablet ? 91 : 73,
+    isTablet ? 98 : 86,
+    isTablet ? 99 : 91,
+    isTablet ? 50 : 37,
+    isTablet ? 98 : 85,
+    isTablet ? 85 : 74,
+    isTablet ? 87 : 81,
+    isTablet ? 85 : 83,
+  ];
+
   const labelPositions = [
     { x: -290, y: -450 },
     { x: isTablet ? 65 : 50, y: isTablet ? 100 : 50 },
