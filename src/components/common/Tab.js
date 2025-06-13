@@ -6,7 +6,7 @@ export default function Tab({ children, isActive, onClick }) {
       onClick={onClick}
       className={`text-midnight-800 text-base md:text-lg lg:text-xl font-semibold leading-none md:tracking-lg cursor-pointer py-4 px-5 border border-transparent rounded-[40px] ${
         isActive
-          ? "bg-[#070C2F]  !text-midnight-0"
+          ? "bg-midnight-950  !text-midnight-0"
           : "hover:border hover:border-midnight-50 hover:bg-midnight-25"
       }`}
     >
