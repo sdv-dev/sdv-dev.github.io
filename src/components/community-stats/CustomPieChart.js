@@ -136,7 +136,12 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
             strokeWidth={1}
             fill="none"
           />
-          <circle cx={path.from[0]} cy={path.from[1]} r={1.4} fill="#FCFCFD" />
+          <circle
+            cx={path.from[0]}
+            cy={path.from[1]}
+            r={1.4}
+            fill={`${name === "be-great" ? "#959FBD" : "#FCFCFD"}`}
+          />
         </>
       )}
       {name.toLowerCase() === "gretel" ? (
