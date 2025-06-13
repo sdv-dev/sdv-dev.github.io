@@ -149,7 +149,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
           <circle
             cx={path.from[0]}
             cy={path.from[1]}
-            r={1.4}
+            r={2}
             fill={`${name === "be-great" ? "#959FBD" : "#FCFCFD"}`}
           />
         </>
