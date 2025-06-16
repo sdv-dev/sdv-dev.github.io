@@ -1,6 +1,6 @@
 import React from "react";
 import useWindowWidth from "../../hooks/useviewport";
-import bannerHome from "../../../static/banner-home.png";
+import ctaImage from "../../../static/cta-image.png";
 import bannerHomeSm from "../../../static/banner-home-sm.png";
 import eastIcon from "../../../static/east.svg";
 
@@ -14,7 +14,7 @@ export default function BannerSection() {
         <div
           className="relative bg-teal-100 bg-opacity-50 bg-contain bg-center h-[340px] w-full rounded-20"
           style={{
-            backgroundImage: `url(${isMobile ? bannerHomeSm : bannerHome})`,
+            backgroundImage: `url(${isMobile ? bannerHomeSm : ctaImage})`,
           }}
         >
           <div className="w-full h-full flex flex-col justify-center items-center px-6">
