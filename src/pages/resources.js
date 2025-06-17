@@ -1,28 +1,26 @@
 import React from "react";
 import { Article } from "../components/common";
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
 import Cta from "../components/Cta";
 
-import config from "../utils/siteConfig"
+import config from "../utils/siteConfig";
 
 const ResourcesPage = () => (
   <Article hasMoreArticles={false}>
     <Helmet
-        title={config.siteTitleMeta}
-        description={config.siteDescriptionMeta}
-        type="website"
+      title={config.siteTitleMeta}
+      description={config.siteDescriptionMeta}
+      type="website"
     />
 
-    <div className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto" 
-        style={{
-          maxWidth: "1680px"
-        }}
-      >
-        <div
-          className=" w-full feature-image relative h-48"
-         
-        >
+    <div
+      className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto"
+      style={{
+        maxWidth: "1680px",
+      }}
+    >
+      <div className=" w-full feature-image relative h-48">
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="container mx-auto">
             <div className="flex flex-wrap -mx-4 lg:-mx-6 justify-center items-center">
@@ -31,7 +29,8 @@ const ResourcesPage = () => (
                   Research papers
                 </h1>
                 <p className="text-xl">
-                  The SDV is based on over 5 years of research & development
+                  The SDV is based on over a decade of research and development
+                  at MIT
                 </p>
               </div>
             </div>
@@ -41,7 +40,6 @@ const ResourcesPage = () => (
     </div>
     <div className="container">
       <section className=" py-12">
-
         <div className="text-lg my-10">
           <a
             rel="noopener"
