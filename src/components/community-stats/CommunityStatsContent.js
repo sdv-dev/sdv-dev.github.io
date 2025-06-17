@@ -8,7 +8,7 @@ import SdvInNumbersSection from "./SdvInNumbersSection";
 import SdvCoreSection from "./SdvCoreSection";
 import SdvOpenCoreSection from "./SdvOpenCoreSection";
 import BannerSection from "./BannerSection";
-import LatestsNewsSubSection from "./LatestsNewsSubSection";
+// import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
 export default function CommunityStatsContent() {
   const [data, setData] = useState([]);
@@ -89,7 +89,7 @@ export default function CommunityStatsContent() {
       <SynthesizeCardsSection />
       <CommunityUsersSection />
       <SdvInNumbersSection data={data} />
-      <LatestsNewsSubSection />
+      {/* <LatestsNewsSubSection /> */}
       <SdvCoreSection dependenciesData={dependenciesData} />
       <SdvOpenCoreSection />
       <NewsSliderSection />
