@@ -30,7 +30,7 @@ export default function SynthesizeCardsSection() {
   };
 
   return (
-    <div className="container w-full flex flex-col pb-12 md:pb-16 lg:pb-24 px-4 md:px-5 lg:px-0">
+    <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
       <h2 className="heading-600-lg text-center pb-8 md:pb-12">
         Learn how to synthesize
       </h2>

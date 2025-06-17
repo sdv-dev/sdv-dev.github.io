@@ -13,7 +13,7 @@ export default function SdvCommunityHero() {
       }}
     >
       <div className="dotted-bg flex justify-center">
-        <div className="container w-full flex flex-col lg:flex-row lg:justify-between lg:gap-8 py-12 md:py-16 lg:py-[46px] px-4 md:px-5 lg:px-0">
+        <div className="container w-full flex flex-col lg:flex-row lg:justify-between lg:gap-8 py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
           <div className="flex flex-col flex-1 lg:justify-center">
             <h1 className="text-center md:text-left heading-700-xl md:leading-xl pb-10 lg:pb-16 md:max-w-[624px]">
               <span className="pt-[0.1rem] pr-[0.1rem text-blue-600">

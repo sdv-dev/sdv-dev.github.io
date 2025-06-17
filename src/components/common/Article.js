@@ -25,6 +25,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
         <div className="viewport-top">
           <Navigation
             isDark={true}
+            hasInfoBar={true}
             navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
           >
             <a href="https://datacebo.com">
