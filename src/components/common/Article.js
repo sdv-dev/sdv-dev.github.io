@@ -1,11 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import { Navigation } from ".";
+import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
 import MoreArticles from "../MoreArticles";
-// import favicon from '../../../static/favicon.ico';
+import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
 
 /**
  * Main layout component
@@ -30,17 +29,10 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
           >
             <a href="https://datacebo.com">
               <div className="w-auto">
-                <Img
-                  fadeIn={true}
-                  fixed={data.logo.childImageSharp.fixed}
-                  alt="DataCebo Blog"
-                  className="white-logo"
-                />
-                <Img
-                  fadeIn={true}
-                  fixed={data.darklogo.childImageSharp.fixed}
-                  alt="DataCebo Blog"
-                  className="dark-logo"
+                <img
+                  src={dataceboHorizontalLogo}
+                  alt="DataCebo Logo"
+                  className="dark-logo lg:pb-1"
                 />
               </div>
             </a>
@@ -80,20 +72,6 @@ export default function PostDefaultLayoutSettingsQuery(props) {
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid_noBase64
-              }
-            }
-          }
-          logo: file(relativePath: { eq: "logo-white.png" }) {
-            childImageSharp {
-              fixed(width: 182, quality: 100) {
-                ...GatsbyImageSharpFixed_noBase64
-              }
-            }
-          }
-          darklogo: file(relativePath: { eq: "logo-dark.png" }) {
-            childImageSharp {
-              fixed(width: 182, quality: 100) {
-                ...GatsbyImageSharpFixed_noBase64
               }
             }
           }

@@ -218,3 +218,11 @@ pre[class*="language-"] {
 .dotted-bg {
   background: radial-gradient(#fff 1.5px, transparent 0) 1.5px 1.5px / 7px 7px;
 }
+
+.dr-dwn {
+  @apply max-h-0 opacity-0 duration-500 pointer-events-none;
+}
+
+.is-active > .dr-dwn {
+  @apply lg:animate-slide-up max-h-screen opacity-100 pointer-events-auto;
+}
