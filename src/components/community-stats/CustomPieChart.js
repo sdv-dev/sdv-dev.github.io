@@ -74,7 +74,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
       to: [isTablet ? 69 : 56, isTablet ? 240 : 190],
     },
     {
-      from: [isTablet ? 457 : 556, isTablet ? 100 : 100],
+      from: [isTablet ? 457 : 557, isTablet ? 100 : 100],
       bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
       to: [isTablet ? 71 : 57, isTablet ? 310 : 260],
     },
