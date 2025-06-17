@@ -31,8 +31,8 @@ export default function SynthesizeCardsSection() {
 
   return (
     <div className="container w-full flex flex-col pb-12 md:pb-16 lg:pb-24 px-4 md:px-5 lg:px-0">
-      <h2 className="text-midnight-950 text-2xl font-medium leading-[36px] tracking-xs pb-8">
-        Learn how to synthesize a:
+      <h2 className="heading-600-lg text-center pb-8 md:pb-12">
+        Learn how to synthesize
       </h2>
       <div className="block md:hidden lg:block">
         <div className="flex flex-col gap-8 lg:flex-row">
