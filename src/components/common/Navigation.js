@@ -17,6 +17,7 @@ import PropTypes from "prop-types";
  */
 
 const navItems = [
+  { label: "Publications", url: "https://sdv.dev/resources/" },
   { label: "Blog", url: "https://datacebo.com/blog" },
   { label: "Company", url: "https://datacebo.com" },
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
@@ -141,7 +142,6 @@ const Navigation = ({ navClass, children, isDark }) => {
                   <a
                     className={`${navClass} bordered`}
                     href="https://datacebo.com/contact"
-                    
                     target="_blank"
                     rel="noopener noreferrer"
                   >
