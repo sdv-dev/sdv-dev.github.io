@@ -97,7 +97,7 @@ export default function SdvCoreSection({ dependenciesData }) {
                 <TableRow key={row.name} index={idx} isLast={isLast}>
                   <div className="relative">
                     <TableRowCell>
-                      <div className="flex font-semibold text-midnight-950">
+                      <div className="flex font-medium text-midnight-950">
                         {row.name}
                       </div>
                     </TableRowCell>
