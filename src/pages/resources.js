@@ -29,7 +29,8 @@ const ResourcesPage = () => (
                   Research papers
                 </h1>
                 <p className="text-xl">
-                  The SDV is based on over 5 years of research & development
+                  The SDV is based on over a decade of research and development
+                  at MIT
                 </p>
               </div>
             </div>
