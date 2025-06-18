@@ -26,7 +26,11 @@ export default function SdvCommunityHero() {
               <button
                 className="all-button blue-btn flex gap-2"
                 onClick={() => {
-                  window.location.href = "/";
+                  window.open(
+                    "https://bit.ly/sdv-slack-invite",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
                 }}
               >
                 Join our community <img src={eastIcon} alt="Arrow" />
@@ -34,7 +38,11 @@ export default function SdvCommunityHero() {
               <button
                 className="all-button gray-btn"
                 onClick={() => {
-                  window.location.href = "/";
+                  window.open(
+                    "https://docs.sdv.dev/sdv",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
                 }}
               >
                 Get started
