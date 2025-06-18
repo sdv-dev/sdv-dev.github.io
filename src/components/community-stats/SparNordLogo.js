@@ -6,7 +6,7 @@ const SparNordLogo = () => {
     <img
       src={sparNordLogo}
       alt="JPMC Logo"
-      className="rounded-t-20 md:rounded-l-20 md:rounded-tr-none"
+      className="rounded-t-20 md:rounded-l-20 md:rounded-tr-none h-[186px] md:h-[246px] w-full"
     />
   );
 };
