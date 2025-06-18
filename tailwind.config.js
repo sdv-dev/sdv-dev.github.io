@@ -11,6 +11,7 @@ module.exports = {
     },
     fontFamily: {
       cern: ["Cern", "sans-serif"],
+      consolas: ["Consolas", "monospace"],
     },
     fontSize: {
       xs: ".75rem", //12

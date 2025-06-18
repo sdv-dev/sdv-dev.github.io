@@ -166,7 +166,7 @@ export default function SdvInNumbersSection({ data }) {
                           className="w-full touch-pan-x"
                         >
                           <TableRowCell>
-                            <div className="flex justify-end font-normal">
+                            <div className="flex justify-end font-normal font-consolas">
                               {row[metricKeys[activeMetricIndex]]}
                             </div>
                           </TableRowCell>
@@ -174,12 +174,12 @@ export default function SdvInNumbersSection({ data }) {
                       ) : (
                         <>
                           <TableRowCell>
-                            <div className="flex justify-end font-normal">
+                            <div className="flex justify-end font-normal font-consolas">
                               {row.toDate}
                             </div>
                           </TableRowCell>
                           <TableRowCell>
-                            <div className="flex justify-end font-normal">
+                            <div className="flex justify-end font-normal font-consolas">
                               {row.yearToDate}
                             </div>
                           </TableRowCell>
