@@ -123,7 +123,7 @@ export default function SdvCoreSection({ dependenciesData }) {
                       className="w-full touch-pan-x"
                     >
                       <TableRowCell>
-                        <div className="flex justify-end font-normal font-consolas">
+                        <div className="flex justify-end font-consolas font-normal antialiased">
                           {row[metricKeys[activeMetricIndex]]}
                         </div>
                       </TableRowCell>
@@ -131,12 +131,12 @@ export default function SdvCoreSection({ dependenciesData }) {
                   ) : (
                     <>
                       <TableRowCell>
-                        <div className="flex justify-end font-normal font-consolas">
+                        <div className="flex justify-end font-consolas font-normal antialiased">
                           {row.toDate}
                         </div>
                       </TableRowCell>
                       <TableRowCell>
-                        <div className="flex justify-end font-normal font-consolas">
+                        <div className="flex justify-end font-consolas font-normal antialiased">
                           {row.yearToDate}
                         </div>
                       </TableRowCell>
