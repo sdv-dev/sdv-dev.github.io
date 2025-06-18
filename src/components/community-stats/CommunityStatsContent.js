@@ -90,8 +90,8 @@ export default function CommunityStatsContent() {
       <CommunityUsersSection />
       <SdvInNumbersSection data={data} />
       {/* <LatestsNewsSubSection /> */}
-      <SdvCoreSection dependenciesData={dependenciesData} />
       <SdvOpenCoreSection />
+      <SdvCoreSection dependenciesData={dependenciesData} />
       <NewsSliderSection />
       <BannerSection />
     </div>
