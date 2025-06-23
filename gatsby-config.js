@@ -9,6 +9,23 @@ const config = require(`./src/utils/siteConfig`);
  * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
  *
  */
+let ghostConfig;
+
+try {
+  ghostConfig = require(`./.ghost`);
+} catch (e) {
+  ghostConfig = {
+    production: {
+      apiUrl: process.env.GHOST_API_URL,
+      contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+    },
+    development: {
+      apiUrl: process.env.GHOST_API_URL,
+      contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+    },
+  };
+}
+
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
@@ -22,6 +39,13 @@ module.exports = {
     // PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-ghost`,
+      options:
+        process.env.NODE_ENV === `development`
+          ? ghostConfig.development
+          : ghostConfig.production,
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
