@@ -244,15 +244,7 @@ export default function BlogPostTemplate({ data }) {
                 image={data.ctaBg.childImageSharp.gatsbyImageData}
                 loading="eager"
                 alt="The Synthetic Data Vault"
-                className="h-full rounded-[20px] hidden lg:block"
-                imgClassName="w-full"
-              />
-
-              <GatsbyImage
-                image={data.ctaBgMobile.childImageSharp.gatsbyImageData}
-                loading="eager"
-                alt="The Synthetic Data Vault"
-                className="h-full rounded-[20px] lg:hidden"
+                className="h-full rounded-[20px] lg:block"
                 imgClassName="w-full"
               />
             </div>
@@ -316,15 +308,6 @@ export const pageQuery = graphql`
       }
     }
     ctaBg: file(relativePath: { eq: "cta-image.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: FULL_WIDTH
-          quality: 100
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
-    }
-    ctaBgMobile: file(relativePath: { eq: "ctabg-sm.png" }) {
       childImageSharp {
         gatsbyImageData(
           layout: FULL_WIDTH
