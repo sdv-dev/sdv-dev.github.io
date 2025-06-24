@@ -47,7 +47,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(`
     {
       allGhostPost(
-        filter: { tags: { elemMatch: { slug: { eq: "case-study" } } } }
+        filter: { tags: { elemMatch: { slug: { eq: "hash-case-study" } } } }
       ) {
         nodes {
           slug
