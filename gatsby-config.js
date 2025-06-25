@@ -167,7 +167,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
