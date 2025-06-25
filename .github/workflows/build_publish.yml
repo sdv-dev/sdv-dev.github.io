@@ -16,7 +16,8 @@ jobs:
         with:
           access-token: ${{ secrets.HOME_TOKEN }}
           deploy-branch: gh-pages-home
-
-        env: 
+        env:
           SITEURL: "https://sdv.dev"
           SITEPATH: ""
+          GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
+          GHOST_CONTENT_API_KEY: ${{ secrets.GHOST_CONTENT_API_KEY }}
