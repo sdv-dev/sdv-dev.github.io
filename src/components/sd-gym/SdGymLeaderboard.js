@@ -1,12 +1,14 @@
 import React from "react";
+import StatusBadge from "./StatusBadge";
 
 const SdGymLeaderboard = () => {
   return (
     <div className="flex justify-center bg-white">
-      <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
+      <div className="container w-full flex flex-col items-center py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
         <h1 className="heading-600-lg text-[36px] md:text-5xl text-center pb-8">
           Leaderboard
         </h1>
+        <StatusBadge dateText={"Feb 15, 2025"} />
       </div>
     </div>
   );
