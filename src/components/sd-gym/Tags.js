@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Tag from "./Tag";
+import TagMd from "./TagMd";
 
 const Tags = ({ tags, setTags }) => {
   const scrollRef = useRef(null);
@@ -32,24 +33,33 @@ const Tags = ({ tags, setTags }) => {
   };
 
   return (
-    <div className="relative">
-      {showLeftGradient && (
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10" />
-      )}
-      {showRightGradient && (
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10" />
-      )}
-      <div
-        ref={scrollRef}
-        className="md:hidden flex gap-2.5 overflow-x-auto no-scrollbar"
-      >
+    <>
+      <div className="hidden md:flex flex-col gap-2">
         {tags.map((t) => (
-          <Tag key={t.id} id={t.id} active={t.active} onClick={toggleTags}>
+          <TagMd key={t.id} id={t.id} active={t.active} onClick={toggleTags}>
             {t.label}
-          </Tag>
+          </TagMd>
         ))}
       </div>
-    </div>
+      <div className="relative">
+        {showLeftGradient && (
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10" />
+        )}
+        {showRightGradient && (
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10" />
+        )}
+        <div
+          ref={scrollRef}
+          className="md:hidden flex gap-2.5 overflow-x-auto no-scrollbar"
+        >
+          {tags.map((t) => (
+            <Tag key={t.id} id={t.id} active={t.active} onClick={toggleTags}>
+              {t.label}
+            </Tag>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
