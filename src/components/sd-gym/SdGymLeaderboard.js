@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import StatusBadge from "./StatusBadge";
 import Tags from "./Tags";
+import Table from "../common/table/Table";
+import TableHeader from "../common/table/TableHeader";
+import TableHeaderCell from "../common/table/TableHeaderCell";
+import TableBody from "../common/table/TableBody";
 
 const SdGymLeaderboard = () => {
   const [tags, setTags] = useState([
@@ -30,6 +34,9 @@ const SdGymLeaderboard = () => {
       active: false,
     },
   ]);
+
+  const metricLabels = ["Models", "Number of wins"];
+  const tableColDimensions = "minmax(172px, 379px) minmax(172px, 379px)";
   // const activeTag = tags.find((tag) => tag.active);
 
   return (
@@ -39,8 +46,18 @@ const SdGymLeaderboard = () => {
           Leaderboard
         </h1>
         <StatusBadge dateText={"Feb 15, 2025"} />
-        <div className="flex flex-col md:flex-row w-full">
-          <Tags tags={tags} setTags={setTags} />
+        <div className="w-full flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row w-full mb-8 md:mb-0">
+            <Tags tags={tags} setTags={setTags} />
+          </div>
+          <Table tableColDimensions={tableColDimensions}>
+            <TableHeader>
+              {metricLabels.map((ml) => (
+                <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
+              ))}
+            </TableHeader>
+            <TableBody></TableBody>
+          </Table>
         </div>
       </div>
     </div>
