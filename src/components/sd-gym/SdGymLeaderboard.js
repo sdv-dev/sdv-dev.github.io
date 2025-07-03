@@ -5,6 +5,8 @@ import Table from "../common/table/Table";
 import TableHeader from "../common/table/TableHeader";
 import TableHeaderCell from "../common/table/TableHeaderCell";
 import TableBody from "../common/table/TableBody";
+import ModelsIcon from "./ModelsIcon";
+import NumOfWinsIcon from "./NumOfWinsIcon";
 
 const SdGymLeaderboard = () => {
   const [tags, setTags] = useState([
@@ -53,7 +55,11 @@ const SdGymLeaderboard = () => {
           <Table tableColDimensions={tableColDimensions}>
             <TableHeader>
               {metricLabels.map((ml) => (
-                <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
+                <TableHeaderCell key={ml}>
+                  {ml === "Models" && <ModelsIcon />}
+                  {ml === "Number of wins" && <NumOfWinsIcon />}
+                  {ml}
+                </TableHeaderCell>
               ))}
             </TableHeader>
             <TableBody></TableBody>
