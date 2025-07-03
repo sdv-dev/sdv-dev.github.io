@@ -12,7 +12,7 @@ export default function BannerSection() {
     <div className="flex justify-center bg-white">
       <div className="container w-full py-12 lg:py-24 px-4 md:px-5 lg:px-0">
         <div
-          className="relative bg-teal-100 bg-opacity-50 bg-contain bg-center h-[340px] w-full rounded-20"
+          className="relative bg-teal-100 bg-opacity-50 bg-contain bg-center h-[340px] w-full border border-teal-100 rounded-20"
           style={{
             backgroundImage: `url(${isMobile ? bannerHomeSm : ctaImage})`,
           }}
