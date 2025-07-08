@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TagMd({ id, active, onClick, children }) {
   const baseClasses =
-    "flex justify-center items-center py-[11px] px-4 text-base font-normal rounded-[40px] whitespace-nowrap";
+    "flex justify-center items-center py-[11px] px-4 text-base md:text-lg font-normal rounded-[40px] whitespace-nowrap";
   const activeClasses = "text-white bg-midnight-950 border-midnight-950";
   const inactiveClasses =
     "text-midnight-800 bg-midnight-0 focusable-elem interactive-tag";
