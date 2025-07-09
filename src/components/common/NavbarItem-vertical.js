@@ -111,7 +111,7 @@ const NavbarItemVertical = ({ data }) => {
       {/* add trianglular  */}
 
       <div
-        className={`lg:absolute ${
+        className={`lg:absolute z-[70] ${
           items.length === 4
             ? "lg:left-[-121px] lg:w-[624px]"
             : items.length === 5
