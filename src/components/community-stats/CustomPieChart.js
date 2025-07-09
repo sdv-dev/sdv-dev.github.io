@@ -59,12 +59,12 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const polylinePaths = [
     { from: [-270, -450], bend: [-290, -475], to: [-290, -500] },
     {
-      from: [isTablet ? 360 : 450, isTablet ? 100 : 50],
+      from: [isTablet ? 360 : 453, isTablet ? 100 : 50],
       bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
       to: [isTablet ? 66 : 50, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 410 : 515, isTablet ? 115 : 60],
+      from: [isTablet ? 410 : 516, isTablet ? 115 : 60],
       bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
       to: [isTablet ? 69 : 53, isTablet ? 170 : 122],
     },
