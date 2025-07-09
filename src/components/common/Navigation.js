@@ -138,14 +138,14 @@ const secondRowNavbarItems = [
       {
         title: "SDV Community stats",
         icon: <PublicSdvIcon />,
-        url: "https://sdv.dev/",
+        url: "/community-stats",
         text: "Founded at MIT, SDV is the most used source-available library",
       },
     ],
   },
-  { name: "Publications", url: "/announcements/" },
-  { name: "Blog", url: "/blog/" },
-  { name: "Github", url: "/announcements/" },
+  { name: "Publications", url: "/resources" },
+  { name: "Blog", url: "https://datacebo.com/blog/" },
+  { name: "Github", url: "https://github.com/sdv-dev" },
 ];
 
 /**
