@@ -302,7 +302,7 @@ const Navigation = ({ children, isDark, isTransparent, hasInfoBar }) => {
                     isSecondActive ? "flex" : "hidden"
                   } lg:block nav-collapse absolute lg:static top-16 lg:top-auto inset-x-0 bg-midnight-0 lg:bg-transparent z-30`}
                 >
-                  <div className=" flex lg:flex-row flex-col lg:justify-center items-center w-full h-full relative lg:static z-50">
+                  <div className="flex lg:flex-row flex-col lg:justify-center items-center w-full h-full relative lg:static z-50">
                     {secondRowNavbarItems.map((item, idx) => {
                       return <NavbarItemVertical data={item} key={idx} />;
                     })}

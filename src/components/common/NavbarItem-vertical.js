@@ -120,7 +120,11 @@ const NavbarItemVertical = ({ data }) => {
         } right-0 text-left dr-dwn lg:top-[px]`}
       >
         <div
-          className={`bg-white lg:rounded-2xl relative lg:shadow-xl ${
+          style={{
+            boxShadow:
+              "0px 4px 6px -2px rgba(0, 0, 54, 0.06), 0px 10px 15px -3px rgba(0, 0, 54, 0.10)",
+          }}
+          className={`bg-white lg:rounded-2xl relative  ${
             items.length === 4
               ? "lg:w-[624px]"
               : items.length === 5
