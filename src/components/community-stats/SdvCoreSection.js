@@ -52,101 +52,103 @@ export default function SdvCoreSection({ dependenciesData }) {
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg md:pb-12">
           SDV Community
         </h1>
-        <Table tableColDimensions={tableColDimensions}>
-          <TableHeader>
-            <div className="relative">
-              <TableHeaderCell />
+        <div className="flex justify-center">
+          <Table tableColDimensions={tableColDimensions}>
+            <TableHeader>
+              <div className="relative">
+                <TableHeaderCell />
 
-              {isMobile && (
-                <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
-                  <div
-                    className="h-full w-full"
-                    style={{
-                      background:
-                        "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
-                      boxShadow: "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
-                    }}
-                  />
-                </div>
-              )}
-            </div>
-            {isMobile ? (
-              <div
-                onTouchStart={handleSwipeStart}
-                onTouchMove={handleSwipeMove}
-                className="touch-pan-x w-full"
-              >
-                <TableHeaderCell>
-                  {metricLabels[activeMetricIndex]}
-                </TableHeaderCell>
-              </div>
-            ) : (
-              <>
-                {metricLabels.map((ml) => (
-                  <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
-                ))}
-              </>
-            )}
-          </TableHeader>
-
-          <TableBody>
-            {dependenciesData.map((row, idx) => {
-              const isLast = idx === dependenciesData.length - 1;
-
-              return (
-                <TableRow key={row.name} index={idx} isLast={isLast}>
-                  <div className="relative">
-                    <TableRowCell>
-                      <div className="flex font-medium text-midnight-950">
-                        {row.name}
-                      </div>
-                    </TableRowCell>
-
-                    {isMobile && (
-                      <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
-                        <div
-                          className="h-full w-full"
-                          style={{
-                            background:
-                              "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
-                            boxShadow:
-                              "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
-                          }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  {isMobile ? (
+                {isMobile && (
+                  <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
                     <div
-                      onTouchStart={handleSwipeStart}
-                      onTouchMove={handleSwipeMove}
-                      className="w-full touch-pan-x"
-                    >
+                      className="h-full w-full"
+                      style={{
+                        background:
+                          "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
+                        boxShadow: "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
+              {isMobile ? (
+                <div
+                  onTouchStart={handleSwipeStart}
+                  onTouchMove={handleSwipeMove}
+                  className="touch-pan-x w-full"
+                >
+                  <TableHeaderCell>
+                    {metricLabels[activeMetricIndex]}
+                  </TableHeaderCell>
+                </div>
+              ) : (
+                <>
+                  {metricLabels.map((ml) => (
+                    <TableHeaderCell key={ml}>{ml}</TableHeaderCell>
+                  ))}
+                </>
+              )}
+            </TableHeader>
+
+            <TableBody>
+              {dependenciesData.map((row, idx) => {
+                const isLast = idx === dependenciesData.length - 1;
+
+                return (
+                  <TableRow key={row.name} index={idx} isLast={isLast}>
+                    <div className="relative">
                       <TableRowCell>
-                        <div className="flex justify-end font-consolas font-normal antialiased">
-                          {row[metricKeys[activeMetricIndex]]}
+                        <div className="flex font-medium text-midnight-950">
+                          {row.name}
                         </div>
                       </TableRowCell>
+
+                      {isMobile && (
+                        <div className="absolute right-0 top-0 h-full w-6 z-50 pointer-events-none">
+                          <div
+                            className="h-full w-full"
+                            style={{
+                              background:
+                                "linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.01) 100%)",
+                              boxShadow:
+                                "7px 0px 20px -10px rgba(0, 0, 54, 0.14)",
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
-                  ) : (
-                    <>
-                      <TableRowCell>
-                        <div className="flex justify-end font-consolas font-normal antialiased">
-                          {row.toDate}
-                        </div>
-                      </TableRowCell>
-                      <TableRowCell>
-                        <div className="flex justify-end font-consolas font-normal antialiased">
-                          {row.yearToDate}
-                        </div>
-                      </TableRowCell>
-                    </>
-                  )}
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
+                    {isMobile ? (
+                      <div
+                        onTouchStart={handleSwipeStart}
+                        onTouchMove={handleSwipeMove}
+                        className="w-full touch-pan-x"
+                      >
+                        <TableRowCell>
+                          <div className="flex justify-end font-consolas font-normal antialiased">
+                            {row[metricKeys[activeMetricIndex]]}
+                          </div>
+                        </TableRowCell>
+                      </div>
+                    ) : (
+                      <>
+                        <TableRowCell>
+                          <div className="flex justify-end font-consolas font-normal antialiased">
+                            {row.toDate}
+                          </div>
+                        </TableRowCell>
+                        <TableRowCell>
+                          <div className="flex justify-end font-consolas font-normal antialiased">
+                            {row.yearToDate}
+                          </div>
+                        </TableRowCell>
+                      </>
+                    )}
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </div>
   );
