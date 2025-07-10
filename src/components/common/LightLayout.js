@@ -1,4 +1,5 @@
 import React from "react";
+import dataceboHorizontalLogoWhite from "../../../static/datacebo-horizontal-logo-white.svg";
 import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
 import { Navigation } from ".";
 import Footer from "../../components/Footer";
@@ -28,6 +29,11 @@ const LightLayout = ({ children, hasInfoBar }) => {
                   src={dataceboHorizontalLogo}
                   alt="DataCebo Logo"
                   className="dark-logo lg:pb-1"
+                />
+                <img
+                  src={dataceboHorizontalLogoWhite}
+                  alt="DataCebo Logo"
+                  className="white-logo lg:pb-1"
                 />
               </div>
             </a>

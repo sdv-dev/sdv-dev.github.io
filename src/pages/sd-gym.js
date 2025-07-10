@@ -15,7 +15,7 @@ export default function SdGymPage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <div className="mx-auto mt-24">
+      <div className="mx-auto">
         <SdGymContent />
       </div>
     </Article>

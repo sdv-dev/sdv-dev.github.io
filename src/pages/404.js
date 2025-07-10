@@ -4,7 +4,7 @@ import { Article } from "../components/common";
 
 const NotFoundPage = () => (
   <Article>
-    <div className="container pt-48 mt-24">
+    <div className="container pt-48">
       <article className="content text-center">
         <h1 className="content-title">Error 404</h1>
         <section className="content-body">

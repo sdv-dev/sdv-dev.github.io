@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
 import MoreArticles from "../MoreArticles";
+import dataceboHorizontalLogoWhite from "../../../static/datacebo-horizontal-logo-white.svg";
 import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
 
 /**
@@ -34,6 +35,11 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
                   src={dataceboHorizontalLogo}
                   alt="DataCebo Logo"
                   className="dark-logo lg:pb-1"
+                />
+                <img
+                  src={dataceboHorizontalLogoWhite}
+                  alt="DataCebo Logo"
+                  className="white-logo lg:pb-1"
                 />
               </div>
             </a>

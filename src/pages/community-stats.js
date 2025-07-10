@@ -15,7 +15,7 @@ export default function CommunityStatsPage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <div className="mx-auto mt-24">
+      <div className="mx-auto">
         <CommunityStatsContent />
       </div>
     </Article>
