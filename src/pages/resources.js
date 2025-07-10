@@ -15,7 +15,7 @@ const ResourcesPage = () => (
     />
 
     <div
-      className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto"
+      className="relative pt-20 md:pt-20 bg-sdv-highlight mx-auto mt-24"
       style={{
         maxWidth: "1680px",
       }}

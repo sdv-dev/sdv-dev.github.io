@@ -49,7 +49,7 @@ export default function HomePage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <div className="mx-auto" style={{ maxWidth: "1680px" }}>
+      <div className="mx-auto mt-[90px] md:mt-24 max-w-[1680px]">
         <Hero />
         <Features />
         <ProtectEnhance />
