@@ -98,10 +98,12 @@ const Navigation = ({ navClass, children, isDark }) => {
     setTimeout(changeNavBackground, 50);
   });
 
+  const path = typeof window !== "undefined" ? window.location.pathname : "";
+
   const addGradientHeader =
-    window.location.pathname.includes("/community-stats") ||
-    window.location.pathname.includes("/sd-gym") ||
-    window.location.pathname.includes("/404");
+    path.includes("/community-stats") ||
+    path.includes("/sd-gym") ||
+    path.includes("/404");
 
   return (
     <nav
