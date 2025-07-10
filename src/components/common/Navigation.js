@@ -19,8 +19,14 @@ import PropTypes from "prop-types";
 const navItems = [
   { label: "Home", url: "/" },
   { label: "Publications", url: `${window.location.origin}/resources/` },
-  { label: "In numbers", url: `${window.location.origin}/community-stats/` },
-  { label: "User stories", url: `${window.location.origin}/community-stats/` },
+  {
+    label: "In numbers",
+    url: `${window.location.origin}/community-stats/#numbers`,
+  },
+  {
+    label: "User stories",
+    url: `${window.location.origin}/community-stats/#user-stories`,
+  },
   { label: "Blog", url: "https://datacebo.com/blog" },
   { label: "Company", url: "https://datacebo.com" },
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
