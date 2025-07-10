@@ -133,7 +133,7 @@ const NavbarItemVertical = ({ data }) => {
           }`}
         >
           <div className="w-0 h-0 absolute -top-2 left-6 hidden border-l-[6px] border-l-transparent border-b-[8px] border-b-white border-r-[6px] border-r-transparent"></div>
-          <div className="p-3 lg:p-4 lg:mt-[18px]">
+          <div className="p-3 lg:p-4 lg:mt-5">
             {data.text && (
               <div
                 className="text-midnight-950 mx-auto max-w-3xl pb-3 text-center leading-tight text-lg"
