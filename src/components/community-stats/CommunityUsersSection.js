@@ -2,7 +2,7 @@ import React from "react";
 // import KaggleLogo from "./KaggleLogo";
 import MapfreeLogo from "./MapfreeLogo";
 // import JpmcLogo from "./JpmcLogo";
-import SparNordLogo from "./SparNordLogo";
+// import SparNordLogo from "./SparNordLogo";
 
 export default function CommunityUsersSection() {
   const cards = [
@@ -14,20 +14,21 @@ export default function CommunityUsersSection() {
     // },
     {
       logo: <MapfreeLogo />,
-      title: "MAPFRE insurance improves fraud detection by xx% using SDV",
-      link: "/",
+      title:
+        "MAPFRE: better detection of homeowner insurance fraud with synthetic data",
+      link: "https://sdv.dev/community-case-studies/mapfre-better-detection-of-homeowner-insurance-fraud-with-synthetic-data",
     },
     // {
     //   logo: <KaggleLogo />,
     //   title: "Kaggle releases data for 11 competitions using SDV",
     //   link: "/",
     // },
-    {
-      logo: <SparNordLogo />,
-      title:
-        "Spar Nord Bank uses SDV’s multitable synthesizer to generate synthetic anti money laundering data",
-      link: "/",
-    },
+    // {
+    //   logo: <SparNordLogo />,
+    //   title:
+    //     "Spar Nord Bank uses SDV’s multitable synthesizer to generate synthetic anti money laundering data",
+    //   link: "/",
+    // },
   ];
 
   return (
