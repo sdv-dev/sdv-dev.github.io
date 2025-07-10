@@ -33,7 +33,7 @@ export default function CommunityUsersSection() {
   return (
     <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0 lg:w-[876px]">
       <h2 className="heading-600-lg text-center pb-8 md:pb-12">
-        SDV Community users
+        SDV Users Stories
       </h2>
       <div className="flex flex-col">
         {cards.map((c, idx) => {

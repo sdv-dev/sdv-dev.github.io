@@ -87,10 +87,10 @@ export default function CommunityStatsContent() {
     <div className="pt-16 relative bg-white flex flex-col justify-center overflow-hidden">
       <SdvCommunityHero />
       <SynthesizeCardsSection />
-      <CommunityUsersSection />
       <SdvInNumbersSection data={data} />
+      <CommunityUsersSection />
       {/* <LatestsNewsSubSection /> */}
-      <SdvOpenCoreSection />
+      {/* <SdvOpenCoreSection /> */}
       <SdvCoreSection dependenciesData={dependenciesData} />
       <NewsSliderSection />
       <BannerSection />
