@@ -115,14 +115,14 @@ const NavbarItemVertical = ({ data }) => {
           items.length === 4
             ? "lg:left-[-121px] lg:w-[624px]"
             : items.length === 5
-            ? "lg:left-[-362px] lg:w-[860px]"
+            ? "lg:left-[-431px] lg:w-[860px]"
             : "lg:left-0 lg:w-[312px]"
         } right-0 text-left dr-dwn lg:top-[px]`}
       >
         <div
           style={{
             boxShadow:
-              "0px 4px 6px -2px rgba(0, 0, 54, 0.06), 0px 10px 15px -3px rgba(0, 0, 54, 0.10)",
+              "2px 12px 22px 0px rgba(0, 0, 54, 0.12), 1.573px 6.292px 15.729px 0px rgba(0, 0, 54, 0.12)",
           }}
           className={`bg-white lg:rounded-2xl relative  ${
             items.length === 4
@@ -133,7 +133,7 @@ const NavbarItemVertical = ({ data }) => {
           }`}
         >
           <div className="w-0 h-0 absolute -top-2 left-6 hidden border-l-[6px] border-l-transparent border-b-[8px] border-b-white border-r-[6px] border-r-transparent"></div>
-          <div className="p-3 lg:p-4 lg:mt-4">
+          <div className="p-3 lg:p-4 lg:mt-[18px]">
             {data.text && (
               <div
                 className="text-midnight-950 mx-auto max-w-3xl pb-3 text-center leading-tight text-lg"
