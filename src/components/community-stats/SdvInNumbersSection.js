@@ -14,7 +14,7 @@ export default function SdvInNumbersSection({ data }) {
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", currentYear];
   const [tableColDimensions, setTableColDimensions] = useState(
-    "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
+    "minmax(199px, 199px) minmax(136px, 488px) minmax(136px, 488px)"
   );
   const width = useWindowWidth();
   const isMobile = width < 768;
@@ -25,8 +25,8 @@ export default function SdvInNumbersSection({ data }) {
   useEffect(() => {
     setTableColDimensions(
       isMobile
-        ? "minmax(208px, 208px) minmax(136px, 488px)"
-        : "minmax(208px, 208px) minmax(136px, 488px) minmax(136px, 488px)"
+        ? "minmax(199px, 199px) minmax(136px, 488px)"
+        : "minmax(199px, 199px) minmax(136px, 488px) minmax(136px, 488px)"
     );
   }, [isMobile]);
 
