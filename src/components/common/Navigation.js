@@ -16,16 +16,18 @@ import PropTypes from "prop-types";
  *
  */
 
+const origin = typeof window !== "undefined" ? window.location.origin : "";
+
 const navItems = [
   { label: "Home", url: "/" },
-  { label: "Publications", url: `${window.location.origin}/resources/` },
+  { label: "Publications", url: `${origin}/resources/` },
   {
     label: "In numbers",
-    url: `${window.location.origin}/community-stats/#numbers`,
+    url: `${origin}/community-stats/#numbers`,
   },
   {
     label: "User stories",
-    url: `${window.location.origin}/community-stats/#user-stories`,
+    url: `${origin}/community-stats/#user-stories`,
   },
   { label: "Blog", url: "https://datacebo.com/blog" },
   { label: "Company", url: "https://datacebo.com" },
