@@ -24,10 +24,10 @@ const Tags = ({ tags, setTags }) => {
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTags = (id) => {
+  const toggleTags = (date) => {
     setTags((prev) =>
       prev.map((tag) =>
-        tag.id === id ? { ...tag, active: true } : { ...tag, active: false }
+        tag.date === date ? { ...tag, active: true } : { ...tag, active: false }
       )
     );
   };
@@ -36,7 +36,12 @@ const Tags = ({ tags, setTags }) => {
     <>
       <div className="hidden md:flex flex-col gap-2">
         {tags.map((t) => (
-          <TagMd key={t.id} id={t.id} active={t.active} onClick={toggleTags}>
+          <TagMd
+            key={t.date}
+            date={t.date}
+            active={t.active}
+            onClick={toggleTags}
+          >
             {t.label}
           </TagMd>
         ))}
@@ -53,7 +58,12 @@ const Tags = ({ tags, setTags }) => {
           className="md:hidden flex gap-2.5 overflow-x-auto no-scrollbar"
         >
           {tags.map((t) => (
-            <Tag key={t.id} id={t.id} active={t.active} onClick={toggleTags}>
+            <Tag
+              key={t.date}
+              date={t.date}
+              active={t.active}
+              onClick={toggleTags}
+            >
               {t.label}
             </Tag>
           ))}

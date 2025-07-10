@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TagMd({ id, active, onClick, children }) {
+export default function TagMd({ date, active, onClick, children }) {
   const baseClasses =
     "flex justify-center items-center py-[11px] px-4 text-base md:text-lg font-normal rounded-[40px] whitespace-nowrap";
   const activeClasses = "text-white bg-midnight-950 border-midnight-950";
@@ -17,7 +17,7 @@ export default function TagMd({ id, active, onClick, children }) {
 
   return (
     <button
-      onClick={() => onClick(id)}
+      onClick={() => onClick(date)}
       type="button"
       className={`${baseClasses} !px-5 ${
         active ? activeClasses : inactiveClasses

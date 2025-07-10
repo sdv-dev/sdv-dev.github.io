@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import StatusBadge from "./StatusBadge";
 import Tags from "./Tags";
 import Table from "../common/table/Table";
@@ -8,37 +8,10 @@ import TableBody from "../common/table/TableBody";
 import ModelsIcon from "./ModelsIcon";
 import NumOfWinsIcon from "./NumOfWinsIcon";
 
-const SdGymLeaderboard = () => {
-  const [tags, setTags] = useState([
-    {
-      id: 1,
-      label: "Feb 15, 2024",
-      active: true,
-    },
-    {
-      id: 2,
-      label: "Jul 12, 2024",
-      active: false,
-    },
-    {
-      id: 3,
-      label: "Oct 14, 2024",
-      active: false,
-    },
-    {
-      id: 4,
-      label: "Dec 12, 2024",
-      active: false,
-    },
-    {
-      id: 5,
-      label: "Feb 25, 2025",
-      active: false,
-    },
-  ]);
-
+const SdGymLeaderboard = ({ tags, setTags }) => {
   const metricLabels = ["Models", "Number of wins"];
   const tableColDimensions = "minmax(172px, 379px) minmax(172px, 379px)";
+  const lastRunLabel = tags[0]?.label;
   // const activeTag = tags.find((tag) => tag.active);
 
   return (
@@ -47,7 +20,7 @@ const SdGymLeaderboard = () => {
         <h1 className="heading-600-lg text-[36px] md:text-5xl text-center pb-8">
           Leaderboard
         </h1>
-        <StatusBadge dateText={"Feb 15, 2025"} />
+        <StatusBadge dateText={lastRunLabel} />
         <div className="w-full flex flex-col md:flex-row">
           <div className="flex flex-col md:flex-row w-full mb-8 md:mb-0">
             <Tags tags={tags} setTags={setTags} />
