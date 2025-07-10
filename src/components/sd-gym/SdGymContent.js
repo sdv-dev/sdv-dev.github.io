@@ -9,6 +9,8 @@ import AboutSdGym from "./AboutSdGym";
 export default function SdGymContent() {
   const [data, setData] = useState([]);
   const [dateTags, setDateTags] = useState([]);
+  const activeDateTag = dateTags.find((dt) => dt.active);
+
   const fileUrl =
     "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/sdgym-leaderboard-files/SDGym Monthly Run.xlsx";
 
@@ -27,8 +29,10 @@ export default function SdGymContent() {
         const rawDateTags = extractSortedDates(rawData);
         setDateTags(rawDateTags);
 
-        // Tables content
-        setData(rawData);
+        // Table content
+        const initialActiveDateTag = rawDateTags.find((dt) => dt.active);
+        const tableData = buildTableData(rawData, initialActiveDateTag.date);
+        setData(tableData);
       } catch (error) {
         console.error("Error loading Excel file:", error);
       }
@@ -63,10 +67,22 @@ export default function SdGymContent() {
     }));
   };
 
+  const buildTableData = (data, selectedDate) => {
+    return data.map((row) => {
+      let model = row["Outperfoms GaussianCopula"] || "-";
+      model = model.replace(/Synthesizer/g, "").trim();
+
+      const key = Object.keys(row).find((k) => k.startsWith(selectedDate));
+      const wins = key && row[key] !== undefined ? row[key] : "-";
+
+      return { model, wins };
+    });
+  };
+
   return (
     <div className="pt-16 relative bg-white flex flex-col justify-center overflow-hidden">
       <SdGymHero />
-      <SdGymLeaderboard tags={dateTags} setTags={setDateTags} />
+      <SdGymLeaderboard data={data} tags={dateTags} setTags={setDateTags} />
       <AboutSdGym />
       <NewsSliderSection />
       <BannerSection />

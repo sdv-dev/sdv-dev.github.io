@@ -7,12 +7,13 @@ import TableHeaderCell from "../common/table/TableHeaderCell";
 import TableBody from "../common/table/TableBody";
 import ModelsIcon from "./ModelsIcon";
 import NumOfWinsIcon from "./NumOfWinsIcon";
+import TableRow from "../common/table/TableRow";
+import TableRowCell from "../common/table/TableRowCell";
 
-const SdGymLeaderboard = ({ tags, setTags }) => {
+const SdGymLeaderboard = ({ data, tags, setTags }) => {
   const metricLabels = ["Models", "Number of wins"];
   const tableColDimensions = "minmax(172px, 379px) minmax(172px, 379px)";
   const lastRunLabel = tags[0]?.label;
-  // const activeTag = tags.find((tag) => tag.active);
 
   return (
     <div className="flex justify-center bg-white">
@@ -35,7 +36,26 @@ const SdGymLeaderboard = ({ tags, setTags }) => {
                 </TableHeaderCell>
               ))}
             </TableHeader>
-            <TableBody></TableBody>
+            <TableBody>
+              {data?.map((row, idx) => {
+                const isLast = idx === data.length - 1;
+
+                return (
+                  <TableRow key={row.model} index={idx} isLast={isLast}>
+                    <TableRowCell>
+                      <div className="flex font-medium text-midnight-950 tracking-lg">
+                        {row.model}
+                      </div>
+                    </TableRowCell>
+                    <TableRowCell>
+                      <div className="flex font-consolas font-normal antialiased">
+                        {row.wins}
+                      </div>
+                    </TableRowCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
           </Table>
         </div>
       </div>
