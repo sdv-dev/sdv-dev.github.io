@@ -150,14 +150,25 @@ const Navigation = ({ navClass, children, isDark }) => {
                     }
                   })}
 
-                  <a
-                    className={`${navClass} bordered`}
-                    href="https://datacebo.com/contact"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Contact Us
-                  </a>
+                  {isDark ? (
+                    <a
+                      className={`${navClass} bordered`}
+                      href="https://datacebo.com/contact"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Contact Us
+                    </a>
+                  ) : (
+                    <li className="group block lg:border-none w-full lg:w-auto text-center lg:ml-4">
+                      <a
+                        className="text-midnight-900 text-center font-semibold inline-block w-full px-6 lg:px-5 py-4 lg:py-2 lg:border border-b border-midnight-50 lg:rounded-lg lg:bg-[rgba(30,30,105,0.04)] group-hover:bg-[#0505580f] group-active:bg-[#132e891c]"
+                        href="https://datacebo.com/contact"
+                      >
+                        Contact us
+                      </a>
+                    </li>
+                  )}
                 </div>
               </div>
             </div>
