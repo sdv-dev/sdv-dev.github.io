@@ -5,6 +5,7 @@ import MapfreeLogo from "./MapfreeLogo";
 // import SparNordLogo from "./SparNordLogo";
 
 export default function CommunityUsersSection() {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
   const cards = [
     // {
     //   logo: <JpmcLogo />,
@@ -16,7 +17,7 @@ export default function CommunityUsersSection() {
       logo: <MapfreeLogo />,
       title:
         "MAPFRE: better detection of homeowner insurance fraud with synthetic data",
-      link: "https://sdv.dev/community-case-studies/mapfre-better-detection-of-homeowner-insurance-fraud-with-synthetic-data",
+      link: `${origin}/community-case-studies/mapfre-better-detection-of-homeowner-insurance-fraud-with-synthetic-data`,
     },
     // {
     //   logo: <KaggleLogo />,
