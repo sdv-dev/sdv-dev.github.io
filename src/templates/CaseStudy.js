@@ -90,6 +90,8 @@ export default function BlogPostTemplate({ data }) {
   const post = {
     frontmatter: {
       ...data.ghostPost,
+      externalTag:
+        data.ghostPost.tags?.find((tag) => tag.visibility === "public") || null,
     },
     html: data.ghostPost.html,
   };
@@ -224,7 +226,9 @@ export default function BlogPostTemplate({ data }) {
                         })}
                       </div>
                       <div className="mx-2 text-midnight-600">|</div>
-                      <div className="text-blue-600">Not specified</div>
+                      <div className="text-blue-600">
+                        {post.frontmatter?.externalTag?.name}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -290,6 +294,7 @@ export const pageQuery = graphql`
       tags {
         name
         slug
+        visibility
       }
       authors {
         name
