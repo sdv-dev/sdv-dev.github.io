@@ -256,6 +256,21 @@ pre[class*="language-"] {
   }
 }
 
+.link-label {
+  @apply text-midnight-700;
+  @apply tracking-lg;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 6%; /* 0.96px */
+  text-underline-offset: 16%; /* 2.56px */
+  text-underline-position: from-font;
+
+  &:hover {
+    text-decoration-style: solid;
+  }
+}
+
 .announcement-body {
   @apply text-midnight-800 lg:text-lg;
   margin: 0 auto;
