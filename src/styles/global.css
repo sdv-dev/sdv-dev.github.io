@@ -242,6 +242,31 @@ pre[class*="language-"] {
   @apply lg:animate-slide-up max-h-screen opacity-100 pointer-events-auto;
 }
 
+.secondary-btn {
+  @apply text-midnight-0 px-[15px] py-3;
+  background: rgba(30, 30, 105, 0.04);
+  border: 1px solid rgba(0, 32, 99, 0.03);
+  border-radius: 7px;
+  backdrop-filter: blur(50px);
+}
+
+.secondary-btn:hover {
+  background: #0505580f;
+}
+
+.secondary-btn:active {
+  background: #132e891c;
+}
+
+.secondary-btn:focus {
+  @apply ring-[3px] ring-blue-600 ring-offset-2 ring-offset-white;
+  transition: none;
+}
+
+.secondary-btn:focus:active {
+  @apply ring-0;
+}
+
 .underlined-link {
   text-decoration-color: var(--primary-blue-500, #03aff1);
   text-decoration-line: underline;

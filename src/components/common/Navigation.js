@@ -152,7 +152,7 @@ const Navigation = ({ navClass, children, isDark }) => {
 
                   {isDark ? (
                     <a
-                      className={`${navClass} bordered`}
+                      className={`${navClass} secondary-btn mb-3 lg:mb-0`}
                       href="https://datacebo.com/contact"
                       target="_blank"
                       rel="noopener noreferrer"
