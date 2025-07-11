@@ -100,23 +100,15 @@ const Navigation = ({ navClass, children, isDark }) => {
 
   const path = typeof window !== "undefined" ? window.location.pathname : "";
 
-  const addGradientHeader =
-    path.includes("/community-stats") ||
-    path.includes("/sd-gym") ||
-    path.includes("/404");
-
   return (
     <nav
       className={`${
-        isDark ? "tp-start" : "white-start"
+        isDark && !path.includes("/community-stats")
+          ? "tp-start"
+          : "white-start"
       } h-20 flex flex-col justify-center items-center z-50 fixed w-full`}
       id="navbar"
       ref={ref}
-      style={{
-        background:
-          addGradientHeader &&
-          "linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)",
-      }}
     >
       <div className="container mx-auto">
         <div className="relative flex md:flex-row flex-col items-center justify-between -mx-5">
