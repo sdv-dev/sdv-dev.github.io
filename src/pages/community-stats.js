@@ -6,7 +6,7 @@ import CommunityStatsContent from "../components/community-stats/CommunityStatsC
 
 export default function CommunityStatsPage() {
   return (
-    <Article>
+    <Article isDark={false}>
       <Seo
         title={config.siteTitleMeta}
         description={config.siteDescriptionMeta}

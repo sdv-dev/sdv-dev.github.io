@@ -15,7 +15,7 @@ import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg
  * styles, and meta data for each page.
  *
  */
-const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
+const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
   return (
     <>
       <Helmet>
@@ -25,7 +25,7 @@ const PostDefaultLayout = ({ data, children, bodyClass, isPost }) => {
       <div>
         <div className="viewport-top">
           <Navigation
-            isDark={true}
+            isDark={isDark}
             hasInfoBar={true}
             navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
           >

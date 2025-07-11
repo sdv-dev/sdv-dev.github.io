@@ -98,14 +98,10 @@ const Navigation = ({ navClass, children, isDark }) => {
     setTimeout(changeNavBackground, 50);
   });
 
-  const path = typeof window !== "undefined" ? window.location.pathname : "";
-
   return (
     <nav
       className={`${
-        isDark && !path.includes("/community-stats")
-          ? "tp-start"
-          : "white-start"
+        isDark ? "tp-start" : "white-start"
       } h-20 flex flex-col justify-center items-center z-50 fixed w-full`}
       id="navbar"
       ref={ref}

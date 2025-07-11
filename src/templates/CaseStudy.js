@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { LightLayout } from "../components/common";
+import { Article } from "../components/common";
 import { graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -180,7 +180,7 @@ export default function BlogPostTemplate({ data }) {
   }, []);
 
   return (
-    <LightLayout>
+    <Article isDark={false}>
       <div className="pt-16 lg:pt-20 relative bg-white">
         <article className="container relative lg:pt-20 pt-10 pb-10 lg:pb-32">
           <div className="announcement-body space-y-6 lg:space-y-6">
@@ -267,7 +267,7 @@ export default function BlogPostTemplate({ data }) {
           </div>
         </div>
       </div>
-    </LightLayout>
+    </Article>
   );
 }
 
