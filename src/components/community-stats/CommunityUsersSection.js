@@ -37,7 +37,7 @@ export default function CommunityUsersSection() {
       <h2 className="heading-600-lg text-center pb-8 md:pb-12">
         SDV <span className="text-blue-600">case studies</span>
       </h2>
-      <div id="user-stories" className="flex flex-col">
+      <div id="case-studies" className="flex flex-col">
         {cards.map((c, idx) => {
           const isLast = idx === cards.length - 1;
           const isFirst = idx === 0;

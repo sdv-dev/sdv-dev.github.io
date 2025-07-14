@@ -26,8 +26,8 @@ const navItems = [
     url: `${origin}/community-stats/#numbers`,
   },
   {
-    label: "User stories",
-    url: `${origin}/community-stats/#user-stories`,
+    label: "Case studies",
+    url: `${origin}/community-stats/#case-studies`,
   },
   { label: "Blog", url: "https://datacebo.com/blog" },
   { label: "Company", url: "https://datacebo.com" },
