@@ -68,10 +68,10 @@
     .white-start & {
       color: #000036;
       .nav-bg-white & {
-        color: #0c0c0c;
+        color: #000036;
       }
       &.bordered {
-        border: 1px solid #0c0c0c;
+        border: 1px solid #000036;
       }
     }
 
@@ -82,9 +82,9 @@
 
       color: white;
       .nav-bg-dark & {
-        color: #0c0c0c;
+        color: #000036;
         &.bordered {
-          border-color: #0c0c0c;
+          border-color: #000036;
         }
       }
     }
@@ -94,7 +94,7 @@
     color: #ffffff;
     .tp-start &,
     .white-start & {
-      color: #0c0c0c;
+      color: #000036;
     }
   }
 }
