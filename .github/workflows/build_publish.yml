@@ -1,4 +1,4 @@
-name: Build and Deploy SDV dev
+name: Build and Deploy sdv dev
 
 on:
   push:
