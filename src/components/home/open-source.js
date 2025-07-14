@@ -1,21 +1,19 @@
 import React, { useState, useRef } from "react";
 import config from "../../utils/siteConfig";
+import Copulas from "../../../assets/copulas.svg";
+import Ctgan from "../../../assets/ctgan.svg";
+import DeepEcho from "../../../assets/deepecho.svg";
+import SDGym from "../../../assets/sdgym.svg";
+import SDMetrics from "../../../assets/sdmetrics.svg";
+import Rdt from "../../../assets/rdt.svg";
+import Vault from "../../../assets/sdv.svg";
 
-import Copulas from "../../../assets/copulas.svg"
-import Ctgan from "../../../assets/ctgan.svg"
-import DeepEcho from "../../../assets/deepecho.svg"
-import SDGym from "../../../assets/sdgym.svg"
-import SDMetrics from "../../../assets/sdmetrics.svg"
-import Rdt from "../../../assets/rdt.svg"
-import Vault from "../../../assets/sdv.svg"
-
-
-const Card = ({ item, idx }) => {
+const Card = ({ item }) => {
   return (
     <div className="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8 animate-slide-up opacity-0">
       <div className="rounded-2xl bg-white p-5 lg:p-8 border border-offwhite shadow-sm">
         <div className="h-8 w-20 my-2 flex justify-start items-start">
-          { item.svg }
+          {item.svg}
         </div>
         <p className="font-bold text-xl lg:text-2xl mb-2">{item.name}</p>
         <p className="text-base lg:text-lg h-auto lg:h-36 leading-normal lg:leading-relaxed">
@@ -60,8 +58,6 @@ export default function OpenSource() {
       document.getElementById("lib-wrap").scrollIntoView();
     }
   };
-
-
 
   const modelingItems = [
     {
@@ -117,7 +113,7 @@ export default function OpenSource() {
       icon: "/sdgym.svg",
       text: "Benchmarks synthetic data generators, including SDV models. Evaluates the synthetic output of a given model on a dataset.",
       github: "https://github.com/sdv-dev/SDGym",
-      url: "https://docs.sdv.dev/sdgym"
+      url: "https://docs.sdv.dev/sdgym",
     },
     {
       name: "Synthetic Data Vault",
@@ -159,9 +155,14 @@ export default function OpenSource() {
             <p className="grad-txt uppercase text-sm tracking-widest font-bold mt-8">
               The SDV Ecosystem
             </p>
-            <h2 className="text-sdv-dark my-8">Public, Source-Available Libraries</h2>
+            <h2 className="text-sdv-dark my-8">
+              Public, Source-Available Libraries
+            </h2>
             <p className="text-sdv-dark mx-auto max-w-4xl text-lg">
-              The SDV is an overall ecosystem for synthetic data models, benchmarks, and metrics. Explore publicly available libraries supporting the SDV. Each can be used as standalone packages for particular needs.
+              The SDV is an overall ecosystem for synthetic data models,
+              benchmarks, and metrics. Explore publicly available libraries
+              supporting the SDV. Each can be used as standalone packages for
+              particular needs.
             </p>
           </div>
         </div>
@@ -254,8 +255,8 @@ export default function OpenSource() {
             filter === "modeling" ? `flex` : `hidden`
           } flex-wrap -mx-4`}
         >
-          {modelingItems.map((item, idx) => {
-            return <Card item={item} idx={idx} />;
+          {modelingItems.map((item) => {
+            return <Card key={item.name} item={item} />;
           })}
         </div>
         <div
@@ -263,8 +264,8 @@ export default function OpenSource() {
             filter === "benchmarking" ? `flex` : `hidden`
           } flex-wrap -mx-4`}
         >
-          {benchmarkingItems.map((item, idx) => {
-            return <Card item={item} idx={idx} />;
+          {benchmarkingItems.map((item) => {
+            return <Card key={item.name} item={item} />;
           })}
         </div>
         <div
@@ -272,8 +273,8 @@ export default function OpenSource() {
             filter === "metrics" ? `flex` : `hidden`
           } flex-wrap -mx-4`}
         >
-          {metricsItems.map((item, idx) => {
-            return <Card item={item} idx={idx} />;
+          {metricsItems.map((item) => {
+            return <Card key={item.name} item={item} />;
           })}
         </div>
       </div>

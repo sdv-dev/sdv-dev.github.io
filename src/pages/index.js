@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Article } from "../components/common";
 import Features from "../components/home/features";
 import Hero from "../components/home/hero";
@@ -10,10 +10,10 @@ import config from "../utils/siteConfig";
 import Seo from "../components/Seo";
 
 export default function HomePage() {
-  const [downloads, setDownloads] = useState("");
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  const [downloads] = useState("");
+  // function numberWithCommas(x) {
+  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // }
 
   //Get the total number of downloads for a single release, using its tag name.
 
@@ -49,8 +49,8 @@ export default function HomePage() {
         canonical={`https://sdv.dev/`}
       />
 
-      <div className="mx-auto" style={{ maxWidth: "1680px"}}>
-        <Hero downloads={downloads} />
+      <div className="mx-auto max-w-[1680px]">
+        <Hero />
         <Features />
         <ProtectEnhance />
         <OpenSource />
