@@ -25,7 +25,7 @@ export default function SdvInNumbersSection({ data }) {
   useEffect(() => {
     setTableColDimensions(
       isMobile
-        ? "minmax(199px, 199px) minmax(130px, 488px)"
+        ? "minmax(192px, 199px) minmax(110px, 488px)"
         : "minmax(199px, 199px) minmax(130px, 488px) minmax(136px, 488px)"
     );
   }, [isMobile]);
