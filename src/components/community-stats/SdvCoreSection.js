@@ -24,7 +24,7 @@ export default function SdvCoreSection({ dependenciesData }) {
     setTableColDimensions(
       isMobile
         ? "minmax(134px, 199px) minmax(136px, 488px)"
-        : "minmax(1px, 199px) minmax(136px, 488px) minmax(136px, 488px)"
+        : "minmax(134px, 199px) minmax(136px, 488px) minmax(136px, 488px)"
     );
   }, [isMobile]);
 

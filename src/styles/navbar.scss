@@ -22,9 +22,22 @@
 
     &.white-start {
       background-color: white;
+      --tw-shadow: 0px 4px 6px -2px rgba(0, 0, 54, 0.06),
+        0px 10px 15px -3px rgba(0, 0, 54, 0.1);
+      --tw-shadow-colored: 0px 4px 6px -2px var(--tw-shadow-color),
+        0px 10px 15px -3px var(--tw-shadow-color);
+      background-color: #fff;
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
       .nav-bg-white & {
         transition: all 400ms ease-in-out;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+        --tw-shadow: 0px 4px 6px -2px rgba(0, 0, 54, 0.06),
+          0px 10px 15px -3px rgba(0, 0, 54, 0.1);
+        --tw-shadow-colored: 0px 4px 6px -2px var(--tw-shadow-color),
+          0px 10px 15px -3px var(--tw-shadow-color);
+        background-color: #fff;
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         background-color: white;
       }
       .white-logo {
