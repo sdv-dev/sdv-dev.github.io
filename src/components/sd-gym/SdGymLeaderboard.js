@@ -12,7 +12,7 @@ import TableRowCell from "../common/table/TableRowCell";
 
 const SdGymLeaderboard = ({ data, tags, setTags }) => {
   const metricLabels = ["Models", "Number of wins"];
-  const tableColDimensions = "minmax(172px, 379px) minmax(172px, 379px)";
+  const tableColDimensions = "minmax(160px, 379px) minmax(140px, 379px)";
   const lastRunLabel = tags[0]?.label;
 
   return (
