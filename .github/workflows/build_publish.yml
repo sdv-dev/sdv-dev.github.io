@@ -9,7 +9,7 @@ on:
       - gatsby-home
   workflow_dispatch:
     branches:
-      - master
+      - gatsby-home
 jobs:
   build:
     runs-on: ubuntu-latest
