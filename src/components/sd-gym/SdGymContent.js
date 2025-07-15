@@ -7,6 +7,7 @@ import SdGymLeaderboard from "./SdGymLeaderboard";
 import AboutSdGym from "./AboutSdGym";
 
 export default function SdGymContent() {
+  const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
   const [dateTags, setDateTags] = useState([]);
   // const activeDateTag = dateTags.find((dt) => dt.active);
@@ -24,6 +25,7 @@ export default function SdGymContent() {
         const firstSheet = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[firstSheet];
         const rawData = XLSX.utils.sheet_to_json(worksheet);
+        setRawData(rawData);
 
         // Date tags for the tables
         const rawDateTags = extractSortedDates(rawData);
@@ -40,6 +42,13 @@ export default function SdGymContent() {
 
     fetchExcel();
   }, []);
+
+  useEffect(() => {
+    if (activeDateTag && rawData.length) {
+      const tableData = buildTableData(rawData, activeDateTag.date);
+      setData(tableData);
+    }
+  }, [activeDateTag, rawData]);
 
   const extractSortedDates = (data) => {
     const datesSet = new Set();
