@@ -1,4 +1,5 @@
 import React from "react";
+import SpeedTradeoffChart from "./SpeedTradeoffChart";
 
 const SpeedTradeoffs = () => {
   return (
@@ -7,6 +8,7 @@ const SpeedTradeoffs = () => {
         <h1 className="heading-600-lg text-[36px] md:text-5xl text-center">
           The <span className="text-blue-600">Quality-Speed</span> Tradeoffs
         </h1>
+        <SpeedTradeoffChart />
       </div>
     </div>
   );
