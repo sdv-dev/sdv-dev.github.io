@@ -52,7 +52,10 @@ export default function CommunityUsersSection() {
                 <div className="flex items-center justify-center md:w-1/2">
                   {c.logo}
                 </div>
-                <div className="flex flex-col md:w-1/2 gap-6 md:gap-9 pb-8 px-6 pt-6 md:pt-[38px] md:px-12 md:pb-[46px] border-b border-r border-l md:border-l-none md:border-t border-midnight-50 rounded-b-20 md:rounded-bl-none md:rounded-tr-20 bg-midnight-25">
+                <div
+                  className="flex flex-col md:w-1/2 gap-6 md:gap-9 pb-8 px-6 pt-6 md:pt-[38px] md:px-12 md:pb-[46px] rounded-b-20 md:rounded-bl-none md:rounded-tr-20 bg-midnight-25"
+                  style={{ boxShadow: "inset 0 0 0 1px #EFEFF5" }}
+                >
                   <p className="text-midnight-950 text-2xl font-medium leading-[30px] tracking-xs line-clamp-3 h-[90px] md:h-[108px] md:text-[28px] md:-tracking-[1.4px] md:leading-9">
                     {c.title}
                   </p>
