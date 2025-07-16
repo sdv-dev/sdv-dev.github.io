@@ -5,7 +5,8 @@ import NewsSliderSection from "../community-stats/NewsSliderSection";
 import BannerSection from "../community-stats/BannerSection";
 import SdGymLeaderboard from "./SdGymLeaderboard";
 import AboutSdGym from "./AboutSdGym";
-import Tradeoffs from "./Tradeoffs";
+// import PrivacyTradeoffs from "./PrivacyTradeoffs";
+import SpeedTradeoffs from "./SpeedTradeoffs";
 
 export default function SdGymContent() {
   const [rawData, setRawData] = useState([]);
@@ -94,7 +95,8 @@ export default function SdGymContent() {
       <SdGymHero />
       <SdGymLeaderboard data={data} tags={dateTags} setTags={setDateTags} />
       <AboutSdGym />
-      <Tradeoffs />
+      {/* <PrivacyTradeoffs /> */}
+      <SpeedTradeoffs />
       <NewsSliderSection />
       <BannerSection />
     </div>
