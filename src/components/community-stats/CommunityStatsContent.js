@@ -6,7 +6,7 @@ import SynthesizeCardsSection from "./SynthesizeCardsSection";
 import CommunityUsersSection from "./CommunityUsersSection";
 import SdvInNumbersSection from "./SdvInNumbersSection";
 import SdvCoreSection from "./SdvCoreSection";
-// import SdvOpenCoreSection from "./SdvOpenCoreSection";
+import SdvOpenCoreSection from "./SdvOpenCoreSection";
 import BannerSection from "./BannerSection";
 // import LatestsNewsSubSection from "./LatestsNewsSubSection";
 
@@ -90,7 +90,7 @@ export default function CommunityStatsContent() {
       <SdvInNumbersSection data={data} />
       <CommunityUsersSection />
       {/* <LatestsNewsSubSection /> */}
-      {/* <SdvOpenCoreSection /> */}
+      <SdvOpenCoreSection />
       <SdvCoreSection dependenciesData={dependenciesData} />
       <NewsSliderSection />
       <BannerSection />
