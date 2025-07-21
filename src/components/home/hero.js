@@ -17,15 +17,19 @@ export default function Hero() {
           background: "linear-gradient(90deg, #03B0F2 1.57%, #01E0C9 100%)",
         }}
       >
-        <div className="container mx-auto">
-          <div className="flex flex-wrap justify-center -mx-4">
-            <div className="w-full lg:w-4/12 px-4 md:w-5/12 md:pt-40 pt-10 pb-10 md:pb-72 text-center md:text-left">
-              <h1 className="leading-tight text-white mb-6 lg:mb-6">
-                <span className="block hero-heading">SDV</span>
-                <span className="block font-light text-lg tracking-tight">
-                  The Synthetic Data Vault
+        <div className="container">
+          <div className="flex flex-wrap justify-between">
+            <div className="w-full lg:w-5/12 md:w-4/12 md:pt-40 pt-10 pb-10 md:pb-72 xl:pb-[330px] text-center">
+              <div className="flex">
+                <img
+                  src={`${config.sitePath}/sdv-logo.png`}
+                  alt="SDV Logo"
+                  className="mr-2 h-[56px] md:w-[122px] md:h-[64px]"
+                />
+                <span className="text-white text-5xl md:text-6xl leading-[1] tracking-2xs font-semibold -mt-1 md:-mt-2">
+                  Community
                 </span>
-              </h1>
+              </div>
               <div className="flex flex-row justify-center md:justify-start -mx-1 mt-4">
                 <div className="px-1">
                   <a
@@ -60,7 +64,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-7/12 lg:w-6/12 px-4 md:mt-0 text-white flex flex-col justify-end">
+            <div className="w-full md:w-6/12 lg:mr-20 px-4 text-white flex flex-col justify-end">
               <div className="pb-40">
                 <img
                   width="445"
