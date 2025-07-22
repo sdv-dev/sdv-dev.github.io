@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
 import MoreArticles from "../MoreArticles";
+import ScarfPixel from "../common/ScarfPixel";
 import dataceboHorizontalLogoWhite from "../../../static/datacebo-horizontal-logo-white.svg";
 import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
 
@@ -58,6 +59,7 @@ const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
         </div>
         {/* <Cta /> */}
         <Footer />
+        <ScarfPixel />
       </div>
     </>
   );
