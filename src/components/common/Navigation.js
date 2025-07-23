@@ -16,22 +16,22 @@ import PropTypes from "prop-types";
  *
  */
 
-const origin = typeof window !== "undefined" ? window.location.origin : "";
-
 const navItems = [
-  { label: "Home", url: "/" },
-  { label: "Publications", url: `${origin}/resources/` },
+  { label: "Home", url: "/", internal: true },
+  { label: "Publications", url: `/resources/`, internal: true },
   {
     label: "In numbers",
-    url: `${origin}/community-stats/#numbers`,
+    url: `/community-stats/#numbers`,
+    internal: true,
   },
   {
     label: "Case studies",
-    url: `${origin}/community-stats/#case-studies`,
+    url: `/community-stats/#case-studies`,
+    internal: true,
   },
-  { label: "Blog", url: "https://datacebo.com/blog" },
-  { label: "Company", url: "https://datacebo.com" },
-  { label: "GitHub", url: "https://github.com/sdv-dev/SDV" },
+  { label: "Blog", url: "https://datacebo.com/blog", internal: false },
+  { label: "Company", url: "https://datacebo.com", internal: false },
+  { label: "GitHub", url: "https://github.com/sdv-dev/SDV", internal: false },
 ];
 
 const Navigation = ({ navClass, children, isDark }) => {
@@ -129,7 +129,7 @@ const Navigation = ({ navClass, children, isDark }) => {
               >
                 <div className=" flex lg:flex-row flex-col justify-center items-center w-full">
                   {navItems.map((navItem, i) => {
-                    if (navItem.url.match(/^\s?http(s?)/gi)) {
+                    if (!navItem.internal) {
                       return (
                         <a
                           className={navClass}
