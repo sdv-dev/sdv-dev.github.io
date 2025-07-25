@@ -1,36 +1,33 @@
 import React from "react";
-// import KaggleLogo from "./KaggleLogo";
-import MapfreeLogo from "./MapfreeLogo";
-// import JpmcLogo from "./JpmcLogo";
-// import SparNordLogo from "./SparNordLogo";
+import { graphql, useStaticQuery } from "gatsby";
 
 export default function CommunityUsersSection() {
   const origin = typeof window !== "undefined" ? window.location.origin : "";
-  const cards = [
-    // {
-    //   logo: <JpmcLogo />,
-    //   title:
-    //     "JP Morgan Chase lorem ipsum dolorem lorem ipsum dolor lorem ipsum dolor dolor dolor dolor",
-    //   link: "/",
-    // },
-    {
-      logo: <MapfreeLogo />,
-      title:
-        "MAPFRE: better detection of homeowner insurance fraud with synthetic data",
-      link: `${origin}/community-case-studies/mapfre-better-detection-of-homeowner-insurance-fraud-with-synthetic-data`,
-    },
-    // {
-    //   logo: <KaggleLogo />,
-    //   title: "Kaggle releases data for 11 competitions using SDV",
-    //   link: "/",
-    // },
-    // {
-    //   logo: <SparNordLogo />,
-    //   title:
-    //     "Spar Nord Bank uses SDV’s multitable synthesizer to generate synthetic anti money laundering data",
-    //   link: "/",
-    // },
-  ];
+
+  const data = useStaticQuery(graphql`
+    query {
+      allGhostPost(
+        filter: {
+          tags: { elemMatch: { slug: { eq: "hash-community-case-study" } } }
+        }
+      ) {
+        nodes {
+          slug
+          title
+          excerpt
+          feature_image
+        }
+      }
+    }
+  `);
+
+  const cards = data.allGhostPost.nodes.map((art) => ({
+    slug: art.slug,
+    logo: art.feature_image,
+    title: art.title,
+    description: art.excerpt,
+    link: `${origin}/community-case-studies/${art.slug}`,
+  }));
 
   return (
     <div className="container w-full flex flex-col py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0 lg:w-[876px]">
@@ -50,7 +47,11 @@ export default function CommunityUsersSection() {
                 }`}
               >
                 <div className="flex items-center justify-center md:w-1/2">
-                  {c.logo}
+                  <img
+                    src={c.logo}
+                    alt="Logo"
+                    className="rounded-t-20 md:rounded-tr-none md:rounded-l-20 h-full"
+                  />
                 </div>
                 <div
                   className="flex flex-col md:w-1/2 gap-6 md:gap-9 pb-8 px-6 pt-6 md:pt-[38px] md:px-12 md:pb-[46px] rounded-b-20 md:rounded-bl-none md:rounded-tr-20 bg-midnight-25"
