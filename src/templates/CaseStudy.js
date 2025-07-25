@@ -13,6 +13,7 @@ import "prismjs";
 import "prismjs/components/prism-python";
 import "prismjs/themes/prism-okaidia.css";
 import AuthorImages from "./AuthorImages";
+import { Helmet } from "react-helmet";
 
 const ImageModal = () => {
   return (
@@ -180,94 +181,154 @@ export default function BlogPostTemplate({ data }) {
   }, []);
 
   return (
-    <Article isDark={false}>
-      <div className="pt-16 lg:pt-20 relative bg-white">
-        <article className="container relative lg:pt-20 pt-10 pb-10 lg:pb-32">
-          <div className="announcement-body space-y-6 lg:space-y-6">
-            <div className="space-y-8 lg:space-y-10">
-              <img
-                src={post.frontmatter.feature_image}
-                alt={post.frontmatter.title}
-                className="rounded-[20px]"
-              />
-              <div className="lg:space-y-[36px] space-y-[26px]">
-                <h1 className="heading-600-lg lg:max-w-[720px]">
-                  {post.frontmatter.title}
-                </h1>
-                <div className="flex flew-row mb-6">
-                  <div className="relative">
-                    <AuthorImages frontmatter={post.frontmatter} />
-                  </div>
-                  <div className="pl-3 lg:px-4 flex flex-col justify-center">
-                    <div className="flex flex-wrap text-sm lg:text-base">
-                      {post.frontmatter.authors.map((author, idx) => (
-                        <div key={author.name} className="flex items-center">
-                          {idx > 0 && <span className="mx-1">and</span>}
-                          {author.website ? (
-                            <a href={author.website} className="link-label">
-                              {author.name}
-                            </a>
-                          ) : (
-                            <span className="text-midnight-600 border-midnight-600 leading-none pb-0 inline-block duration-200">
-                              {author.name}
-                            </span>
-                          )}
-                        </div>
-                      ))}
+    <>
+      <Helmet>
+        <title>{post.frontmatter.meta_title || post.frontmatter.title}</title>
+        <meta
+          name="description"
+          content={
+            post.frontmatter.meta_description || post.frontmatter.excerpt
+          }
+        />
+        <meta property="og:site_name" content="Datacebo" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content={post.frontmatter.meta_title || post.frontmatter.title}
+        />
+        <meta
+          property="og:description"
+          content={
+            post.frontmatter.meta_description || post.frontmatter.excerpt
+          }
+        />
+        <meta
+          property="og:url"
+          content={`https://sdv.dev/community-case-studies/${post.frontmatter.slug}/`}
+        />
+        <meta
+          property="og:image"
+          content={post.frontmatter.og_image || post.frontmatter.feature_image}
+        />
+        <meta
+          property="article:published_time"
+          content={post.frontmatter.published_at}
+        />
+        <meta
+          property="article:modified_time"
+          content={post.frontmatter.updated_at || post.frontmatter.published_at}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={post.frontmatter.twitter_title || post.frontmatter.title}
+        />
+        <meta
+          name="twitter:description"
+          content={
+            post.frontmatter.twitter_description ||
+            post.frontmatter.meta_description ||
+            post.frontmatter.excerpt
+          }
+        />
+        <meta
+          name="twitter:image"
+          content={
+            post.frontmatter.twitter_image || post.frontmatter.feature_image
+          }
+        />
+        <meta name="twitter:site" content="https://twitter.com/datacebo/" />
+        <meta name="twitter:creator" content="@datacebo" />
+      </Helmet>
+      <Article isDark={false}>
+        <div className="pt-16 lg:pt-20 relative bg-white">
+          <article className="container relative lg:pt-20 pt-10 pb-10 lg:pb-32">
+            <div className="announcement-body space-y-6 lg:space-y-6">
+              <div className="space-y-8 lg:space-y-10">
+                <img
+                  src={post.frontmatter.feature_image}
+                  alt={post.frontmatter.title}
+                  className="rounded-[20px]"
+                />
+                <div className="lg:space-y-[36px] space-y-[26px]">
+                  <h1 className="heading-600-lg lg:max-w-[720px]">
+                    {post.frontmatter.title}
+                  </h1>
+                  <div className="flex flew-row mb-6">
+                    <div className="relative">
+                      <AuthorImages frontmatter={post.frontmatter} />
                     </div>
-                    <div className="flex text-xs lg:text-sm">
-                      <div className="text-midnight-600">
-                        {new Date(
-                          post.frontmatter.published_at
-                        ).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
+                    <div className="pl-3 lg:px-4 flex flex-col justify-center">
+                      <div className="flex flex-wrap text-sm lg:text-base">
+                        {post.frontmatter.authors.map((author, idx) => (
+                          <div key={author.name} className="flex items-center">
+                            {idx > 0 && <span className="mx-1">and</span>}
+                            {author.website ? (
+                              <a href={author.website} className="link-label">
+                                {author.name}
+                              </a>
+                            ) : (
+                              <span className="text-midnight-600 border-midnight-600 leading-none pb-0 inline-block duration-200">
+                                {author.name}
+                              </span>
+                            )}
+                          </div>
+                        ))}
                       </div>
-                      <div className="mx-2 text-midnight-600">|</div>
-                      <div className="text-blue-600">
-                        {post.frontmatter?.externalTag?.name}
+                      <div className="flex text-xs lg:text-sm">
+                        <div className="text-midnight-600">
+                          {new Date(
+                            post.frontmatter.published_at
+                          ).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </div>
+                        <div className="mx-2 text-midnight-600">|</div>
+                        <div className="text-blue-600">
+                          {post.frontmatter?.externalTag?.name}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <AnnouncementBody />
               </div>
-
-              <AnnouncementBody />
+              <SocialDesktop post={post.frontmatter} />
             </div>
-            <SocialDesktop post={post.frontmatter} />
-          </div>
-        </article>
-        <ImageModal />
+          </article>
+          <ImageModal />
 
-        <div className="container max-w-7xl h-full z-0 mx-auto py-16 lg:py-24">
-          <div className="relative py-24 lg:py-28 px-4">
-            <div className="absolute inset-0 rounded-[20px] border border-teal-200">
-              <GatsbyImage
-                image={data.ctaBg.childImageSharp.gatsbyImageData}
-                loading="eager"
-                alt="The Synthetic Data Vault"
-                className="h-full rounded-[20px] lg:block"
-                imgClassName="w-full"
-              />
-            </div>
-            <div className="text-center relative z-10 text-midnight-950 space-y-6">
-              <h2 className="heading-500-md font-medium">
-                Let’s put synthetic data to work
-              </h2>
+          <div className="container max-w-7xl h-full z-0 mx-auto py-16 lg:py-24">
+            <div className="relative py-24 lg:py-28 px-4">
+              <div className="absolute inset-0 rounded-[20px] border border-teal-200">
+                <GatsbyImage
+                  image={data.ctaBg.childImageSharp.gatsbyImageData}
+                  loading="eager"
+                  alt="The Synthetic Data Vault"
+                  className="h-full rounded-[20px] lg:block"
+                  imgClassName="w-full"
+                />
+              </div>
+              <div className="text-center relative z-10 text-midnight-950 space-y-6">
+                <h2 className="heading-500-md font-medium">
+                  Let’s put synthetic data to work
+                </h2>
 
-              <a
-                href="/contact/"
-                className="all-button inline-block bg-midnight-950 hover:bg-midnight-800 text-white"
-              >
-                Contact us
-              </a>
+                <a
+                  href="/contact/"
+                  className="all-button inline-block bg-midnight-950 hover:bg-midnight-800 text-white"
+                >
+                  Contact us
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Article>
+      </Article>
+    </>
   );
 }
 
