@@ -73,7 +73,7 @@ export default function Footer() {
                     },
                     {
                       name: "SDV Enterprise",
-                      url: "/sdv-enterprise/",
+                      url: "https://datacebo.com/sdv-enterprise/",
                     },
                     {
                       name: "SDMetrics",
@@ -81,7 +81,7 @@ export default function Footer() {
                     },
                     {
                       name: "Pricing",
-                      url: "/pricing/",
+                      url: "https://datacebo.com/pricing/",
                     },
                   ].map((i, idx) => (
                     <ListItem i={i} key={`product-${idx}`} />
@@ -150,19 +150,19 @@ export default function Footer() {
                   {[
                     {
                       name: "Our Team",
-                      url: "/team/",
+                      url: "https://datacebo.com/team/",
                     },
 
                     {
                       name: "Careers",
-                      url: "/careers/",
+                      url: "https://datacebo.com/careers/",
                       tag: {
                         name: "We're hiring",
                       },
                     },
                     {
                       name: "Support",
-                      url: "/support/",
+                      url: "https://datacebo.com/support/",
                     },
                   ].map((i, idx) => (
                     <ListItem i={i} key={`company-${idx}`} />
