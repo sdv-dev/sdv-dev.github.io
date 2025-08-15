@@ -12,7 +12,7 @@ export default function SdGymContent() {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
   const [dateTags, setDateTags] = useState([]);
-  // const activeDateTag = dateTags.find((dt) => dt.active);
+  const activeDateTag = dateTags.find((dt) => dt.active);
 
   const fileUrl =
     "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/sdgym-leaderboard-files/SDGym Monthly Run.xlsx";
