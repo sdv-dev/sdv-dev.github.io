@@ -16,6 +16,13 @@ export default function CommunityStatsContent() {
   const fileUrl =
     "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/Downloads_Summary.xlsx";
 
+  function formatThousands(value) {
+    if (value >= 1000000)
+      return (value / 1000000).toFixed(2).replace(/\.00$/, "") + "M";
+    if (value >= 1000) return (value / 1000).toFixed(0) + "K";
+    return value.toString();
+  }
+
   useEffect(() => {
     async function fetchExcel() {
       try {
@@ -31,13 +38,6 @@ export default function CommunityStatsContent() {
 
         const rawData = XLSX.utils.sheet_to_json(worksheet);
         const rawDependencies = XLSX.utils.sheet_to_json(dependenciesWorksheet);
-
-        function formatThousands(value) {
-          if (value >= 1_000_000)
-            return (value / 1_000_000).toFixed(2).replace(/\.00$/, "") + "M";
-          if (value >= 1_000) return (value / 1_000).toFixed(0) + "K";
-          return value.toString();
-        }
 
         const filtered = rawData.filter(
           (item) =>
