@@ -67,6 +67,7 @@
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "2.14.3",
     "gatsby-remark-prismjs": "^5.2.0",
+    "gatsby-source-contentful": "^8.13.2",
     "gatsby-source-filesystem": "2.11.1",
     "gatsby-source-ghost": "^5.0.3",
     "gatsby-transformer-remark": "^4.2.0",
