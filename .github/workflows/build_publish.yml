@@ -24,3 +24,5 @@ jobs:
           SITEPATH: ""
           GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
           GHOST_CONTENT_API_KEY: ${{ secrets.GHOST_CONTENT_API_KEY }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
