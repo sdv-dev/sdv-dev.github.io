@@ -34,7 +34,7 @@ const navItems = [
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV", internal: false },
 ];
 
-const Navigation = ({ navClass, children, isDark }) => {
+const Navigation = ({ navClass = "site-nav-item", children, isDark }) => {
   const ref = useRef();
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
@@ -177,10 +177,6 @@ const Navigation = ({ navClass, children, isDark }) => {
       </div>
     </nav>
   );
-};
-
-Navigation.defaultProps = {
-  navClass: `site-nav-item`,
 };
 
 Navigation.propTypes = {
