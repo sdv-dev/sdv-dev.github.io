@@ -6,27 +6,26 @@ export default function CommunityUsersSection() {
 
   const data = useStaticQuery(graphql`
     query {
-      allGhostPost(
-        filter: {
-          tags: { elemMatch: { slug: { eq: "hash-community-case-study" } } }
-        }
-      ) {
-        nodes {
-          slug
-          title
-          excerpt
-          feature_image
+      caseStudies: allContentfulCaseStudy(sort: { datePublished: DESC }) {
+        edges {
+          node {
+            url
+            title
+            featureImage {
+              url
+            }
+            cardText
+          }
         }
       }
     }
   `);
 
-  const cards = data.allGhostPost.nodes.map((art) => ({
-    slug: art.slug,
-    logo: art.feature_image,
-    title: art.title,
-    description: art.excerpt,
-    link: `${origin}/community-case-studies/${art.slug}`,
+  const cards = data.caseStudies.edges.map(({ node }) => ({
+    logo: node.featureImage.url,
+    title: node.title,
+    description: node.cardText,
+    link: `${origin}/community-case-studies/${node.url}`,
   }));
 
   return (

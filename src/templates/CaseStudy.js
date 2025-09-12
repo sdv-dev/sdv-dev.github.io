@@ -333,8 +333,8 @@ export default function BlogPostTemplate({ data }) {
 }
 
 export const pageQuery = graphql`
-  query ($slug: String!) {
-    ghostPost(slug: { eq: $slug }) {
+  query ($url: String!) {
+    ghostPost(slug: { eq: $url }) {
       id
       title
       slug
