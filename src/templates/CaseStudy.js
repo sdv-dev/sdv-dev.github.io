@@ -66,7 +66,7 @@ export const SocialDesktop = ({ post }) => {
           target="_blank"
           rel="noopener"
           to={`https://www.linkedin.com/shareArticle?mini=true&url=https://sdv.dev${sitePath}${post.slug}/`}
-          className="w-6 h-6 flex justify-center duration-200 items-center hover:text-blue-600 text-midnight-950 inline-block rounded-full"
+          className="w-6 h-6 duration-200 hover:text-blue-600 text-midnight-950 inline-block rounded-full"
         >
           <FontAwesomeIcon size="xl" icon={faLinkedinIn} />
         </Link>
@@ -78,7 +78,7 @@ export const SocialDesktop = ({ post }) => {
           )}&url=https://sdv.dev${sitePath}${
             post.slug
           }/&hashtags=syntheticdatavault`}
-          className="w-6 h-6 flex justify-center duration-200 items-center hover:text-blue-600 text-midnight-950 inline-block rounded-full"
+          className="w-6 h-6 duration-200 hover:text-blue-600 text-midnight-950 inline-block rounded-full"
         >
           <FontAwesomeIcon size="xl" icon={faSquareXTwitter} />
         </Link>
