@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery } from "gatsby";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
 import MoreArticles from "../MoreArticles";
@@ -68,17 +68,6 @@ const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
 export default function PostDefaultLayoutSettingsQuery(props) {
   return (
     <StaticQuery
-      query={graphql`
-        query GhostSettingsArticle {
-          file(relativePath: { eq: "ghost-icon.png" }) {
-            childImageSharp {
-              fixed(width: 30, height: 30) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      `}
       render={(data) => <PostDefaultLayout data={data} {...props} />}
     />
   );
