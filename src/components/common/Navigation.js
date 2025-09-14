@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { Squash as Hamburger } from "hamburger-react";
-import PropTypes from "prop-types";
 
 // import Logo from "../../../assets/logo.svg";
 
@@ -177,16 +176,6 @@ const Navigation = ({ navClass = "site-nav-item", children, isDark }) => {
       </div>
     </nav>
   );
-};
-
-Navigation.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
-  navClass: PropTypes.string,
 };
 
 export default Navigation;
