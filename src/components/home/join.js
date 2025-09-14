@@ -6,7 +6,7 @@ export default function Join({ downloads }) {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
-        relativePath: { eq: "join our community map.png" }
+        relativePath: { eq: "join-our-community-map.png" }
       ) {
         childImageSharp {
           gatsbyImageData(

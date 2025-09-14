@@ -77,7 +77,7 @@ export default function PostDefaultLayoutSettingsQuery(props) {
               }
             }
           }
-          blogHero: file(relativePath: { eq: "Blog graphic people.png" }) {
+          blogHero: file(relativePath: { eq: "Blog-graphic-people.png" }) {
             childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid_noBase64
