@@ -256,7 +256,9 @@ export default function BlogPostTemplate({ data }) {
                   boxShadow: "rgb(239, 239, 245) 0px 0px 0px 1px inset;",
                 }}
               >
-                <h3 className="">Quick Takeaways</h3>
+                <h3 className="!text-[28px] !leading-base !tracking-2xs text-midnight-950 !m-0 !mb-6">
+                  Quick Takeaways
+                </h3>
                 <div>{post.frontmatter.takeaways}</div>
               </div>
               <div>{post.html}</div>

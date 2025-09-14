@@ -13,7 +13,7 @@ const AuthorImages = ({ frontmatter }) => {
         <a
           key={a.name}
           href={a.url}
-          className={`hover:bg-midnight-100 bg-midnight-50 rounded-full duration-200 ${
+          className={`hover:bg-midnight-100 bg-midnight-50 rounded-full duration-200 lg:!h-12 ${
             index === 0 && authors.length > 1 ? "-mr-2" : ""
           }`}
         >
@@ -22,7 +22,7 @@ const AuthorImages = ({ frontmatter }) => {
             height={48}
             src={a.image}
             alt={a.name}
-            className="block rounded-full relative z-10 object-cover h-full"
+            className="block rounded-full relative z-10 object-cover h-full lg:!h-12"
           />
         </a>
       ))}

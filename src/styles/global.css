@@ -404,7 +404,6 @@ pre[class*="language-"] {
 }
 
 .announcement-body ol,
-.announcement-body ul,
 .announcement-body ul {
   padding-left: 2rem;
   line-height: 1.75;
@@ -466,7 +465,26 @@ pre[class*="language-"] {
 }
 
 .announcement-body .takeaways-list {
-  @apply bg-midnight-25 border border-midnight-50 rounded-20;
+  @apply bg-midnight-25 px-9 py-8 border border-midnight-50 rounded-20;
+}
+
+.announcement-body .takeaways-list ul {
+  @apply !mb-0 !pl-2.5 lg:!pl-3 text-base lg:text-lg !font-medium;
+}
+
+.announcement-body .takeaways-list ul li {
+  @apply !mb-2 !pl-2;
+}
+
+.announcement-body .takeaways-list ul li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 .announcement-body ol > li {
