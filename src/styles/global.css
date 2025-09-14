@@ -465,6 +465,10 @@ pre[class*="language-"] {
   padding-left: 1rem;
 }
 
+.announcement-body .takeaways-list {
+  @apply bg-midnight-25 border border-midnight-50 rounded-20;
+}
+
 .announcement-body ol > li {
   display: flex;
   position: relative;

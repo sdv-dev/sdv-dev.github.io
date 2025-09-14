@@ -89,6 +89,12 @@ export default function BlogPostTemplate({ data }) {
       excerpt: c.cardText,
       feature_image: c.featureImage.url,
       published_at: c.datePublished,
+      takeaways:
+        c.takeaways[0].caseStudyName === c.url
+          ? documentToReactComponents(
+              JSON.parse(c.takeaways[0].takeawaysList.raw)
+            )
+          : null,
       authors:
         c.authors?.map((a) => ({
           name: a.authorName,
@@ -244,7 +250,15 @@ export default function BlogPostTemplate({ data }) {
                   </div>
                 </div>
               </div>
-              <div></div>
+              <div
+                className="takeaways-list"
+                style={{
+                  boxShadow: "rgb(239, 239, 245) 0px 0px 0px 1px inset;",
+                }}
+              >
+                <h3 className="">Quick Takeaways</h3>
+                <div>{post.frontmatter.takeaways}</div>
+              </div>
               <div>{post.html}</div>
               <SocialDesktop post={post.frontmatter} />
             </div>
