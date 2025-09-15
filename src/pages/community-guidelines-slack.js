@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import { Article } from "../components/common";
 import { Helmet } from "react-helmet";
@@ -12,13 +12,16 @@ const ResourcesPage = () => {
         relativePath: { eq: "Slack-conversation-example.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: NONE
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
   `);
+  const image = getImage(data.placeholderImage);
 
   return (
     <Article hasMoreArticles={false}>
@@ -168,8 +171,8 @@ const ResourcesPage = () => {
                 nested underneath it:
               </p>
               <div className="max-w-2xl mb-6">
-                <Img
-                  fluid={data.placeholderImage.childImageSharp.fluid}
+                <GatsbyImage
+                  image={image}
                   alt="join our community map"
                   loading={`lazy`}
                 />

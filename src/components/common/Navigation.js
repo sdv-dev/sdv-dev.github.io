@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { Squash as Hamburger } from "hamburger-react";
-import PropTypes from "prop-types";
 
 // import Logo from "../../../assets/logo.svg";
 
@@ -34,7 +33,7 @@ const navItems = [
   { label: "GitHub", url: "https://github.com/sdv-dev/SDV", internal: false },
 ];
 
-const Navigation = ({ navClass, children, isDark }) => {
+const Navigation = ({ navClass = "site-nav-item", children, isDark }) => {
   const ref = useRef();
 
   const navbarClassName = isDark ? "nav-bg-dark" : "nav-bg-white";
@@ -177,20 +176,6 @@ const Navigation = ({ navClass, children, isDark }) => {
       </div>
     </nav>
   );
-};
-
-Navigation.defaultProps = {
-  navClass: `site-nav-item`,
-};
-
-Navigation.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
-  navClass: PropTypes.string,
 };
 
 export default Navigation;

@@ -1,6 +1,4 @@
 const path = require(`path`);
-const { postsPerPage } = require(`./src/utils/siteConfig`);
-const { paginate } = require(`gatsby-awesome-pagination`);
 const util = require("util");
 const glob = require("glob");
 const fs = require("fs");
@@ -38,7 +36,7 @@ exports.onPostBuild = async () => {
 
 /**
  * Here is the place where Gatsby creates the URLs for all the
- * posts, tags, pages and authors that we fetched from the Ghost site.
+ * posts, tags, pages and authors that we fetched from the Contentful.
  */
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -46,24 +44,24 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const result = await graphql(`
     {
-      allGhostPost(
-        filter: {
-          tags: { elemMatch: { slug: { eq: "hash-community-case-study" } } }
-        }
-      ) {
-        nodes {
-          slug
+      caseStudies: allContentfulCaseStudy(sort: { datePublished: DESC }) {
+        edges {
+          node {
+            url
+          }
         }
       }
     }
   `);
 
-  result.data.allGhostPost.nodes.forEach((post) => {
+  const caseStudies = result.data.caseStudies.edges;
+
+  caseStudies.forEach(({ node }) => {
     createPage({
-      path: `/community-case-studies/${post.slug}/`,
+      path: `/community-case-studies/${node.url}/`,
       component: require.resolve(`./src/templates/CaseStudy.js`),
       context: {
-        slug: post.slug,
+        url: node.url,
       },
     });
   });
