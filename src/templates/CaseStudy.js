@@ -272,7 +272,7 @@ export default function BlogPostTemplate({ data }) {
             <div className="relative py-24 lg:py-28 px-4">
               <div className="absolute inset-0 rounded-[20px] border border-teal-200">
                 <img
-                  className="w-full h-full rounded-20"
+                  className="w-full h-full rounded-20 object-cover"
                   src={ctaImage}
                   alt="The Synthetic Data Vault"
                 />
