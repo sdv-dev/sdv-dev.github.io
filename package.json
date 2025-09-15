@@ -9,10 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/sdv-dev/SDV.git"
   },
-  "resolutions": {
-    "sharp": "0.27.1",
-    "gatsby-plugin-sharp/probe-image-size": "^7.0.0"
-  },
   "engines": {
     "node": ">= 20.18.1"
   },
