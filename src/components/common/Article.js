@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { StaticQuery } from "gatsby";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
 import MoreArticles from "../MoreArticles";
@@ -66,9 +65,5 @@ const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
 };
 
 export default function PostDefaultLayoutSettingsQuery(props) {
-  return (
-    <StaticQuery
-      render={(data) => <PostDefaultLayout data={data} {...props} />}
-    />
-  );
+  return <PostDefaultLayout {...props} />;
 }
