@@ -7,12 +7,12 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { GatsbyImage } from "gatsby-plugin-image";
 import Prism from "prismjs";
 import "prismjs";
 import "prismjs/components/prism-python";
 import "prismjs/themes/prism-okaidia.css";
 import AuthorImages from "./AuthorImages";
+import ctaImage from "../../static/cta-image.png";
 import { Helmet } from "react-helmet";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -271,12 +271,10 @@ export default function BlogPostTemplate({ data }) {
           <div className="container max-w-7xl mx-auto py-16 lg:py-24">
             <div className="relative py-24 lg:py-28 px-4">
               <div className="absolute inset-0 rounded-[20px] border border-teal-200">
-                <GatsbyImage
-                  image={data.ctaBg.childImageSharp.gatsbyImageData}
-                  loading="eager"
+                <img
+                  className="w-full h-full rounded-20"
+                  src={ctaImage}
                   alt="The Synthetic Data Vault"
-                  className="h-full rounded-[20px]"
-                  imgClassName="w-full"
                 />
               </div>
               <div className="text-center relative z-10 text-midnight-950 space-y-6">
@@ -329,15 +327,6 @@ export const pageQuery = graphql`
           }
         }
         website
-      }
-    }
-    ctaBg: file(relativePath: { eq: "cta-image.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: FULL_WIDTH
-          quality: 100
-          formats: [AUTO, WEBP, AVIF]
-        )
       }
     }
   }
