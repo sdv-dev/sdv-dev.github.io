@@ -79,10 +79,6 @@ export default function Footer() {
                       name: "SDMetrics",
                       url: "https://docs.sdv.dev/sdmetrics/",
                     },
-                    {
-                      name: "Pricing",
-                      url: "https://datacebo.com/pricing/",
-                    },
                   ].map((i, idx) => (
                     <ListItem i={i} key={`product-${idx}`} />
                   ))}
@@ -122,8 +118,8 @@ export default function Footer() {
                 <ul>
                   {[
                     {
-                      name: "Blog",
-                      url: "https://datacebo.com/blog/",
+                      name: "Plans",
+                      url: "https://datacebo.com/pricing/",
                     },
                     {
                       name: "Newsroom",
@@ -159,6 +155,14 @@ export default function Footer() {
                       tag: {
                         name: "We're hiring",
                       },
+                    },
+                    {
+                      name: "Engineering",
+                      url: "https://datacebo.com/engineering/",
+                    },
+                    {
+                      name: "Blog",
+                      url: "https://datacebo.com/blog/",
                     },
                     {
                       name: "Support",
