@@ -64,32 +64,32 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
       to: [isTablet ? 66 : 50, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 410 : 516, isTablet ? 115 : 60],
+      from: [isTablet ? 410 : 512, isTablet ? 115 : 60],
       bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
       to: [isTablet ? 69 : 53, isTablet ? 170 : 122],
     },
     {
-      from: [isTablet ? 440 : 545, isTablet ? 110 : 80],
+      from: [isTablet ? 437 : 543, isTablet ? 110 : 80],
       bend: [isTablet ? 320 : 220, isTablet ? 240 : 190],
       to: [isTablet ? 69 : 56, isTablet ? 240 : 190],
     },
     {
-      from: [isTablet ? 457 : 558, isTablet ? 100 : 100],
+      from: [isTablet ? 454 : 554, isTablet ? 100 : 100],
       bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
       to: [isTablet ? 71 : 57, isTablet ? 310 : 260],
     },
     {
-      from: [isTablet ? 465 : 584, isTablet ? 100 : 50],
+      from: [isTablet ? 463 : 580, isTablet ? 100 : 50],
       bend: [isTablet ? 600 : 740, isTablet ? 100 : 50],
       to: [isTablet ? 742 : 944, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 471 : 588, isTablet ? 105 : 65],
+      from: [isTablet ? 469 : 585, isTablet ? 105 : 65],
       bend: [isTablet ? 570 : 745, isTablet ? 171 : 122],
       to: [isTablet ? 744 : 944, isTablet ? 171 : 122],
     },
     {
-      from: [isTablet ? 472 : 591, isTablet ? 120 : 80],
+      from: [isTablet ? 471 : 589, isTablet ? 120 : 80],
       bend: [isTablet ? 630 : 780, isTablet ? 241 : 190],
       to: [isTablet ? 744 : 944, isTablet ? 241 : 190],
     },
@@ -99,7 +99,7 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
       to: [isTablet ? 744 : 944, isTablet ? 311 : 260],
     },
     {
-      from: [isTablet ? 475 : 586, isTablet ? 140 : 120],
+      from: [isTablet ? 475 : 587, isTablet ? 140 : 120],
       bend: [isTablet ? 610 : 785, isTablet ? 381 : 330],
       to: [isTablet ? 743 : 944, isTablet ? 381 : 330],
     },
