@@ -2,7 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 
 export default function ScrollableTable({ children, tableColDimensions }) {
   const tableScrollRef = useRef(null);
+  const scrollbarRef = useRef(null);
   const [thumbStyle, setThumbStyle] = useState({ width: "0%", left: "0%" });
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartRef = useRef({ touchX: 0, scrollLeft: 0 });
 
   const customStyles = {
     "--table-col-dimensions": `${tableColDimensions ?? "minmax(0, 1fr)"}`,
@@ -39,6 +42,48 @@ export default function ScrollableTable({ children, tableColDimensions }) {
     };
   }, []);
 
+  const handleTouchStart = (e) => {
+    const table = tableScrollRef.current;
+    const scrollbar = scrollbarRef.current;
+    if (!table || !scrollbar) return;
+
+    setIsDragging(true);
+    dragStartRef.current = {
+      touchX: e.touches[0].clientX,
+      scrollLeft: table.scrollLeft,
+    };
+  };
+
+  useEffect(() => {
+    if (!isDragging) return;
+
+    const handleTouchMove = (e) => {
+      e.preventDefault();
+      const table = tableScrollRef.current;
+      const scrollbar = scrollbarRef.current;
+      if (!table || !scrollbar) return;
+
+      const rect = scrollbar.getBoundingClientRect();
+      const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
+      const percentage = x / rect.width;
+
+      const { scrollWidth, clientWidth } = table;
+      table.scrollLeft = percentage * (scrollWidth - clientWidth);
+    };
+
+    const handleTouchEnd = () => {
+      setIsDragging(false);
+    };
+
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isDragging]);
+
   return (
     <>
       <style>{`
@@ -61,26 +106,34 @@ export default function ScrollableTable({ children, tableColDimensions }) {
           border-radius: 20px;
           position: absolute;
           top: 0;
-          transition: left 0.1s;
         }
-        .fake-scrollbar-thumb:hover {
-          background-color: #4b5563;
+        .fake-scrollbar-thumb:not(.dragging) {
+          transition: left 0.1s ease-out;
         }
-        .scrollable-table-grid > div:first-child > div:first-child {
+        /* Unified shadow for entire first column */
+        .scrollable-table-grid > div:first-child::after,
+        .scrollable-table-grid > div:last-child::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 199px;
           box-shadow: 7px 0px 20px -10px rgba(0, 0, 54, 0.14);
+          pointer-events: none;
+          z-index: 1;
         }
-        .scrollable-table-grid > div:last-child > div.grid > div:first-child {
-          box-shadow: 7px 0px 20px -10px rgba(0, 0, 54, 0.14);
+        .scrollable-table-grid > div:first-child,
+        .scrollable-table-grid > div:last-child {
+          position: relative;
         }
         @media (min-width: 640px) {
           .fake-scrollbar-container {
             display: none;
           }
-          .scrollable-table-grid > div:first-child > div:first-child {
-            box-shadow: none;
-          }
-          .scrollable-table-grid > div:last-child > div.grid > div:first-child {
-            box-shadow: none;
+          .scrollable-table-grid > div:first-child::after,
+          .scrollable-table-grid > div:last-child::after {
+            display: none;
           }
         }
       `}</style>
@@ -110,8 +163,8 @@ export default function ScrollableTable({ children, tableColDimensions }) {
         </div>
 
         <div className="fake-scrollbar-container">
-          <div className="fake-scrollbar">
-            <div className="fake-scrollbar-thumb" style={thumbStyle}></div>
+          <div className="fake-scrollbar" ref={scrollbarRef} onTouchStart={handleTouchStart}>
+            <div className={`fake-scrollbar-thumb ${isDragging ? 'dragging' : ''}`} style={thumbStyle}></div>
           </div>
         </div>
       </div>
