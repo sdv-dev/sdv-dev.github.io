@@ -16,7 +16,7 @@ export default function SdvCoreSection({ dependenciesData }) {
           SDV Community <span className="text-blue-600">downloads</span>
         </h1>
         <div>
-          <ScrollableTable tableColDimensions="minmax(134px, 199px) minmax(136px, 488px) minmax(136px, 488px)">
+          <ScrollableTable tableColDimensions="minmax(84px, 129px) minmax(106px, 428px) minmax(136px, 488px)">
             <TableHeader>
               <TableHeaderCell />
               <TableHeaderCell>To date</TableHeaderCell>

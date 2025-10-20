@@ -61,7 +61,7 @@ export default function SdvInNumbersSection({ data }) {
         </div>
         <div className="flex justify-center">
           {activeTab.label === "Downloads" && (
-            <ScrollableTable tableColDimensions="minmax(199px, 199px) minmax(130px, 488px) minmax(136px, 488px)">
+            <ScrollableTable tableColDimensions="minmax(191px, 191px) minmax(40px, 350px) minmax(136px, 488px)">
               <TableHeader>
                 <TableHeaderCell />
                 <TableHeaderCell>To date</TableHeaderCell>

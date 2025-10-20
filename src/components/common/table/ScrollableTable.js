@@ -6,9 +6,11 @@ export default function ScrollableTable({ children, tableColDimensions }) {
   const [thumbStyle, setThumbStyle] = useState({ width: "0%", left: "0%" });
   const [isDragging, setIsDragging] = useState(false);
   const dragStartRef = useRef({ touchX: 0, scrollLeft: 0 });
+  const [firstColWidth, setFirstColWidth] = useState(199);
 
   const customStyles = {
     "--table-col-dimensions": `${tableColDimensions ?? "minmax(0, 1fr)"}`,
+    "--first-col-width": `${firstColWidth}px`,
     gridTemplateAreas: `"header" "body"`,
     boxShadow: "2.135px 8.539px 21.347px 0px rgba(0, 0, 54, 0.12)",
   };
@@ -32,9 +34,22 @@ export default function ScrollableTable({ children, tableColDimensions }) {
       setThumbStyle({ width, left });
     };
 
+    const updateFirstColWidth = () => {
+      const firstCell = table.querySelector(
+        ".scrollable-table-grid > div:first-child > div:first-child"
+      );
+      if (firstCell) {
+        setFirstColWidth(firstCell.offsetWidth);
+      }
+    };
+
     updateThumb();
+    updateFirstColWidth();
     table.addEventListener("scroll", updateThumb);
-    window.addEventListener("resize", updateThumb);
+    window.addEventListener("resize", () => {
+      updateThumb();
+      updateFirstColWidth();
+    });
 
     return () => {
       table.removeEventListener("scroll", updateThumb);
@@ -64,7 +79,10 @@ export default function ScrollableTable({ children, tableColDimensions }) {
       if (!table || !scrollbar) return;
 
       const rect = scrollbar.getBoundingClientRect();
-      const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
+      const x = Math.max(
+        0,
+        Math.min(e.touches[0].clientX - rect.left, rect.width)
+      );
       const percentage = x / rect.width;
 
       const { scrollWidth, clientWidth } = table;
@@ -118,7 +136,7 @@ export default function ScrollableTable({ children, tableColDimensions }) {
           top: 0;
           bottom: 0;
           left: 0;
-          width: 199px;
+          width: var(--first-col-width, 199px);
           box-shadow: 7px 0px 20px -10px rgba(0, 0, 54, 0.14);
           pointer-events: none;
           z-index: 1;
@@ -151,6 +169,7 @@ export default function ScrollableTable({ children, tableColDimensions }) {
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
+              boxShadow: "rgba(0, 0, 54, 0.12) 2.135px 8.539px 21.347px 0px",
             }}
           >
             <div
@@ -163,8 +182,15 @@ export default function ScrollableTable({ children, tableColDimensions }) {
         </div>
 
         <div className="fake-scrollbar-container">
-          <div className="fake-scrollbar" ref={scrollbarRef} onTouchStart={handleTouchStart}>
-            <div className={`fake-scrollbar-thumb ${isDragging ? 'dragging' : ''}`} style={thumbStyle}></div>
+          <div
+            className="fake-scrollbar"
+            ref={scrollbarRef}
+            onTouchStart={handleTouchStart}
+          >
+            <div
+              className={`fake-scrollbar-thumb ${isDragging ? "dragging" : ""}`}
+              style={thumbStyle}
+            ></div>
           </div>
         </div>
       </div>
