@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../common/table/Table";
+import ScrollableTable from "../common/table/ScrollableTable";
 import TableHeader from "../common/table/TableHeader";
 import TableHeaderCell from "../common/table/TableHeaderCell";
 import TableBody from "../common/table/TableBody";
@@ -11,12 +11,12 @@ export default function SdvCoreSection({ dependenciesData }) {
 
   return (
     <div className="flex justify-center bg-white">
-      <div className="container w-full flex flex-col md:items-center py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-0">
+      <div className="container w-full flex flex-col md:items-center py-12 md:py-16 lg:py-24 px-4 md:px-5 lg:px-5">
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg md:pb-12">
           SDV Community <span className="text-blue-600">downloads</span>
         </h1>
         <div>
-          <Table tableColDimensions="minmax(134px, 199px) minmax(136px, 488px) minmax(136px, 488px)">
+          <ScrollableTable tableColDimensions="minmax(134px, 199px) minmax(136px, 488px) minmax(136px, 488px)">
             <TableHeader>
               <TableHeaderCell />
               <TableHeaderCell>To date</TableHeaderCell>
@@ -48,7 +48,7 @@ export default function SdvCoreSection({ dependenciesData }) {
                 );
               })}
             </TableBody>
-          </Table>
+          </ScrollableTable>
         </div>
       </div>
     </div>
