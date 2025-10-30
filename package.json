@@ -42,7 +42,6 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@heroicons/react": "^2.0.18",
     "autoprefixer": "^10.2.5",
-    "cheerio": "1.0.0-rc.5",
     "dotenv": "^8.2.0",
     "gatsby": "^5.0.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
