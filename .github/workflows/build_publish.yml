@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - gatsby-home
-  repository_dispatch:
-    branches:
-      - gatsby-home
   workflow_dispatch:
     branches:
       - gatsby-home
