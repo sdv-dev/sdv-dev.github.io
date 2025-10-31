@@ -13,6 +13,7 @@ import BannerSection from "./BannerSection";
 export default function CommunityStatsContent() {
   const [data, setData] = useState([]);
   const [dependenciesData, setDependenciesData] = useState([]);
+  const [statsDate, setStatsDate] = useState(null);
   const fileUrl =
     "https://raw.githubusercontent.com/sdv-dev/sdv-dev.github.io/gatsby-home/assets/Downloads_Summary.xlsx";
 
@@ -33,11 +34,21 @@ export default function CommunityStatsContent() {
 
         const firstSheet = workbook.SheetNames[0];
         const thirdSheet = workbook.SheetNames[2];
+        const fifthSheet = workbook.SheetNames[4];
         const worksheet = workbook.Sheets[firstSheet];
         const dependenciesWorksheet = workbook.Sheets[thirdSheet];
+        const metaInfoWorksheet = workbook.Sheets[fifthSheet];
 
         const rawData = XLSX.utils.sheet_to_json(worksheet);
         const rawDependencies = XLSX.utils.sheet_to_json(dependenciesWorksheet);
+        const metaInfo = XLSX.utils.sheet_to_json(metaInfoWorksheet);
+
+        const metaMap = {};
+        metaInfo.forEach((row) => {
+          metaMap[row.index] = row.value;
+        });
+        const dateValue = metaMap.date;
+        setStatsDate(dateValue);
 
         const filtered = rawData.filter(
           (item) =>
@@ -87,11 +98,14 @@ export default function CommunityStatsContent() {
     <div className="pt-16 relative bg-white flex flex-col justify-center overflow-hidden">
       <SdvCommunityHero />
       <SynthesizeCardsSection />
-      <SdvInNumbersSection data={data} />
+      <SdvInNumbersSection data={data} lastUpdatedDate={statsDate} />
       <CommunityUsersSection />
       {/* <LatestsNewsSubSection /> */}
       {/* <SdvOpenCoreSection /> */}
-      <SdvCoreSection dependenciesData={dependenciesData} />
+      <SdvCoreSection
+        dependenciesData={dependenciesData}
+        lastUpdatedDate={statsDate}
+      />
       <NewsSliderSection />
       <BannerSection />
     </div>

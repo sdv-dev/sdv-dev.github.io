@@ -7,7 +7,7 @@ import TableRow from "../common/table/TableRow";
 import TableRowCell from "../common/table/TableRowCell";
 import useWindowWidth from "../../hooks/useviewport";
 
-export default function SdvCoreSection({ dependenciesData }) {
+export default function SdvCoreSection({ dependenciesData, lastUpdatedDate }) {
   const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", currentYear];
@@ -52,6 +52,9 @@ export default function SdvCoreSection({ dependenciesData }) {
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg md:pb-12">
           SDV Community <span className="text-blue-600">downloads</span>
         </h1>
+        <p className="text-midnight-800 mb-4 text-lg">
+          Last Updated: {lastUpdatedDate}
+        </p>
         <div className="flex justify-center">
           <Table tableColDimensions={tableColDimensions}>
             <TableHeader>

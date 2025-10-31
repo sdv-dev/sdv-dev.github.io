@@ -9,7 +9,7 @@ import Tab from "../common/Tab";
 import useWindowWidth from "../../hooks/useviewport";
 import CustomPieChart from "./CustomPieChart";
 
-export default function SdvInNumbersSection({ data }) {
+export default function SdvInNumbersSection({ data, lastUpdatedDate }) {
   const currentYear = new Date().getFullYear().toString();
   const metricKeys = ["toDate", "yearToDate"];
   const metricLabels = ["To date", currentYear];
@@ -81,6 +81,9 @@ export default function SdvInNumbersSection({ data }) {
           >
             Learn more
           </a>
+          <p className="text-midnight-800 mt-4 text-lg">
+            Last Updated: {lastUpdatedDate}
+          </p>
         </div>
         <div
           id="numbers"
