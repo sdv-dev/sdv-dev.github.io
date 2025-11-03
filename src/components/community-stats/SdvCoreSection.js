@@ -52,8 +52,9 @@ export default function SdvCoreSection({ dependenciesData, lastUpdatedDate }) {
         <h1 className="heading-600-lg pb-6 text-center md:leading-lg md:pb-12">
           SDV Community <span className="text-blue-600">downloads</span>
         </h1>
-        <p className="w-fit mx-auto text-center py-[11px] px-5 border border-blue-200 rounded-[40px] mb-8 lg:mb-12 bg-blue-100">
-          Last Updated: {lastUpdatedDate}
+        <p className="text-midnight-600 text-center text-base font-normal leading-[18px] mb-6 md:mb-8 md:text-lg md:leading-5">
+          Last Updated:{" "}
+          <span className="text-midnight-800">{lastUpdatedDate}</span>
         </p>
         <div className="flex justify-center">
           <Table tableColDimensions={tableColDimensions}>

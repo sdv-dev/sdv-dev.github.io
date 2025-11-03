@@ -81,13 +81,14 @@ export default function SdvInNumbersSection({ data, lastUpdatedDate }) {
           >
             Learn more
           </a>
-          <div className="mx-auto w-fit py-[11px] px-5 mt-4 border border-blue-200 rounded-[40px] mb-8 lg:mb-12 bg-blue-100">
-            Last Updated: {lastUpdatedDate}
-          </div>
+          <p className="text-midnight-600 text-base font-normal leading-[18px] mb-4 mt-[38px] md:mt-12 md:mb-6 md:text-lg md:leading-5">
+            Last Updated:{" "}
+            <span className="text-midnight-800">{lastUpdatedDate}</span>
+          </p>
         </div>
         <div
           id="numbers"
-          className="flex justify-center items-center gap-2.5 mb-6"
+          className="flex justify-center items-center gap-2.5 my-3.5"
         >
           {tabs.map((t) => (
             <Tab
