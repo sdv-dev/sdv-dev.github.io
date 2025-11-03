@@ -72,7 +72,7 @@ export default function SdvInNumbersSection({ data, lastUpdatedDate }) {
           <br className="hidden md:inline-block lg:hidden" />
           <span className="text-blue-600">in numbers</span>
         </h1>
-        <div className="text-center pt-1.5 pb-12">
+        <div className="text-center pt-1.5">
           <a
             href="https://datacebo.com/announcements/sdv-reaches-10-million-downloads/"
             target="_blank"
@@ -81,9 +81,9 @@ export default function SdvInNumbersSection({ data, lastUpdatedDate }) {
           >
             Learn more
           </a>
-          <p className="text-midnight-800 mt-4 text-lg">
+          <div className="mx-auto w-fit py-[11px] px-5 mt-4 border border-blue-200 rounded-[40px] mb-8 lg:mb-12 bg-blue-100">
             Last Updated: {lastUpdatedDate}
-          </p>
+          </div>
         </div>
         <div
           id="numbers"
