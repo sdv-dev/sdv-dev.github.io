@@ -1,24 +1,17 @@
 {
   "name": "sdv-dev",
-  "description": "SDV dev website with Ghost and Gatsby",
+  "description": "SDV dev website with Ghost, Contentful and Gatsby",
   "version": "1.0.0",
   "license": "MIT",
   "author": "SDV",
-  "homepage": "https://github.com/sdv-dev/SDV#readme",
+  "homepage": "https://sdv.dev/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdv-dev/SDV.git"
+    "url": "https://github.com/sdv-dev/sdv-dev.github.io"
   },
   "engines": {
     "node": ">= 20.18.1"
   },
-  "bugs": {
-    "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "main": "n/a",
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/sdv-dev/web-dev.git",
     "serve": "gatsby build && NODE_ENV=production gatsby serve",
