@@ -44,7 +44,16 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const result = await graphql(`
     {
-      caseStudies: allContentfulCaseStudy(sort: { datePublished: DESC }) {
+      caseStudies: allContentfulCaseStudy(
+        sort: { datePublished: DESC }
+        filter: {
+          publishLocation: {
+            elemMatch: {
+              urlLocation: { eq: "https://sdv.dev/community-case-studies/" }
+            }
+          }
+        }
+      ) {
         edges {
           node {
             url

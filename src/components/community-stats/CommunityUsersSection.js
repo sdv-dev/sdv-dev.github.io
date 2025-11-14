@@ -6,7 +6,16 @@ export default function CommunityUsersSection() {
 
   const data = useStaticQuery(graphql`
     query {
-      caseStudies: allContentfulCaseStudy(sort: { datePublished: DESC }) {
+      caseStudies: allContentfulCaseStudy(
+        sort: { datePublished: DESC }
+        filter: {
+          publishLocation: {
+            elemMatch: {
+              urlLocation: { eq: "https://sdv.dev/community-case-studies/" }
+            }
+          }
+        }
+      ) {
         edges {
           node {
             url
