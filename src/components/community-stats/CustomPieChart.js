@@ -59,37 +59,37 @@ const renderCustomizedLabel = ({ name, value, index, isTablet, isMobile }) => {
   const polylinePaths = [
     { from: [-270, -450], bend: [-290, -475], to: [-290, -500] },
     {
-      from: [isTablet ? 360 : 453, isTablet ? 100 : 50],
+      from: [isTablet ? 360 : 442, isTablet ? 100 : 50],
       bend: [isTablet ? 300 : 370, isTablet ? 100 : 50],
       to: [isTablet ? 66 : 50, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 410 : 512, isTablet ? 115 : 60],
+      from: [isTablet ? 407 : 505, isTablet ? 115 : 60],
       bend: [isTablet ? 320 : 250, isTablet ? 170 : 122],
       to: [isTablet ? 69 : 53, isTablet ? 170 : 122],
     },
     {
-      from: [isTablet ? 437 : 543, isTablet ? 110 : 80],
+      from: [isTablet ? 433 : 538, isTablet ? 110 : 80],
       bend: [isTablet ? 320 : 220, isTablet ? 240 : 190],
       to: [isTablet ? 69 : 56, isTablet ? 240 : 190],
     },
     {
-      from: [isTablet ? 454 : 554, isTablet ? 100 : 100],
+      from: [isTablet ? 449 : 548, isTablet ? 100 : 100],
       bend: [isTablet ? 320 : 220, isTablet ? 310 : 260],
       to: [isTablet ? 71 : 57, isTablet ? 310 : 260],
     },
     {
-      from: [isTablet ? 463 : 580, isTablet ? 100 : 50],
+      from: [isTablet ? 458 : 576, isTablet ? 100 : 50],
       bend: [isTablet ? 600 : 740, isTablet ? 100 : 50],
       to: [isTablet ? 742 : 944, isTablet ? 100 : 50],
     },
     {
-      from: [isTablet ? 469 : 585, isTablet ? 105 : 65],
+      from: [isTablet ? 466 : 582, isTablet ? 105 : 65],
       bend: [isTablet ? 570 : 745, isTablet ? 171 : 122],
       to: [isTablet ? 744 : 944, isTablet ? 171 : 122],
     },
     {
-      from: [isTablet ? 471 : 589, isTablet ? 120 : 80],
+      from: [isTablet ? 470 : 588, isTablet ? 120 : 80],
       bend: [isTablet ? 630 : 780, isTablet ? 241 : 190],
       to: [isTablet ? 744 : 944, isTablet ? 241 : 190],
     },
