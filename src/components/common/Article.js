@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
-import MoreArticles from "../MoreArticles";
 import ScarfPixel from "../common/ScarfPixel";
 import dataceboHorizontalLogoWhite from "../../../static/datacebo-horizontal-logo-white.svg";
 import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
@@ -15,7 +14,7 @@ import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg
  * styles, and meta data for each page.
  *
  */
-const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
+const PostDefaultLayout = ({ children, isDark = true }) => {
   return (
     <>
       <Helmet>
@@ -26,7 +25,6 @@ const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
         <div className="viewport-top">
           <Navigation
             isDark={isDark}
-            hasInfoBar={true}
             navClass="block px-4 lg:px-4 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
           >
             <a href="https://datacebo.com">
@@ -45,16 +43,7 @@ const PostDefaultLayout = ({ children, isDark = true, isPost }) => {
             </a>
           </Navigation>
 
-          <main className="">
-            {children}
-            {isPost ? (
-              <div className="container mx-auto">
-                <MoreArticles />
-              </div>
-            ) : (
-              ""
-            )}
-          </main>
+          <main className="">{children}</main>
         </div>
         {/* <Cta /> */}
         <Footer />

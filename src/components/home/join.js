@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function Join({ downloads }) {
+export default function Join() {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
@@ -75,17 +75,6 @@ export default function Join({ downloads }) {
                 <span className="grad-txt">LinkedIn</span>
               </span>
             </a>
-          </div>
-        </div>
-        <div className="flex flex-wrap justify-center -mx-2 mt-4 text-center">
-          <div className="w-auto px-4">
-            {downloads !== "" ? (
-              <p className="px-4 text-white">
-                <span className="font-bold">{downloads}K</span> Downloads
-              </p>
-            ) : (
-              ""
-            )}
           </div>
         </div>
       </div>
