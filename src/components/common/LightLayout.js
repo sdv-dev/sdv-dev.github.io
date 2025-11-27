@@ -12,7 +12,7 @@ import Footer from "../../components/Footer";
  * styles, and meta data for each page.
  *
  */
-const LightLayout = ({ children, hasInfoBar }) => {
+const LightLayout = ({ children }) => {
   return (
     <>
       <div className="bg-fixed bg-cover bg-gray-1">
@@ -21,7 +21,6 @@ const LightLayout = ({ children, hasInfoBar }) => {
             isDark={false}
             isTransparent={false}
             navclassName="block px-4 lg:px-5 py-4 md:py-2 rounded-md text-base hover:underline-none focus:outline-none transition duration-150 ease-in-out navbar-item"
-            hasInfoBar={hasInfoBar}
           >
             <a href="https://datacebo.com">
               <div className="w-auto">
@@ -39,7 +38,7 @@ const LightLayout = ({ children, hasInfoBar }) => {
             </a>
           </Navigation>
 
-          <main className={`${hasInfoBar ? "pt-8" : ""}`}>{children}</main>
+          <main>{children}</main>
         </div>
         <Footer />
       </div>
