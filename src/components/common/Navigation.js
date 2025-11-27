@@ -2,8 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { Squash as Hamburger } from "hamburger-react";
 
-// import Logo from "../../../assets/logo.svg";
-
 const navItems = [
   { label: "Home", url: "/", internal: true },
   { label: "Publications", url: `/resources/`, internal: true },
