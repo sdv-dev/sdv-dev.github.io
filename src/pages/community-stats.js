@@ -1,23 +1,18 @@
 import React from "react";
-import { Article } from "../components/common";
-import config from "../utils/siteConfig";
-import Seo from "../components/Seo";
-import CommunityStatsContent from "../components/community-stats/CommunityStatsContent";
+import { Helmet } from "react-helmet";
 
 export default function CommunityStatsPage() {
-  return (
-    <Article isDark={false}>
-      <Seo
-        title={config.siteTitleMeta}
-        description={config.siteDescriptionMeta}
-        type="website"
-        image={`/sdv-home.jpg`}
-        canonical={`https://sdv.dev/`}
-      />
+  const baseUrl = "https://datacebo.com/sdv-dev";
 
-      <div className="mx-auto">
-        <CommunityStatsContent />
-      </div>
-    </Article>
+  const finalUrl =
+    typeof window !== "undefined"
+      ? `${baseUrl}${window.location.hash || ""}`
+      : baseUrl;
+
+  return (
+    <Helmet>
+      <meta httpEquiv="refresh" content={`0; URL=${finalUrl}`} />
+      <link rel="canonical" href={finalUrl} />
+    </Helmet>
   );
 }
