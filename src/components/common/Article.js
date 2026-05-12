@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Navigation from "./Navigation";
 import Footer from "../../components/Footer";
-import ScarfPixel from "../common/ScarfPixel";
 import dataceboHorizontalLogoWhite from "../../../static/datacebo-horizontal-logo-white.svg";
 import dataceboHorizontalLogo from "../../../static/datacebo-horizontal-logo.svg";
 
@@ -47,7 +46,6 @@ const PostDefaultLayout = ({ children, isDark = true }) => {
         </div>
         {/* <Cta /> */}
         <Footer />
-        <ScarfPixel />
       </div>
     </>
   );
