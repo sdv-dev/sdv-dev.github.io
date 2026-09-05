@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[293],{9639:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var c=n(6540),r=n(8154);function a(){const e="https://datacebo.com/sdv-dev";return c.createElement(r.m,null,c.createElement("meta",{httpEquiv:"refresh",content:`0; URL=${e}`}),c.createElement("link",{rel:"canonical",href:e}))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-5fb445c8e0775a6c0452.js.map
