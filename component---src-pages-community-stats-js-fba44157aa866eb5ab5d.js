@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[462],{3060:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var c=t(6540),a=t(8154);function r(){const e="https://datacebo.com/sdv-dev",n="undefined"!=typeof window?`${e}${window.location.hash||""}`:e;return c.createElement(a.m,null,c.createElement("meta",{httpEquiv:"refresh",content:`0; URL=${n}`}),c.createElement("link",{rel:"canonical",href:n}))}}}]);
+//# sourceMappingURL=component---src-pages-community-stats-js-fba44157aa866eb5ab5d.js.map
