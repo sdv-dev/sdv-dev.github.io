@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[229],{3457:function(e,t,n){n.r(t),n.d(t,{default:function(){return u}});var c=n(6540),r=n(8154);function u(){const e="https://datacebo.com/community-guidelines";return c.createElement(r.m,null,c.createElement("meta",{httpEquiv:"refresh",content:`0; URL=${e}`}),c.createElement("link",{rel:"canonical",href:e}))}}}]);
+//# sourceMappingURL=component---src-pages-community-guidelines-slack-js-ff4f5b518f97b2bb3f5f.js.map
