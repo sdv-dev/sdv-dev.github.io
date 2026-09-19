@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[125],{3331:function(e,t,a){a.r(t);var c=a(6540),n=a(8154);t.default=()=>c.createElement(n.m,null,c.createElement("meta",{httpEquiv:"refresh",content:"0; URL=https://datacebo.com/404/"}),c.createElement("link",{rel:"canonical",href:"https://datacebo.com/404/"}))}}]);
+//# sourceMappingURL=component---src-pages-404-js-cac1bf77a1e84313eca2.js.map

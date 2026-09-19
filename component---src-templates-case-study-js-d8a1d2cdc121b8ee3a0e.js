@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[582],{4417:function(e,t,n){n.r(t),n.d(t,{default:function(){return r}});var c=n(6540),l=n(8154);function r(e){let{pageContext:t}=e;const n="https://datacebo.com/case-studies/",r=(null==t?void 0:t.url)||"",a=r?r.replace(/^\/|\/$/g,""):"",u=a?`${n}${a}/`:n;return c.createElement(l.m,null,c.createElement("meta",{httpEquiv:"refresh",content:`0; URL=${u}`}),c.createElement("link",{rel:"canonical",href:u}))}}}]);
+//# sourceMappingURL=component---src-templates-case-study-js-d8a1d2cdc121b8ee3a0e.js.map
