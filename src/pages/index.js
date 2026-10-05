@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function HomePage() {
-  const targetUrl = "https://datacebo.com/sdv-dev";
+  const targetUrl = "https://datacebo.com/sdv-dev/";
 
   return (
     <Helmet>
