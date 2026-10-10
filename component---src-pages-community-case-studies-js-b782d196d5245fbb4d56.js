@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[783],{4627:function(e,t,a){a.r(t);var c=a(6540),s=a(8154);t.default=()=>c.createElement(s.m,null,c.createElement("meta",{httpEquiv:"refresh",content:"0; URL=https://datacebo.com/case-studies/"}),c.createElement("link",{rel:"canonical",href:"https://datacebo.com/case-studies/"}))}}]);
+//# sourceMappingURL=component---src-pages-community-case-studies-js-b782d196d5245fbb4d56.js.map
