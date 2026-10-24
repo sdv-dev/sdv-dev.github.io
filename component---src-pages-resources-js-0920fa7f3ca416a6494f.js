@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksdv_dev=self.webpackChunksdv_dev||[]).push([[636],{4826:function(e,t,a){a.r(t);var c=a(6540),r=a(8154);t.default=()=>c.createElement(r.m,null,c.createElement("meta",{httpEquiv:"refresh",content:"0; URL=https://datacebo.com/research/"}),c.createElement("link",{rel:"canonical",href:"https://datacebo.com/research/"}))}}]);
+//# sourceMappingURL=component---src-pages-resources-js-0920fa7f3ca416a6494f.js.map
